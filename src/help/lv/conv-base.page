@@ -7,14 +7,5 @@
 
 	<title>Skaitļu bāzes</title>
     
-    <p>Lai konvertētu skaitli uz citu bāzes reprezentāciju, izmanto <em>in</em> operatoru.</p>
-    <example>
-    <p>12 in hex</p>
-    <p>5 in binary</p>
-    <p>1A₁₆ in dec</p>
-    <p>1010₂ in octal</p>
-    </example>
-    <note>
-      <p>Skaitļa bāzes konvertēšanu jāveic, izmantojot tastatūru.</p>
-    </note>
+    <p>Lai konvertētu skaitļus starp bāzēm, ievadi skaitli (vai atrisini izteiksi) un pamaini <link xref="number-display">rezultāta formātu</link> no <guiseq><gui>Kalkulators</gui><gui>Iestatījumi</gui></guiseq> izvēlnes.</p>
 </page>

@@ -7,11 +7,7 @@
 
 	<title>Znanstveni zapis</title>
     
-    <p>
-    To enter numbers in scientific format use the <gui>×10y</gui> button (<keyseq><key>Ctrl</key><key>E</key></keyseq>).
-    The <link xref="superscript">number mode</link> automatically changes to superscript.
-    To enter 2×10¹⁰⁰, start by entering the mantissa (2):
-    </p>
+    <p>Za vnos števil v znanstveni obliki uporabite gumb <gui>×10x</gui>  (<keyseq><key>Ctrl</key><key>E</key></keyseq>). <link xref="superscript">Način števila</link> se semodejno spremeni v nadpisana. Za vnos 2×10¹⁰⁰ začnite z vnosom osnove (2):</p>
     <example>
     <p>2</p>
     </example>

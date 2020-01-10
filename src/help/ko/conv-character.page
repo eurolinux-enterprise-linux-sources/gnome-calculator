@@ -3,24 +3,16 @@
 
     <info>
         <link type="guide" xref="index#conversion"/>
-    
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>류창우</mal:name>
-      <mal:email>cwryu@debian.org</mal:email>
-      <mal:years>2007, 2008, 2015.</mal:years>
-    </mal:credit>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>조성호</mal:name>
-      <mal:email>shcho@gnome.org</mal:email>
-      <mal:years>2016, 2017.</mal:years>
-    </mal:credit>
-  </info>
+    </info>
 
-	<title>문자 코드</title>
+	<title>Character Codes</title>
     
-    <p><link xref="mouse">프로그래밍 모드</link>일 때, <gui>á</gui> 단추는 문자를 문자 코드로 바꿀 대화 상자를 엽니다.</p>
+    <p>
+    When in <link xref="mouse">programming mode</link> the <gui>á</gui> button opens a dialog to convert characters to character codes.
+    </p>
     <note>
-    <p>문자는 키보드로 변환할 수 없습니다.</p>
+    <p>
+    Characters cannot be converted using the keyboard.
+    </p>
     </note>
 </page>

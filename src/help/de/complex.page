@@ -13,7 +13,7 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Christian Kirbach</mal:name>
       <mal:email>Christian.Kirbach@googlemail.com</mal:email>
-      <mal:years>2008,2009,2010,2014,2015,2017</mal:years>
+      <mal:years>2008, 2009, 2010</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
@@ -27,57 +27,9 @@
       <mal:email>jakob.kramer@gmx.de</mal:email>
       <mal:years>2010</mal:years>
     </mal:credit>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Tim Sabsch</mal:name>
-      <mal:email>tim@sabsch.com</mal:email>
-      <mal:years>2018</mal:years>
-    </mal:credit>
   </info>
 
 	<title>Komplexe Zahlen</title>
     
-    <p><app>Taschenrechner</app> unterstützt im <link xref="mouse">wissenschaftlichen Modus</link> komplexe Zahlen sowie die folgenden Funktionen.</p>
-
-    <table>
-    
-    <tr>
-    <td><p>Re</p></td>
-    <td><p>Gibt den reellen Teil einer komplexen Zahl zurück. Zum Beispiel:</p>
-    <example>
-    <p>Re (2-5i) = 2</p>
-    </example>
-    </td>
-    </tr>
-
-    <tr>
-    <td><p>Im</p></td>
-    <td><p>Gibt den imaginären Teil einer komplexen Zahl zurück. Zum Beispiel:</p>
-    <example>
-    <p>Im (2-5i) = -5</p>
-    </example>
-    </td>
-    </tr>
- 
-    <tr>
-    <td><p>conj</p></td>
-    <td><p>Gibt die Konjugierte einer komplexen Zahl zurück. Zum Beispiel:</p>
-    <example>
-    <p>conj (2-5i) = 2+5i</p>
-    </example>
-    </td>
-    </tr>
-
-    <tr>
-    <td><p>Arg</p></td>
-    <td><p>Gibt das Argument einer komplexen Zahl zurück. Zum Beispiel:</p>
-    <example>
-    <p>Arg (2-5i) = -68.1986</p>
-    </example>
-    </td>
-    </tr> 
-
-    </table>
-
-
+    <p>Komplexe Zahlen werden vom <app>Taschenrechner</app> nicht unterstützt.</p>
 </page>

@@ -5,27 +5,28 @@
         <!-- Place this at the end of the section -->
         <title type="sort">_</title>
         <link type="guide" xref="index#ui"/>
-    
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Daniel Nylander</mal:name>
-      <mal:email>po@danielnylander.se</mal:email>
-      <mal:years>2006, 2007, 2009</mal:years>
-    </mal:credit>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Sebastian Rasmussen</mal:name>
-      <mal:email>sebras@gmail.com</mal:email>
-      <mal:years>2015</mal:years>
-    </mal:credit>
-  </info>
+    </info>
 
-	<title>Exponent- och indexläge</title>
+	<title>Superscript and Subscript</title>
 
-    <p>Vissa ekvationer kan kräva att tal matas in i exponent- eller indexlägesform. t.ex.</p>
+    <p>
+    Some equations may require numbers to be entered in superscript or subscript form. e.g.
+    </p>
     <example>
-    <p>x³+2x²−5</p>
+    <p>
+    x³+2x²−5
+    </p>
     </example>
-    <p>För att mata in exponentlägestal med musen välj talläget med knapparna <gui>↑n</gui> och <gui>↓n</gui>. När ett utav dessa lägen är aktivt kommer klickande på talknapparna att mata in tal i exponent- eller indexläge. För att återvända till normalt talläge klicka på den aktiva knappen.</p>
-    <p>För att mata in exponentlägestal med tangentbordet håll ner <key>Ctrl</key> medan du matar in talet. Håll ner <key>Alt</key> för indexläge.</p>
-    <p>Talläget återgår till normalt när nästa icketals tecken matas in (t.ex. +).</p>
+    <p>
+    To enter superscript numbers with the mouse select the number mode using the the <gui>↑n</gui> and <gui>↓n</gui> buttons.
+    When one of these modes is active clicking the number buttons will enter numbers in superscript or subscript.
+    To return to normal number mode click the active button.
+    </p>
+    <p>
+    To enter superscript numbers with the keyboard hold down <key>Ctrl</key> while entering the number.
+    Hold <key>Alt</key> for subscript.
+    </p>
+    <p>
+    The number mode returns to normal when entering the next non-number character (e.g. +).
+    </p>
 </page>

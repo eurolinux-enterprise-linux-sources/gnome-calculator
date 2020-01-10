@@ -3,19 +3,7 @@
 
     <info>
         <link type="guide" xref="index#number"/>
-    
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Marek Černocký</mal:name>
-      <mal:email>marek@manet.cz</mal:email>
-      <mal:years>2009, 2010, 2011, 2013</mal:years>
-    </mal:credit>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Lucas Lommer</mal:name>
-      <mal:email>llommer@svn.gnome.org</mal:email>
-      <mal:years>2009</mal:years>
-    </mal:credit>
-  </info>
+    </info>
 
 	<title>Číselné soustavy</title>
     
@@ -26,7 +14,7 @@
     <p>75</p>
     <p>4B₁₆</p>
     </example>
-    <p>V <link xref="mouse">programátorském režimu</link> použijte rozbalovací nabídku ke změně číselné soustavy vypočtů.</p>
-    <p>Je možné použít klávesové zkratky pro přepnutí na <gui>dvojkovou</gui> (<keyseq><key>Ctrl</key><key>B</key></keyseq>), <gui>osmičkovou</gui> (<keyseq><key>Ctrl</key><key>O</key></keyseq>), <gui>desítkovou</gui> (<keyseq><key>Ctrl</key><key>D</key></keyseq>) a <gui>šestnáctkovou</gui> (<keyseq><key>Ctrl</key><key>H</key></keyseq>) soustavu.</p>
-    <p>Pro převod čísla do jiné číselné soustavy za běhu je možné použít <link xref="conv-base">Převod číselných soustav</link>.</p>
+    <p>Když se nacházíte v <link xref="mouse">programátorském režimu</link>, jsou k dispozici tlačítka pro dvojkovou (<keyseq><key>Ctrl</key><key>B</key></keyseq>), osmičkovou (<keyseq><key>Ctrl</key><key>O</key></keyseq>) a šestnáctkovou (<keyseq><key>Ctrl</key><key>H</key></keyseq>) soustavu.</p>
+    <p>Pokud chcete změnit číselnou soustavu, ve které se mají zobrazovat výsledky, změňte <link xref="number-display">formát výsledku</link>.</p>
+    <p>Jestliže chcete změnit číselnou soustavu, ve které se má zobrazit současný výsledek, použijte tlačítko příslušné číselné soustavy, případně <keyseq><key>Ctrl</key><key>D</key></keyseq> pro zobrazení v desítkové soustavě.</p>
 </page>

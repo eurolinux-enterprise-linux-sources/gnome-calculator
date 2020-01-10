@@ -3,33 +3,35 @@
 
     <info>
         <link type="guide" xref="index#number"/>
-    
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Jukka Heikkilä</mal:name>
-      <mal:email>jutsco@gmail.com</mal:email>
-      <mal:years>2010</mal:years>
-    </mal:credit>
-  </info>
+    </info>
 
 	<title>Tulosten muoto</title>
     
     <p>Tulosten näyttämismuodon asetukset voidaan määrittää <guiseq><gui>Laskin</gui><gui>Asetukset</gui></guiseq> -valikosta.</p>
     <table>
     <tr>
-    <td><p><gui>Automatic</gui></p></td>
-    <td><p>Small results are displayed as <gui>Fixed</gui> notation while long results are displayed as <gui>Scientific</gui> notation</p></td>
+    <td><p>Desimaalimuoto</p></td>
+    <td><p>Tulokset näytetään desimaalimuodossa</p></td>
     </tr>
     <tr>
-    <td><p><gui>Fixed</gui></p></td>
-    <td><p>Tulokset näytetään aina desimaalimuodossa</p></td>
-    </tr>
-    <tr>
-    <td><p><gui>Scientific</gui></p></td>
+    <td><p>Tieteellinen muoto</p></td>
     <td><p>Tulokset näytetään <link xref="scientific">tieteellisessä muodossa</link></p></td>
     </tr>
     <tr>
-    <td><p><gui>Engineering</gui></p></td>
+    <td><p>Insinöörimuoto</p></td>
     <td><p>Tulokset näytetään käyttäen tieteellistä merkintätapaa, poikkeuksena eksponentti, joka näytetään aina kolmen monikertana</p></td>
+    </tr>
+    <tr>
+    <td><p>Binäärimuoto</p></td>
+    <td><p>Tulokset näytetään <link xref="base">binäärilukuina</link></p></td>
+    </tr>
+    <tr>
+    <td><p>Oktaalimuoto</p></td>
+    <td><p>Tulokset näytetään <link xref="base">oktaalilukuina</link></p></td>
+    </tr>
+    <tr>
+    <td><p>Heksadesimaaliluku</p></td>
+    <td><p>Tulokset näytetään <link xref="base">heksadesimaalilukuina</link></p></td>
     </tr>
     </table>
     <p>

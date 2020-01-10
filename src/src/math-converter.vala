@@ -3,49 +3,76 @@
  *
  * This program is free software: you can redistribute it and/or modify it under
  * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
+ * Foundation, either version 2 of the License, or (at your option) any later
  * version. See http://www.gnu.org/copyleft/gpl.html the full text of the
  * license.
  */
 
-[GtkTemplate (ui = "/org/gnome/calculator/math-converter.ui")]
-public class MathConverter : Gtk.Grid
+public class MathConverter : Gtk.Box
 {
-    private MathEquation equation = null;
+    private MathEquation equation;
 
     private string category;
 
-    [GtkChild]
-    private Gtk.CellRendererText from_renderer;
-
-    [GtkChild]
     private Gtk.ComboBox from_combo;
-    [GtkChild]
     private Gtk.ComboBox to_combo;
-    [GtkChild]
-    private Gtk.Label from_label;
-    [GtkChild]
-    private Gtk.Label to_label;
 
+    private Gtk.Label result_label;
+    
     public signal void changed ();
-
-    construct
-    {
-        from_combo.set_cell_data_func (from_renderer, from_cell_data_func);
-        CurrencyManager.get_default ().updated.connect (() => { update_result_label (); });
-
-        update_from_model ();
-    }
 
     public MathConverter (MathEquation equation)
     {
-      set_equation (equation);
-    }
-
-    public void set_equation (MathEquation equation)
-    {
+        Object (orientation: Gtk.Orientation.HORIZONTAL);
         this.equation = equation;
+
+        spacing = 6;
+
+        var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+        hbox.show ();
+        pack_start (hbox, false, true, 0);
+
+        from_combo = new Gtk.ComboBox ();
+
+        var renderer = new Gtk.CellRendererText ();
+        from_combo.pack_start (renderer, true);
+        from_combo.add_attribute (renderer, "text", 0);
+        from_combo.set_cell_data_func (renderer, from_cell_data_func);
+        from_combo.changed.connect (from_combobox_changed_cb);
+        from_combo.show ();
+        hbox.pack_start (from_combo, false, true, 0);
+
+        var label = new Gtk.Label (/* Label that is displayed between the two conversion combo boxes, e.g. "[degrees] in [radians]" */
+                                   _(" in "));
+        label.show ();
+        hbox.pack_start (label, false, true, 5);
+
+        to_combo = new Gtk.ComboBox ();
+        renderer = new Gtk.CellRendererText ();
+        to_combo.pack_start (renderer, true);
+        to_combo.add_attribute (renderer, "text", 0);
+        to_combo.changed.connect (to_combobox_changed_cb);
+        to_combo.show ();
+        hbox.pack_start (to_combo, false, true, 0);
+
+        var swap_button = new Gtk.Button.with_label ("⇆");
+        swap_button.set_tooltip_text (/* Tooltip for swap conversion button */
+                                      _("Switch conversion units"));
+        swap_button.set_relief (Gtk.ReliefStyle.NONE);
+        swap_button.clicked.connect (swap_button_clicked_cb);
+        swap_button.show ();
+        hbox.pack_start (swap_button, false, true, 0);
+
+        result_label = new Gtk.Label ("");
+        result_label.set_alignment (1.0f, 0.5f);
+        result_label.sensitive = false;
+        result_label.show ();
+        pack_start (result_label, true, true, 0);
+
+        CurrencyManager.get_default ().updated.connect (() => { update_result_label (); });
         equation.notify["display"].connect ((pspec) => { update_result_label (); });
+
+        update_from_model ();
     }
 
     public void set_category (string? category)
@@ -103,6 +130,7 @@ public class MathConverter : Gtk.Grid
             return;
 
         var z = convert_equation (x);
+        result_label.sensitive = z != null;
         if (z != null)
         {
             Unit source_unit, target_unit;
@@ -110,8 +138,7 @@ public class MathConverter : Gtk.Grid
 
             var source_text = source_unit.format (x);
             var target_text = target_unit.format (z);
-            from_label.set_text (source_text);
-            to_label.set_text (target_text);
+            result_label.set_text ("%s = %s".printf (source_text, target_text));
         }
     }
 
@@ -179,40 +206,31 @@ public class MathConverter : Gtk.Grid
         return false;
     }
 
-    [GtkCallback]
     private void from_combobox_changed_cb ()
     {
-        UnitCategory? category = null, to_category = null;
-        Unit unit;
-        Gtk.TreeIter iter, to_iter;
-
         var model = from_combo.get_model ();
-        var to_model = to_combo.get_model () as Gtk.ListStore;
-
+        Gtk.TreeIter iter;
         if (!from_combo.get_active_iter (out iter))
             return;
-
+        UnitCategory category;
+        Unit unit;
         model.get (iter, 1, out category, 2, out unit, -1);
-        if (to_combo.get_active_iter (out to_iter))
-            to_model.get (to_iter, 1, out to_category);
 
-        if (category != to_category)
+        /* Set the to combobox to be the list of units can be converted to */
+        var to_model = new Gtk.ListStore (3, typeof (string), typeof (UnitCategory), typeof (Unit));
+        foreach (var u in category.get_units ())
         {
-            /* Set the to combobox to be the list of units can be converted to */
-            to_model = new Gtk.ListStore (3, typeof (string), typeof (UnitCategory), typeof (Unit));
-            foreach (var u in category.get_units ())
-            {
-                to_model.append (out iter);
-                to_model.set (iter, 0, u.display_name, 1, category, 2, u, -1);
-            }
-            to_combo.model = to_model;
-
-            /* Select the first possible unit */
-            to_combo.set_active (0);
+            if (u == unit)
+                continue;
+            to_model.append (out iter);
+            to_model.set (iter, 0, u.display_name, 1, category, 2, u, -1);
         }
+        to_combo.model = to_model;
+
+        /* Select the first possible unit */
+        to_combo.set_active (0);
     }
 
-    [GtkCallback]
     private void to_combobox_changed_cb ()
     {
         /* Conversion must have changed */
@@ -225,7 +243,6 @@ public class MathConverter : Gtk.Grid
         cell.set ("sensitive", !tree_model.iter_has_child (iter));
     }
 
-    [GtkCallback]
     private void swap_button_clicked_cb ()
     {
         var x = equation.number;

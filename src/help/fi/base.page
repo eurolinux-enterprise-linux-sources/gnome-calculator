@@ -3,13 +3,7 @@
 
     <info>
         <link type="guide" xref="index#number"/>
-    
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Jukka Heikkilä</mal:name>
-      <mal:email>jutsco@gmail.com</mal:email>
-      <mal:years>2010</mal:years>
-    </mal:credit>
-  </info>
+    </info>
 
 	<title>Numeroiden kantaluvut</title>
     
@@ -20,13 +14,7 @@
     <p>75</p>
     <p>4B₁₆</p>
     </example>
-    <p>
-    When in <link xref="mouse">programming mode</link>, use the drop-down menu to change the base of the calculation.
-    </p>
-    <p>
-    Keyboard shortcuts can be used to switch to <gui>Binary</gui> (<keyseq><key>Ctrl</key><key>B</key></keyseq>), <gui>Octal</gui> (<keyseq><key>Ctrl</key><key>O</key></keyseq>), <gui>Decimal</gui> (<keyseq><key>Ctrl</key><key>D</key></keyseq>) and <gui>Hexadecimal</gui> (<keyseq><key>Ctrl</key><key>H</key></keyseq>) modes.
-    </p>
-    <p>
-    To convert numbers to other base on the fly, <link xref="conv-base">Number Base conversion</link> can be used.
-    </p>
+    <p><link xref="mouse">Ohjelmointitilassa</link> on käytössä painikkeetbinääriluvuille (<keyseq><key>Ctrl</key><key>B</key></keyseq>), oktaaliluvuille (<keyseq><key>Ctrl</key><key>O</key></keyseq>) ja heksadesimaaliluvuille (<keyseq><key>Ctrl</key><key>H</key></keyseq>).</p>
+    <p>Tulosten kantalukujen muunnos on esitetty <link xref="number-display">tulosten muodon</link> vaihto -osiossa.</p>
+    <p>Voit vaihtaa nykyisen tuloksen kantalukua käyttäen kantalukupainiketta tai napsauttamalla <keyseq><key>Ctrl</key><key>D</key></keyseq>-näppäinyhdistelmää vaihtaaksesi desimaalimuotoon.</p>
 </page>

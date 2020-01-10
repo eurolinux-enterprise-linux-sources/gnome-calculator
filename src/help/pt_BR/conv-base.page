@@ -3,54 +3,11 @@
 
     <info>
         <link type="guide" xref="index#conversion"/>
-    
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Irapuan Pascoal</mal:name>
-      <mal:email>irapuan.menezes@gmail.com</mal:email>
-      <mal:years>2007</mal:years>
-    </mal:credit>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Georges Basile Stavracas Neto</mal:name>
-      <mal:email>georges.stavracas@gmail.com</mal:email>
-      <mal:years>2013</mal:years>
-    </mal:credit>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Lucas Romero de Abreu</mal:name>
-      <mal:email>lucasdeabreu@gmail.com</mal:email>
-      <mal:years>2013</mal:years>
-    </mal:credit>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Enrico Nicoletto</mal:name>
-      <mal:email>liverig@gmail.com</mal:email>
-      <mal:years>2013</mal:years>
-    </mal:credit>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Rafael Fontenelle</mal:name>
-      <mal:email>rafaelff@gnome.org</mal:email>
-      <mal:years>2013, 2014, 2017</mal:years>
-    </mal:credit>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Felipe Braga</mal:name>
-      <mal:email>fbobraga@gmail.com</mal:email>
-      <mal:years>2015</mal:years>
-    </mal:credit>
-  </info>
+    </info>
 
-	<title>Base numérica</title>
+	<title>Number Bases</title>
     
-    <p>Para converter o número para uma representação de base diferente use o operador <em>em</em>.</p>
-    <example>
-    <p>12 em hex</p>
-    <p>5 em binário</p>
-    <p>1A₁₆ em dec</p>
-    <p>1010₂ em octal</p>
-    </example>
-    <note>
-      <p>Conversões de bases numéricas podem ser efetuadas usando o teclado.</p>
-    </note>
+    <p>
+    To convert between number bases enter a number (or solve an equation) and change the <link xref="number-display">result format</link> from the <guiseq><gui>Calculator</gui><gui>Preferences</gui></guiseq> menu.
+    </p>
 </page>

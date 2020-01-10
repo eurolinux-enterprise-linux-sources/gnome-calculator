@@ -3,17 +3,14 @@
 
     <info>
         <link type="guide" xref="index#ui"/>
-    
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Jukka Heikkilä</mal:name>
-      <mal:email>jutsco@gmail.com</mal:email>
-      <mal:years>2010</mal:years>
-    </mal:credit>
-  </info>
+    </info>
 
 	<title>Hiiren käyttö</title>
 
-    <p>Kaikki lausekkeet voidaan syöttää hiirtä käyttäen. Kaikkien erilaisten painikkeiden käyttämiseksi on käytössä lukuisia tiloja, joita voidaan valita <gui>Näytä</gui>-valikosta.</p>
+    <p>
+    All equations can be entered using the mouse.
+    To access all buttons there are a number of modes that can be selected from the <gui>Mode</gui> menu.
+    </p>
     <table>
     <tr>
     <td><p>Perusteet</p></td>

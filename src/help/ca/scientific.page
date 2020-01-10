@@ -15,21 +15,11 @@
       <mal:email>sergi256@gmail.com</mal:email>
       <mal:years>2011, 2012</mal:years>
     </mal:credit>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Gil Forcada</mal:name>
-      <mal:email>gilforcada@guifi.net</mal:email>
-      <mal:years>2013</mal:years>
-    </mal:credit>
   </info>
 
 	<title>Notació científica</title>
     
-    <p>
-    To enter numbers in scientific format use the <gui>×10y</gui> button (<keyseq><key>Ctrl</key><key>E</key></keyseq>).
-    The <link xref="superscript">number mode</link> automatically changes to superscript.
-    To enter 2×10¹⁰⁰, start by entering the mantissa (2):
-    </p>
+    <p>Per introduir nombres en format científic utilitzeu el botó <gui>×10x</gui> (<keyseq><key>Ctrl</key><key>E</key></keyseq>). El <link xref="superscript">mode dels nombres</link> canvia automàticament a superíndex. Per introduir 2×10¹⁰⁰, comenceu introduint la mantissa (2):</p>
     <example>
     <p>2</p>
     </example>

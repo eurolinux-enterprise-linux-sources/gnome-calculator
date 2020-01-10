@@ -3,24 +3,16 @@
 
     <info>
         <link type="guide" xref="index#conversion"/>
-    
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Daniel Nylander</mal:name>
-      <mal:email>po@danielnylander.se</mal:email>
-      <mal:years>2006, 2007, 2009</mal:years>
-    </mal:credit>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Sebastian Rasmussen</mal:name>
-      <mal:email>sebras@gmail.com</mal:email>
-      <mal:years>2015</mal:years>
-    </mal:credit>
-  </info>
+    </info>
 
-	<title>Teckenkoder</title>
+	<title>Character Codes</title>
     
-    <p>I <link xref="mouse">programmeringsläget</link> öppnar <gui>á</gui>-knappen en dialog för att konvertera tecken till teckenkoder.</p>
+    <p>
+    When in <link xref="mouse">programming mode</link> the <gui>á</gui> button opens a dialog to convert characters to character codes.
+    </p>
     <note>
-    <p>Tecken kan inte konverteras via tangentbordet.</p>
+    <p>
+    Characters cannot be converted using the keyboard.
+    </p>
     </note>
 </page>

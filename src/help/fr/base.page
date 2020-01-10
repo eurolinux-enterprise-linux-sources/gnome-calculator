@@ -21,18 +21,6 @@
       <mal:email>laurentc@iol.ie</mal:email>
       <mal:years>2009-2010</mal:years>
     </mal:credit>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Alain Lojewski</mal:name>
-      <mal:email>allomervan@gmail.com</mal:email>
-      <mal:years>2014</mal:years>
-    </mal:credit>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Guillaume Bernard</mal:name>
-      <mal:email>associations@guillaume-bernard.fr</mal:email>
-      <mal:years>2015, 2018</mal:years>
-    </mal:credit>
   </info>
 
 	<title>Bases numériques</title>
@@ -44,7 +32,7 @@
     <p>75</p>
     <p>4B₁₆</p>
     </example>
-    <p>En <link xref="mouse">mode programmation</link>, servez-vous du menu déroulant pour changer de base de calcul.</p>
-    <p>Vous pouvez utiliser ces raccourcis clavier pour passer au mode <gui>Binaire</gui> (<keyseq><key>Ctrl</key><key>B</key></keyseq>), <gui>Octal</gui> (<keyseq><key>Ctrl</key><key>O</key></keyseq>), <gui>Decimal</gui> (<keyseq><key>Ctrl</key><key>D</key></keyseq>) et <gui>Hexadécimal</gui> (<keyseq><key>Ctrl</key><key>H</key></keyseq>).</p>
-    <p>Pour convertir les nombres dans une autre base à la volée, servez-vous de la <link xref="conv-base">conversion de la base des nombres</link>.</p>
+    <p>Dans le <link xref="mouse">mode programmation</link>, il y a des boutons pour le binaire (<keyseq><key>Ctrl</key><key>B</key></keyseq>), l'octal (<keyseq><key>Ctrl</key><key>O</key></keyseq>) et l'hexadécimal (<keyseq><key>Ctrl</key><key>H</key></keyseq>).</p>
+    <p>Pour définir la base dans laquelle sont affichés les résultats, modifiez le <link xref="number-display">format des résultats</link>.</p>
+    <p>Pour changer la base du résultat actuel, utilisez un bouton de base ou <keyseq><key>Ctrl</key><key>D</key></keyseq> pour afficher la forme décimale.</p>
 </page>

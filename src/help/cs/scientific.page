@@ -3,23 +3,11 @@
 
     <info>
         <link type="guide" xref="index#number"/>
-    
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Marek Černocký</mal:name>
-      <mal:email>marek@manet.cz</mal:email>
-      <mal:years>2009, 2010, 2011, 2013</mal:years>
-    </mal:credit>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Lucas Lommer</mal:name>
-      <mal:email>llommer@svn.gnome.org</mal:email>
-      <mal:years>2009</mal:years>
-    </mal:credit>
-  </info>
+    </info>
 
 	<title>Vědecká notace</title>
     
-    <p>K zadávání čísel ve vědecké notaci použijte tlačítko <gui>×10y</gui> (<keyseq><key>Ctrl</key><key>E</key></keyseq>). <link xref="superscript">Číselný režim</link> se automaticky změní na režim horního indexu. Když chcete zadat 2.10¹⁰, začněte zadáním masky (2):</p>
+    <p>K zadávání čísel ve vědeckém formátu použijte tlačítko <gui>×10x</gui> (<keyseq><key>Ctrl</key><key>E</key></keyseq>). <link xref="superscript">Číselný režim</link> se automaticky změní na režim horního indexu. Když chcete zadat 2.10¹⁰, začněte zadáním masky (2):</p>
     <example>
     <p>2</p>
     </example>

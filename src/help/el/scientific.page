@@ -5,15 +5,9 @@
         <link type="guide" xref="index#number"/>
     
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Ελληνική μεταφραστική ομάδα GNOME</mal:name>
-      <mal:email>team@gnome.gr</mal:email>
-      <mal:years>2009-2014</mal:years>
-    </mal:credit>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name> Δημήτρης Σπίγγος</mal:name>
       <mal:email>dmtrs32@gmail.com</mal:email>
-      <mal:years>2013, 2014</mal:years>
+      <mal:years>2013</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
@@ -31,11 +25,7 @@
 
 	<title>Επιστημονική μορφή</title>
     
-    <p>
-    To enter numbers in scientific format use the <gui>×10y</gui> button (<keyseq><key>Ctrl</key><key>E</key></keyseq>).
-    The <link xref="superscript">number mode</link> automatically changes to superscript.
-    To enter 2×10¹⁰⁰, start by entering the mantissa (2):
-    </p>
+    <p>Για να εισάγετε αριθμούς σε επιστημονική μορφή, χρησιμοποιήστε το κουμπί <gui>×10y</gui> (<keyseq><key>Ctrl</key><key>E</key></keyseq>). H <link xref="superscript">λειτουργία αριθμού</link> γυρίζει αυτόματα σε μορφή δύναμης. Για να εισάγετε 2×10¹⁰⁰, ξεκινήστε εισάγοντας πρώτα το δεκαδικό μέρος (2):</p>
     <example>
     <p>2</p>
     </example>

@@ -26,13 +26,7 @@
     <p>75</p>
     <p>4B₁₆</p>
     </example>
-    <p>
-    When in <link xref="mouse">programming mode</link>, use the drop-down menu to change the base of the calculation.
-    </p>
-    <p>
-    Keyboard shortcuts can be used to switch to <gui>Binary</gui> (<keyseq><key>Ctrl</key><key>B</key></keyseq>), <gui>Octal</gui> (<keyseq><key>Ctrl</key><key>O</key></keyseq>), <gui>Decimal</gui> (<keyseq><key>Ctrl</key><key>D</key></keyseq>) and <gui>Hexadecimal</gui> (<keyseq><key>Ctrl</key><key>H</key></keyseq>) modes.
-    </p>
-    <p>
-    To convert numbers to other base on the fly, <link xref="conv-base">Number Base conversion</link> can be used.
-    </p>
+    <p>Quando in <link xref="mouse">modalità programmazione</link> sono presenti pulsanti per il formato binario (<keyseq><key>Ctrl</key><key>B</key></keyseq>), ottale (<keyseq><key>Ctrl</key><key>O</key></keyseq>) ed esadecimale (<keyseq><key>Ctrl</key><key>H</key></keyseq>).</p>
+    <p>Per impostare la base in cui sono mostrati i risultati cambiare il <link xref="number-display">formato del risultato</link>.</p>
+    <p>Per cambiare la base del risultato corrente un pulsante per la base o <keyseq><key>Ctrl</key><key>D</key></keyseq> per mostrarlo nel formato decimale.</p>
 </page>

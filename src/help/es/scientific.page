@@ -7,7 +7,7 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Daniel Mustieles</mal:name>
       <mal:email>daniel.mustieles@gmail.com</mal:email>
-      <mal:years>2012 - 2018</mal:years>
+      <mal:years>2012</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
@@ -19,7 +19,7 @@
 
 	<title>Notación científica</title>
     
-    <p>Para introducir números en formato científico use el botón <gui>×10x</gui> (<keyseq><key>Ctrl</key><key>E</key></keyseq>). El <link xref="superscript">modo numérico</link> cambia automáticamente a superíndice. Para introducir 2×10¹⁰⁰, comience introduciendo la mantisa (2):</p>
+    <p>Para introducir números en formato científico use el botón <gui>x10x</gui> (<keyseq><key>Ctrl</key><key>E</key></keyseq>). El <link xref="superscript">modo numérico</link> cambia automáticamente a superíndice. Para introducir 2×10¹⁰⁰, comience introduciendo la mantisa (2):</p>
     <example>
     <p>2</p>
     </example>

@@ -13,10 +13,7 @@
 
 	<title>変数</title>
     
-    <p>
-    To assign a value to a variable use the = symbol or choose the variable to assign to with the <gui>x</gui> button in <link xref="mouse">advanced mode</link>.
-    A variable name must only contain upper or lower case characters.
-    </p>
+    <p>変数に値を割り当てるには、= 記号を使用するか、<link xref="mouse">拡張モード</link>で <gui>x</gui> ボタンを使用して値を割り当てたい変数を選択します。変数名は大文字または小文字のみを含めなければなりません。</p>
     <example>
     <p>x=5</p>
     <p>value=82</p>
@@ -29,7 +26,7 @@
     <p>以下の変数は常に定義されています。</p>
     <table>
     <tr>
-    <td><p>_</p></td>
+    <td><p>ans</p></td>
     <td><p>前の計算結果</p></td>
     </tr>
     <tr>

@@ -7,13 +7,13 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Kelemen Gábor</mal:name>
       <mal:email>kelemeng at gnome dot hu</mal:email>
-      <mal:years>2010, 2011, 2012, 2013, 2017.</mal:years>
+      <mal:years>2010, 2011, 2012, 2013.</mal:years>
     </mal:credit>
   </info>
 
 	<title>Tudományos jelölés</title>
     
-    <p>A számok tudományos formátumban való beviteléhez használja a <gui>×10y</gui> gombot (<keyseq><key>Ctrl</key><key>E</key></keyseq>). A <link xref="superscript">számmód</link> automatikusan felső indexre változik. A 2×10¹⁰⁰ bevitelét kezdje a mantissza (2) bevitelével:</p>
+    <p>A számok tudományos formátumban való beviteléhez használja a <gui>×10x</gui> gombot (<keyseq><key>Ctrl</key><key>E</key></keyseq>). A <link xref="superscript">számmód</link> automatikusan felső indexre változik. A 2×10¹⁰⁰ bevitelét kezdje a mantissza (2) bevitelével:</p>
     <example>
     <p>2</p>
     </example>

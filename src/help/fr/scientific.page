@@ -21,23 +21,11 @@
       <mal:email>laurentc@iol.ie</mal:email>
       <mal:years>2009-2010</mal:years>
     </mal:credit>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Alain Lojewski</mal:name>
-      <mal:email>allomervan@gmail.com</mal:email>
-      <mal:years>2014</mal:years>
-    </mal:credit>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Guillaume Bernard</mal:name>
-      <mal:email>associations@guillaume-bernard.fr</mal:email>
-      <mal:years>2015, 2018</mal:years>
-    </mal:credit>
   </info>
 
 	<title>Notation scientifique</title>
     
-    <p>Pour saisir des nombres en notation scientifique, utilisez le bouton <gui>×10y</gui> (<keyseq><key>Ctrl</key><key>E</key></keyseq>). Le <link xref="superscript">mode numérique</link> change automatiquement en exposant. Pour saisir 2×10¹⁰⁰, commencez par saisir la mantisse (2) :</p>
+    <p>Pour saisir des nombres en notation scientifique, utilisez le bouton <gui>×10x</gui> (<keyseq><key>Ctrl</key><key>E</key></keyseq>). Le <link xref="superscript">mode numérique</link> change automatiquement en exposant. Pour saisir 2×10¹⁰⁰, commencez par saisir la mantisse (2) :</p>
     <example>
     <p>2</p>
     </example>

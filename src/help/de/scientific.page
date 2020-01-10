@@ -13,7 +13,7 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Christian Kirbach</mal:name>
       <mal:email>Christian.Kirbach@googlemail.com</mal:email>
-      <mal:years>2008,2009,2010,2014,2015,2017</mal:years>
+      <mal:years>2008, 2009, 2010</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
@@ -27,17 +27,11 @@
       <mal:email>jakob.kramer@gmx.de</mal:email>
       <mal:years>2010</mal:years>
     </mal:credit>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Tim Sabsch</mal:name>
-      <mal:email>tim@sabsch.com</mal:email>
-      <mal:years>2018</mal:years>
-    </mal:credit>
   </info>
 
 	<title>Wissenschaftliche Notation</title>
     
-    <p>Um Zahlen im wissenschaftlichen Format einzugeben, verwenden Sie den <gui>×10y</gui>-Knopf (<keyseq><key>Strg</key><key>E</key></keyseq>). Der <link xref="superscript">Zahlenmodus</link> wird automatisch in »Tiefgestellt« geändert. Um 2×10¹⁰⁰ einzugeben, beginnen Sie mit der Eingabe der Mantisse (2):</p>
+    <p>Um Zahlen im wissenschaftlichen Format einzugeben, verwenden Sie den <gui>×10x</gui>-Knopf (<keyseq><key>Strg</key><key>E</key></keyseq>). Der <link xref="superscript">Zahlenmodus</link> wird automatisch in »Tiefgestellt« geändert. Um 2×10¹⁰⁰ einzugeben, beginnen Sie mit der Eingabe der Mantisse (2):</p>
     <example>
     <p>2</p>
     </example>

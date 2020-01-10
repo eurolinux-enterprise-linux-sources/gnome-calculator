@@ -3,16 +3,12 @@
 
     <info>
         <link type="guide" xref="index#financial"/>
-    
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Jukka Heikkilä</mal:name>
-      <mal:email>jutsco@gmail.com</mal:email>
-      <mal:years>2010</mal:years>
-    </mal:credit>
-  </info>
+    </info>
 
 	<title>Talousfunktiot</title>
-    <p>Taloustilassa seuraavat painikkeet ovat käytettävissä.</p>
+    <p>
+    When in financial mode the following buttons are available.
+    </p>
     <table>
     <tr>
     <td><p>Ctrm</p></td>

@@ -1,87 +1,124 @@
 bin_PROGRAMS = gnome-calculator gcalccmd
+noinst_PROGRAMS = test-number test-equation test-serializer
 
-AM_CPPFLAGS = \
+TESTS = test-number test-equation
+
+INCLUDES = \
+	-DUI_DIR=\""$(datadir)/gnome-calculator"\" \
 	-DVERSION=\""$(VERSION)"\" \
 	-DLOCALE_DIR=\""$(localedir)"\" \
 	-DGETTEXT_PACKAGE=\"$(GETTEXT_PACKAGE)\" \
-	-w \
-	-I$(top_srcdir)/lib \
-	$(LIBCALCULATOR_CFLAGS)
-
-
-resources_file = gnome-calculator.gresource.xml
-BUILT_SOURCES = resources.c
-
-resources.c: $(resources_file) $(shell $(GLIB_COMPILE_RESOURCES) --generate-dependencies --sourcedir=$(srcdir) $(srcdir)/gnome-calculator.gresource.xml)
-	$(AM_V_GEN) $(GLIB_COMPILE_RESOURCES) --target=$@ --sourcedir=$(srcdir) --generate-source $<
+	$(WARN_CFLAGS) \
+	$(GNOME_CALCULATOR_CFLAGS)
 
 gnome_calculator_SOURCES = \
-	$(top_builddir)/vapi/config.vapi \
+	config.vapi \
+	fixes.vapi \
 	gnome-calculator.vala \
+	currency.vala \
+	equation.vala \
+	equation-lexer.vala \
+	equation-parser.vala \
+	financial.vala \
 	math-buttons.vala \
 	math-converter.vala \
 	math-display.vala \
+	math-equation.vala \
 	math-preferences.vala \
-	math-function-popover.vala \
-	math-variable-popover.vala \
+	math-variables.vala \
+	math-variable-popup.vala \
 	math-window.vala \
-	math-history.vala \
-	$(BUILT_SOURCES)
+	number.vala \
+	serializer.vala \
+  	unit.vala
 
 gnome_calculator_VALAFLAGS = \
-	--target-glib $(GLIB_REQUIRED) \
+	--target-glib 2.32 \
 	--pkg posix \
 	--pkg gtk+-3.0 \
-	--pkg gtksourceview-3.0 \
-	--pkg libxml-2.0 \
-	--gresources $(resources_file) \
-	$(top_builddir)/lib/libcalculator.vapi \
-	$(top_builddir)/vapi/mpfr.vapi
-
-gnome_calculator_CPPFLAGS = \
-	$(AM_CPPFLAGS) \
-	$(GNOME_CALCULATOR_CFLAGS)
+	--pkg libxml-2.0
 
 gnome_calculator_LDADD = \
 	$(GNOME_CALCULATOR_LIBS) \
-	$(top_builddir)/lib/libcalculator.la
-
+	-lm
 
 gcalccmd_SOURCES = \
-	$(top_builddir)/vapi/config.vapi \
-	gcalccmd.vala
+	config.vapi \
+	fixes.vapi \
+	gcalccmd.vala \
+	currency.vala \
+	equation.vala \
+	equation-lexer.vala \
+	equation-parser.vala \
+	number.vala \
+	serializer.vala \
+	unit.vala
 
 gcalccmd_VALAFLAGS = \
-	--target-glib $(GLIB_REQUIRED) \
+	--target-glib 2.32 \
 	--pkg posix \
 	--pkg gio-2.0 \
-	--pkg gtksourceview-3.0 \
-	--pkg libxml-2.0 \
-	$(top_builddir)/lib/libcalculator.vapi \
-	$(top_builddir)/vapi/mpfr.vapi
-
-gcalccmd_CPPFLAGS = \
-	$(AM_CPPFLAGS) \
-	$(GCALCCMD_CFLAGS)
+	--pkg libxml-2.0
 
 gcalccmd_LDADD = \
 	$(GCALCCMD_LIBS) \
-	$(top_builddir)/lib/libcalculator.la
+	-lm
 
-EXTRA_DIST = \
-	buttons-basic.ui \
-	buttons-advanced.ui \
-	buttons-financial.ui \
-	buttons-programming.ui \
-	history-entry.ui \
-	history-view.ui \
-	math-converter.ui \
-	math-function-popover.ui \
-	math-variable-popover.ui \
-	math-window.ui \
-	math-shortcuts.ui \
-	menu.ui \
-	calculator.css \
-	gnome-calculator.gresource.xml
+test_number_SOURCES = \
+	config.vapi \
+	fixes.vapi \
+	test-number.vala \
+	number.vala \
+	serializer.vala
 
--include $(top_srcdir)/git.mk
+test_number_VALAFLAGS = \
+	--target-glib 2.32 \
+	--pkg posix \
+	--pkg gio-2.0 \
+	--pkg libxml-2.0
+
+test_number_LDADD = \
+	$(GCALCCMD_LIBS) \
+	-lm
+
+test_equation_SOURCES = \
+	config.vapi \
+	fixes.vapi \
+	test-equation.vala \
+	currency.vala \
+	equation.vala \
+	equation-lexer.vala \
+	equation-parser.vala \
+	number.vala \
+	serializer.vala \
+	unit.vala
+
+test_equation_VALAFLAGS = \
+	--target-glib 2.32 \
+	--pkg posix \
+	--pkg gio-2.0 \
+	--pkg libxml-2.0
+
+test_equation_LDADD = \
+	$(GCALCCMD_LIBS) \
+	-lm
+
+test_serializer_SOURCES = \
+	config.vapi \
+	fixes.vapi \
+	test-serializer.vala \
+	number.vala \
+	serializer.vala
+
+test_serializer_VAFLAGS = \
+	--target-glib 2.32 \
+	--pkg posix \
+	--pkg gio-2.0 \
+	--pkg libxml-2.0
+
+test_serializer_LDADD = \
+	$(GCALCCMD_LIBS) \
+	-lm
+
+DISTCLEANFILES = \
+	Makefile.in

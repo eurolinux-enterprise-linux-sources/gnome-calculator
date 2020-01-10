@@ -13,10 +13,7 @@
 
 	<title>Variabile</title>
     
-    <p>
-    To assign a value to a variable use the = symbol or choose the variable to assign to with the <gui>x</gui> button in <link xref="mouse">advanced mode</link>.
-    A variable name must only contain upper or lower case characters.
-    </p>
+    <p>Pentru a atribui o valoare unei variabile utilizați simbolul = sau alegeți variabila căreia să-i atribuiți valoarea cu butonul <gui>x</gui> din <link xref="mouse">modul avansat</link>. O variabilă trebuie să conțină numai majuscule sau minuscule.</p>
     <example>
     <p>x=5</p>
     <p>valoare=82</p>
@@ -32,7 +29,7 @@
     <p>Următoarele variabile sunt întotdeauna definite.</p>
     <table>
     <tr>
-    <td><p>_</p></td>
+    <td><p>ans</p></td>
     <td><p>Rezultatul calculului anterior.</p></td>
     </tr>
     <tr>

@@ -20,13 +20,7 @@
     <p>75</p>
     <p>4B₁₆</p>
     </example>
-    <p>
-    When in <link xref="mouse">programming mode</link>, use the drop-down menu to change the base of the calculation.
-    </p>
-    <p>
-    Keyboard shortcuts can be used to switch to <gui>Binary</gui> (<keyseq><key>Ctrl</key><key>B</key></keyseq>), <gui>Octal</gui> (<keyseq><key>Ctrl</key><key>O</key></keyseq>), <gui>Decimal</gui> (<keyseq><key>Ctrl</key><key>D</key></keyseq>) and <gui>Hexadecimal</gui> (<keyseq><key>Ctrl</key><key>H</key></keyseq>) modes.
-    </p>
-    <p>
-    To convert numbers to other base on the fly, <link xref="conv-base">Number Base conversion</link> can be used.
-    </p>
+    <p><link xref="mouse">プログラミングモード</link>には、2 進法 (<keyseq><key>Ctrl</key><key>B</key></keyseq>)、8 進法 (<keyseq><key>Ctrl</key><key>O</key></keyseq>) および 16 進法 (<keyseq><key>Ctrl</key><key>H</key></keyseq>) のボタンがあります。</p>
+    <p><link xref="number-display">結果の書式</link>を変更すると計算結果を表示する基数を設定できます。</p>
+    <p>現在の結果の基数を変更するには、基数ボタンを使用するか、<keyseq><key>Ctrl</key><key>D</key></keyseq> を押して 10 進法で表示します。</p>
 </page>

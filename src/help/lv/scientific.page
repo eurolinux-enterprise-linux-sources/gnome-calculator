@@ -7,7 +7,7 @@
 
 	<title>Zinātniskā notācija</title>
     
-    <p>Lai ierakstītu skaitļus zinātniskā notācijā, izmanto <gui>×10y</gui> pogu (<keyseq><key>Ctrl</key><key>E</key></keyseq>). <link xref="superscript">Skaitļu režīms</link> automātiski nomainīsies uz augšrakstu. Lai ievadītu 2×10¹⁰⁰, sāc, ierakstot mantisu (2):</p>
+    <p>Lai ierakstītu skaitļus zinātniskā notācijā, izmanto <gui>×10x</gui> pogu (<keyseq><key>Ctrl</key><key>E</key></keyseq>). <link xref="superscript">Skaitļu režīms</link> automātiski nomainīsies uz augšrakstu. Lai ievadītu 2×10¹⁰⁰, sāc, ierakstot mantisu (2):</p>
     <example>
     <p>2</p>
     </example>

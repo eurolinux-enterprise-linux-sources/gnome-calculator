@@ -7,37 +7,10 @@
 
 	<title>函數</title>
     
-    <p>
-    Functions can be used by inserting the name of the function followed by function arguments. <app>Calculator</app> also support user-defined functions.
-    If the argument is not a number or <link xref="variable">a single variable</link> then write each argument separated by semicolon and use parenthesis around the argument list.
-    </p>
+    <p>要使用函數，輸入函數的名稱，後面再加上參數。如果參數不是數字或 <link xref="variable">變數</link>，在參數兩旁使用括號。</p>
     <example>
     <p>sin 30</p>
     <p>abs (5−9)</p>
-    <p>
-    fun (9;10)
-    </p>
-    </example>
-    <p>
-    To add a new function type the function in the format as given below. A function name and arguments must only contain upper or lower case characters. The part after @ is the function description which is optional.
-    </p>
-    <example>
-    <p>
-    SimpleInterest (principal; rate; time) = principal * rate * time @ Simple Interest formula
-    </p>
-    </example>
-    <p>
-    Functions can also be added and inserted using the f(x) button.
-    </p>
-    <example>
-    <p>
-    Click on f(x). Type the function name in the box, choose the number of arguments and click on the plus sign button next to it. On the calculator screen type the function expression and press <key>Enter</key>.
-    </p>
-    </example>
-    <example>
-    <p>
-    Click on f(x). Choose the function and click on it.
-    </p>
     </example>
     <p>下面是預先定義的函數。</p>
     <table>
@@ -46,20 +19,12 @@
     <td><p><link xref="absolute">Absolute Value</link></p></td>
     </tr>
     <tr>
-    <td><p>ceil</p></td>
-    <td><p>Ceiling</p></td>
-    </tr>
-    <tr>
     <td><p>cos</p></td>
     <td><p><link xref="trigonometry">Cosine</link></p></td>
     </tr>
     <tr>
     <td><p>cosh</p></td>
     <td><p><link xref="trigonometry">Hyperbolic Cosine</link></p></td>
-    </tr>
-    <tr>
-    <td><p>floor</p></td>
-    <td><p>Floor</p></td>
     </tr>
     <tr>
     <td><p>frac</p></td>
@@ -86,14 +51,6 @@
     <td><p>1 的補數</p></td>
     </tr>
     <tr>
-    <td><p>round</p></td>
-    <td><p>Round</p></td>
-    </tr>
-    <tr>
-    <td><p>sgn</p></td>
-    <td><p>Signum</p></td>
-    </tr>
-    <tr>
     <td><p>sin</p></td>
     <td><p><link xref="trigonometry">Sine</link></p></td>
     </tr>
@@ -118,4 +75,7 @@
     <td><p>2 的補數</p></td>
     </tr>
     </table>
+    <p>
+    <app>Calculator</app> does not support user-defined functions.
+    </p>
 </page>

@@ -1,23 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="guide" id="power" xml:lang="ro">
+<page xmlns="http://projectmallard.org/1.0/" type="guide" id="power" xml:lang="ro">
 
-  <info>
-    <link type="guide" xref="index#equation"/>
-    <revision pkgversion="3.16" date="2015-02-21" status="candidate"/>
-
-    <credit type="editor">
-      <name>Ekaterina Gerasimova</name>
-      <email its:translate="no">kittykat3756@gmail.com</email>
-      <years>2015</years>
-    </credit>
-    <credit type="editor">
-      <name>Sebastian Rasmussen</name>
-      <email its:translate="no">sebras@gmail.com</email>
-      <years>2015</years>
-    </credit>
-
-    <desc>Learn to enter roots and powers into the calculator.</desc>
-  
+    <info>
+        <link type="guide" xref="index#equation"/>
+    
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Nichita Uțiu</mal:name>
       <mal:email>nikita.utiu@gmail.com</mal:email>
@@ -25,39 +11,27 @@
     </mal:credit>
   </info>
 
-  <title>Puteri și rădăcini</title>
+	<title>Puteri și rădăcini</title>
     
-  <p>Puterile sunt introduse prin punerea unui <link xref="superscript">exponent</link> după valoare.</p>
-
-  <example>
+    <p>Puterile sunt introduse prin punerea unui <link xref="superscript">exponent</link> după valoare.</p>
+    <example>
     <p>5²</p>
-  </example>
-
-  <p>Inversul unui număr poate fi introdus utilizând simbolul pentru invers ⁻¹ (<keyseq><key>Ctrl</key><key>I</key></keyseq>).</p>
-
-  <example>
+    </example>
+    <p>Inversul unui număr poate fi introdus utilizând simbolul pentru invers ⁻¹ (<keyseq><key>Ctrl</key><key>I</key></keyseq>).</p>
+    <example>
     <p>3⁻¹</p>
-  </example>
-
-  <p>Puterile pot fi de asemenea calculate utilizând simbolul ^. Acesta permite puterii să fie o ecuație.</p>
-
-  <example>
+    </example>
+    <p>Puterile pot fi de asemenea calculate utilizând simbolul ^. Acesta permite puterii să fie o ecuație.</p>
+    <example>
     <p>5^(6−2)</p>
-  </example>
-
-  <p>Dacă tastatura nu are o tastă <key>^</key> puteți utiliza tasta <key>*</key> de două ori.</p>
-
-  <p>Square roots can be calculated using the √ symbol
-  (<keyseq><key>Ctrl</key><key>R</key></keyseq>).</p>
-
-  <example>
+    </example>
+    <p>Dacă tastatura nu are o tastă <key>^</key> puteți utiliza tasta <key>*</key> de două ori.</p>
+    <p>Rădăcinile pătrate pot fi calculate utilizând simbolul (<keyseq><key>Ctrl</key><key>R</key></keyseq>).</p>
+    <example>
     <p>√2</p>
-  </example>
-
-  <p>Rădăcinile de grad n pot fi calculate punând un <link xref="superscript">indice</link> înaintea semnului de radical.</p>
-
-  <example>
+    </example>
+    <p>Rădăcinile de grad n pot fi calculate punând un <link xref="superscript">indice</link> înaintea semnului de radical.</p>
+    <example>
     <p>₃√2</p>
-  </example>
-
+    </example>
 </page>

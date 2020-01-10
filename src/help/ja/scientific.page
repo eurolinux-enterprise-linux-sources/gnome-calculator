@@ -13,11 +13,7 @@
 
 	<title>科学的記数法</title>
     
-    <p>
-    To enter numbers in scientific format use the <gui>×10y</gui> button (<keyseq><key>Ctrl</key><key>E</key></keyseq>).
-    The <link xref="superscript">number mode</link> automatically changes to superscript.
-    To enter 2×10¹⁰⁰, start by entering the mantissa (2):
-    </p>
+    <p>科学的記数法で数を入力するには、<gui>×10y</gui> ボタン (<keyseq><key>Ctrl</key><key>E</key></keyseq>) を使います。<link xref="superscript">数値モード</link>が自動的に上付き数字モードに変更されます。2×10¹⁰⁰ を入力するには、仮数 (2) の入力から始めます。</p>
     <example>
     <p>2</p>
     </example>

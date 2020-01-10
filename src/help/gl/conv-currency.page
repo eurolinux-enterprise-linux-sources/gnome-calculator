@@ -1,26 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="guide" id="conv-currency" xml:lang="gl">
+<page xmlns="http://projectmallard.org/1.0/" type="guide" id="conv-currency" xml:lang="gl">
 
-  <info>
-    <link type="guide" xref="index#conversion"/>
-
-    <credit type="author copyright">
-      <name>Robert Ancell</name>
-      <email its:translate="no">robert.ancell@gmail.com</email>
-      <years>2010</years>
-    </credit>
-    <credit type="author copyright">
-      <name>Robin Sonefors</name>
-      <email its:translate="no">ozamosi@flukkost.nu</email>
-      <years>2010</years>
-    </credit>
-    <credit type="copyright editor">
-      <name>Ekaterina Gerasimova</name>
-      <email its:translate="no">kittykat3756@gmail.com</email>
-      <years>2014</years>
-    </credit>
-
-  
+    <info>
+        <link type="guide" xref="index#conversion"/>
+    
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Fran Dieguez</mal:name>
       <mal:email>frandieguez@gnome.org</mal:email>
@@ -28,20 +11,14 @@
     </mal:credit>
   </info>
 
-  <title>Divisa</title>
+	<title>Divisa</title>
 
-  <p>Para converter moedas, entre no <link xref="financial">modo financeiro</link>, e use os controis de moeda.</p>
-
-  <steps>
-    <item>
-      <p>Escriba a cantidade que quere converter.</p>
-    </item>
-    <item>
-      <p>Seleccione a moeda da que quere converter e a moeda á que quere converter desde o despregábel de embaixo.</p>
-    </item>
-  </steps>
-
-  <note>
+    <p>Para converter moedas, entre no <link xref="financial">modo financeiro</link>, e use os controis de moeda.</p>
+    <p>Tamén pode converter moedas usando o teclado e o operador <em>in</em>.</p>
+    <example>
+    <p>13.65 USD in GBP</p>
+    </example>
+    <note>
     <p>A información de moeda é aproximada e non debería usarse para facer decisións financeiras.</p>
-  </note>
+    </note>
 </page>

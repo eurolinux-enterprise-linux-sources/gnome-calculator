@@ -13,11 +13,7 @@
 
 	<title>Notación científica</title>
     
-    <p>
-    To enter numbers in scientific format use the <gui>×10y</gui> button (<keyseq><key>Ctrl</key><key>E</key></keyseq>).
-    The <link xref="superscript">number mode</link> automatically changes to superscript.
-    To enter 2×10¹⁰⁰, start by entering the mantissa (2):
-    </p>
+    <p>Para escribir números no formato científico use o botón <gui>x10x</gui> (<keyseq><key>Ctrl</key><key>E</key></keyseq>). O <link xref="superscript">modo número</link> cambia automaticamente ao modo superíndice. Para escribir 2×10¹⁰⁰, comece escribindo a mantisa (2):</p>
     <example>
     <p>2</p>
     </example>

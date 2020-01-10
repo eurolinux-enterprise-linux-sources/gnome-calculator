@@ -13,7 +13,7 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Christian Kirbach</mal:name>
       <mal:email>Christian.Kirbach@googlemail.com</mal:email>
-      <mal:years>2008,2009,2010,2014,2015,2017</mal:years>
+      <mal:years>2008, 2009, 2010</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
@@ -27,12 +27,6 @@
       <mal:email>jakob.kramer@gmx.de</mal:email>
       <mal:years>2010</mal:years>
     </mal:credit>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Tim Sabsch</mal:name>
-      <mal:email>tim@sabsch.com</mal:email>
-      <mal:years>2018</mal:years>
-    </mal:credit>
   </info>
 
 	<title>Format der Ergebnisse</title>
@@ -40,20 +34,28 @@
     <p>Das Format der dargestellten Ergebnisse kann über das Menü <guiseq><gui>Taschenrechner</gui><gui>Einstellungen</gui></guiseq> geändert werden.</p>
     <table>
     <tr>
-    <td><p><gui>Automatisch</gui></p></td>
-    <td><p>Kleine Ergebnisse werden in <gui>Festkomma</gui>-Notation und lange Ergebnisse in <gui>wissenschaftlicher</gui> Notation dargestellt.</p></td>
+    <td><p>Dezimal</p></td>
+    <td><p>Ergebnisse werden als Dezimalzahlen dargestellt</p></td>
     </tr>
     <tr>
-    <td><p><gui>Festkomma</gui></p></td>
-    <td><p>Ergebnisse werden immer als Dezimalzahlen dargestellt</p></td>
-    </tr>
-    <tr>
-    <td><p><gui>Wissenschaftlich</gui></p></td>
+    <td><p>Wissenschaftlich</p></td>
     <td><p>Ergebnisse werden in <link xref="scientific">wissenschaftlicher Notation</link> angezeigt</p></td>
     </tr>
     <tr>
-    <td><p><gui>Ingenieurwissenschaften</gui></p></td>
+    <td><p>Ingenieurwissenschaftlich</p></td>
     <td><p>Die Ergebnisse werden in wissenschaftlicher Schreibweise ausgegeben. Der Exponent ist immer ein Vielfaches von drei.</p></td>
+    </tr>
+    <tr>
+    <td><p>Binär</p></td>
+    <td><p>Ergebnisse werden als <link xref="scientific">Binärzahlen</link> angezeigt</p></td>
+    </tr>
+    <tr>
+    <td><p>Oktal</p></td>
+    <td><p>Ergebnisse werden als <link xref="scientific">Oktalzahlen</link> angezeigt</p></td>
+    </tr>
+    <tr>
+    <td><p>Hexadezimal</p></td>
+    <td><p>Ergebnisse werden als <link xref="scientific">Hexadezimalzahlen</link> angezeigt</p></td>
     </tr>
     </table>
     <p>Die Anzahl der Dezimalstellen bei angehängten Nullen und Tausender-Trennzeichen können ebenfalls angepasst werden.</p>

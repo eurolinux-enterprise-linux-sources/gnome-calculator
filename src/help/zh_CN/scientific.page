@@ -7,11 +7,7 @@
 
 	<title>科学计数</title>
     
-    <p>
-    To enter numbers in scientific format use the <gui>×10y</gui> button (<keyseq><key>Ctrl</key><key>E</key></keyseq>).
-    The <link xref="superscript">number mode</link> automatically changes to superscript.
-    To enter 2×10¹⁰⁰, start by entering the mantissa (2):
-    </p>
+    <p>要输入一个科学计数值，使用 <gui>×10x</gui> 按钮(<keyseq><key>Ctrl</key><key>E</key></keyseq>)。<link xref="superscript">数字模式</link> 自动变为上标。要输入 2×10¹⁰⁰，从尾数(2)开始输入：</p>
     <example>
     <p>2</p>
     </example>

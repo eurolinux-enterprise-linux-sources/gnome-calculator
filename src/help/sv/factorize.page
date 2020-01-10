@@ -3,21 +3,12 @@
 
     <info>
         <link type="guide" xref="index#equation"/>
-    
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Daniel Nylander</mal:name>
-      <mal:email>po@danielnylander.se</mal:email>
-      <mal:years>2006, 2007, 2009</mal:years>
-    </mal:credit>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Sebastian Rasmussen</mal:name>
-      <mal:email>sebras@gmail.com</mal:email>
-      <mal:years>2015</mal:years>
-    </mal:credit>
-  </info>
+    </info>
 
-	<title>Faktorisering</title>
+	<title>Factorization</title>
     
-    <p>Du kan faktorisera det aktuella talet som visas i skärmen genom att trycka på <gui>fact</gui>-knappen. Denna knapp visas i <link xref="mouse">programmeringsläget</link>.</p>
+    <p>
+    You can factorize the number currently displayed by pressing the <gui>fact</gui> button.
+    This button is visible in <link xref="mouse">programming mode</link>.
+    </p>
 </page>

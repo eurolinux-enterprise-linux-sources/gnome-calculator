@@ -3,21 +3,11 @@
 
     <info>
         <link type="guide" xref="index#number"/>
-    
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Jukka Heikkilä</mal:name>
-      <mal:email>jutsco@gmail.com</mal:email>
-      <mal:years>2010</mal:years>
-    </mal:credit>
-  </info>
+    </info>
 
 	<title>Tieteellinen merkintätapa</title>
     
-    <p>
-    To enter numbers in scientific format use the <gui>×10y</gui> button (<keyseq><key>Ctrl</key><key>E</key></keyseq>).
-    The <link xref="superscript">number mode</link> automatically changes to superscript.
-    To enter 2×10¹⁰⁰, start by entering the mantissa (2):
-    </p>
+    <p>Voit asettaa numeroita tieteellisessä muodossa käyttäen <gui>×10x</gui>-painiketta (<keyseq><key>Ctrl</key><key>E</key></keyseq>). <link xref="superscript">Lukutila</link> muuntaa ne automaattisesti yläindeksiin. Syöttääksesi2×10¹⁰⁰, aloita antamalla mantissa (2):</p>
     <example>
     <p>2</p>
     </example>

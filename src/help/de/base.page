@@ -13,7 +13,7 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Christian Kirbach</mal:name>
       <mal:email>Christian.Kirbach@googlemail.com</mal:email>
-      <mal:years>2008,2009,2010,2014,2015,2017</mal:years>
+      <mal:years>2008, 2009, 2010</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
@@ -27,24 +27,18 @@
       <mal:email>jakob.kramer@gmx.de</mal:email>
       <mal:years>2010</mal:years>
     </mal:credit>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Tim Sabsch</mal:name>
-      <mal:email>tim@sabsch.com</mal:email>
-      <mal:years>2018</mal:years>
-    </mal:credit>
   </info>
 
 	<title>Zahlenbasen</title>
     
     <p>Um Zahlen in einer bestimmten Zahlenbasis einzugeben, verwenden Sie <link xref="superscript">tiefgestellte Zahlen</link>. Die folgenden Zahlen sind äquivalent.</p>
     <example>
-    <p>1001011₂</p>    
+    <p>10011001</p>    
     <p>113₈</p>
     <p>75</p>
     <p>4B₁₆</p>
     </example>
-    <p>Verwenden Sie im <link xref="mouse">Programmiermodus</link> das Auswahlmenü, um die Basis der Berechnung zu ändern.</p>
-    <p>Mit Tastenkombinationen schalten Sie zwischen den Modi <gui>Binär</gui> (<keyseq><key>Strg</key><key>B</key></keyseq>), <gui>Oktal</gui> (<keyseq><key>Strg</key><key>O</key></keyseq>), <gui>Dezimal</gui> (<keyseq><key>Strg</key><key>D</key></keyseq>) und <gui>Hexadezimal</gui> (<keyseq><key>Strg</key><key>H</key></keyseq>) um.</p>
-    <p>Verwenden Sie die <link xref="conv-base">Umwandlung der Zahlenbasis</link>, um Zahlen unmittelbar in andere Basen umzuwandeln.</p>
+    <p>Im <link xref="mouse">Programmiermodus</link> gibt es Knöpfe für binär (<keyseq><key>Strg</key><key>B</key></keyseq>), oktal (<keyseq><key>Strg</key><key>O</key></keyseq>) und hexadezimal (<keyseq><key>Strg</key><key>H</key></keyseq>).</p>
+    <p>Um die Zahlenbasis der angezeigten Ergebnisse zu ändern, ändern Sie das <link xref="number-display">Ergebnisformat</link>.</p>
+    <p>Um die Basis des aktuellen Ergebnisses zu ändern, verwenden Sie einen der Zahlenbasis-Knöpfe oder <keyseq><key>Strg</key><key>D</key></keyseq>, um die Ergebnisse in dezimaler Form anzuzeigen.</p>
 </page>

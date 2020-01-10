@@ -1,27 +1,26 @@
 Name:           gnome-calculator
-Version:        3.28.2
+Version:        3.8.2
 Release:        1%{?dist}
 Summary:        A desktop calculator
 
-License:        GPLv3+
-URL:            https://wiki.gnome.org/Apps/Calculator
-Source0:        https://download.gnome.org/sources/%{name}/3.28/%{name}-%{version}.tar.xz
-# Fix the build with Python 2
-Patch0:         gnome-calculator-python2.patch
+Group:          Applications/System
+License:        GPLv2+
+URL:            http://live.gnome.org/Gcalctool
+#VCS: git:git://git.gnome.org/gcalctool
+Source0:        http://download.gnome.org/sources/%{name}/3.8/%{name}-%{version}.tar.xz
 
-BuildRequires:  desktop-file-utils
-BuildRequires:  gettext
-BuildRequires:  itstool
-BuildRequires:  libmpc-devel
-BuildRequires:  libsoup-devel
-BuildRequires:  meson
-BuildRequires:  mpfr-devel
-BuildRequires:  pkgconfig(glib-2.0)
-BuildRequires:  pkgconfig(gtk+-3.0)
-BuildRequires:  pkgconfig(gtksourceview-3.0)
-BuildRequires:  pkgconfig(libxml-2.0)
-BuildRequires:  vala
-BuildRequires:  /usr/bin/appstream-util
+BuildRequires: glib2-devel
+BuildRequires: gtk3-devel
+BuildRequires: libsoup-devel
+BuildRequires: desktop-file-utils
+BuildRequires: gettext
+BuildRequires: flex
+BuildRequires: bison
+BuildRequires: intltool
+BuildRequires: itstool
+
+Requires(post): glib2
+Requires(postun): glib2
 
 Provides:  gcalctool = 6.6.2-3
 Obsoletes: gcalctool < 6.6.2-3
@@ -34,22 +33,20 @@ to do its arithmetic to give a high degree of accuracy.
 
 
 %prep
-%autosetup -p1
+%setup -q
 
 
 %build
-%meson
-%meson_build
+%configure
+make %{?_smp_mflags}
 
 
 %install
-%meson_install
+make install DESTDIR=$RPM_BUILD_ROOT
+
+desktop-file-validate $RPM_BUILD_ROOT%{_datadir}/applications/gcalctool.desktop
+
 %find_lang %{name} --with-gnome --all-name
-
-
-%check
-appstream-util validate-relax --nonet %{buildroot}/%{_datadir}/metainfo/org.gnome.Calculator.appdata.xml
-desktop-file-validate %{buildroot}/%{_datadir}/applications/org.gnome.Calculator.desktop
 
 
 %postun
@@ -63,53 +60,17 @@ glib-compile-schemas %{_datadir}/glib-2.0/schemas &> /dev/null || :
 
 
 %files -f %{name}.lang
-%doc NEWS
-%license COPYING
+%doc COPYING NEWS
 %{_bindir}/gcalccmd
 %{_bindir}/gnome-calculator
-%{_libexecdir}/gnome-calculator-search-provider
-%{_datadir}/applications/org.gnome.Calculator.desktop
-%{_datadir}/dbus-1/services/org.gnome.Calculator.SearchProvider.service
+%{_datadir}/applications/gcalctool.desktop
 %{_datadir}/glib-2.0/schemas/org.gnome.calculator.gschema.xml
-%{_datadir}/gnome-shell/
-%{_datadir}/icons/hicolor/*/apps/gnome-calculator.png
-%{_datadir}/icons/hicolor/scalable/apps/gnome-calculator-symbolic.svg
-%{_datadir}/metainfo/org.gnome.Calculator.appdata.xml
-%{_mandir}/man1/gnome-calculator.1*
-%{_mandir}/man1/gcalccmd.1*
+%{_datadir}/gnome-calculator
+%doc %{_mandir}/man1/gnome-calculator.1.gz
+%doc %{_mandir}/man1/gcalccmd.1.gz
 
 
 %changelog
-* Tue Jun 26 2018 Kalev Lember <klember@redhat.com> - 3.28.2-1
-- Update to 3.28.2
-- Resolves: #1567475
-
-* Mon Apr 09 2018 Kalev Lember <klember@redhat.com> - 3.28.1-1
-- Update to 3.28.1
-- Switch to the meson build system
-- Resolves: #1567475
-
-* Wed Feb 22 2017 Matthias Clasen <mclasen@redhat.com> - 3.22.3-1
-- Rebase to 3.22.3
-  Resolves: rhbz#1386880
-
-* Wed May  6 2015 Alexander Larsson <alexl@redhat.com> - 3.14.1-2
-- Add new translations
-
-* Mon Mar 23 2015 Richard Hughes <rhughes@redhat.com> - 3.14.1-1
-- Update to 3.14.1
-- Resolves: #1174575
-
-* Fri Jan 24 2014 Daniel Mach <dmach@redhat.com> - 3.8.2-4
-- Mass rebuild 2014-01-24
-
-* Wed Jan 22 2014 Alexander Larsson <alexl@redhat.com> - 3.8.2-3
-- Add missing translations
-  Resolves: rhbz#1030337
-
-* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 3.8.2-2
-- Mass rebuild 2013-12-27
-
 * Mon May 13 2013 Matthias Clasen <mclasen@redhat.com> - 3.8.2-1
 - Update to 3.8.2
 

@@ -19,11 +19,7 @@
 
 	<title>Научная запись</title>
     
-    <p>
-    To enter numbers in scientific format use the <gui>×10y</gui> button (<keyseq><key>Ctrl</key><key>E</key></keyseq>).
-    The <link xref="superscript">number mode</link> automatically changes to superscript.
-    To enter 2×10¹⁰⁰, start by entering the mantissa (2):
-    </p>
+    <p>Для ввода числа в научном формате используйте кнопку <gui>×10x</gui> (<keyseq><key>Ctrl</key><key>E</key></keyseq>). <link xref="superscript">Режим ввода чисел</link> автоматически меняется на надстрочный. Чтобы ввести 2×10¹⁰⁰, начните с набора мантиссы (2):</p>
     <example>
     <p>2</p>
     </example>

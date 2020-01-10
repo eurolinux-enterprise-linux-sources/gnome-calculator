@@ -19,10 +19,7 @@
 
 	<title>Переменные</title>
     
-    <p>
-    To assign a value to a variable use the = symbol or choose the variable to assign to with the <gui>x</gui> button in <link xref="mouse">advanced mode</link>.
-    A variable name must only contain upper or lower case characters.
-    </p>
+    <p>Чтобы присвоить значение переменной, используйте символ = или выберите переменную для присваивания кнопкой <gui>x</gui> в <link xref="mouse">расширенном режиме</link>. Имя переменной должно содержать только буквы в верхнем или нижнем регистре.</p>
     <example>
     <p>x=5</p>
     <p>value=82</p>
@@ -35,7 +32,7 @@
     <p>Следующие переменные определены всегда.</p>
     <table>
     <tr>
-    <td><p>_</p></td>
+    <td><p>ans</p></td>
     <td><p>Результат предыдущего вычисления</p></td>
     </tr>
     <tr>

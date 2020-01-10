@@ -7,10 +7,7 @@
 
 	<title>变量</title>
     
-    <p>
-    To assign a value to a variable use the = symbol or choose the variable to assign to with the <gui>x</gui> button in <link xref="mouse">advanced mode</link>.
-    A variable name must only contain upper or lower case characters.
-    </p>
+    <p>要赋值给一个变量，请使用 = 或在 <link xref="mouse">高级模式</link> 中，选择一个变量用 <gui>x</gui> 按钮赋值。变量名只能包含大小写字母。</p>
     <example>
     <p>x=5</p>
     <p>value=82</p>
@@ -23,7 +20,7 @@
     <p>下面的变量是预定义好的。</p>
     <table>
     <tr>
-    <td><p>_</p></td>
+    <td><p>ans</p></td>
     <td><p>上次运算结果</p></td>
     </tr>
     <tr>

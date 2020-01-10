@@ -7,10 +7,7 @@
 
 	<title>Spremenljivke</title>
     
-    <p>
-    To assign a value to a variable use the = symbol or choose the variable to assign to with the <gui>x</gui> button in <link xref="mouse">advanced mode</link>.
-    A variable name must only contain upper or lower case characters.
-    </p>
+    <p>Za dodelitev vrednosti spremenljivki uporabite simbol = ali izberite spremenljivko za dodelitev z gumbom <gui>x</gui> v <link xref="mouse">naprednem načinu</link>. Ime spremenljivke vsebuje le majhne ali velike črke.</p>
     <example>
     <p>x=5</p>
     <p>value=82</p>
@@ -23,7 +20,7 @@
     <p>Naslednje spremenljivke so vedno določene.</p>
     <table>
     <tr>
-    <td><p>_</p></td>
+    <td><p>ans</p></td>
     <td><p>Rezultat predhodnega izračuna</p></td>
     </tr>
     <tr>

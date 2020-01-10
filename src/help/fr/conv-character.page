@@ -21,23 +21,11 @@
       <mal:email>laurentc@iol.ie</mal:email>
       <mal:years>2009-2010</mal:years>
     </mal:credit>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Alain Lojewski</mal:name>
-      <mal:email>allomervan@gmail.com</mal:email>
-      <mal:years>2014</mal:years>
-    </mal:credit>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Guillaume Bernard</mal:name>
-      <mal:email>associations@guillaume-bernard.fr</mal:email>
-      <mal:years>2015, 2018</mal:years>
-    </mal:credit>
   </info>
 
 	<title>Code de caractères</title>
     
-    <p>En <link xref="mouse">mode programmation</link> le bouton <gui>á</gui> ouvre une boîte de dialogue pour convertir des caractères en codes de caractère.</p>
+    <p>Dans le <link xref="mouse">mode de programmation</link> le bouton <gui>á</gui> ouvre une boîte de dialogue pour convertir des caractères en codes de caractère.</p>
     <note>
     <p>Les caractères ne peuvent pas être convertis en utilisant le clavier.</p>
     </note>

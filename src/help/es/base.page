@@ -7,7 +7,7 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Daniel Mustieles</mal:name>
       <mal:email>daniel.mustieles@gmail.com</mal:email>
-      <mal:years>2012 - 2018</mal:years>
+      <mal:years>2012</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
@@ -26,7 +26,7 @@
     <p>75</p>
     <p>4B₁₆</p>
     </example>
-    <p>Cuando está en el <link xref="mouse">modo programación</link> use los menús desplegables para cambiar la base del cálculo.</p>
-    <p>Se puede usar los atajos del teclado para cambiar a los modos <gui>Binario</gui> (<keyseq><key>Ctrl</key><key>B</key></keyseq>), <gui>Octal</gui> (<keyseq><key>Ctrl</key><key>O</key></keyseq>), <gui>Decimal</gui> (<keyseq><key>Ctrl</key><key>D</key></keyseq>) y <gui>Hexadecimal</gui> (<keyseq><key>Ctrl</key><key>H</key></keyseq>).</p>
-    <p>Para convertir números a otra base directamente, se puede usar la <link xref="conv-base">Conversión de base numérica</link>.</p>
+    <p>En el <link xref="mouse">modo programador</link> existen botones para los sistemas binario (<keyseq><key>Ctrl</key><key>B</key></keyseq>), octal (<keyseq><key>Ctrl</key><key>O</key></keyseq>) y hexadecimal (<keyseq><key>Ctrl</key><key>H</key></keyseq>).</p>
+    <p>Para establecer la base en la que se muestra el resultado cambie el <link xref="number-display">formato del resultado</link>.</p>
+    <p>Para cambiar la base del resultado actual use un botón de base o pulse <keyseq><key>Ctrl</key><key>D</key></keyseq> para mostrarlo en la forma decimal.</p>
 </page>

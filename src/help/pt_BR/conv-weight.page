@@ -3,51 +3,21 @@
 
     <info>
         <link type="guide" xref="index#conversion"/>
-    
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Irapuan Pascoal</mal:name>
-      <mal:email>irapuan.menezes@gmail.com</mal:email>
-      <mal:years>2007</mal:years>
-    </mal:credit>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Georges Basile Stavracas Neto</mal:name>
-      <mal:email>georges.stavracas@gmail.com</mal:email>
-      <mal:years>2013</mal:years>
-    </mal:credit>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Lucas Romero de Abreu</mal:name>
-      <mal:email>lucasdeabreu@gmail.com</mal:email>
-      <mal:years>2013</mal:years>
-    </mal:credit>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Enrico Nicoletto</mal:name>
-      <mal:email>liverig@gmail.com</mal:email>
-      <mal:years>2013</mal:years>
-    </mal:credit>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Rafael Fontenelle</mal:name>
-      <mal:email>rafaelff@gnome.org</mal:email>
-      <mal:years>2013, 2014, 2017</mal:years>
-    </mal:credit>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Felipe Braga</mal:name>
-      <mal:email>fbobraga@gmail.com</mal:email>
-      <mal:years>2015</mal:years>
-    </mal:credit>
-  </info>
+    </info>
 
-	<title>Massa</title>
+	<title>Mass</title>
     
-    <p>Para converter entre massas use o operador <em>in</em>.</p>
+    <p>
+    To convert between mass use the <em>in</em> operator.
+    </p>
     <example>
-    <p>1 quilo in libras</p>
+    <p>
+    1kg in pounds
+    </p>
     </example>
     <note>
-    <p>Conversões de massa podem ser efetuadas usando o teclado.</p>
+    <p>
+    Mass conversions must be performed using the keyboard.
+    </p>
     </note>
 </page>

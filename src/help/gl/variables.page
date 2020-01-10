@@ -26,7 +26,7 @@
     <p>As seguintes variábeis están sempre definidas.</p>
     <table>
     <tr>
-    <td><p>_</p></td>
+    <td><p>ans</p></td>
     <td><p>Resultado do cálculo anterior</p></td>
     </tr>
     <tr>

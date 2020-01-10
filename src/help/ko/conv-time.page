@@ -3,27 +3,21 @@
 
     <info>
         <link type="guide" xref="index#conversion"/>
-    
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>류창우</mal:name>
-      <mal:email>cwryu@debian.org</mal:email>
-      <mal:years>2007, 2008, 2015.</mal:years>
-    </mal:credit>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>조성호</mal:name>
-      <mal:email>shcho@gnome.org</mal:email>
-      <mal:years>2016, 2017.</mal:years>
-    </mal:credit>
-  </info>
+    </info>
 
-	<title>시간</title>
+	<title>Time</title>
     
-    <p>시간을 변환하려면 <em>in</em> 연산자를 사용합니다.</p>
+    <p>
+    To convert between time use the <em>in</em> operator.
+    </p>
     <example>
-    <p>3 years in hours</p>
+    <p>
+    3 years in hours
+    </p>
     </example>
     <note>
-    <p>시간 변환은 키보드로 처리해야합니다.</p>
+    <p>
+    Time conversions must be performed using the keyboard.
+    </p>
     </note>
 </page>

@@ -3,36 +3,63 @@
 # translation of gcalctool manual to Spanish
 # traducción al español del manual de gcalctool
 # Jorge González <jorgegonz@svn.gnome.org>, 2007, 2009, 2010.
-# Daniel Mustieles <daniel.mustieles@gmail.com>, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018.
+# Daniel Mustieles <daniel.mustieles@gmail.com>, 2011, 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gcalctool-help.master\n"
-"POT-Creation-Date: 2018-01-26 19:29+0000\n"
-"PO-Revision-Date: 2018-02-22 12:41+0100\n"
+"POT-Creation-Date: 2012-12-30 18:39+0000\n"
+"PO-Revision-Date: 2012-12-30 20:28+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
-"Language-Team: es <gnome-es-list@gnome.org>\n"
+"Language-Team: Español; Castellano <gnome-es-list@gnome.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Gtranslator 2.91.6\n"
+"X-Generator: Gtranslator 2.91.5\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
 msgstr ""
-"Daniel Mustieles <daniel.mustieles@gmail.com>, 2012 - 2018\n"
+"Daniel Mustieles <daniel.mustieles@gmail.com>, 2012\n"
 "Jorge González <jorgegonz@svn.gnome.org>, 2010"
 
-#. (itstool) path: page/title
-#: C/absolute.page:9
+#: C/index.page:7(credit/name)
+msgid "Robert Ancell"
+msgstr "Robert Ancell"
+
+#: C/index.page:13(page/title)
+#| msgid "GCalctool Help"
+msgid "Calculator Help"
+msgstr "Ayuda de la Calculadora"
+
+#: C/index.page:16(section/title)
+msgid "User Interface"
+msgstr "Interfaz de usuario"
+
+#: C/index.page:20(section/title)
+msgid "Equations"
+msgstr "Ecuaciones"
+
+#: C/index.page:24(section/title)
+msgid "Numbers"
+msgstr "Números"
+
+#: C/index.page:28(section/title)
+msgid "Conversions"
+msgstr "Conversiones"
+
+#: C/index.page:32(section/title)
+msgid "Financial Calculations"
+msgstr "Cálculos financieros"
+
+#: C/absolute.page:9(page/title)
 msgid "Absolute Values"
 msgstr "Valores absolutos"
 
-#. (itstool) path: page/p
-#: C/absolute.page:11
+#: C/absolute.page:11(page/p)
 msgid ""
 "Absolute values are calculated using the | symbol or abs <link xref="
 "\"function\">function</link>."
@@ -40,23 +67,19 @@ msgstr ""
 "Los valores absolutos se calculan usando el símbolo | o la <link xref="
 "\"function\">función</link> abs."
 
-#. (itstool) path: example/p
-#: C/absolute.page:15
+#: C/absolute.page:15(example/p)
 msgid "|−1|"
 msgstr "|−1|"
 
-#. (itstool) path: example/p
-#: C/absolute.page:18
+#: C/absolute.page:18(example/p)
 msgid "abs (−1)"
 msgstr "abs (−1)"
 
-#. (itstool) path: page/title
-#: C/base.page:9 C/conv-base.page:9
+#: C/base.page:9(page/title) C/conv-base.page:9(page/title)
 msgid "Number Bases"
 msgstr "Base numérica"
 
-#. (itstool) path: page/p
-#: C/base.page:11
+#: C/base.page:11(page/p)
 msgid ""
 "To enter numbers in a particular number base use <link xref=\"superscript"
 "\">subscript numbers</link>. The following numbers are equivalent."
@@ -64,77 +87,65 @@ msgstr ""
 "Para introducir números en una base numérica particular use <link xref="
 "\"superscript\">subíndices</link>. Los siguientes números son equivalentes."
 
-#. (itstool) path: example/p
-#: C/base.page:16
+#: C/base.page:16(example/p)
 msgid "1001011₂"
 msgstr "1001011₂"
 
-#. (itstool) path: example/p
-#: C/base.page:19
+#: C/base.page:19(example/p)
 msgid "113₈"
 msgstr "113₈"
 
-#. (itstool) path: example/p
-#: C/base.page:22
+#: C/base.page:22(example/p)
 msgid "75"
 msgstr "75"
 
-#. (itstool) path: example/p
-#: C/base.page:25
+#: C/base.page:25(example/p)
 msgid "4B₁₆"
 msgstr "4B₁₆"
 
-#. (itstool) path: page/p
-#: C/base.page:29
+#: C/base.page:29(page/p)
 msgid ""
-"When in <link xref=\"mouse\">programming mode</link>, use the drop-down menu "
-"to change the base of the calculation."
+"When in <link xref=\"mouse\">programming mode</link> there are buttons for "
+"binary (<keyseq><key>Ctrl</key><key>B</key></keyseq>), octal "
+"(<keyseq><key>Ctrl</key><key>O</key></keyseq>) and hexadecimal "
+"(<keyseq><key>Ctrl</key><key>H</key></keyseq>)."
 msgstr ""
-"Cuando está en el <link xref=\"mouse\">modo programación</link> use los "
-"menús desplegables para cambiar la base del cálculo."
-
-#. (itstool) path: page/p
-#: C/base.page:32
-msgid ""
-"Keyboard shortcuts can be used to switch to <gui>Binary</gui> "
-"(<keyseq><key>Ctrl</key><key>B</key></keyseq>), <gui>Octal</gui> "
-"(<keyseq><key>Ctrl</key><key>O</key></keyseq>), <gui>Decimal</gui> "
-"(<keyseq><key>Ctrl</key><key>D</key></keyseq>) and <gui>Hexadecimal</gui> "
-"(<keyseq><key>Ctrl</key><key>H</key></keyseq>) modes."
-msgstr ""
-"Se puede usar los atajos del teclado para cambiar a los modos <gui>Binario</"
-"gui> (<keyseq><key>Ctrl</key><key>B</key></keyseq>), <gui>Octal</gui> "
-"(<keyseq><key>Ctrl</key><key>O</key></keyseq>), <gui>Decimal</gui> "
-"(<keyseq><key>Ctrl</key><key>D</key></keyseq>) y <gui>Hexadecimal</gui> "
+"En el <link xref=\"mouse\">modo programador</link> existen botones para los "
+"sistemas binario (<keyseq><key>Ctrl</key><key>B</key></keyseq>), octal "
+"(<keyseq><key>Ctrl</key><key>O</key></keyseq>) y hexadecimal "
 "(<keyseq><key>Ctrl</key><key>H</key></keyseq>)."
 
-#. (itstool) path: page/p
-#: C/base.page:35
+#: C/base.page:32(page/p)
 msgid ""
-"To convert numbers to other base on the fly, <link xref=\"conv-base\">Number "
-"Base conversion</link> can be used."
+"To set the base that results are shown in change the <link xref=\"number-"
+"display\">result format</link>."
 msgstr ""
-"Para convertir números a otra base directamente, se puede usar la <link xref="
-"\"conv-base\">Conversión de base numérica</link>."
+"Para establecer la base en la que se muestra el resultado cambie el <link "
+"xref=\"number-display\">formato del resultado</link>."
 
-#. (itstool) path: page/title
-#: C/boolean.page:9
+#: C/base.page:35(page/p)
+msgid ""
+"To change the base of the current result use a base button or "
+"<keyseq><key>Ctrl</key><key>D</key></keyseq> to show in decimal form."
+msgstr ""
+"Para cambiar la base del resultado actual use un botón de base o pulse "
+"<keyseq><key>Ctrl</key><key>D</key></keyseq> para mostrarlo en la forma "
+"decimal."
+
+#: C/boolean.page:9(page/title)
 msgid "Boolean Algebra"
 msgstr "Álgebra booleano"
 
-#. (itstool) path: page/p
-#: C/boolean.page:11
+#: C/boolean.page:11(page/p)
 msgid "Boolean algebra can be calculated using the AND, OR and XOR operators."
 msgstr ""
 "El álgebra booleano se puede calcular usando los operadores AND, OR y XOR."
 
-#. (itstool) path: example/p
-#: C/boolean.page:15
+#: C/boolean.page:15(example/p)
 msgid "010011₂ AND 110101₂"
 msgstr "010011₂ AND 110101₂"
 
-#. (itstool) path: page/p
-#: C/boolean.page:19
+#: C/boolean.page:19(page/p)
 msgid ""
 "Buttons for these symbols are available in <link xref=\"mouse\">programming "
 "mode</link>."
@@ -142,8 +153,7 @@ msgstr ""
 "Los botones para estos símbolos están disponibles en el <link xref=\"mouse"
 "\">modo programador</link>."
 
-#. (itstool) path: page/p
-#: C/boolean.page:22
+#: C/boolean.page:22(page/p)
 msgid ""
 "The NOT <link xref=\"function\">function</link> inverts the bits in a "
 "number. The word size is set from the <guiseq><gui>Calculator</"
@@ -153,126 +163,35 @@ msgstr ""
 "número. El tamaño de palabra se establece en el menú "
 "<guiseq><gui>Calculadora</gui><gui>Preferencias</gui></guiseq>."
 
-#. (itstool) path: example/p
-#: C/boolean.page:27
+#: C/boolean.page:27(example/p)
 msgid "NOT 010011₂"
 msgstr "NOT 010011₂"
 
-#. (itstool) path: page/title
-#: C/complex.page:9
+#: C/complex.page:9(page/title)
 msgid "Complex Numbers"
 msgstr "Números complejos"
 
-#. (itstool) path: page/p
-#: C/complex.page:11
+#: C/complex.page:11(page/p)
+#| msgid "Complex numbers are not supported in <app>GCalctool</app>."
+msgid "Complex numbers are not supported in <app>Calculator</app>."
+msgstr "<app>Calculadora</app> no soporta números complejos."
+
+#: C/conv-base.page:11(page/p)
 msgid ""
-"<app>Calculator</app> supports complex numbers, as well as the following "
-"functions while in <link xref=\"mouse\">Advanced mode</link>."
+"To convert between number bases enter a number (or solve an equation) and "
+"change the <link xref=\"number-display\">result format</link> from the "
+"<guiseq><gui>Calculator</gui><gui>Preferences</gui></guiseq> menu."
 msgstr ""
-"<app>Calculadora</app> soporta números complejos, así como las siguientes "
-"funciones en el <link xref=\"mouse\">Modo avanzado</link>."
+"Para convertir entre bases numéricas introduzca un número (o resuelva una "
+"ecuación) y cambie el <link xref=\"number-display\">formato del resultado</"
+"link> desde el menú <guiseq><gui>Calculadora</gui><gui>Preferencias</gui></"
+"guiseq>."
 
-#. (itstool) path: td/p
-#: C/complex.page:18
-#| msgid "e"
-msgid "Re"
-msgstr "Re"
-
-#. (itstool) path: td/p
-#: C/complex.page:19
-msgid "Returns the real part of a complex number. For example:"
-msgstr "Devuelve la parte real de un número complejo. Por ejemplo:"
-
-#. (itstool) path: example/p
-#: C/complex.page:21
-msgid "Re (2-5i) = 2"
-msgstr "Re (2-5i) = 2"
-
-#. (itstool) path: td/p
-#: C/complex.page:29
-msgid "Im"
-msgstr "Im"
-
-#. (itstool) path: td/p
-#: C/complex.page:30
-msgid "Returns the imaginary part of a complex number. For example:"
-msgstr "Devuelve la parte imaginaria de un número complejo. Por ejemplo:"
-
-#. (itstool) path: example/p
-#: C/complex.page:32
-msgid "Im (2-5i) = -5"
-msgstr "Im (2-5i) = -5"
-
-#. (itstool) path: td/p
-#: C/complex.page:40
-msgid "conj"
-msgstr "conj"
-
-#. (itstool) path: td/p
-#: C/complex.page:41
-msgid "Returns the conjugate of a complex number. For example:"
-msgstr "Devuelve el conjugado de un número complejo. Por ejemplo:"
-
-#. (itstool) path: example/p
-#: C/complex.page:43
-msgid "conj (2-5i) = 2+5i"
-msgstr "conj (2-5i) = 2+5i"
-
-#. (itstool) path: td/p
-#: C/complex.page:51
-msgid "Arg"
-msgstr "Arg"
-
-#. (itstool) path: td/p
-#: C/complex.page:52
-msgid "Returns the argument of a complex number. For example:"
-msgstr "Devuelve el argumento de un número complejo. Por ejemplo:"
-
-#. (itstool) path: example/p
-#: C/complex.page:54
-msgid "Arg (2-5i) = -68.1986"
-msgstr "Arg (2-5i) = -68.1986"
-
-#. (itstool) path: page/p
-#: C/conv-base.page:11
-msgid ""
-"To convert the number to a different base representation use the <em>in</em> "
-"operator."
-msgstr ""
-"Para convertir números a otra base diferente, use el operador <em>in</em>."
-
-#. (itstool) path: example/p
-#: C/conv-base.page:15
-msgid "12 in hex"
-msgstr "12 en hexadecimal"
-
-#. (itstool) path: example/p
-#: C/conv-base.page:18
-msgid "5 in binary"
-msgstr "5 en binario"
-
-#. (itstool) path: example/p
-#: C/conv-base.page:21
-msgid "1A₁₆ in dec"
-msgstr "1A₁₆ en decimal"
-
-#. (itstool) path: example/p
-#: C/conv-base.page:24
-msgid "1010₂ in octal"
-msgstr "1010₂ en octal"
-
-#. (itstool) path: note/p
-#: C/conv-base.page:29
-msgid "Number Base conversions must be performed using the keyboard."
-msgstr "Las conversiones entre tiempos se deben realizar usando el teclado."
-
-#. (itstool) path: page/title
-#: C/conv-character.page:9
+#: C/conv-character.page:9(page/title)
 msgid "Character Codes"
 msgstr "Códigos de caracteres"
 
-#. (itstool) path: page/p
-#: C/conv-character.page:11
+#: C/conv-character.page:11(page/p)
 msgid ""
 "When in <link xref=\"mouse\">programming mode</link> the <gui>á</gui> button "
 "opens a dialog to convert characters to character codes."
@@ -280,43 +199,15 @@ msgstr ""
 "En el <link xref=\"mouse\">modo programador</link> el botón <gui>á</gui> "
 "abre un diálogo para convertir caracteres en códigos de caracteres."
 
-#. (itstool) path: note/p
-#: C/conv-character.page:15
+#: C/conv-character.page:15(note/p)
 msgid "Characters cannot be converted using the keyboard."
 msgstr "No se pueden convertir caracteres usando el teclado."
 
-#. (itstool) path: credit/name
-#: C/conv-currency.page:10 C/index.page:8
-msgid "Robert Ancell"
-msgstr "Robert Ancell"
-
-#. (itstool) path: credit/years
-#: C/conv-currency.page:12 C/conv-currency.page:17
-msgid "2010"
-msgstr "2010"
-
-#. (itstool) path: credit/name
-#: C/conv-currency.page:15
-msgid "Robin Sonefors"
-msgstr "Robin Sonefors"
-
-#. (itstool) path: credit/name
-#: C/conv-currency.page:20 C/power.page:11
-msgid "Ekaterina Gerasimova"
-msgstr "Ekaterina Gerasimova"
-
-#. (itstool) path: credit/years
-#: C/conv-currency.page:22
-msgid "2014"
-msgstr "2014"
-
-#. (itstool) path: page/title
-#: C/conv-currency.page:27
+#: C/conv-currency.page:9(page/title)
 msgid "Currency"
 msgstr "Divisa"
 
-#. (itstool) path: page/p
-#: C/conv-currency.page:29
+#: C/conv-currency.page:11(page/p)
 msgid ""
 "To convert currencies, enter the <link xref=\"financial\">financial mode</"
 "link>, and use the currency controls."
@@ -324,22 +215,18 @@ msgstr ""
 "Para convertir divisas entre en el <link xref=\"financial\">modo financiero</"
 "link> y use los controles de divisa."
 
-#. (itstool) path: item/p
-#: C/conv-currency.page:34
-msgid "Enter the amount which you want to convert."
-msgstr "Introduzca la cantidad que quiere convertir."
-
-#. (itstool) path: item/p
-#: C/conv-currency.page:37
+#: C/conv-currency.page:14(page/p)
 msgid ""
-"Select the currency that you want to convert from and the currency that you "
-"want to convert to from the drop down below."
+"You can also convert currencies using the keyboard and the <em>in</em> "
+"operator."
 msgstr ""
-"Seleccione la divisa desde la que quiere convertir y a la que quiere "
-"convertir en la lista desplegable."
+"También puede convertir divisas usando el teclado y el operador<em>in</em>."
 
-#. (itstool) path: note/p
-#: C/conv-currency.page:43
+#: C/conv-currency.page:18(example/p)
+msgid "13.65 USD in GBP"
+msgstr "13.65 USD in GBP"
+
+#: C/conv-currency.page:23(note/p)
 msgid ""
 "Currency information is approximate and should not be used for making "
 "financial decisions."
@@ -347,13 +234,11 @@ msgstr ""
 "La información acerca de divisas es aproximada y no se debería usar para "
 "tomar decisiones financieras."
 
-#. (itstool) path: page/title
-#: C/conv-length.page:9
+#: C/conv-length.page:9(page/title)
 msgid "Length/Area/Volume"
 msgstr "Longitud/área/volumen"
 
-#. (itstool) path: page/p
-#: C/conv-length.page:11
+#: C/conv-length.page:11(page/p)
 msgid ""
 "To convert between length, area and volume units use the <em>in</em> "
 "operator."
@@ -361,81 +246,66 @@ msgstr ""
 "Para convertir unidades de longitud, área y volumen use el operador <em>in</"
 "em>."
 
-#. (itstool) path: example/p
-#: C/conv-length.page:15
+#: C/conv-length.page:15(example/p)
 msgid "6 meters in inches"
 msgstr "6 metros en pulgadas"
 
-#. (itstool) path: example/p
-#: C/conv-length.page:18
+#: C/conv-length.page:18(example/p)
 msgid "1 acre in cm²"
 msgstr "1 acre in cm²"
 
-#. (itstool) path: example/p
-#: C/conv-length.page:21
+#: C/conv-length.page:21(example/p)
 msgid "1 pint in mL"
 msgstr "1 pint in mL"
 
-#. (itstool) path: note/p
-#: C/conv-length.page:26
+#: C/conv-length.page:26(note/p)
 msgid "Length/Area/Volume conversions must be performed using the keyboard."
 msgstr ""
 "Las conversiones entre longitud, área y volumen se deben realizar usando el "
 "teclado."
 
-#. (itstool) path: page/title
-#: C/conv-time.page:9
+#: C/conv-time.page:9(page/title)
 msgid "Time"
 msgstr "Tiempo"
 
-#. (itstool) path: page/p
-#: C/conv-time.page:11
+#: C/conv-time.page:11(page/p)
 msgid "To convert between time use the <em>in</em> operator."
 msgstr "Para convertir tiempo use el operador <em>in</em>."
 
-#. (itstool) path: example/p
-#: C/conv-time.page:15
+#: C/conv-time.page:15(example/p)
 msgid "3 years in hours"
 msgstr "3 años en horas"
 
-#. (itstool) path: note/p
-#: C/conv-time.page:20
+#: C/conv-time.page:20(note/p)
 msgid "Time conversions must be performed using the keyboard."
 msgstr "Las conversiones entre tiempos se deben realizar usando el teclado."
 
-#. (itstool) path: page/title
-#: C/conv-weight.page:9
+#: C/conv-weight.page:9(page/title)
 msgid "Mass"
 msgstr "Masas"
 
-#. (itstool) path: page/p
-#: C/conv-weight.page:11
+#: C/conv-weight.page:11(page/p)
 msgid "To convert between mass use the <em>in</em> operator."
 msgstr "Para convertir masas use el operador <em>in</em>."
 
-#. (itstool) path: example/p
-#: C/conv-weight.page:15
+#: C/conv-weight.page:15(example/p)
 msgid "1kg in pounds"
 msgstr "1kg in pounds"
 
-#. (itstool) path: note/p
-#: C/conv-weight.page:20
+#: C/conv-weight.page:20(note/p)
 msgid "Mass conversions must be performed using the keyboard."
 msgstr "Las conversiones entre masas se deben realizar usando el teclado."
 
-#. (itstool) path: info/title
-#: C/equation.page:7
+#: C/equation.page:7(info/title)
 msgctxt "sort"
 msgid "0"
 msgstr "0"
 
-#. (itstool) path: page/title
-#: C/equation.page:11
+#: C/equation.page:11(page/title)
 msgid "Basic Equations"
 msgstr "Ecuaciones básicas"
 
-#. (itstool) path: page/p
-#: C/equation.page:13
+#: C/equation.page:13(page/p)
 msgid ""
 "Equations are entered in standard mathematical form. For example to add 7 "
 "and 2 enter the following:"
@@ -443,13 +313,11 @@ msgstr ""
 "Las ecuaciones se introducen de la forma matemática estándar. Por ejemplo, "
 "para sumar 7 y 2 introduzca lo siguiente:"
 
-#. (itstool) path: example/p
-#: C/equation.page:18
+#: C/equation.page:18(example/p)
 msgid "7+2"
 msgstr "7+2"
 
-#. (itstool) path: page/p
-#: C/equation.page:22
+#: C/equation.page:22(page/p)
 msgid ""
 "To solve, press the <gui>=</gui> button with your mouse or the <key>Enter</"
 "key> key on your keyboard."
@@ -457,8 +325,7 @@ msgstr ""
 "Para resolverlo, pulse el botón <gui>=</gui> con su ratón o la telca "
 "<key>Intro</key> de su teclado."
 
-#. (itstool) path: page/p
-#: C/equation.page:25
+#: C/equation.page:25(page/p)
 msgid ""
 "Calculations are performed in mathematical order - multiplication and "
 "division are performed before addition and subtraction. The following "
@@ -468,13 +335,11 @@ msgstr ""
 "división se realizan antes de la suma y resta. En la siguiente ecuación se "
 "obtiene 1 (3×2 = 6, 7−6 = 1)."
 
-#. (itstool) path: example/p
-#: C/equation.page:30
+#: C/equation.page:30(example/p)
 msgid "7−3×2"
 msgstr "7−3×2"
 
-#. (itstool) path: page/p
-#: C/equation.page:34
+#: C/equation.page:34(page/p)
 msgid ""
 "To change the order of calculation use parenthesis. The following equation "
 "solves to 8 (7−3 = 4, 4×2 = 8)."
@@ -482,25 +347,21 @@ msgstr ""
 "Para cambiar el orden de cálculo use los paréntesis. La solución de la "
 "siguiente ecuación es 8 (7−3 = 4, 4×2 = 8)."
 
-#. (itstool) path: example/p
-#: C/equation.page:39
+#: C/equation.page:39(example/p)
 msgid "(7−3)×2"
 msgstr "(7−3)×2"
 
-#. (itstool) path: page/p
-#: C/equation.page:43
+#: C/equation.page:43(page/p)
 msgid ""
 "To clear the display press the <gui>Clr</gui> button or <key>Escape</key>."
 msgstr ""
 "Para limpiar la pantalla pulse el botón <gui>Clr</gui> o <key>Escape</key>."
 
-#. (itstool) path: page/title
-#: C/factorial.page:9
+#: C/factorial.page:9(page/title)
 msgid "Factorials"
 msgstr "Factoriales"
 
-#. (itstool) path: page/p
-#: C/factorial.page:11
+#: C/factorial.page:11(page/p)
 msgid ""
 "Factorials are entered using the ! symbol. To calculate the factorial of 6 "
 "enter the following."
@@ -508,18 +369,15 @@ msgstr ""
 "Los factoriales se introducen usando el símbolo !. Para calcular el "
 "factorial de 6 introduzca lo siguiente."
 
-#. (itstool) path: example/p
-#: C/factorial.page:16
+#: C/factorial.page:16(example/p)
 msgid "6!"
 msgstr "6!"
 
-#. (itstool) path: page/title
-#: C/factorize.page:9
+#: C/factorize.page:9(page/title)
 msgid "Factorization"
 msgstr "Factorización"
 
-#. (itstool) path: page/p
-#: C/factorize.page:11
+#: C/factorize.page:11(page/p)
 msgid ""
 "You can factorize the number currently displayed by pressing the <gui>fact</"
 "gui> button. This button is visible in <link xref=\"mouse\">programming "
@@ -529,23 +387,19 @@ msgstr ""
 "gui>. Este botón es visible en el <link xref=\"mouse\">modo programador</"
 "link>."
 
-#. (itstool) path: page/title
-#: C/financial.page:9
+#: C/financial.page:9(page/title)
 msgid "Financial Functions"
 msgstr "Funciones financieras"
 
-#. (itstool) path: page/p
-#: C/financial.page:10
+#: C/financial.page:10(page/p)
 msgid "When in financial mode the following buttons are available."
 msgstr "Los siguientes botones están disponibles en el modo financiero."
 
-#. (itstool) path: td/p
-#: C/financial.page:15
+#: C/financial.page:15(td/p)
 msgid "Ctrm"
 msgstr "Trmc"
 
-#. (itstool) path: td/p
-#: C/financial.page:16
+#: C/financial.page:16(td/p)
 msgid ""
 "Calculate the number of compounding periods necessary to increase an "
 "investment of present value to a future value, at a fixed interest rate per "
@@ -555,13 +409,11 @@ msgstr ""
 "una inversión de un valor presenta a un valor futuro, a una tasa de interés "
 "fija por cada periodo de interés."
 
-#. (itstool) path: td/p
-#: C/financial.page:19
+#: C/financial.page:19(td/p)
 msgid "Ddb"
 msgstr "Ddd"
 
-#. (itstool) path: td/p
-#: C/financial.page:20
+#: C/financial.page:20(td/p)
 msgid ""
 "Calculate the depreciation allowance on an asset for a specified period of "
 "time, using the double-declining balance method."
@@ -569,13 +421,11 @@ msgstr ""
 "Calcula la depreciación sobre un activo para un periodo de tiempo "
 "especificado, usando el método de depreciación doble declinación."
 
-#. (itstool) path: td/p
-#: C/financial.page:23
+#: C/financial.page:23(td/p)
 msgid "Fv"
 msgstr "Vf"
 
-#. (itstool) path: td/p
-#: C/financial.page:24
+#: C/financial.page:24(td/p)
 msgid ""
 "Calculate the future value of an investment based on a series of equal "
 "payments at a periodic interest rate over the number of payment periods in "
@@ -585,13 +435,11 @@ msgstr ""
 "una tasa periódica de interés sobre el número de pagos periódicos durante el "
 "plazo."
 
-#. (itstool) path: td/p
-#: C/financial.page:27
+#: C/financial.page:27(td/p)
 msgid "Gpm"
 msgstr "MIB"
 
-#. (itstool) path: td/p
-#: C/financial.page:28
+#: C/financial.page:28(td/p)
 msgid ""
 "Calculate the resale price of a product, based on the product cost and the "
 "wanted gross profit margin."
@@ -599,13 +447,11 @@ msgstr ""
 "Calcula el precio de reventa de un producto, basado en el precio del "
 "producto y el margen de ingreso bruto requerido."
 
-#. (itstool) path: td/p
-#: C/financial.page:31
+#: C/financial.page:31(td/p)
 msgid "Pmt"
 msgstr "Ppc"
 
-#. (itstool) path: td/p
-#: C/financial.page:32
+#: C/financial.page:32(td/p)
 msgid ""
 "Calculate the amount of the periodic payment of a loan, where payments are "
 "made at the end of each payment period."
@@ -613,13 +459,11 @@ msgstr ""
 "Calcula la cantidad de pagos periódicos de un préstamo, donde los pagos se "
 "realizan al final de cada periodo de pago."
 
-#. (itstool) path: td/p
-#: C/financial.page:35
+#: C/financial.page:35(td/p)
 msgid "Pv"
 msgstr "Vp"
 
-#. (itstool) path: td/p
-#: C/financial.page:36
+#: C/financial.page:36(td/p)
 msgid ""
 "Calculate the present value of an investment based on a series of equal "
 "payments discounted at a periodic interest rate over the number of payment "
@@ -629,13 +473,11 @@ msgstr ""
 "iguales, descontando una tasa de interés periódica, sobre el número de pagos "
 "periódicos en el plazo."
 
-#. (itstool) path: td/p
-#: C/financial.page:39
+#: C/financial.page:39(td/p)
 msgid "Rate"
 msgstr "Tasa"
 
-#. (itstool) path: td/p
-#: C/financial.page:40
+#: C/financial.page:40(td/p)
 msgid ""
 "Calculate the periodic interest necessary to increase an investment to a "
 "future value, over the number of compounding periods."
@@ -644,13 +486,11 @@ msgstr ""
 "presente para un valor futuro, sobre un número de periodos de interés "
 "compuestos."
 
-#. (itstool) path: td/p
-#: C/financial.page:43
+#: C/financial.page:43(td/p)
 msgid "Sln"
 msgstr "Sln"
 
-#. (itstool) path: td/p
-#: C/financial.page:44
+#: C/financial.page:44(td/p)
 msgid ""
 "Calculate the straight-line depreciation of an asset for one period. The "
 "straight-line method of depreciation divides the depreciable cost evenly "
@@ -662,13 +502,11 @@ msgstr ""
 "útil de un activo. La vida útil es el número de periodos, generalmente años, "
 "sobre el cual un activo se deprecia."
 
-#. (itstool) path: td/p
-#: C/financial.page:47
+#: C/financial.page:47(td/p)
 msgid "Syd"
 msgstr "Syd"
 
-#. (itstool) path: td/p
-#: C/financial.page:48
+#: C/financial.page:48(td/p)
 msgid ""
 "Calculate the depreciation allowance on an asset for a specified period of "
 "time, using the Sum-of-the-Years'-Digits method. This method of depreciation "
@@ -683,13 +521,11 @@ msgstr ""
 "últimos. La vida útil es el número de periodos, generalmente años, sobre el "
 "cual un activo se deprecia."
 
-#. (itstool) path: td/p
-#: C/financial.page:51
+#: C/financial.page:51(td/p)
 msgid "Term"
 msgstr "Term"
 
-#. (itstool) path: td/p
-#: C/financial.page:52
+#: C/financial.page:52(td/p)
 msgid ""
 "Calculate the number of payment periods that are necessary during the term "
 "of an ordinary annuity, to accumulate a future value, at a periodic interest "
@@ -699,370 +535,171 @@ msgstr ""
 "ordinario, para acumular un valor futuro, con cierta tasa periódica de "
 "interés."
 
-#. (itstool) path: note/p
-#: C/financial.page:56
+#: C/financial.page:56(note/p)
 msgid "Financial functions cannot be performed using the keyboard."
 msgstr "No se pueden realizar funciones financieras usando el teclado."
 
-#. (itstool) path: page/title
-#: C/functions.page:9
+#: C/functions.page:9(page/title)
 msgid "Functions"
 msgstr "Funciones"
 
-#. (itstool) path: page/p
-#: C/functions.page:11
+#: C/functions.page:11(page/p)
 msgid ""
-"Functions can be used by inserting the name of the function followed by "
-"function arguments. <app>Calculator</app> also support user-defined "
-"functions. If the argument is not a number or <link xref=\"variable\">a "
-"single variable</link> then write each argument separated by semicolon and "
-"use parenthesis around the argument list."
+"Functions can be used by inserting the name of the function followed by the "
+"function argument. If the argument is not a number or <link xref=\"variable"
+"\">variable</link> then use parenthesis around the argument."
 msgstr ""
-"Las funciones se pueden usar insertando el nombre de la función seguido de "
-"los argumentos. La <app>Calculadora</app> también soporta la funciones "
-"definidas por el usuario. Si el argumento no es un número o una <link xref="
-"\"variable\">variable única</link>, escriba los argumentos separados por "
-"punto y coma y coloque la lista de argumentos entre paréntesis."
+"Las fracciones se pueden usar insertando el nombre de la función seguido del "
+"argumento de la función. Si el argumento no es un número o una <link xref="
+"\"variable\">variable</link> entonces use los paréntesis para el argumento."
 
-#. (itstool) path: example/p
-#: C/functions.page:16
+#: C/functions.page:16(example/p)
 msgid "sin 30"
 msgstr "sen 30"
 
-#. (itstool) path: example/p
-#: C/functions.page:19
+#: C/functions.page:19(example/p)
 msgid "abs (5−9)"
 msgstr "abs (5−9)"
 
-#. (itstool) path: example/p
-#: C/functions.page:22
-msgid "fun (9;10)"
-msgstr "fun (9;10)"
-
-#. (itstool) path: page/p
-#: C/functions.page:26
-msgid ""
-"To add a new function type the function in the format as given below. A "
-"function name and arguments must only contain upper or lower case "
-"characters. The part after @ is the function description which is optional."
-msgstr ""
-"Para añadir una función, escriba el nombre de la función en el formato dado "
-"a continuación. El nombre de la función y los argumentos sólo pueden "
-"contener letras mayúsculas o minúsculas. La parte de después de la @ es la "
-"descripción de la función, y es opcional."
-
-#. (itstool) path: example/p
-#: C/functions.page:30
-msgid ""
-"SimpleInterest (principal; rate; time) = principal * rate * time @ Simple "
-"Interest formula"
-msgstr ""
-"SimpleInterest (principal; tasa; tiempo) = principal * tasa * tiempo @ "
-"Fórmula del interés simple"
-
-#. (itstool) path: page/p
-#: C/functions.page:34
-msgid "Functions can also be added and inserted using the f(x) button."
-msgstr "Las funciones también se pueden insertar usando el botón f(x)."
-
-#. (itstool) path: example/p
-#: C/functions.page:38
-msgid ""
-"Click on f(x). Type the function name in the box, choose the number of "
-"arguments and click on the plus sign button next to it. On the calculator "
-"screen type the function expression and press <key>Enter</key>."
-msgstr ""
-"Pulse en f(x). Escriba el nombre de la función en la caja, elija el número "
-"de argumentos y pulse en el botón con el signo «+». En la pantalla de la "
-"calculadora escriba la expresión de la función y pulse <key>Intro</key>."
-
-#. (itstool) path: example/p
-#: C/functions.page:43
-msgid "Click on f(x). Choose the function and click on it."
-msgstr "Pulse en f(x). Elija la función y pulse sobre ella."
-
-#. (itstool) path: page/p
-#: C/functions.page:47
+#: C/functions.page:23(page/p)
 msgid "The following functions are defined."
 msgstr "Las siguientes funciones siempre están definidas"
 
-#. (itstool) path: td/p
-#: C/functions.page:52
+#: C/functions.page:28(td/p)
 msgid "abs"
 msgstr "abs"
 
-#. (itstool) path: td/p
-#: C/functions.page:53
+#: C/functions.page:29(td/p)
 msgid "<link xref=\"absolute\">Absolute Value</link>"
 msgstr "<link xref=\"absolute\">Valor absoluto</link>"
 
-#. (itstool) path: td/p
-#: C/functions.page:56
-msgid "ceil"
-msgstr "ceil"
-
-#. (itstool) path: td/p
-#: C/functions.page:57
-msgid "Ceiling"
-msgstr "Ceiling"
-
-#. (itstool) path: td/p
-#: C/functions.page:60
+#: C/functions.page:32(td/p)
 msgid "cos"
 msgstr "cos"
 
-#. (itstool) path: td/p
-#: C/functions.page:61
+#: C/functions.page:33(td/p)
 msgid "<link xref=\"trigonometry\">Cosine</link>"
 msgstr "<link xref=\"trigonometry\">Coseno</link>"
 
-#. (itstool) path: td/p
-#: C/functions.page:64
+#: C/functions.page:36(td/p)
 msgid "cosh"
 msgstr "cosh"
 
-#. (itstool) path: td/p
-#: C/functions.page:65
+#: C/functions.page:37(td/p)
 msgid "<link xref=\"trigonometry\">Hyperbolic Cosine</link>"
 msgstr "<link xref=\"trigonometry\">Coseno hiperbólico</link>"
 
-#. (itstool) path: td/p
-#: C/functions.page:68
-msgid "floor"
-msgstr "floor"
-
-#. (itstool) path: td/p
-#: C/functions.page:69
-msgid "Floor"
-msgstr "Floor"
-
-#. (itstool) path: td/p
-#: C/functions.page:72
+#: C/functions.page:40(td/p)
 msgid "frac"
 msgstr "frac"
 
-#. (itstool) path: td/p
-#: C/functions.page:73
+#: C/functions.page:41(td/p)
 msgid "Fractional Component"
 msgstr "Parte fraccional"
 
-#. (itstool) path: td/p
-#: C/functions.page:76
+#: C/functions.page:44(td/p)
 msgid "int"
 msgstr "int"
 
-#. (itstool) path: td/p
-#: C/functions.page:77
+#: C/functions.page:45(td/p)
 msgid "Integer Component"
 msgstr "Parte entera"
 
-#. (itstool) path: td/p
-#: C/functions.page:80
+#: C/functions.page:48(td/p)
 msgid "ln"
 msgstr "ln"
 
-#. (itstool) path: td/p
-#: C/functions.page:81
+#: C/functions.page:49(td/p)
 msgid "<link xref=\"logarithm\">Natural Logarithm</link>"
 msgstr "<link xref=\"logarithm\">Logaritmo natural</link>"
 
-#. (itstool) path: td/p
-#: C/functions.page:84
+#: C/functions.page:52(td/p)
 msgid "log"
 msgstr "log"
 
-#. (itstool) path: td/p
-#: C/functions.page:85
+#: C/functions.page:53(td/p)
 msgid "<link xref=\"logarithm\">Logarithm</link>"
 msgstr "<link xref=\"logarithm\">Logaritmo</link>"
 
-#. (itstool) path: td/p
-#: C/functions.page:88
+#: C/functions.page:56(td/p)
 msgid "not"
 msgstr "not"
 
-#. (itstool) path: td/p
-#: C/functions.page:89
+#: C/functions.page:57(td/p)
 msgid "<link xref=\"boolean\">Boolean NOT</link>"
 msgstr "<link xref=\"boolean\">NOT booleano</link>"
 
-#. (itstool) path: td/p
-#: C/functions.page:92
+#: C/functions.page:60(td/p)
 msgid "ones"
 msgstr "uno"
 
-#. (itstool) path: td/p
-#: C/functions.page:93
+#: C/functions.page:61(td/p)
 msgid "Ones complement"
 msgstr "Complemento a uno"
 
-#. (itstool) path: td/p
-#: C/functions.page:96
-msgid "round"
-msgstr "round"
-
-#. (itstool) path: td/p
-#: C/functions.page:97
-msgid "Round"
-msgstr "Redondeo"
-
-#. (itstool) path: td/p
-#: C/functions.page:100
-msgid "sgn"
-msgstr "sgn"
-
-#. (itstool) path: td/p
-#: C/functions.page:101
-msgid "Signum"
-msgstr "Signo"
-
-#. (itstool) path: td/p
-#: C/functions.page:104
+#: C/functions.page:64(td/p)
 msgid "sin"
 msgstr "sen"
 
-#. (itstool) path: td/p
-#: C/functions.page:105
+#: C/functions.page:65(td/p)
 msgid "<link xref=\"trigonometry\">Sine</link>"
 msgstr "<link xref=\"trigonometry\">Seno</link>"
 
-#. (itstool) path: td/p
-#: C/functions.page:108
+#: C/functions.page:68(td/p)
 msgid "sinh"
 msgstr "senh"
 
-#. (itstool) path: td/p
-#: C/functions.page:109
+#: C/functions.page:69(td/p)
 msgid "<link xref=\"trigonometry\">Hyperbolic Sine</link>"
 msgstr "<link xref=\"trigonometry\">Seno hiperbólico</link>"
 
-#. (itstool) path: td/p
-#: C/functions.page:112
+#: C/functions.page:72(td/p)
 msgid "sqrt"
 msgstr "sqrt"
 
-#. (itstool) path: td/p
-#: C/functions.page:113
+#: C/functions.page:73(td/p)
 msgid "<link xref=\"power\">Square Root</link>"
 msgstr "<link xref=\"power\">Raíz cuadrada</link>"
 
-#. (itstool) path: td/p
-#: C/functions.page:116
+#: C/functions.page:76(td/p)
 msgid "tan"
 msgstr "tan"
 
-#. (itstool) path: td/p
-#: C/functions.page:117
+#: C/functions.page:77(td/p)
 msgid "<link xref=\"trigonometry\">Tangent</link>"
 msgstr "<link xref=\"trigonometry\">Tangente</link>"
 
-#. (itstool) path: td/p
-#: C/functions.page:120
+#: C/functions.page:80(td/p)
 msgid "tanh"
 msgstr "tanh"
 
-#. (itstool) path: td/p
-#: C/functions.page:121
+#: C/functions.page:81(td/p)
 msgid "<link xref=\"trigonometry\">Hyperbolic Tangent</link>"
 msgstr "<link xref=\"trigonometry\">Tangente hiperbólica</link>"
 
-#. (itstool) path: td/p
-#: C/functions.page:124
+#: C/functions.page:84(td/p)
 msgid "twos"
 msgstr "dos"
 
-#. (itstool) path: td/p
-#: C/functions.page:125
+#: C/functions.page:85(td/p)
 msgid "Twos complement"
 msgstr "Complemento a dos"
 
-#. (itstool) path: credit/name
-#: C/history.page:11
-msgid "Gopal Krishnan"
-msgstr "Gopal Krishnan"
+#: C/functions.page:88(page/p)
+#| msgid "<app>GCalctool</app> does not support user-defined functions."
+msgid "<app>Calculator</app> does not support user-defined functions."
+msgstr "<app>Calculadora</app> no soporta funciones definidas por el usuario."
 
-#. (itstool) path: credit/years
-#: C/history.page:13
-msgid "2012, 2013"
-msgstr "2012, 2013"
-
-#. (itstool) path: credit/name
-#: C/history.page:17
-msgid "Sanket Dasgupta"
-msgstr "Sanket Dasgupta"
-
-#. (itstool) path: credit/years
-#: C/history.page:19
-msgid "2016, 2017"
-msgstr "2016, 2017"
-
-#. (itstool) path: page/title
-#: C/history.page:23
-msgid "Using the History View"
-msgstr "Usar la vista de histórico"
-
-#. (itstool) path: page/p
-#: C/history.page:25
-msgid ""
-"The History View is located above the entry box and is designed to show your "
-"previous calculations in the form of a scrollable list that can be clicked "
-"and scrolled through using a mouse or even navigated and selected using the "
-"arrow keys on a keyboard. Once an entry has been selected, it will "
-"immediately show up in the entry box for you to manipulate and use. Finally, "
-"there is no upper limit on the number of calculations that can show up in "
-"the list for you to use."
-msgstr ""
-"La vista de histórico se encuentra encima de la caja de entrada y está "
-"diseñada para mostrar los cálculos anteriores en forma de lista desplazable "
-"en la que se puede pulsar y desplazarse con el ratón o incluso navegar y "
-"seleccionar usando las teclas de flechas. Cuando se ha seleccionado una "
-"entrada, se mostrará automáticamente en la caja de entrada para poder "
-"manipularla y usarla. Por último, no hay límite en el número de cálculos que "
-"se pueden mostrar en la lista que use."
-
-#. (itstool) path: page/title
-#: C/index.page:14
-msgid "<_:media-1/> Calculator Help"
-msgstr "<_:media-1/> Ayuda de la Calculadora"
-
-#. (itstool) path: section/title
-#: C/index.page:17
-msgid "User Interface"
-msgstr "Interfaz de usuario"
-
-#. (itstool) path: section/title
-#: C/index.page:21
-msgid "Equations"
-msgstr "Ecuaciones"
-
-#. (itstool) path: section/title
-#: C/index.page:25
-msgid "Numbers"
-msgstr "Números"
-
-#. (itstool) path: section/title
-#: C/index.page:29
-msgid "Conversions"
-msgstr "Conversiones"
-
-#. (itstool) path: section/title
-#: C/index.page:33
-msgid "Financial Calculations"
-msgstr "Cálculos financieros"
-
-#. (itstool) path: page/title
-#: C/keyboard.page:9
+#: C/keyboard.page:9(page/title)
 msgid "Using the Keyboard"
 msgstr "Usar el teclado"
 
-#. (itstool) path: page/p
-#: C/keyboard.page:11
+#: C/keyboard.page:11(page/p)
 msgid "All mathematical equations can be entered using the keyboard."
 msgstr ""
 "Se pueden introducir todas las ecuaciones matemáticas usando el teclado."
 
-#. (itstool) path: page/p
-#: C/keyboard.page:14
+#: C/keyboard.page:14(page/p)
 msgid ""
 "The following key combinations can be used to enter keys that may not be "
 "available on your keyboard."
@@ -1070,58 +707,47 @@ msgstr ""
 "Se pueden usar las siguientes combinaciones de teclas para introducir claves "
 "que pueden no estar disponibles en su teclado."
 
-#. (itstool) path: td/p
-#: C/keyboard.page:19
+#: C/keyboard.page:19(td/p)
 msgid "×"
 msgstr "×"
 
-#. (itstool) path: td/p
-#: C/keyboard.page:20
+#: C/keyboard.page:20(td/p)
 msgid "<key>*</key>"
 msgstr "<key>*</key>"
 
-#. (itstool) path: td/p
-#: C/keyboard.page:23
+#: C/keyboard.page:23(td/p)
 msgid "÷"
 msgstr "÷"
 
-#. (itstool) path: td/p
-#: C/keyboard.page:24
+#: C/keyboard.page:24(td/p)
 msgid "<key>/</key>"
 msgstr "<key>/</key>"
 
-#. (itstool) path: td/p
-#: C/keyboard.page:27
+#: C/keyboard.page:27(td/p)
 msgid "^"
 msgstr "^"
 
-#. (itstool) path: td/p
-#: C/keyboard.page:28
+#: C/keyboard.page:28(td/p)
 msgid "<key>*</key> twice"
 msgstr "<key>*</key> dos veces"
 
-#. (itstool) path: td/p
-#: C/keyboard.page:31
+#: C/keyboard.page:31(td/p)
 msgid "√"
 msgstr "√"
 
-#. (itstool) path: td/p
-#: C/keyboard.page:32
+#: C/keyboard.page:32(td/p)
 msgid "<keyseq><key>Ctrl</key><key>R</key></keyseq>"
 msgstr "<keyseq><key>Ctrl</key><key>R</key></keyseq>"
 
-#. (itstool) path: td/p
-#: C/keyboard.page:35 C/variables.page:48
+#: C/keyboard.page:35(td/p) C/variables.page:48(td/p)
 msgid "π"
 msgstr "π"
 
-#. (itstool) path: td/p
-#: C/keyboard.page:36
+#: C/keyboard.page:36(td/p)
 msgid "<keyseq><key>Ctrl</key><key>P</key></keyseq>"
 msgstr "<keyseq><key>Ctrl</key><key>P</key></keyseq>"
 
-#. (itstool) path: page/p
-#: C/keyboard.page:39
+#: C/keyboard.page:39(page/p)
 msgid ""
 "To enter <link xref=\"superscript\">superscript numbers</link> use "
 "<keyseq><key>Ctrl</key>number</keyseq>, for subscript use <keyseq><key>Alt</"
@@ -1131,19 +757,16 @@ msgstr ""
 "<keyseq><key>Ctrl</key>número</keyseq>, para subíndices use "
 "<keyseq><key>Alt</key>número</keyseq>."
 
-#. (itstool) path: p/link
-#: C/legal.xml:4
+#: C/legal.xml:4(p/link)
 msgid "Creative Commons Attribution-Share Alike 3.0 Unported License"
 msgstr ""
 "Licencia Creative Commons Atribución - Compartir igual 3.0 sin soporte."
 
-#. (itstool) path: license/p
-#: C/legal.xml:3
+#: C/legal.xml:3(license/p)
 msgid "This work is licensed under a <_:link-1/>."
 msgstr "Este trabajo está licenciado bajo la <_:link-1/>."
 
-#. (itstool) path: license/p
-#: C/legal.xml:6
+#: C/legal.xml:6(license/p)
 msgid ""
 "As a special exception, the copyright holders give you permission to copy, "
 "modify, and distribute the example code contained in this document under the "
@@ -1153,13 +776,11 @@ msgstr ""
 "permiso para copiar, modificar y distribuir el ejemplo de código contenido "
 "en este documento bajo los términos que usted elija, sin restricción."
 
-#. (itstool) path: page/title
-#: C/logarithm.page:9
+#: C/logarithm.page:9(page/title)
 msgid "Logarithms"
 msgstr "Logaritmos"
 
-#. (itstool) path: page/p
-#: C/logarithm.page:11
+#: C/logarithm.page:11(page/p)
 msgid ""
 "Logarithms can be calculated using the log <link xref=\"function\">function</"
 "link>."
@@ -1167,13 +788,11 @@ msgstr ""
 "Se pueden calcular logaritmos usando la <link xref=\"function\">función</"
 "link> log."
 
-#. (itstool) path: example/p
-#: C/logarithm.page:15
+#: C/logarithm.page:15(example/p)
 msgid "log 100"
 msgstr "log 100"
 
-#. (itstool) path: page/p
-#: C/logarithm.page:19
+#: C/logarithm.page:19(page/p)
 msgid ""
 "To calculate a logarithm in a different base use a <link xref=\"superscript"
 "\">subscript number</link> after the function."
@@ -1181,23 +800,19 @@ msgstr ""
 "Para calcular el logaritmo en una base diferente use un <link xref="
 "\"superscript\">subíndice</link> después de la función."
 
-#. (itstool) path: example/p
-#: C/logarithm.page:23
+#: C/logarithm.page:23(example/p)
 msgid "log₂ 32"
 msgstr "log₂ 32"
 
-#. (itstool) path: page/p
-#: C/logarithm.page:27
+#: C/logarithm.page:27(page/p)
 msgid "To calculate a natural logarithm use the ln function."
 msgstr "Para calcular el logaritmo natural use la función ln."
 
-#. (itstool) path: example/p
-#: C/logarithm.page:31
+#: C/logarithm.page:31(example/p)
 msgid "ln 1.32"
 msgstr "ln 1.32"
 
-#. (itstool) path: page/p
-#: C/logarithm.page:35
+#: C/logarithm.page:35(page/p)
 msgid ""
 "Euler's number can be entered by using the <link xref=\"variable\">variable</"
 "link> e."
@@ -1205,33 +820,27 @@ msgstr ""
 "El número de Euler se puede introducir usando la <link xref=\"variable"
 "\">variable</link> e."
 
-#. (itstool) path: example/p
-#: C/logarithm.page:39
+#: C/logarithm.page:39(example/p)
 msgid "e^1.32"
 msgstr "e^1.32"
 
-#. (itstool) path: page/title
-#: C/modulus.page:9
+#: C/modulus.page:9(page/title)
 msgid "Modulus Division"
 msgstr "División modular"
 
-#. (itstool) path: page/p
-#: C/modulus.page:11
+#: C/modulus.page:11(page/p)
 msgid "Modulus division is performed using the mod operator."
 msgstr "La división modular se realiza usando el operador mod."
 
-#. (itstool) path: example/p
-#: C/modulus.page:15
+#: C/modulus.page:15(example/p)
 msgid "9 mod 5"
 msgstr "9 mod 5"
 
-#. (itstool) path: page/title
-#: C/mouse.page:9
+#: C/mouse.page:9(page/title)
 msgid "Using the Mouse"
 msgstr "Uso del ratón"
 
-#. (itstool) path: page/p
-#: C/mouse.page:11
+#: C/mouse.page:11(page/p)
 msgid ""
 "All equations can be entered using the mouse. To access all buttons there "
 "are a number of modes that can be selected from the <gui>Mode</gui> menu."
@@ -1240,26 +849,22 @@ msgstr ""
 "todos los botones existe un número de modos que se puede seleccionar desde "
 "el menú <gui>Modo</gui>."
 
-#. (itstool) path: td/p
-#: C/mouse.page:17
+#: C/mouse.page:17(td/p)
 msgid "Basic"
 msgstr "Básico"
 
-#. (itstool) path: td/p
-#: C/mouse.page:18
+#: C/mouse.page:18(td/p)
 msgid ""
 "Provides buttons suitable for <link xref=\"equation\">basic equations</link>"
 msgstr ""
 "Proporciona botones apropiados para las <link xref=\"equation\">ecuaciones "
 "básicas</link>"
 
-#. (itstool) path: td/p
-#: C/mouse.page:21
+#: C/mouse.page:21(td/p)
 msgid "Advanced"
 msgstr "Avanzado"
 
-#. (itstool) path: td/p
-#: C/mouse.page:22
+#: C/mouse.page:22(td/p)
 msgid ""
 "Provides buttons suitable for advanced mathematics such as <link xref="
 "\"trigonometry\"/>"
@@ -1267,13 +872,11 @@ msgstr ""
 "Proporciona botones apropiados para matemáticas avanzadas como <link xref="
 "\"trigonometry\"/>"
 
-#. (itstool) path: td/p
-#: C/mouse.page:25
+#: C/mouse.page:25(td/p)
 msgid "Financial"
 msgstr "Financiero"
 
-#. (itstool) path: td/p
-#: C/mouse.page:26
+#: C/mouse.page:26(td/p)
 msgid ""
 "Provides buttons suitable for <link xref=\"financial\">financial equations</"
 "link>"
@@ -1281,23 +884,19 @@ msgstr ""
 "Proporciona botones apropiados para <link xref=\"financial\">ecuaciones "
 "financieras</link>"
 
-#. (itstool) path: td/p
-#: C/mouse.page:29
+#: C/mouse.page:29(td/p)
 msgid "Programming"
 msgstr "Programador"
 
-#. (itstool) path: td/p
-#: C/mouse.page:30
+#: C/mouse.page:30(td/p)
 msgid "Provides buttons suitable for computer programmers"
 msgstr "Proporciona botones apropiados para programadores"
 
-#. (itstool) path: page/title
-#: C/number-display.page:9
+#: C/number-display.page:9(page/title)
 msgid "Result Format"
 msgstr "Formato del resultado"
 
-#. (itstool) path: page/p
-#: C/number-display.page:11
+#: C/number-display.page:11(page/p)
 msgid ""
 "The format used to display results can be changed from the "
 "<guiseq><gui>Calculator</gui><gui>Preferences</gui></guiseq> menu."
@@ -1305,50 +904,30 @@ msgstr ""
 "Se puede cambiar el formato usado para mostrar los resultados en el menú "
 "<guiseq><gui>Calculadora</gui><gui>Preferencias</gui></guiseq>."
 
-#. (itstool) path: td/p
-#: C/number-display.page:16
-msgid "<gui>Automatic</gui>"
-msgstr "<gui>Automático</gui>"
+#: C/number-display.page:16(td/p)
+msgid "Decimal"
+msgstr "Decimal"
 
-#. (itstool) path: td/p
-#: C/number-display.page:17
-msgid ""
-"Small results are displayed as <gui>Fixed</gui> notation while long results "
-"are displayed as <gui>Scientific</gui> notation"
-msgstr ""
-"Los resultados pequeños se muestran en notación <gui>Fija</gui> mientras que "
-"los resultados largos se muestran en notación <gui>Científica</gui>"
+#: C/number-display.page:17(td/p)
+msgid "Results are displayed as decimal numbers"
+msgstr "Los resultados se muestran como números decimales"
 
-#. (itstool) path: td/p
-#: C/number-display.page:20
-msgid "<gui>Fixed</gui>"
-msgstr "<gui>Fija</gui>"
+#: C/number-display.page:20(td/p)
+msgid "Scientific"
+msgstr "Científico"
 
-#. (itstool) path: td/p
-#: C/number-display.page:21
-msgid "Results are always displayed as decimal numbers"
-msgstr "Los resultados se muestran siempre como números decimales"
-
-#. (itstool) path: td/p
-#: C/number-display.page:24
-msgid "<gui>Scientific</gui>"
-msgstr "<gui>Científico</gui>"
-
-#. (itstool) path: td/p
-#: C/number-display.page:25
+#: C/number-display.page:21(td/p)
 msgid ""
 "Results are displayed in <link xref=\"scientific\">scientific notation</link>"
 msgstr ""
 "Los resultados se muestran en <link xref=\"scientific\">notación científica</"
 "link>."
 
-#. (itstool) path: td/p
-#: C/number-display.page:28
-msgid "<gui>Engineering</gui>"
-msgstr "<gui>Ingeniería</gui>"
+#: C/number-display.page:24(td/p)
+msgid "Engineering"
+msgstr "Ingeniería"
 
-#. (itstool) path: td/p
-#: C/number-display.page:29
+#: C/number-display.page:25(td/p)
 msgid ""
 "Results are displayed in scientific notation except the exponent is always a "
 "multiple of three"
@@ -1356,8 +935,35 @@ msgstr ""
 "Los resultados se muestran en notación científica excepto cuando el "
 "exponente es siempre múltiplo de tres"
 
-#. (itstool) path: page/p
-#: C/number-display.page:32
+#: C/number-display.page:28(td/p)
+msgid "Binary"
+msgstr "Binario"
+
+#: C/number-display.page:29(td/p)
+msgid "Results are displayed as <link xref=\"base\">binary numbers</link>"
+msgstr ""
+"Los resultados se muestran como <link xref=\"base\">números binarios</link>"
+
+#: C/number-display.page:32(td/p)
+msgid "Octal"
+msgstr "Octal"
+
+#: C/number-display.page:33(td/p)
+msgid "Results are displayed as <link xref=\"base\">octal numbers</link>"
+msgstr ""
+"Los resultados se muestran como <link xref=\"base\">números octales</link>"
+
+#: C/number-display.page:36(td/p)
+msgid "Hexadecimal"
+msgstr "Hexadecimal"
+
+#: C/number-display.page:37(td/p)
+msgid "Results are displayed as <link xref=\"base\">hexadecimal numbers</link>"
+msgstr ""
+"Los resultados se muestran como <link xref=\"base\">números hexadecimales</"
+"link>"
+
+#: C/number-display.page:40(page/p)
 msgid ""
 "The number of decimal places, if trailing zeroes and if thousands separators "
 "are shown can also be configured."
@@ -1365,18 +971,15 @@ msgstr ""
 "El número de lugares decimales, si se muestran los ceros excedentes y los "
 "separadores de miles también se pueden configurar."
 
-#. (itstool) path: page/title
-#: C/percentage.page:9
+#: C/percentage.page:9(page/title)
 msgid "Percentages"
 msgstr "Porcentajes"
 
-#. (itstool) path: page/p
-#: C/percentage.page:11
+#: C/percentage.page:11(page/p)
 msgid "Percentages are calculated using the % symbol."
 msgstr "Los porcentajes se calculan usando el símbolo %."
 
-#. (itstool) path: page/p
-#: C/percentage.page:14
+#: C/percentage.page:14(page/p)
 msgid ""
 "When added or subtracted the percentage symbol resolves to one percent of "
 "the value being added or subtracted from. The following equation calculates "
@@ -1386,13 +989,11 @@ msgstr ""
 "añadido o restado. La siguiente ecuación calcula el precio de un elemento de "
 "140€ con un 15% de impuestos (140 + (15÷100)×140)."
 
-#. (itstool) path: example/p
-#: C/percentage.page:19
+#: C/percentage.page:19(example/p)
 msgid "140+15%"
 msgstr "140+15%"
 
-#. (itstool) path: page/p
-#: C/percentage.page:23
+#: C/percentage.page:23(page/p)
 msgid ""
 "In all other cases the percentage symbol resolves to a fraction out of 100. "
 "The following equation calculates one quarter of 80 apples ((25÷100)×80)."
@@ -1400,33 +1001,15 @@ msgstr ""
 "En el resto de casos el símbolo de porcentaje resuelve una fracción de 100. "
 "La siguiente ecuación calcula un cuarto de 80 manzanas ((25÷100)×80)."
 
-#. (itstool) path: example/p
-#: C/percentage.page:28
+#: C/percentage.page:28(example/p)
 msgid "25%×80"
 msgstr "25%×80"
 
-#. (itstool) path: credit/years
-#: C/power.page:13 C/power.page:18
-msgid "2015"
-msgstr "2015"
-
-#. (itstool) path: credit/name
-#: C/power.page:16
-msgid "Sebastian Rasmussen"
-msgstr "Sebastian Rasmussen"
-
-#. (itstool) path: info/desc
-#: C/power.page:21
-msgid "Learn to enter roots and powers into the calculator."
-msgstr "Aprender a introducir raíces y potencias en la calculadora."
-
-#. (itstool) path: page/title
-#: C/power.page:24
+#: C/power.page:9(page/title)
 msgid "Powers and Roots"
 msgstr "Potencias y raíces"
 
-#. (itstool) path: page/p
-#: C/power.page:26
+#: C/power.page:11(page/p)
 msgid ""
 "Powers are entered by putting a <link xref=\"superscript\">superscript "
 "number</link> after the value."
@@ -1434,13 +1017,11 @@ msgstr ""
 "Las potencias se introducen introduciendo un <link xref=\"superscript"
 "\">número superíndice</link> después del valor."
 
-#. (itstool) path: example/p
-#: C/power.page:30
+#: C/power.page:15(example/p)
 msgid "5²"
 msgstr "5²"
 
-#. (itstool) path: page/p
-#: C/power.page:33
+#: C/power.page:19(page/p)
 msgid ""
 "The inverse of a number can be entered using the inverse symbol ⁻¹ "
 "(<keyseq><key>Ctrl</key><key>I</key></keyseq>)."
@@ -1448,13 +1029,11 @@ msgstr ""
 "La inversa de un número se puede introducir usando el símbolo de inverso ⁻¹ "
 "(<keyseq><key>Ctrl</key><key>I</key></keyseq>)."
 
-#. (itstool) path: example/p
-#: C/power.page:37
+#: C/power.page:23(example/p)
 msgid "3⁻¹"
 msgstr "3⁻¹"
 
-#. (itstool) path: page/p
-#: C/power.page:40
+#: C/power.page:27(page/p)
 msgid ""
 "Powers can also be calculated using the ^ symbol. This allows the power to "
 "be an equation."
@@ -1462,13 +1041,11 @@ msgstr ""
 "Las potencias también se pueden calcular usando el símbolo ^. Esto permite "
 "que la potencia sea una ecuación."
 
-#. (itstool) path: example/p
-#: C/power.page:44
+#: C/power.page:32(example/p)
 msgid "5^(6−2)"
 msgstr "5^(6−2)"
 
-#. (itstool) path: page/p
-#: C/power.page:47
+#: C/power.page:36(page/p)
 msgid ""
 "If your keyboard does not have a <key>^</key> key you can use <key>*</key> "
 "twice."
@@ -1476,22 +1053,19 @@ msgstr ""
 "Si su teclado no tiene una tecla <key>^</key> puede usar la tecla <key>*</"
 "key> dos veces."
 
-#. (itstool) path: page/p
-#: C/power.page:50
+#: C/power.page:39(page/p)
 msgid ""
-"Square roots can be calculated using the √ symbol (<keyseq><key>Ctrl</"
+"Square roots can be calculated using the symbol (<keyseq><key>Ctrl</"
 "key><key>R</key></keyseq>)."
 msgstr ""
-"Se pueden calcular las raíces cuadradas usando el símbolo √ "
+"Se pueden calcular las raíces cuadradas usando el símbolo "
 "(<keyseq><key>Ctrl</key><key>R</key></keyseq>)."
 
-#. (itstool) path: example/p
-#: C/power.page:54
+#: C/power.page:43(example/p)
 msgid "√2"
 msgstr "√2"
 
-#. (itstool) path: page/p
-#: C/power.page:57
+#: C/power.page:47(page/p)
 msgid ""
 "n-th roots can be calculated by putting a <link xref=\"superscript"
 "\">subscript number</link> before the root sign."
@@ -1499,36 +1073,31 @@ msgstr ""
 "Se pueden calcular las raíces enésimas poniendo un <link xref=\"superscript"
 "\">subíndice</link> antes del símbolo de raíz."
 
-#. (itstool) path: example/p
-#: C/power.page:61
+#: C/power.page:51(example/p)
 msgid "₃√2"
 msgstr "₃√2"
 
-#. (itstool) path: page/title
-#: C/scientific.page:9
+#: C/scientific.page:9(page/title)
 msgid "Scientific Notation"
 msgstr "Notación científica"
 
-#. (itstool) path: page/p
-#: C/scientific.page:11
+#: C/scientific.page:11(page/p)
 msgid ""
-"To enter numbers in scientific format use the <gui>×10y</gui> button "
+"To enter numbers in scientific format use the <gui>×10x</gui> button "
 "(<keyseq><key>Ctrl</key><key>E</key></keyseq>). The <link xref=\"superscript"
 "\">number mode</link> automatically changes to superscript. To enter "
 "2×10¹⁰⁰, start by entering the mantissa (2):"
 msgstr ""
-"Para introducir números en formato científico use el botón <gui>×10x</gui> "
+"Para introducir números en formato científico use el botón <gui>x10x</gui> "
 "(<keyseq><key>Ctrl</key><key>E</key></keyseq>). El <link xref=\"superscript"
 "\">modo numérico</link> cambia automáticamente a superíndice. Para "
 "introducir 2×10¹⁰⁰, comience introduciendo la mantisa (2):"
 
-#. (itstool) path: example/p
-#: C/scientific.page:17
+#: C/scientific.page:17(example/p)
 msgid "2"
 msgstr "2"
 
-#. (itstool) path: page/p
-#: C/scientific.page:21
+#: C/scientific.page:21(page/p)
 msgid ""
 "Then press the scientific notation button (or press <keyseq><key>Ctrl</"
 "key><key>E</key></keyseq>):"
@@ -1536,23 +1105,19 @@ msgstr ""
 "Después pulse el botón de notación científica (o pulse <keyseq><key>Ctrl</"
 "key><key>E</key></keyseq>):"
 
-#. (itstool) path: example/p
-#: C/scientific.page:25
+#: C/scientific.page:25(example/p)
 msgid "2×10"
 msgstr "2×10"
 
-#. (itstool) path: page/p
-#: C/scientific.page:29
+#: C/scientific.page:29(page/p)
 msgid "Then enter the exponent (100):"
 msgstr "Después introduzca el exponente (100):"
 
-#. (itstool) path: example/p
-#: C/scientific.page:33
+#: C/scientific.page:33(example/p)
 msgid "2×10¹⁰⁰"
 msgstr "2×10¹⁰⁰"
 
-#. (itstool) path: page/p
-#: C/scientific.page:37
+#: C/scientific.page:37(page/p)
 msgid ""
 "To show results in scientific form change the <link xref=\"number-display"
 "\">result format</link>."
@@ -1560,19 +1125,16 @@ msgstr ""
 "Para mostrar los resultados de forma científica cambie el <link xref="
 "\"number-display\">formato del resultado</link>."
 
-#. (itstool) path: info/title
-#: C/superscript.page:7
+#: C/superscript.page:7(info/title)
 msgctxt "sort"
 msgid "_"
 msgstr "_"
 
-#. (itstool) path: page/title
-#: C/superscript.page:11
+#: C/superscript.page:11(page/title)
 msgid "Superscript and Subscript"
 msgstr "Superíndice y subíndice"
 
-#. (itstool) path: page/p
-#: C/superscript.page:13
+#: C/superscript.page:13(page/p)
 msgid ""
 "Some equations may require numbers to be entered in superscript or subscript "
 "form. e.g."
@@ -1580,13 +1142,11 @@ msgstr ""
 "Algunas ecuaciones pueden requerir que introduzca números en la forma de "
 "superíndice o subíndice, ej."
 
-#. (itstool) path: example/p
-#: C/superscript.page:17
+#: C/superscript.page:17(example/p)
 msgid "x³+2x²−5"
 msgstr "x³+2x²−5"
 
-#. (itstool) path: page/p
-#: C/superscript.page:21
+#: C/superscript.page:21(page/p)
 msgid ""
 "To enter superscript numbers with the mouse select the number mode using the "
 "the <gui>↑n</gui> and <gui>↓n</gui> buttons. When one of these modes is "
@@ -1598,8 +1158,7 @@ msgstr ""
 "está activo, pulsar los números de los botones introducirá números como "
 "superíndice o subíndice. Para volver al modo normal pulse el botón activo."
 
-#. (itstool) path: page/p
-#: C/superscript.page:26
+#: C/superscript.page:26(page/p)
 msgid ""
 "To enter superscript numbers with the keyboard hold down <key>Ctrl</key> "
 "while entering the number. Hold <key>Alt</key> for subscript."
@@ -1608,8 +1167,7 @@ msgstr ""
 "<key>Ctrl</key> mientras introduce el número. Mantenga <key>Alt</key> para "
 "introducir un subíndice."
 
-#. (itstool) path: page/p
-#: C/superscript.page:30
+#: C/superscript.page:30(page/p)
 msgid ""
 "The number mode returns to normal when entering the next non-number "
 "character (e.g. +)."
@@ -1617,13 +1175,11 @@ msgstr ""
 "El modo numérico vuelve a normal después de introducir un carácter no "
 "numérico (ej. +)."
 
-#. (itstool) path: page/title
-#: C/trigonometry.page:9
+#: C/trigonometry.page:9(page/title)
 msgid "Trigonometry"
 msgstr "Trigonometría"
 
-#. (itstool) path: page/p
-#: C/trigonometry.page:11
+#: C/trigonometry.page:11(page/p)
 msgid ""
 "Trigonometry can be performed using the sin, cos, and tan <link xref="
 "\"function\">function</link>."
@@ -1631,13 +1187,11 @@ msgstr ""
 "La trigonometría se puede realizar usando las <link xref=\"function"
 "\">funciones</link> sen, cos y tan."
 
-#. (itstool) path: example/p
-#: C/trigonometry.page:15
+#: C/trigonometry.page:15(example/p)
 msgid "sin 45"
 msgstr "sen 45"
 
-#. (itstool) path: page/p
-#: C/trigonometry.page:19
+#: C/trigonometry.page:19(page/p)
 msgid ""
 "The angle units used can be changed from the <guiseq><gui>Calculator</"
 "gui><gui>Preferences</gui></guiseq> menu. Trigonometry buttons are visible "
@@ -1648,21 +1202,18 @@ msgstr ""
 "de trigonometría están visibles en el <link xref=\"mouse\">modo avanzado</"
 "link>."
 
-#. (itstool) path: page/p
-#: C/trigonometry.page:23
+#: C/trigonometry.page:23(page/p)
 msgid ""
 "Hyperbolic functions are available by adding \"h\" to the end of a function."
 msgstr ""
 "Las funciones hiperbólicas están disponibles añadiendo una «h» al final de "
 "una función."
 
-#. (itstool) path: example/p
-#: C/trigonometry.page:27
+#: C/trigonometry.page:27(example/p)
 msgid "sinh 0.34"
 msgstr "senh 0.34"
 
-#. (itstool) path: page/p
-#: C/trigonometry.page:31
+#: C/trigonometry.page:31(page/p)
 msgid ""
 "Inverse functions are entered either using the inverse symbol ⁻¹ "
 "(<keyseq><key>Ctrl</key><key>I</key></keyseq>) or the \"a\" form of the "
@@ -1672,18 +1223,15 @@ msgstr ""
 "(<keyseq><key>Ctrl</key><key>I</key></keyseq>) o la forma «a» de la función. "
 "Las siguientes dos ecuaciones son equivalentes."
 
-#. (itstool) path: example/p
-#: C/trigonometry.page:36
+#: C/trigonometry.page:36(example/p)
 msgid "sin⁻¹ 0.5"
 msgstr "sen⁻¹ 0.5"
 
-#. (itstool) path: example/p
-#: C/trigonometry.page:39
+#: C/trigonometry.page:39(example/p)
 msgid "asin 0.5"
 msgstr "asen 0.5"
 
-#. (itstool) path: page/p
-#: C/trigonometry.page:43
+#: C/trigonometry.page:43(page/p)
 msgid ""
 "To enter <link xref=\"variable\">π</link> with the keyboard use "
 "<keyseq><key>Ctrl</key><key>P</key></keyseq>."
@@ -1691,36 +1239,30 @@ msgstr ""
 "Para introducir <link xref=\"variable\">π</link> con el teclado, use "
 "<keyseq><key>Ctrl</key><key>P</key></keyseq>."
 
-#. (itstool) path: page/title
-#: C/variables.page:9
+#: C/variables.page:9(page/title)
 msgid "Variables"
 msgstr "Variables"
 
-#. (itstool) path: page/p
-#: C/variables.page:11
+#: C/variables.page:11(page/p)
 msgid ""
 "To assign a value to a variable use the = symbol or choose the variable to "
 "assign to with the <gui>x</gui> button in <link xref=\"mouse\">advanced "
-"mode</link>. A variable name must only contain upper or lower case "
-"characters."
+"mode</link>. A variable name must only contain upper or lower characters."
 msgstr ""
 "Para asignar un valor a una variable use el símbolo = o elija la variable a "
 "la que asignar el valor con el botón <gui>x</gui> en el <link xref=\"mouse"
 "\">modo avanzado</link>. Un nombre de variable sólo puede contener "
 "caracteres en mayúscula o minúscula."
 
-#. (itstool) path: example/p
-#: C/variables.page:16
+#: C/variables.page:16(example/p)
 msgid "x=5"
 msgstr "x=5"
 
-#. (itstool) path: example/p
-#: C/variables.page:19
+#: C/variables.page:19(example/p)
 msgid "value=82"
 msgstr "valor=82"
 
-#. (itstool) path: page/p
-#: C/variables.page:23
+#: C/variables.page:23(page/p)
 msgid ""
 "Variables can be used in any equation and are substituted for their assigned "
 "value. Variables can be inserted using the <gui>x</gui> button."
@@ -1729,137 +1271,45 @@ msgstr ""
 "valor asignado. Las variables se pueden insertar usando el botón <gui>x</"
 "gui>."
 
-#. (itstool) path: example/p
-#: C/variables.page:28
+#: C/variables.page:28(example/p)
 msgid "6x+3"
 msgstr "6x+3"
 
-#. (itstool) path: example/p
-#: C/variables.page:31
+#: C/variables.page:31(example/p)
 msgid "xy−3x+7y−21"
 msgstr "xy−3x+7y−21"
 
-#. (itstool) path: page/p
-#: C/variables.page:35
+#: C/variables.page:35(page/p)
 msgid "The following variables are always defined."
 msgstr "Las siguientes variables están siempre definidas."
 
-#. (itstool) path: td/p
-#: C/variables.page:40
-msgid "_"
-msgstr "_"
+#: C/variables.page:40(td/p)
+msgid "ans"
+msgstr "ans"
 
-#. (itstool) path: td/p
-#: C/variables.page:41
+#: C/variables.page:41(td/p)
 msgid "Result of previous calculation"
 msgstr "Resultado del cálculo anterior"
 
-#. (itstool) path: td/p
-#: C/variables.page:44
+#: C/variables.page:44(td/p)
 msgid "e"
 msgstr "e"
 
-#. (itstool) path: td/p
-#: C/variables.page:45
+#: C/variables.page:45(td/p)
 msgid "<link xref=\"logarithm\">Euler's Number</link>"
 msgstr "<link xref=\"logarithm\">Número de Euler</link>"
 
-#. (itstool) path: td/p
-#: C/variables.page:49
+#: C/variables.page:49(td/p)
 msgid "<link xref=\"trigonometry\">Pi</link>"
 msgstr "<link xref=\"trigonometry\">Pi</link>"
 
-#. (itstool) path: td/p
-#: C/variables.page:52
+#: C/variables.page:52(td/p)
 msgid "rand"
 msgstr "rand"
 
-#. (itstool) path: td/p
-#: C/variables.page:53
+#: C/variables.page:53(td/p)
 msgid "Random value in the range [0,1] (changes on each read)"
 msgstr "Valor aleatorio en el rango [0,1] (cambia en cada lectura)"
-
-#~ msgid "Complex numbers are not supported in <app>Calculator</app>."
-#~ msgstr "<app>Calculadora</app> no soporta números complejos."
-
-#~ msgid "ans"
-#~ msgstr "ans"
-
-#~ msgid ""
-#~ "You can also convert currencies using the keyboard and the <em>in</em> "
-#~ "operator."
-#~ msgstr ""
-#~ "También puede convertir divisas usando el teclado y el operador<em>in</"
-#~ "em>."
-
-#~ msgid "13.65 USD in GBP"
-#~ msgstr "13.65 USD in GBP"
-
-#~ msgctxt "_"
-#~ msgid ""
-#~ "external ref='figures/logo32.png' md5='009d7dcd3d8a2c698be7d7c8bce75b6b'"
-#~ msgstr ""
-#~ "external ref='figures/logo32.png' md5='009d7dcd3d8a2c698be7d7c8bce75b6b'"
-
-#~ msgid "<media type=\"image\" src=\"figures/logo32.png\"/> Calculator Help"
-#~ msgstr ""
-#~ "<media type=\"image\" src=\"figures/logo32.png\"/> Ayuda de la Calculadora"
-
-#~ msgid ""
-#~ "To set the base that results are shown in change the <link xref=\"number-"
-#~ "display\">result format</link>."
-#~ msgstr ""
-#~ "Para establecer la base en la que se muestra el resultado cambie el <link "
-#~ "xref=\"number-display\">formato del resultado</link>."
-
-#~ msgid ""
-#~ "To change the base of the current result use a base button or "
-#~ "<keyseq><key>Ctrl</key><key>D</key></keyseq> to show in decimal form."
-#~ msgstr ""
-#~ "Para cambiar la base del resultado actual use un botón de base o pulse "
-#~ "<keyseq><key>Ctrl</key><key>D</key></keyseq> para mostrarlo en la forma "
-#~ "decimal."
-
-#~ msgid ""
-#~ "To convert between number bases enter a number (or solve an equation) and "
-#~ "change the <link xref=\"number-display\">result format</link> from the "
-#~ "<guiseq><gui>Calculator</gui><gui>Preferences</gui></guiseq> menu."
-#~ msgstr ""
-#~ "Para convertir entre bases numéricas introduzca un número (o resuelva una "
-#~ "ecuación) y cambie el <link xref=\"number-display\">formato del "
-#~ "resultado</link> desde el menú <guiseq><gui>Calculadora</"
-#~ "gui><gui>Preferencias</gui></guiseq>."
-
-#~ msgid "Decimal"
-#~ msgstr "Decimal"
-
-#~ msgid "Binary"
-#~ msgstr "Binario"
-
-#~ msgid "Results are displayed as <link xref=\"base\">binary numbers</link>"
-#~ msgstr ""
-#~ "Los resultados se muestran como <link xref=\"base\">números binarios</"
-#~ "link>"
-
-#~ msgid "Octal"
-#~ msgstr "Octal"
-
-#~ msgid "Results are displayed as <link xref=\"base\">octal numbers</link>"
-#~ msgstr ""
-#~ "Los resultados se muestran como <link xref=\"base\">números octales</link>"
-
-#~ msgid "Hexadecimal"
-#~ msgstr "Hexadecimal"
-
-#~ msgid ""
-#~ "Results are displayed as <link xref=\"base\">hexadecimal numbers</link>"
-#~ msgstr ""
-#~ "Los resultados se muestran como <link xref=\"base\">números "
-#~ "hexadecimales</link>"
-
-#~ msgid "<app>Calculator</app> does not support user-defined functions."
-#~ msgstr ""
-#~ "<app>Calculadora</app> no soporta funciones definidas por el usuario."
 
 #~ msgid ""
 #~ "Provides buttons suitable for <link xref=\"trigonometry\">trigonometry</"
@@ -1933,3 +1383,10 @@ msgstr "Valor aleatorio en el rango [0,1] (cambia en cada lectura)"
 #~ "Este trabajo está licenciado bajo una <link href=\"http://creativecommons."
 #~ "org/licenses/by-sa/3.0/us/\">Licencia Creative Commons atribución - "
 #~ "compartir igual 3.0 sin soporte</link>."
+
+#~ msgid ""
+#~ "When in <link xref=\"mouse\">programming mode</link> there are buttons "
+#~ "for binary, octal and hexadecimal."
+#~ msgstr ""
+#~ "Cuando está en el <link xref=\"mouse\">modo programador</link> existen "
+#~ "botones para binario, octal y hexadecimal."

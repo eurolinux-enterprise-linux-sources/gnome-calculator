@@ -13,24 +13,5 @@
 
 	<title>Baze de numerație</title>
     
-    <p>
-    To convert the number to a different base representation use the <em>in</em> operator.
-    </p>
-    <example>
-    <p>
-    12 in hex
-    </p>
-    <p>
-    5 in binary
-    </p>
-    <p>
-    1A₁₆ in dec
-    </p>
-    <p>
-    1010₂ in octal
-    </p>
-    </example>
-    <note>
-      <p>Number Base conversions must be performed using the keyboard.</p>
-    </note>
+    <p>Pentru a converti între baze de numerație introduceți un număr (sau rezolvați o ecuație) și modificați <link xref="number-display">formatul rezultatului</link> din meniul <guiseq><gui>Calculator</gui><gui>Preferințe</gui></guiseq>.</p>
 </page>

@@ -3,29 +3,27 @@
 
     <info>
         <link type="guide" xref="index#conversion"/>
-    
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Daniel Nylander</mal:name>
-      <mal:email>po@danielnylander.se</mal:email>
-      <mal:years>2006, 2007, 2009</mal:years>
-    </mal:credit>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Sebastian Rasmussen</mal:name>
-      <mal:email>sebras@gmail.com</mal:email>
-      <mal:years>2015</mal:years>
-    </mal:credit>
-  </info>
+    </info>
 
-	<title>Längd/Yta/Volym</title>
+	<title>Length/Area/Volume</title>
     
-    <p>För att konvertera mellan längd-, yt- och volymenheter använd operatorn <em>in</em>.</p>
+    <p>
+    To convert between length, area and volume units use the <em>in</em> operator.
+    </p>
     <example>
-    <p>6 meters in inches</p>
-    <p>1 acre in cm²</p>
-    <p>1 pint in mL</p>
+    <p>
+    6 meters in inches
+    </p>
+    <p>
+    1 acre in cm²
+    </p>
+    <p>
+    1 pint in mL
+    </p>
     </example>
     <note>
-    <p>Längd-/yt-/volymkonverteringar måste utföras via tangentbordet.</p>
+    <p>
+    Length/Area/Volume conversions must be performed using the keyboard.
+    </p>
     </note>
 </page>

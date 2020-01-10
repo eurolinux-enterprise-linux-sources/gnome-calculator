@@ -3,19 +3,7 @@
 
     <info>
         <link type="guide" xref="index#equation"/>
-    
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Marek Černocký</mal:name>
-      <mal:email>marek@manet.cz</mal:email>
-      <mal:years>2009, 2010, 2011, 2013</mal:years>
-    </mal:credit>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Lucas Lommer</mal:name>
-      <mal:email>llommer@svn.gnome.org</mal:email>
-      <mal:years>2009</mal:years>
-    </mal:credit>
-  </info>
+    </info>
 
 	<title>Trigonometrie</title>
     
@@ -23,7 +11,10 @@
     <example>
     <p>sin 45</p>
     </example>
-    <p>Úhlové jednotky lze změnit v nabídce <guiseq><gui>Kalkulačka</gui><gui>Předvolby</gui></guiseq>. Tlačítka s trigonometrickými funkcemi jsou viditelná v <link xref="mouse">pokročilém režimu</link>.</p>
+    <p>
+    The angle units used can be changed from the <guiseq><gui>Calculator</gui><gui>Preferences</gui></guiseq> menu.
+    Trigonometry buttons are visible when in <link xref="mouse">Advanced mode</link>.
+    </p>
     <p>Hyperbolické funkce jsou dostupné přidáním „h“ na konec názvu funkce.</p>
     <example>
     <p>sinh 0,34</p>

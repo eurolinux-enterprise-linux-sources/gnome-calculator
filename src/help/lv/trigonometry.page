@@ -11,7 +11,10 @@
     <example>
     <p>sin 45</p>
     </example>
-    <p>Grādu mērvienības var tikt mainītas no <guiseq><gui>Kalkulators</gui><gui>Iestatījumi</gui></guiseq> izvēlnes. Trigonometrijas pogas ir pieejamas <link xref="mouse">paplašinātajā režīmā</link>.</p>
+    <p>
+    The angle units used can be changed from the <guiseq><gui>Calculator</gui><gui>Preferences</gui></guiseq> menu.
+    Trigonometry buttons are visible when in <link xref="mouse">Advanced mode</link>.
+    </p>
     <p>Hiperboliskās funkcijas ir pieejamas, funkcijas beigās pievienojot "h".</p>
     <example>
     <p>sinh 0,34</p>

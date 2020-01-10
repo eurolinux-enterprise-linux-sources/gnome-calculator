@@ -4,7 +4,7 @@
  *
  * This program is free software: you can redistribute it and/or modify it under
  * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
+ * Foundation, either version 2 of the License, or (at your option) any later
  * version. See http://www.gnu.org/copyleft/gpl.html the full text of the
  * license.
  */
@@ -12,41 +12,34 @@
 public class Calculator : Gtk.Application
 {
     private Settings settings;
-    private MathWindow last_opened_window;
-    int n_math_windows = 0;
+    private MathWindow window;
     private MathPreferencesDialog preferences_dialog;
-    private Gtk.ShortcutsWindow shortcuts_window;
     private static string program_name = null;
     private static string equation_string = null;
-    private static string mode_string = null;
-
-    private const OptionEntry[] option_entries = {
-        { "mode", 'm', 0, OptionArg.STRING, ref mode_string, N_("Start in given mode"), "mode" },
-        { "solve", 's', 0, OptionArg.STRING, null, N_("Solve given equation"), "equation" },
-        { "equation", 'e', 0, OptionArg.STRING, ref equation_string, N_("Start with given equation"), "equation"},
-        { "version", 'v', 0, OptionArg.NONE, null, N_("Show release version"), null },
-        { null }
-    };
 
     private const ActionEntry[] app_entries =
     {
-        { "newwindow", new_window_cb, null, null, null },
+        { "copy", copy_cb, null, null, null },
+        { "paste", paste_cb, null, null, null },
+        { "undo", undo_cb, null, null, null },
+        { "redo", redo_cb, null, null, null },
+        { "mode", mode_changed_cb, "s", "\"basic\"", null },
         { "preferences", show_preferences_cb, null, null, null },
-        { "shortcuts", keyboard_shortcuts_cb, null, null, null },
         { "help", help_cb, null, null, null },
         { "about", about_cb, null, null, null },
         { "quit", quit_cb, null, null, null },
     };
-
+    
     public Calculator ()
     {
-        Object (flags : ApplicationFlags.NON_UNIQUE, application_id : "org.gnome.Calculator");
-
-        add_main_option_entries (option_entries);
+        Object (flags : ApplicationFlags.NON_UNIQUE);
     }
 
-    private MathWindow create_new_window (Settings settings)
+    protected override void startup ()
     {
+        base.startup ();
+
+        settings = new Settings ("org.gnome.calculator");
         var accuracy = settings.get_int ("accuracy");
         var word_size = settings.get_int ("word-size");
         var number_base = settings.get_int ("base");
@@ -59,7 +52,6 @@ public class Calculator : Gtk.Application
         var target_currency = settings.get_string ("target-currency");
         var source_units = settings.get_string ("source-units");
         var target_units = settings.get_string ("target-units");
-        var precision = settings.get_int ("precision");
 
         var equation = new MathEquation ();
         equation.accuracy = accuracy;
@@ -72,107 +64,60 @@ public class Calculator : Gtk.Application
         equation.target_currency = target_currency;
         equation.source_units = source_units;
         equation.target_units = target_units;
-        Number.precision = precision;
 
         add_action_entries (app_entries, this);
-        set_accels_for_action ("win.clear", {"<Primary>Escape"});
 
-        var current_window = new MathWindow (this, equation);
-        current_window.set_title (_("Calculator"));
-        // when closing the last window save its position to the settings
-        current_window.delete_event.connect((sender, event) => {
-            if (n_math_windows == 1) {
-                save_window_position ((sender as MathWindow));
-            }
-            n_math_windows -= 1;
-            return false;
-        });
-        n_math_windows += 1;
-
-        var buttons = current_window.buttons;
+        window = new MathWindow (this, equation);
+        var buttons = window.buttons;
         buttons.programming_base = number_base;
         buttons.mode = button_mode; // FIXME: We load the basic buttons even if we immediately switch to the next type
+        buttons.notify["mode"].connect ((pspec) => { mode_cb (); });
+        mode_cb ();
 
-        var builder = new Gtk.Builder ();
-        try
-        {
-            builder.add_from_resource ("/org/gnome/calculator/menu.ui");
-        }
-        catch (Error e)
-        {
-            error ("Error loading menu UI: %s", e.message);
-        }
+        var menu = new Menu ();
 
-        var menu = builder.get_object ("appmenu") as MenuModel;
+        var section = new Menu ();
+        section.append (_("Basic"), "app.mode::basic");
+        section.append (_("Advanced"), "app.mode::advanced");
+        section.append (_("Financial"), "app.mode::financial");
+        section.append (_("Programming"), "app.mode::programming");
+        menu.append_section (_("Mode"), section);
+
+        section = new Menu ();
+        section.append (_("Preferences"), "app.preferences");
+        menu.append_section (null, section);
+
+        section = new Menu ();
+        section.append (_("About Calculator"), "app.about");
+        section.append (_("Help"), "app.help");
+        section.append (_("Quit"), "app.quit");
+        menu.append_section (null, section);
+
         set_app_menu (menu);
 
-        set_accels_for_action ("win.mode::basic", {"<alt>B"});
-        set_accels_for_action ("win.mode::advanced", {"<alt>A"});
-        set_accels_for_action ("win.mode::financial", {"<alt>F"});
-        set_accels_for_action ("win.mode::programming", {"<alt>P"});
-        set_accels_for_action ("win.mode::keyboard", {"<alt>K"});
-        set_accels_for_action ("win.copy", {"<control>C"});
-        set_accels_for_action ("win.paste", {"<control>V"});
-        set_accels_for_action ("win.undo", {"<control>Z"});
-        set_accels_for_action ("win.close", {"<control>W"});
-        set_accels_for_action ("win.redo", {"<control><shift>Z"});
-        return current_window;
-    }
-
-    protected override void startup ()
-    {
-        base.startup ();
-
-        settings = new Settings ("org.gnome.calculator");
-        last_opened_window = create_new_window (settings);
-        // restore the first window position from the settings
-        load_window_position (last_opened_window);
-    }
-
-    private MathWindow get_active_math_window ()
-    {
-        return (MathWindow) get_active_window ();
+        add_accelerator ("<control>Q", "app.quit", null);
+        add_accelerator ("F1", "app.help", null);
+        add_accelerator ("<control>C", "app.copy", null);
+        add_accelerator ("<control>V", "app.paste", null);
+        add_accelerator ("<control>Z", "app.undo", null);
+        add_accelerator ("<control><shift>Z", "app.redo", null);
     }
 
     protected override void activate ()
     {
         base.activate ();
 
-        last_opened_window.present ();
+        window.present ();
         if (equation_string != "" && equation_string != null)
         {
             var equations = (equation_string.compress ()).split ("\n",0);
             for (var i = 0; i < equations.length; i++)
             {
                 if ((equations [i].strip ()).length > 0)
-                    last_opened_window.equation.set (equations [i]);
+                    window.equation.set (equations [i]);
                 else
-                    last_opened_window.equation.solve ();
+                    window.equation.solve ();
             }
-        }
-        if (mode_string != "" && mode_string != null)
-        {
-            var mode = ButtonMode.BASIC;
-
-            switch (mode_string)
-            {
-            case "basic":
-                mode = ButtonMode.BASIC;
-                break;
-            case "advanced":
-                mode = ButtonMode.ADVANCED;
-                break;
-            case "financial":
-                mode = ButtonMode.FINANCIAL;
-                break;
-            case "programming":
-                mode = ButtonMode.PROGRAMMING;
-                break;
-            case "keyboard":
-                mode = ButtonMode.KEYBOARD;
-                break;
-            }
-            last_opened_window.buttons.mode = mode;
         }
     }
 
@@ -180,7 +125,6 @@ public class Calculator : Gtk.Application
     {
         base.shutdown ();
 
-        var window = last_opened_window;
         var equation = window.equation;
         var buttons = window.buttons;
 
@@ -198,111 +142,92 @@ public class Calculator : Gtk.Application
         settings.set_int ("base", buttons.programming_base);
     }
 
-    protected override int handle_local_options (GLib.VariantDict options)
+    private void mode_cb ()
     {
-        if (options.contains ("version"))
+        var buttons = window.buttons;
+        var state = "basic";
+        switch (buttons.mode)
         {
-            /* NOTE: Is not translated so can be easily parsed */
-            stderr.printf ("%1$s %2$s\n", program_name, VERSION);
-            return Posix.EXIT_SUCCESS;
+        default:
+        case ButtonMode.BASIC:
+            state = "basic";
+            //FIXME: Should it revert to decimal mode? equation.number_format = NumberFormat.DECIMAL;
+            break;
+
+        case ButtonMode.ADVANCED:
+            state = "advanced";
+            break;
+
+        case ButtonMode.FINANCIAL:
+            state = "financial";
+            break;
+
+        case ButtonMode.PROGRAMMING:
+            state = "programming";
+            break;
         }
 
-        if (options.contains ("solve"))
-        {
-            var solve_equation = (string) options.lookup_value ("solve", VariantType.STRING);
-            var tsep_string = Posix.nl_langinfo (Posix.NLItem.THOUSEP);
-            if (tsep_string == null || tsep_string == "")
-                tsep_string = " ";
+        var action = lookup_action ("mode") as SimpleAction;
+        action.set_state (new Variant.string (state));
+    }
 
-            var decimal = Posix.nl_langinfo (Posix.NLItem.RADIXCHAR);
-            if (decimal == null)
-                decimal = "";
+    private void copy_cb ()
+    {
+        window.equation.copy ();
+    }
 
-            settings = new Settings ("org.gnome.calculator");
-            var angle_units = (AngleUnit) settings.get_enum ("angle-units");
-            var e = new SolveEquation (solve_equation.replace (tsep_string, "").replace (decimal, "."));
-            e.base = 10;
-            e.wordlen = 32;
-            e.angle_units = angle_units;
+    private void paste_cb ()
+    {
+        window.equation.paste ();
+    }
 
-            ErrorCode error;
-            string? error_token = null;
-            uint representation_base;
-            var result = e.parse (out representation_base, out error, out error_token);
-            if (result != null)
-            {
-                var serializer = new Serializer (DisplayFormat.AUTOMATIC, 10, 9);
-                serializer.set_representation_base (representation_base);
-                var eq_result = serializer.to_string (result);
-                if (serializer.error != null) {
-                    stderr.printf (serializer.error);
-                    return Posix.EXIT_FAILURE;
-                }
+    private void undo_cb ()
+    {
+        window.equation.undo ();
+    }
 
-                stdout.printf ("%s\n", eq_result);
-                return Posix.EXIT_SUCCESS;
-            }
-            else if (error == ErrorCode.MP)
-            {
-                stderr.printf ("Error: %s\n", (Number.error != null) ? Number.error : error_token);
-                return Posix.EXIT_FAILURE;
-            }
-            else
-            {
-                stderr.printf ("Error: %s\n", mp_error_code_to_string (error));
-                return Posix.EXIT_FAILURE;
-            }
-        }
+    private void redo_cb ()
+    {
+        window.equation.redo ();
+    }
 
-        return -1;
+    private void mode_changed_cb (SimpleAction action, Variant? parameter)
+    {
+        var mode = ButtonMode.BASIC;
+        var mode_str = parameter.get_string (null);
+        if (mode_str == "basic")
+            mode = ButtonMode.BASIC;
+        else if (mode_str == "advanced")
+            mode = ButtonMode.ADVANCED;
+        else if (mode_str == "financial")
+            mode = ButtonMode.FINANCIAL;
+        else if (mode_str == "programming")
+            mode = ButtonMode.PROGRAMMING;
+        window.buttons.mode = mode;
     }
 
     private void show_preferences_cb ()
     {
         if (preferences_dialog == null)
         {
-            preferences_dialog = new MathPreferencesDialog (get_active_math_window ().equation);
-            preferences_dialog.set_transient_for (get_active_window ());
+            preferences_dialog = new MathPreferencesDialog (window.equation);
+            preferences_dialog.set_transient_for (window);
         }
         preferences_dialog.present ();
-    }
-
-    private void keyboard_shortcuts_cb ()
-    {
-        if (shortcuts_window == null)
-        {
-            var builder = new Gtk.Builder ();
-            try
-            {
-                builder.add_from_resource ("/org/gnome/calculator/math-shortcuts.ui");
-            }
-            catch (Error e)
-            {
-                error ("Error loading shortcuts window UI: %s", e.message);
-            }
-
-            shortcuts_window = builder.get_object ("shortcuts-calculator") as Gtk.ShortcutsWindow;
-            shortcuts_window.destroy.connect ( (event) => { shortcuts_window = null; });
-        }
-
-        if (get_active_window () != shortcuts_window.get_transient_for ())
-            shortcuts_window.set_transient_for (get_active_window ());
-        shortcuts_window.show_all ();
-        shortcuts_window.present ();
     }
 
     private void help_cb ()
     {
         try
         {
-            Gtk.show_uri (get_active_window ().get_screen (), "help:gnome-calculator", Gtk.get_current_event_time ());
+            Gtk.show_uri (window.get_screen (), "help:gnome-calculator", Gtk.get_current_event_time ());
         }
         catch (Error e)
         {
             /* Translators: Error message displayed when unable to launch help browser */
             var message = _("Unable to open help file");
 
-            var d = new Gtk.MessageDialog (get_active_window (),
+            var d = new Gtk.MessageDialog (window,
                                            Gtk.DialogFlags.MODAL | Gtk.DialogFlags.DESTROY_WITH_PARENT,
                                            Gtk.MessageType.ERROR,
                                            Gtk.ButtonsType.CLOSE,
@@ -321,7 +246,6 @@ public class Calculator : Gtk.Application
             "Robert Ancell <robert.ancell@gmail.com>",
             "Klaus Niederkrüger <kniederk@umpa.ens-lyon.fr>",
             "Robin Sonefors <ozamosi@flukkost.nu>",
-            "Robert Roth <robert.roth.off@gmail.com>",
             null
         };
         string[] documenters =
@@ -333,16 +257,16 @@ public class Calculator : Gtk.Application
         /* The translator credits. Please translate this with your name (s). */
         var translator_credits = _("translator-credits");
 
-        Gtk.show_about_dialog (get_active_window (),
-                               "program-name",
+        var license = "This program is free software; you can redistribute it and/or modify\nit under the terms of the GNU General Public License as published by\nthe Free Software Foundation; either version 2 of the License, or\n(at your option) any later version.\n\nThis program is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License\nalong with this program; if not, write to the Free Software Foundation, Inc.,\n51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA";
+
+        Gtk.show_about_dialog (window,
+                               "name",
                                /* Program name in the about dialog */
                                _("Calculator"),
-                               "title", _("About Calculator"),
                                "version", VERSION,
                                "copyright",
-                               "\xc2\xa9 1986–2016 The Calculator authors",
-                               /* We link to MPFR and MPC which are  LGPLv3+, so Calculator cannot be conveyed as GPLv2+ */
-                               "license-type", Gtk.License.GPL_3_0,
+                               "\xc2\xa9 1986–2012 The Calculator authors",
+                               "license", license,
                                "comments",
                                /* Short description in the about dialog */
                                _("Calculator with financial and scientific modes."),
@@ -354,36 +278,7 @@ public class Calculator : Gtk.Application
 
     private void quit_cb ()
     {
-        save_window_position (get_active_math_window ());
-        get_active_window ().destroy ();
-    }
-
-    private void new_window_cb ()
-    {
-        var window = create_new_window (settings);
-        window.present ();
-    }
-
-    /**
-     * Load `window-position` from the settings and move the window to that
-     * position
-     */
-    private void load_window_position (MathWindow window) {
-        int32 x, y;
-        settings.get("window-position", "(ii)", out x, out y);
-        // (-1, -1) is the default value
-        if (x != -1 && y != -1) {
-            window.move (x, y);
-        }
-    }
-
-    /**
-     * Save window position to the settings
-     */
-    private void save_window_position (MathWindow window) {
-        int32 x, y;
-        window.get_position (out x, out y);
-        settings.set_value("window-position", new Variant("(ii)", x, y));
+        window.destroy ();
     }
 
     public static int main (string[] args)
@@ -398,6 +293,90 @@ public class Calculator : Gtk.Application
         Random.set_seed (now.get_microsecond ());
 
         program_name = Path.get_basename (args [0]);
+
+        var options = new OptionEntry [4];
+
+        string? solve_equation = null;
+        options[0] = {"solve",
+                      's',
+                      0,
+                      OptionArg.STRING,
+                      ref solve_equation,
+                      _("Solve given equation"),
+                      "equation"};
+
+        options[1] = {"equation",
+                      'e',
+                      0,
+                      OptionArg.STRING,
+                      ref equation_string,
+                      _("Start with given equation"),
+                      "equation"};
+
+        bool show_version = false;
+        options[2] = {"version",
+                      'v',
+                      0,
+                      OptionArg.NONE,
+                      ref show_version,
+                      _("Show release version"),
+                      null};
+                      
+        options[3] = { null, 0, 0, 0, null, null, null };
+
+        try
+        {
+            if (!Gtk.init_with_args (ref args, "Perform mathematical calculations", options, null))
+            {
+                stderr.printf ("Unable to initialize GTK+\n");
+                return Posix.EXIT_FAILURE;
+            }
+        }
+        catch (Error e)
+        {
+            stderr.printf ("%s\nUse '%s --help' to display help.\n", e.message, program_name);
+            return Posix.EXIT_FAILURE;
+        }
+
+        if (show_version)
+        {
+            /* NOTE: Is not translated so can be easily parsed */
+            stderr.printf ("%1$s %2$s\n", program_name, VERSION);
+            return Posix.EXIT_SUCCESS;
+        }
+
+        if (solve_equation != null)
+        {
+            var tsep_string = nl_langinfo (NLItem.THOUSEP);
+            if (tsep_string == null || tsep_string == "")
+                tsep_string = " ";
+
+            var e = new SolveEquation (solve_equation.replace (tsep_string, ""));
+            e.base = 10;
+            e.wordlen = 32;
+            e.angle_units = AngleUnit.DEGREES;
+
+            ErrorCode error;
+            uint representation_base;
+            var result = e.parse (out representation_base, out error);
+            if (result != null)
+            {
+                var serializer = new Serializer (DisplayFormat.AUTOMATIC, 10, 9);
+                serializer.set_representation_base (representation_base);
+                stdout.printf ("%s\n", serializer.to_string (result));
+                return Posix.EXIT_SUCCESS;
+            }
+            else if (error == ErrorCode.MP)
+            {
+                stderr.printf ("Error: %s\n", mp_get_error ());
+                return Posix.EXIT_FAILURE;
+            }
+            else
+            {
+                stderr.printf ("Error: %s\n", mp_error_code_to_string (error));
+                return Posix.EXIT_FAILURE;
+            }
+        }
 
         Gtk.Window.set_default_icon_name ("accessories-calculator");
 

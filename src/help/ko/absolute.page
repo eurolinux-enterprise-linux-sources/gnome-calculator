@@ -3,25 +3,19 @@
 
     <info>
         <link type="guide" xref="index#equation"/>
-    
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>류창우</mal:name>
-      <mal:email>cwryu@debian.org</mal:email>
-      <mal:years>2007, 2008, 2015.</mal:years>
-    </mal:credit>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>조성호</mal:name>
-      <mal:email>shcho@gnome.org</mal:email>
-      <mal:years>2016, 2017.</mal:years>
-    </mal:credit>
-  </info>
+    </info>
 
-	<title>절대값</title>
+	<title>Absolute Values</title>
     
-    <p>절대값은 | 기호 또는 abs <link xref="function">함수</link>로 계산합니다.</p>
+    <p>
+    Absolute values are calculated using the | symbol or abs <link xref="function">function</link>.
+    </p>
     <example>
-    <p>|−1|</p>
-    <p>abs (−1)</p>
+    <p>
+    |−1|
+    </p>
+    <p>
+    abs (−1)
+    </p>
     </example>
 </page>

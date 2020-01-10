@@ -1,2948 +1,2517 @@
-# Swedish translation for gnome-calculator
-# Copyright © 2002-2018 Free Software Foundation, Inc.
+# Swedish translation for gcalctool
+# Copyright (C) 2002-2011 Free Software Foundation, Inc.
 # Christian Rose <menthos@menthos.com>, 2002, 2003, 2004, 2005.
 # Daniel Nylander <po@danielnylander.se>, 2006, 2007, 2008, 2009, 2010, 2011.
-# Marcus Lundblad <ml@update.uu.se>, 2014.
-# Mattias Eriksson <snaggen@gmail.com>, 2014.
-# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2015, 2016, 2017, 2018.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-calculator\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"calculator&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2018-01-29 12:08+0000\n"
-"PO-Revision-Date: 2018-02-22 15:49+0100\n"
-"Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
+"Project-Id-Version: gcalctool\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-09-03 19:31+0200\n"
+"PO-Revision-Date: 2011-09-03 19:32+0100\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.0.6\n"
 
-#: src/buttons-advanced.ui:17 src/buttons-programming.ui:2143
-msgid "Inverse [Ctrl+I]"
-msgstr "Invers [Ctrl+I]"
-
-#. Accessible name for the inverse button
-#: src/buttons-advanced.ui:22 src/buttons-programming.ui:2148
-msgid "Inverse"
-msgstr "Invers"
-
-#: src/buttons-advanced.ui:47 src/buttons-programming.ui:1277
-msgid "Factorize [Ctrl+F]"
-msgstr "Faktorisera [Ctrl+F]"
-
-#. Accessible name for the factorize button
-#: src/buttons-advanced.ui:51 src/buttons-programming.ui:1281
-msgid "Factorize"
-msgstr "Faktorisera"
-
-#: src/buttons-advanced.ui:66 src/buttons-programming.ui:2116
-msgid "Factorial [!]"
-msgstr "Fakultet [!]"
-
-#. Accessible name for the factorial button
-#: src/buttons-advanced.ui:71 src/buttons-programming.ui:2121
-msgid "Factorial"
-msgstr "Fakultet"
-
-#: src/buttons-advanced.ui:95
-msgid "Imaginary Component"
-msgstr "Imaginärdel"
-
-#: src/buttons-advanced.ui:247 src/buttons-basic.ui:130
-#: src/buttons-financial.ui:2037 src/buttons-programming.ui:1377
-msgid "Divide [/]"
-msgstr "Dividera [/]"
-
-#: src/buttons-advanced.ui:359 src/buttons-basic.ui:258
-#: src/buttons-financial.ui:2165 src/buttons-programming.ui:1414
-msgid "Multiply [*]"
-msgstr "Multiplicera [*]"
-
-#: src/buttons-advanced.ui:376 src/buttons-basic.ui:275
-#: src/buttons-financial.ui:2182 src/buttons-programming.ui:1431
-msgid "Subtract [-]"
-msgstr "Subtrahera [-]"
-
-# Detta är räknesättet
-#: src/buttons-advanced.ui:392 src/buttons-basic.ui:291
-#: src/buttons-financial.ui:2198 src/buttons-programming.ui:1447
-msgid "Add [+]"
-msgstr "Addera [+]"
+#. The label on the memory button
+#: ../data/buttons-advanced.ui.h:2
+#: ../data/buttons-financial.ui.h:2
+msgid "<i>x</i>"
+msgstr "<i>x</i>"
 
 #. Label on the solve button (clicking this solves the displayed calculation)
-#: src/buttons-advanced.ui:403 src/buttons-basic.ui:302
-#: src/buttons-financial.ui:2209 src/buttons-programming.ui:1458
+#: ../data/buttons-advanced.ui.h:4
+#: ../data/buttons-basic.ui.h:2
+#: ../data/buttons-financial.ui.h:4
+#: ../data/buttons-programming.ui.h:2
 msgid "="
 msgstr "="
 
-#: src/buttons-advanced.ui:409 src/buttons-basic.ui:308
-#: src/buttons-financial.ui:2215 src/buttons-programming.ui:1464
-msgid "Calculate Result"
-msgstr "Beräkna resultat"
-
-#: src/buttons-advanced.ui:427 src/buttons-basic.ui:361
-#: src/buttons-financial.ui:2268 src/buttons-programming.ui:1482
-msgid "Clear Display [Escape]"
-msgstr "Töm skärmen [Escape]"
-
-#: src/buttons-advanced.ui:441 src/buttons-programming.ui:1782
-msgid "Subscript mode [Alt]"
-msgstr "Subscript-läge [Alt]"
-
-#. Accessible name for the subscript mode button
-#: src/buttons-advanced.ui:446 src/buttons-programming.ui:1787
-msgid "Subscript"
-msgstr "Indexläge"
-
-#: src/buttons-advanced.ui:468 src/buttons-programming.ui:1809
-msgid "Superscript mode [Ctrl]"
-msgstr "Superscript-läge [Ctrl]"
-
-#. Accessible name for the superscript mode button
-#: src/buttons-advanced.ui:473 src/buttons-programming.ui:1814
-msgid "Superscript"
-msgstr "Exponentläge"
-
-#: src/buttons-advanced.ui:495
-msgid "Scientific exponent [Ctrl+E]"
-msgstr "Vetenskaplig exponent [Ctrl+E]"
-
-#. Accessible name for the scientific exponent button
-#: src/buttons-advanced.ui:499
-msgid "Scientific Exponent"
-msgstr "Vetenskaplig exponent"
-
-#: src/buttons-advanced.ui:522 src/buttons-programming.ui:1947
-msgid "Modulus divide"
-msgstr "Modulusdivision"
-
-#: src/buttons-advanced.ui:538 src/buttons-basic.ui:328
-#: src/buttons-financial.ui:2235 src/buttons-programming.ui:1964
-msgid "Start Group [(]"
-msgstr "Startblock [(]"
-
-#: src/buttons-advanced.ui:555 src/buttons-basic.ui:345
-#: src/buttons-financial.ui:2252 src/buttons-programming.ui:1980
-msgid "End Group [)]"
-msgstr "Slutblock [)]"
-
-#. Accessible name for the memory button
-#. Accessible name for the memory value button
-#: src/buttons-advanced.ui:570 src/buttons-advanced.ui:573
-#: src/buttons-financial.ui:1854 src/buttons-financial.ui:1857
-#: src/buttons-programming.ui:1852
-msgid "Memory"
-msgstr "Minne"
-
-#. The label on the memory button
-#: src/buttons-advanced.ui:582 src/buttons-financial.ui:1869
-#: src/buttons-programming.ui:1865
-msgid "x"
-msgstr "x"
-
-#: src/buttons-advanced.ui:617 src/buttons-programming.ui:1314
-msgid "Absolute Value [|]"
-msgstr "Absolutvärde [|]"
-
 #. Accessible name for the absolute value button
-#: src/buttons-advanced.ui:622 src/buttons-programming.ui:1319
+#: ../data/buttons-advanced.ui.h:6
+#: ../data/buttons-programming.ui.h:4
 msgid "Absolute Value"
 msgstr "Absolutvärde"
 
-#: src/buttons-advanced.ui:646
-msgid "Real Component"
-msgstr "Realdel"
-
-#: src/buttons-advanced.ui:663
-msgid "Complex conjugate"
-msgstr "Komplexkonjugat"
-
-#: src/buttons-advanced.ui:680
-msgid "Complex argument"
-msgstr "Komplexargument"
-
-#: src/buttons-advanced.ui:697
-msgid "Natural Logarithm"
-msgstr "Naturlig logaritm"
-
-#: src/buttons-advanced.ui:713 src/buttons-financial.ui:1908
-#: src/buttons-programming.ui:1260
-msgid "Logarithm"
-msgstr "Logaritm"
-
-#: src/buttons-advanced.ui:728 src/buttons-financial.ui:2470
-#: src/buttons-programming.ui:2171
-msgid "Exponent [^ or **]"
-msgstr "Exponent [^ eller **]"
-
 #. Accessible name for the exponentiation (x to the power of y) button
-#: src/buttons-advanced.ui:733 src/buttons-basic.ui:396
-#: src/buttons-financial.ui:2475 src/buttons-programming.ui:2176
+#: ../data/buttons-advanced.ui.h:8
+#: ../data/buttons-basic.ui.h:4
+#: ../data/buttons-financial.ui.h:38
+#: ../data/buttons-programming.ui.h:8
 msgid "Exponent"
 msgstr "Exponent"
 
-#: src/buttons-advanced.ui:757 src/buttons-financial.ui:2499
-#: src/buttons-programming.ui:1244
-msgid "Root [Ctrl+R]"
-msgstr "Rot [Ctrl+R]"
+#. Accessible name for the factorial button
+#: ../data/buttons-advanced.ui.h:10
+#: ../data/buttons-programming.ui.h:10
+msgid "Factorial"
+msgstr "Fakultet"
 
-#: src/buttons-advanced.ui:773 src/buttons-basic.ui:419
-#: src/buttons-financial.ui:2450
-msgid "Undo [Ctrl+Z]"
-msgstr "Ångra [Ctrl+Z]"
+#. Accessible name for the factorize button
+#: ../data/buttons-advanced.ui.h:12
+#: ../data/buttons-programming.ui.h:12
+msgid "Factorize"
+msgstr "Faktorisera"
 
-#: src/buttons-advanced.ui:793
-msgid "Pi [Ctrl+P]"
-msgstr "Pi [Ctrl+P]"
+#. Accessible name for the inverse button
+#: ../data/buttons-advanced.ui.h:14
+#: ../data/buttons-programming.ui.h:18
+msgid "Inverse"
+msgstr "Inversad"
 
-#: src/buttons-advanced.ui:816
-msgid "Euler’s Number"
-msgstr "Eulers nummer"
+#. Accessible name for the memory button
+#. Accessible name for the memory value button
+#. Tooltip for the memory button
+#: ../data/buttons-advanced.ui.h:16
+#: ../data/buttons-financial.ui.h:50
+#: ../src/math-buttons.c:224
+msgid "Memory"
+msgstr "Minne"
 
-#: src/buttons-advanced.ui:846
-msgid "Cosine"
-msgstr "Cosinus"
-
-#: src/buttons-advanced.ui:861
-msgid "Sine"
-msgstr "Sinus"
-
-#: src/buttons-advanced.ui:876
-msgid "Tangent"
-msgstr "Tangens"
-
-#: src/buttons-advanced.ui:891
-msgid "Hyperbolic Sine"
-msgstr "Hyperbolisk sinus"
-
-#: src/buttons-advanced.ui:907
-msgid "Hyperbolic Cosine"
-msgstr "Hyperbolisk cosinus"
-
-#: src/buttons-advanced.ui:923
-msgid "Hyperbolic Tangent"
-msgstr "Hyperbolisk tangens"
-
-#: src/buttons-advanced.ui:946
-msgid "Additional Functions"
-msgstr "Ytterligare funktioner"
+#. Accessible name for the scientific exponent button
+#: ../data/buttons-advanced.ui.h:18
+msgid "Scientific Exponent"
+msgstr "Vetenskaplig exponent"
 
 #. Accessible name for the store value button
-#: src/buttons-advanced.ui:949 src/buttons-programming.ui:1855
+#: ../data/buttons-advanced.ui.h:20
+#: ../data/buttons-programming.ui.h:24
 msgid "Store"
 msgstr "Lagra"
 
-#: src/buttons-basic.ui:222 src/buttons-financial.ui:2129
-msgid "Percentage [%]"
-msgstr "Procent [%]"
+#. Accessible name for the subscript mode button
+#: ../data/buttons-advanced.ui.h:22
+#: ../data/buttons-programming.ui.h:26
+msgid "Subscript"
+msgstr "Nedsänkt"
 
-#: src/buttons-basic.ui:377
-msgid "Square root [Ctrl+R]"
-msgstr "Kvadratrot [Ctrl+R]"
+# Upphöjt?
+#. Accessible name for the superscript mode button
+#: ../data/buttons-advanced.ui.h:24
+#: ../data/buttons-programming.ui.h:28
+msgid "Superscript"
+msgstr "Överskrift"
 
-#: src/buttons-basic.ui:392
-msgid "Square [Ctrl+2]"
-msgstr "Kvadrat [Ctrl+2]"
-
-# Compounding kan även vara ränta-på-ränta. Oklar
-#. Title of Compounding Term dialog
-#: src/buttons-financial.ui:8 src/buttons-financial.ui:2284
-msgid "Compounding Term"
-msgstr "Sammansatt period"
-
-#: src/buttons-financial.ui:22 src/buttons-financial.ui:205
-#: src/buttons-financial.ui:388 src/buttons-financial.ui:571
-#: src/buttons-financial.ui:723 src/buttons-financial.ui:907
-#: src/buttons-financial.ui:1091 src/buttons-financial.ui:1275
-#: src/buttons-financial.ui:1459 src/buttons-financial.ui:1674
-#: src/buttons-programming.ui:2301
-msgid "_Cancel"
-msgstr "A_vbryt"
-
-#. Compounding Term Dialog: Calculate button
-#. Double-Declining Depreciation Dialog: Calculate button
-#. Future Value Dialog: Calculate button
-#. Gross Profit Margin Dialog: Calculate button
-#. Periodic Payment Dialog: Calculate button
-#. Present Value Dialog: Calculate button
-#. Periodic Interest Rate Dialog: Calculate button
-#. Straight-Line Depreciation Dialog: Calculate button
-#. Sum-of-the-Years’-Digits Depreciation Dialog: Calculate result button
 #. Payment Period Dialog: Button to calculate result
-#: src/buttons-financial.ui:37 src/buttons-financial.ui:220
-#: src/buttons-financial.ui:403 src/buttons-financial.ui:586
-#: src/buttons-financial.ui:738 src/buttons-financial.ui:922
-#: src/buttons-financial.ui:1106 src/buttons-financial.ui:1290
-#: src/buttons-financial.ui:1474 src/buttons-financial.ui:1689
+#: ../data/buttons-financial.ui.h:6
 msgid "C_alculate"
 msgstr "B_eräkna"
 
-#. Compounding Term Dialog: Label before present value input
-#. Periodic Interest Rate Dialog: Label before present value input
-#: src/buttons-financial.ui:117 src/buttons-financial.ui:1172
-msgid "Present _Value:"
-msgstr "Nuvarande _värde:"
-
-#. Compounding Term Dialog: Label before periodic interest rate input
-#. Future Value Dialog: Label before periodic interest rate input
-#. Periodic Payment Dialog: Label before periodic interest rate input
-#. Present Value Dialog: Label before periodic interest rate input
-#. Payment Period Dialog: Label before periodic interest rate input
-#: src/buttons-financial.ui:133 src/buttons-financial.ui:468
-#: src/buttons-financial.ui:804 src/buttons-financial.ui:988
-#: src/buttons-financial.ui:1769
-msgid "Periodic Interest _Rate:"
-msgstr "Periodisk _räntesats:"
-
-#. Compounding Term Dialog: Description of calculation
-#: src/buttons-financial.ui:149
-msgid ""
-"Calculates the number of compounding periods necessary to increase an "
-"investment of present value to a future value, at a fixed interest rate per "
-"compounding period."
-msgstr ""
-"Beräknar antalet sammansatta perioder som krävs för att öka en investering "
-"för nuvarande värdet till ett framtida värde, med en fast ränta per "
-"sammansatt period."
-
-#. Compounding Term Dialog: Label before future value input
-#. Periodic Interest Rate Dialog: Label before future value input
-#: src/buttons-financial.ui:163 src/buttons-financial.ui:1156
-msgid "_Future Value:"
-msgstr "_Framtida värde:"
-
-#. Title of Double-Declining Depreciation dialog
-#: src/buttons-financial.ui:191
-msgid "Double-Declining Depreciation"
-msgstr "Dubbel degressiv avskrivning"
-
-#. Double-Declining Depreciation Dialog: Description of calculation
-#: src/buttons-financial.ui:255
-msgid ""
-"Calculates the depreciation allowance on an asset for a specified period of "
-"time, using the double-declining balance method."
-msgstr ""
-"Beräknar avskrivningskostnaden för en tillgång under en angiven tidsperiod, "
-"som använder metoden dubbel degressiv avskrivning."
-
-#. Double-Declining Depreciation Dialog: Label before cost input
 #. Gross Profit Margin Dialog: Label before cost input
-#: src/buttons-financial.ui:269 src/buttons-financial.ui:635
+#: ../data/buttons-financial.ui.h:8
 msgid "C_ost:"
 msgstr "K_ostnad:"
 
-#. Double-Declining Depreciation Dialog: Label before life input
-#. Straight-Line Depreciation Dialog: Label before life input
-#. Sum-of-the-Years’-Digits Depreciation Dialog: Label before life input
-#: src/buttons-financial.ui:285 src/buttons-financial.ui:1357
-#: src/buttons-financial.ui:1525
-msgid "_Life:"
-msgstr "_Livslängd:"
+#. Periodic Payment Dialog: Description of calculation
+#: ../data/buttons-financial.ui.h:10
+msgid "Calculates the amount of the periodic payment of a loan, where payments are made at the end of each payment period. "
+msgstr "Beräknar mängden för den periodiska betalningen för ett lån, där betalningar görs vid slutet av varje betalningsperiod."
 
-#. Double-Declining Depreciation Dialog: Label before period input
-#. Sum-of-the-Years’-Digits Depreciation Dialog: Label before period input
-#: src/buttons-financial.ui:331 src/buttons-financial.ui:1509
-msgid "_Period:"
-msgstr "_Period:"
+#. Sum-of-the-Years'-Digits Depreciation Dialog: Description of calculation
+#: ../data/buttons-financial.ui.h:12
+msgid "Calculates the depreciation allowance on an asset for a specified period of time, using the Sum-of-the-Years'-Digits method. This method of depreciation accelerates the rate of depreciation, so that more depreciation expense occurs in earlier periods than in later ones. The useful life is the number of periods, typically years, over which an asset is depreciated. "
+msgstr "Beräknar avskrivningskostnaden för ett objekt för en angiven tidsperiod och använder metoden degressiv avskrivning. Denna metod för avskrivning accelererar räntan för avskrivningen så att högra avskrivningskostnader inträffar i tidigare perioder än i de senare. Den användbara livslängden är antalet perioder, oftast år, över vilka ett objekt skrivs av."
 
-#. Title of Future Value dialog
-#: src/buttons-financial.ui:374 src/buttons-financial.ui:2316
-msgid "Future Value"
-msgstr "Framtida värde"
+#. Double-Declining Depreciation Dialog: Description of calculation
+#: ../data/buttons-financial.ui.h:14
+msgid "Calculates the depreciation allowance on an asset for a specified period of time, using the double-declining balance method."
+msgstr "Beräknar avskrivningskostnaden för ett objekt för en angiven tidsperiod, som använder metoden dubbel degressiv avskrivning."
 
 #. Future Value Dialog: Description of calculation
-#: src/buttons-financial.ui:438
-msgid ""
-"Calculates the future value of an investment based on a series of equal "
-"payments at a periodic interest rate over the number of payment periods in "
-"the term."
-msgstr ""
-"Beräknar det framtida värdet för en investering baserat på ett antal "
-"likvärdiga betalningar med en periodisk ränta över ett antal "
-"betalningsperioder i perioden."
+#: ../data/buttons-financial.ui.h:16
+msgid "Calculates the future value of an investment based on a series of equal payments at a periodic interest rate over the number of payment periods in the term."
+msgstr "Beräknar det framtida värdet för en investering baserat på ett antal likvärdiga betalningar med en periodisk ränta över ett antal betalningsperioder i perioden."
 
-#. Future Value Dialog: Label before periodic payment input
-#. Present Value Dialog: Label before periodic payment input
-#. Payment Period Dialog: Label before periodic payment input
-#: src/buttons-financial.ui:452 src/buttons-financial.ui:972
-#: src/buttons-financial.ui:1801
-msgid "_Periodic Payment:"
-msgstr "_Periodisk betalning:"
-
-#. Future Value Dialog: Label before number of periods input
-#. Present Value Dialog: Label before number of periods input
-#: src/buttons-financial.ui:484 src/buttons-financial.ui:1004
-msgid "_Number of Periods:"
-msgstr "Antal perio_der:"
-
-#. Title of Gross Profit Margin dialog
-#: src/buttons-financial.ui:557 src/buttons-financial.ui:2434
-msgid "Gross Profit Margin"
-msgstr "Bruttovinstmarginal"
-
-#. Gross Profit Margin Dialog: Description of calculation
-#: src/buttons-financial.ui:621
-msgid ""
-"Calculates the resale price of a product, based on the product cost and the "
-"wanted gross profit margin."
-msgstr ""
-"Beräknar försäljningspriset för en produkt, baserat på produktens kostnad "
-"och den önskade bruttovinstmarginalen."
-
-#. Gross Profit Margin Dialog: Label before margin input
-#: src/buttons-financial.ui:651
-msgid "_Margin:"
-msgstr "_Marginal:"
-
-#. Title of Periodic Payment dialog
-#: src/buttons-financial.ui:709 src/buttons-financial.ui:2417
-msgid "Periodic Payment"
-msgstr "Periodisk betalning"
-
-#. Periodic Payment Dialog: Description of calculation
-#: src/buttons-financial.ui:774
-msgid ""
-"Calculates the amount of the periodic payment of a loan, where payments are "
-"made at the end of each payment period. "
-msgstr ""
-"Beräknar mängden för den periodiska betalningen för ett lån, där betalningar "
-"görs vid slutet av varje betalningsperiod. "
-
-#. Periodic Payment Dialog: Label before principal input
-#: src/buttons-financial.ui:788
-msgid "_Principal:"
-msgstr "_Principal:"
-
-#. Periodic Payment Dialog: Label before term input
-#. Periodic Interest Rate Dialog: Label before term input
-#: src/buttons-financial.ui:820 src/buttons-financial.ui:1188
-msgid "_Term:"
-msgstr "_Period:"
-
-#. Title of Present Value dialog
-#: src/buttons-financial.ui:893 src/buttons-financial.ui:2400
-msgid "Present Value"
-msgstr "Nuvarande värde"
-
-#. Present Value Dialog: Description of calculation
-#: src/buttons-financial.ui:958
-msgid ""
-"Calculates the present value of an investment based on a series of equal "
-"payments discounted at a periodic interest rate over the number of payment "
-"periods in the term. "
-msgstr ""
-"Beräknar det nuvarande värdet för en investering baserad på ett antal "
-"likvärdiga betalningar rabatterade med en periodisk ränta över ett antal "
-"betalningsperioder i perioden. "
-
-#. Title of Periodic Interest Rate dialog
-#: src/buttons-financial.ui:1077 src/buttons-financial.ui:2383
-msgid "Periodic Interest Rate"
-msgstr "Periodisk räntesats"
-
-#. Periodic Interest Rate Dialog: Description of calculation
-#: src/buttons-financial.ui:1142
-msgid ""
-"Calculates the periodic interest necessary to increase an investment to a "
-"future value, over the number of compounding periods. "
-msgstr ""
-"Beräknar den periodiska ränta som behövs för att öka en investering till ett "
-"framtida värde, över ett antal sammansatta perioder. "
-
-#. Title of Straight-Line Depreciation dialog
-#: src/buttons-financial.ui:1261
-msgid "Straight-Line Depreciation"
-msgstr "Linjär avskrivning"
-
-#. Straight-Line Depreciation Dialog: Label before cost input
-#. Sum-of-the-Years’-Digits Depreciation Dialog: Label before cost input
-#: src/buttons-financial.ui:1325 src/buttons-financial.ui:1557
-msgid "_Cost:"
-msgstr "_Kostnad:"
-
-#. Straight-Line Depreciation Dialog: Label before salvage input
-#. Sum-of-the-Years’-Digits Depreciation Dialog: Label before salvage input
-#: src/buttons-financial.ui:1341 src/buttons-financial.ui:1541
-msgid "_Salvage:"
-msgstr "_Salvage:"
-
-#. Straight-Line Depreciation Dialog: Description of calculation
-#: src/buttons-financial.ui:1419
-msgid ""
-"Calculates the straight-line depreciation of an asset for one period. The "
-"straight-line method of depreciation divides the depreciable cost evenly "
-"over the useful life of an asset. The useful life is the number of periods, "
-"typically years, over which an asset is depreciated. "
-msgstr ""
-"Beräknar den linjära avskrivningen för en tillgång under en period. Den "
-"linjära metoden för avskrivning delar upp den avskrivna kostnaden jämnt över "
-"den användbara livslängden för objektet. Den användbara livslängden är "
-"antalet perioder, oftast år, över vilket ett objekt skrivs av. "
-
-#. Title of Sum-of-the-Years’-Digits Depreciation dialog
-#: src/buttons-financial.ui:1445
-msgid "Sum-of-the-Years’-Digits Depreciation"
-msgstr "Degressiv avskrivning"
-
-#. Sum-of-the-Years’-Digits Depreciation Dialog: Description of calculation
-#: src/buttons-financial.ui:1634
-msgid ""
-"Calculates the depreciation allowance on an asset for a specified period of "
-"time, using the Sum-of-the-Years’-Digits method. This method of depreciation "
-"accelerates the rate of depreciation, so that more depreciation expense "
-"occurs in earlier periods than in later ones. The useful life is the number "
-"of periods, typically years, over which an asset is depreciated. "
-msgstr ""
-"Beräknar avskrivningskostnaden för en tillgång under en angiven tidsperiod "
-"och använder metoden degressiv avskrivning. Denna metod för avskrivning "
-"accelererar räntan för avskrivningen så att högre avskrivningskostnader "
-"inträffar i tidigare perioder än i de senare. Den användbara livslängden är "
-"antalet perioder, oftast år, över vilka ett objekt skrivs av. "
-
-#. Title of Payment Period dialog
-#: src/buttons-financial.ui:1660
-msgid "Payment Period"
-msgstr "Betalningsperiod"
-
-#. Payment Period Dialog: Label before future value input
-#: src/buttons-financial.ui:1785
-msgid "Future _Value:"
-msgstr "Framtida _värde:"
+#. Compounding Term Dialog: Description of calculation
+#: ../data/buttons-financial.ui.h:18
+msgid "Calculates the number of compounding periods necessary to increase an investment of present value to a future value, at a fixed interest rate per compounding period."
+msgstr "Beräknar antalet sammansatta perioder som krävs för att öka en investering för nuvarande värdet till ett framtida värde, med en fast ränta per sammansatt period."
 
 #. Payment Period Dialog: Description of calculation
-#: src/buttons-financial.ui:1818
-msgid ""
-"Calculates the number of payment periods that are necessary during the term "
-"of an ordinary annuity, to accumulate a future value, at a periodic interest "
-"rate."
-msgstr ""
-"Beräknar antalet betalningsperioder som krävs under perioden för en vanlig "
-"annuitet, för att ackumulera ett framtida värde, med en periodisk ränta."
+#: ../data/buttons-financial.ui.h:20
+msgid "Calculates the number of payment periods that are necessary during the term of an ordinary annuity, to accumulate a future value, at a periodic interest rate."
+msgstr "Beräknar antalet betalningsperioder som krävs under perioden för en vanlig annuitet, för att ackumulera ett framtida värde, med en periodisk ränta."
+
+#. Periodic Interest Rate Dialog: Description of calculation
+#: ../data/buttons-financial.ui.h:22
+msgid "Calculates the periodic interest necessary to increase an investment to a future value, over the number of compounding periods. "
+msgstr "Beräknar den periodiska ränta som behövs för att öka en investering till ett framtida värde, över ett antal sammansatta perioder."
+
+#. Present Value Dialog: Description of calculation
+#: ../data/buttons-financial.ui.h:24
+msgid "Calculates the present value of an investment based on a series of equal payments discounted at a periodic interest rate over the number of payment periods in the term. "
+msgstr "Beräknar det nuvarande värdet för en investering baserad på ett antal likvärdiga betalningar rabatterade med en periodisk ränta över ett antal betalningsperioder i perioden."
+
+#. Gross Profit Margin Dialog: Description of calculation
+#: ../data/buttons-financial.ui.h:26
+msgid "Calculates the resale price of a product, based on the product cost and the wanted gross profit margin."
+msgstr "Beräknar försäljningspriset för en produkt, baserat på produktens kostnad och den önskade bruttovinstmarginalen."
+
+#. Straight-Line Depreciation Dialog: Description of calculation
+#: ../data/buttons-financial.ui.h:28
+msgid "Calculates the straight-line depreciation of an asset for one period. The straight-line method of depreciation divides the depreciable cost evenly over the useful life of an asset. The useful life is the number of periods, typically years, over which an asset is depreciated. "
+msgstr "Beräknar den linjära avskrivningen för ett objekt under en period. Den linjära metoden för avskrivning delar upp den avskrivna kostnaden jämnt över den användbara livslängden för objektet. Den användbara livslängden är antalet perioder, oftast år, över vilket ett objekt skrivs av."
+
+# Compounding kan även vara ränta-på-ränta. Oklar
+#. Title of Compounding Term dialog
+#. Tooltip for the compounding term button
+#: ../data/buttons-financial.ui.h:30
+#: ../src/math-buttons.c:248
+msgid "Compounding Term"
+msgstr "Sammansatt period"
 
 #. Calculates the number of compounding periods necessary to increase an investment of present value pv to a future value of fv, at a fixed interest rate of int per compounding period. See also: http://en.wikipedia.org/wiki/Compound_interest
-#: src/buttons-financial.ui:2278
+#: ../data/buttons-financial.ui.h:32
 msgid "Ctrm"
 msgstr "Sampr"
 
 #. Calculates the depreciation allowance on an asset for a specified period of time, using the double-declining balance method. See also: http://en.wikipedia.org/wiki/Depreciation
-#: src/buttons-financial.ui:2294
+#: ../data/buttons-financial.ui.h:34
 msgid "Ddb"
 msgstr "Ddav"
 
-#: src/buttons-financial.ui:2300
-msgid "Double Declining Depreciation"
+#. Title of Double-Declining Depreciation dialog
+#: ../data/buttons-financial.ui.h:36
+msgid "Double-Declining Depreciation"
 msgstr "Dubbel degressiv avskrivning"
 
+#. Title of Future Value dialog
+#. Tooltip for the future value button
+#: ../data/buttons-financial.ui.h:40
+#: ../src/math-buttons.c:254
+msgid "Future Value"
+msgstr "Framtida värde"
+
+#. Payment Period Dialog: Label before future value input
+#: ../data/buttons-financial.ui.h:42
+msgid "Future _Value:"
+msgstr "Framtida _värde:"
+
 #. Calculates the future value of an investment based on a series of equal payments, each of amount pmt, at a periodic interest rate of int, over the number of payment periods in the term. See also: http://en.wikipedia.org/wiki/Future_value
-#: src/buttons-financial.ui:2310
+#: ../data/buttons-financial.ui.h:44
 msgid "Fv"
 msgstr "Fv"
 
-#. Calculates the number of payment periods that are necessary during the term of an ordinary annuity, to accumulate a future value of fv, at a periodic interest rate of int. Each payment is equal to amount pmt. See also: http://en.wikipedia.org/wiki/Annuity_(finance_theory)
-#: src/buttons-financial.ui:2326
-msgid "Term"
-msgstr "Period"
-
-#: src/buttons-financial.ui:2332
-msgid "Financial Term"
-msgstr "Finansiell period"
-
-#. Calculates the depreciation allowance on an asset for a specified period of time, using the Sum-Of-The-Years’-Digits method. This method of depreciation accelerates the rate of depreciation, so that more depreciation expense occurs in earlier periods than in later ones. The depreciable cost is cost - salvage. The useful life is the number of periods, typically years, over which an asset is depreciated. See also: http://en.wikipedia.org/wiki/Depreciation
-#: src/buttons-financial.ui:2343
-msgid "Syd"
-msgstr "Dgrav"
-
-#: src/buttons-financial.ui:2349
-msgid "Sum of the Years Digits Depreciation"
-msgstr "Degressiv avskrivning"
-
-# Osäker
-#. Calculates the straight-line depreciation of an asset for one period. The depreciable cost is cost - salvage. The straight-line method of depreciation divides the depreciable cost evenly over the useful life of an asset. The useful life is the number of periods, typically years, over which an asset is depreciated. See also: http://en.wikipedia.org/wiki/Depreciation
-#: src/buttons-financial.ui:2360
-msgid "Sln"
-msgstr "Rkl"
-
-#: src/buttons-financial.ui:2366
-msgid "Straight Line Depreciation"
-msgstr "Linjär avskrivning"
-
-#. Calculates the periodic interest necessary to increase an investment of present value pv to a future value of fv, over the number of compounding periods in term. See also: http://en.wikipedia.org/wiki/Interest
-#: src/buttons-financial.ui:2377
-msgid "Rate"
-msgstr "Sats"
-
-#. Calculates the present value of an investment based on a series of equal payments, each of amount pmt, discounted at a periodic interest rate of int, over the number of payment periods in the term. See also: http://en.wikipedia.org/wiki/Present_value
-#: src/buttons-financial.ui:2394
-msgid "Pv"
-msgstr "Nv"
-
-#. Calculates the amount of the periodic payment of a loan, where payments are made at the end of each payment period. See also: http://en.wikipedia.org/wiki/Amortization_schedule
-#: src/buttons-financial.ui:2411
-msgid "Pmt"
-msgstr "Bet"
-
 #. Calculates the resale price of a product, based on the product cost and the wanted gross profit margin. See also: http://en.wikipedia.org/wiki/Gross_profit_margin
-#: src/buttons-financial.ui:2428
+#: ../data/buttons-financial.ui.h:46
 msgid "Gpm"
 msgstr "Bvm"
 
-#: src/buttons-programming.ui:17
-msgid "Binary"
-msgstr "Binär"
+#. Title of Gross Profit Margin dialog
+#. Tooltip for the gross profit margin button
+#: ../data/buttons-financial.ui.h:48
+#: ../src/math-buttons.c:275
+msgid "Gross Profit Margin"
+msgstr "Bruttovinstmarginal"
 
-#: src/buttons-programming.ui:18
-msgid "Octal"
-msgstr "Oktal"
+#. Title of Payment Period dialog
+#: ../data/buttons-financial.ui.h:52
+msgid "Payment Period"
+msgstr "Betalningsperiod"
 
-#: src/buttons-programming.ui:19
-msgid "Decimal"
-msgstr "Decimal"
+#. Title of Periodic Interest Rate dialog
+#. Tooltip for the periodic interest rate button
+#: ../data/buttons-financial.ui.h:54
+#: ../src/math-buttons.c:266
+msgid "Periodic Interest Rate"
+msgstr "Periodisk räntesats"
 
-#: src/buttons-programming.ui:20
-msgid "Hexadecimal"
-msgstr "Hexadecimal"
+#. Payment Period Dialog: Label before periodic interest rate input
+#: ../data/buttons-financial.ui.h:56
+msgid "Periodic Interest _Rate:"
+msgstr "Periodisk _räntesats:"
 
-#: src/buttons-programming.ui:1298
-msgid "Binary Logarithm"
-msgstr "Binär logaritm"
+#. Title of Periodic Payment dialog
+#. Tooltip for the periodic payment button
+#: ../data/buttons-financial.ui.h:58
+#: ../src/math-buttons.c:272
+msgid "Periodic Payment"
+msgstr "Periodisk betalning"
 
-#: src/buttons-programming.ui:1343
-msgid "Integer Component"
-msgstr "Heltalsdel"
+#. Calculates the amount of the periodic payment of a loan, where payments are made at the end of each payment period. See also: http://en.wikipedia.org/wiki/Amortization_schedule
+#: ../data/buttons-financial.ui.h:60
+msgid "Pmt"
+msgstr "Bet"
 
-#: src/buttons-programming.ui:1360
-msgid "Fractional Component"
-msgstr "Bråkdel"
+#. Title of Present Value dialog
+#. Tooltip for the present value button
+#: ../data/buttons-financial.ui.h:62
+#: ../src/math-buttons.c:269
+msgid "Present Value"
+msgstr "Nuvarande värde"
 
-#: src/buttons-programming.ui:1896
-msgid "Boolean Exclusive OR"
-msgstr "Boolesk exklusiv OR"
+#. Periodic Interest Rate Dialog: Label before present value input
+#: ../data/buttons-financial.ui.h:64
+msgid "Present _Value:"
+msgstr "Nuvarande _värde:"
 
-#: src/buttons-programming.ui:1913
-msgid "Boolean OR"
-msgstr "Boolesk OR"
+#. Calculates the present value of an investment based on a series of equal payments, each of amount pmt, discounted at a periodic interest rate of int, over the number of payment periods in the term. See also: http://en.wikipedia.org/wiki/Present_value
+#: ../data/buttons-financial.ui.h:66
+msgid "Pv"
+msgstr "Nv"
 
-#: src/buttons-programming.ui:1930
-msgid "Boolean AND"
-msgstr "Boolesk AND"
+#. Calculates the periodic interest necessary to increase an investment of present value pv to a future value of fv, over the number of compounding periods in term. See also: http://en.wikipedia.org/wiki/Interest
+#: ../data/buttons-financial.ui.h:68
+msgid "Rate"
+msgstr "Sats"
+
+# Osäker
+#. Calculates the straight-line depreciation of an asset for one period. The depreciable cost is cost - salvage. The straight-line method of depreciation divides the depreciable cost evenly over the useful life of an asset. The useful life is the number of periods, typically years, over which an asset is depreciated. See also: http://en.wikipedia.org/wiki/Depreciation
+#: ../data/buttons-financial.ui.h:70
+msgid "Sln"
+msgstr "Rkl"
+
+#. Title of Straight-Line Depreciation dialog
+#: ../data/buttons-financial.ui.h:72
+msgid "Straight-Line Depreciation"
+msgstr "Linjär avskrivning"
+
+#. Title of Sum-of-the-Years'-Digits Depreciation dialog
+#: ../data/buttons-financial.ui.h:74
+msgid "Sum-of-the-Years'-Digits Depreciation"
+msgstr "Degressiv avskrivning"
+
+#. Calculates the depreciation allowance on an asset for a specified period of time, using the Sum-Of-The-Years'-Digits method. This method of depreciation accelerates the rate of depreciation, so that more depreciation expense occurs in earlier periods than in later ones. The depreciable cost is cost - salvage. The useful life is the number of periods, typically years, over which an asset is depreciated. See also: http://en.wikipedia.org/wiki/Depreciation
+#: ../data/buttons-financial.ui.h:76
+msgid "Syd"
+msgstr "Dgrav"
+
+#. Calculates the number of payment periods that are necessary during the term of an ordinary annuity, to accumulate a future value of fv, at a periodic interest rate of int. Each payment is equal to amount pmt. See also: http://en.wikipedia.org/wiki/Annuity_(finance_theory)
+#: ../data/buttons-financial.ui.h:78
+msgid "Term"
+msgstr "Period"
+
+#. Sum-of-the-Years'-Digits Depreciation Dialog: Label before cost input
+#: ../data/buttons-financial.ui.h:80
+msgid "_Cost:"
+msgstr "_Kostnad:"
+
+#. Periodic Interest Rate Dialog: Label before future value input
+#: ../data/buttons-financial.ui.h:82
+msgid "_Future Value:"
+msgstr "_Framtida värde:"
+
+#. Sum-of-the-Years'-Digits Depreciation Dialog: Label before life input
+#: ../data/buttons-financial.ui.h:84
+msgid "_Life:"
+msgstr "_Livslängd:"
+
+#. Gross Profit Margin Dialog: Label before margin input
+#: ../data/buttons-financial.ui.h:86
+msgid "_Margin:"
+msgstr "_Marginal:"
+
+#. Present Value Dialog: Label before number of periods input
+#: ../data/buttons-financial.ui.h:88
+msgid "_Number of Periods:"
+msgstr "Antal perio_der:"
+
+#. Sum-of-the-Years'-Digits Depreciation Dialog: Label before period input
+#: ../data/buttons-financial.ui.h:90
+msgid "_Period:"
+msgstr "_Period:"
+
+#. Payment Period Dialog: Label before periodic payment input
+#: ../data/buttons-financial.ui.h:92
+msgid "_Periodic Payment:"
+msgstr "_Periodisk betalning:"
+
+#. Periodic Payment Dialog: Label before principal input
+#: ../data/buttons-financial.ui.h:94
+msgid "_Principal:"
+msgstr "_Principal:"
+
+#. Sum-of-the-Years'-Digits Depreciation Dialog: Label before salvage input
+#: ../data/buttons-financial.ui.h:96
+msgid "_Salvage:"
+msgstr "_Salvage:"
+
+#. Periodic Interest Rate Dialog: Label before term input
+#: ../data/buttons-financial.ui.h:98
+msgid "_Term:"
+msgstr "_Period:"
+
+#. Insert ASCII dialog: Label before character entry
+#: ../data/buttons-programming.ui.h:6
+msgid "Ch_aracter:"
+msgstr "T_ecken:"
+
+#. Accessible name for the insert character button
+#: ../data/buttons-programming.ui.h:14
+msgid "Insert Character"
+msgstr "Infoga tecken"
+
+#. Title of insert character code dialog
+#. Tooltip for the insert character code button
+#: ../data/buttons-programming.ui.h:16
+#: ../src/math-buttons.c:227
+msgid "Insert Character Code"
+msgstr "Infoga teckenkod"
 
 #. Accessible name for the shift left button
-#: src/buttons-programming.ui:1994 src/buttons-programming.ui:1997
+#. Tooltip for the shift left button
+#: ../data/buttons-programming.ui.h:20
+#: ../src/math-buttons.c:242
 msgid "Shift Left"
 msgstr "Skifta vänster"
 
 #. Accessible name for the shift right button
-#: src/buttons-programming.ui:2037 src/buttons-programming.ui:2040
+#. Tooltip for the shift right button
+#: ../data/buttons-programming.ui.h:22
+#: ../src/math-buttons.c:245
 msgid "Shift Right"
 msgstr "Skifta höger"
 
-#. Title of insert character code dialog
-#: src/buttons-programming.ui:2081 src/buttons-programming.ui:2254
-msgid "Insert Character Code"
-msgstr "Infoga teckenkod"
-
-#. Accessible name for the insert character button
-#: src/buttons-programming.ui:2085
-msgid "Insert Character"
-msgstr "Infoga tecken"
-
-#: src/buttons-programming.ui:2101
-msgid "Boolean NOT"
-msgstr "Boolesk NOT"
-
-#: src/buttons-programming.ui:2200
-msgid "Ones’ Complement"
-msgstr "Enkomplement"
-
-#: src/buttons-programming.ui:2217
-msgid "Two’s Complement"
-msgstr "Tvåkomplement"
-
-#. Insert ASCII dialog: Label before character entry
-#: src/buttons-programming.ui:2267
-msgid "Ch_aracter:"
-msgstr "T_ecken:"
-
 #. Insert ASCII dialog: Button to insert selected character
-#: src/buttons-programming.ui:2316
+#: ../data/buttons-programming.ui.h:30
 msgid "_Insert"
 msgstr "_Infoga"
 
-#: data/org.gnome.Calculator.appdata.xml.in:7
-msgid "GNOME Calculator"
-msgstr "GNOME Kalkylator"
+#. The label on the memory button
+#: ../data/buttons-programming.ui.h:32
+msgid "x"
+msgstr "x"
 
-#: data/org.gnome.Calculator.appdata.xml.in:8
-#: data/org.gnome.Calculator.desktop.in:4
-msgid "Perform arithmetic, scientific or financial calculations"
-msgstr "Utför aritmetiska, vetenskapliga eller finansiella beräkningar"
+#. Word size combo: 16 bits
+#: ../data/preferences.ui.h:2
+msgid "16-bit"
+msgstr "16-bitars"
 
-#: data/org.gnome.Calculator.appdata.xml.in:10
-msgid ""
-"GNOME Calculator is an application that solves mathematical equations. "
-"Though it at first appears to be a simple calculator with only basic "
-"arithmetic operations, you can switch into Advanced, Financial, or "
-"Programming mode to find a surprising set of capabilities."
-msgstr ""
-"GNOME-kalkylator är ett program som löser matematiska ekvationer. Trots att "
-"det vid en första anblick kan verka som en enkel kalkylator med endast "
-"grundläggande räknesätt, så kan du byta till avancerat, finansiellt eller "
-"programmeringsläge för att finna ett förvånansvärt stort urval av funktioner."
+#. Word size combo: 32 bits
+#: ../data/preferences.ui.h:4
+msgid "32-bit"
+msgstr "32-bitars"
 
-#: data/org.gnome.Calculator.appdata.xml.in:16
-msgid ""
-"The Advanced calculator supports many operations, including: logarithms, "
-"factorials, trigonometric and hyperbolic functions, modulus division, "
-"complex numbers, random number generation, prime factorization and unit "
-"conversions."
-msgstr ""
-"Den avancerade kalkylatorn stödjer många operationer så som: logaritmer, "
-"fakultet, trigonometriska och hyperboliska funktioner, division med rest, "
-"komplexa tal, generering av slumptal, primtalsfaktorisering och "
-"enhetsomvandling."
+#. Word size combo: 64 bits
+#: ../data/preferences.ui.h:6
+msgid "64-bit"
+msgstr "64-bitars"
 
-#: data/org.gnome.Calculator.appdata.xml.in:22
-msgid ""
-"Financial mode supports several computations, including periodic interest "
-"rate, present and future value, double declining and straight line "
-"depreciation, and many others."
-msgstr ""
-"Finansiellt läge stödjer många beräkningar som periodisk räntesats, "
-"nuvarande och framtida värde, dubbel degressiv och linjär avskrivning och "
-"många andra."
+#. Word size combo: 8 bits
+#: ../data/preferences.ui.h:8
+msgid "8-bit"
+msgstr "8-bitars"
 
-#: data/org.gnome.Calculator.appdata.xml.in:27
-msgid ""
-"Programming mode supports conversion between common bases (binary, octal, "
-"decimal, and hexadecimal), boolean algebra, one’s and two’s complementation, "
-"character to character code conversion, and more."
-msgstr ""
-"Programmeringsläge stödjer konvertering mellan vanliga talbaser (binärt, "
-"oktalt, decimalt och hexadecimalt), boolesk algebra, ett- och tvåkomplement, "
-"konvertering från tecken till teckenkoder och annat."
-
-#: data/org.gnome.Calculator.appdata.xml.in:36
-msgid "GNOME Calculator in Basic Mode"
-msgstr "GNOME Kalkylator i grundläggande läge"
-
-#: data/org.gnome.Calculator.appdata.xml.in:40
-msgid "GNOME Calculator in Advanced Mode"
-msgstr "GNOME Kalkylator i avancerat läge"
-
-#: data/org.gnome.Calculator.appdata.xml.in:44
-msgid "GNOME Calculator in Financial Mode"
-msgstr "GNOME Kalkylator i finansiellt läge"
-
-#: data/org.gnome.Calculator.appdata.xml.in:48
-msgid "GNOME Calculator in Programming Mode"
-msgstr "GNOME Kalkylator i programmeringsläge"
-
-#: data/org.gnome.Calculator.appdata.xml.in:62
-msgid "The GNOME Project"
-msgstr "GNOME-projektet"
-
-#. Program name in the about dialog
-#: data/org.gnome.Calculator.desktop.in:3 src/math-window.ui:48
-#: src/gnome-calculator.vala:81 src/gnome-calculator.vala:339
-msgid "Calculator"
-msgstr "Kalkylator"
-
-#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/org.gnome.Calculator.desktop.in:6
-msgid "calculation;arithmetic;scientific;financial;"
-msgstr "uträkning;aritmetik;vetenskaplig;finansiell;"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/org.gnome.Calculator.desktop.in:9
-#| msgid "Calculator"
-msgid "gnome-calculator"
-msgstr "gnome-calculator"
-
-#: src/math-converter.ui:16
-msgid "Switch conversion units"
-msgstr "Byt konverteringsenheter"
-
-#: src/math-converter.ui:29
-msgid " in "
-msgstr " i "
-
-#: src/math-converter.ui:108
-msgctxt "convertion equals label"
-msgid "="
-msgstr "="
-
-#: src/math-function-popover.ui:33
-msgid "New function"
-msgstr "Ny funktion"
-
-#: src/math-variable-popover.ui:37
-msgid "Variable name"
-msgstr "Variabelnamn"
-
-#: src/math-variable-popover.ui:51
-msgid "Store value into existing or new variable"
-msgstr "Lagra värde till en befintlig eller ny variabel"
-
-#: src/math-window.ui:20 src/math-window.vala:88
-msgid "Basic Mode"
-msgstr "Grundläggande läge"
-
-#: src/math-window.ui:25 src/math-window.vala:93
-msgid "Advanced Mode"
-msgstr "Avancerat läge"
-
-#: src/math-window.ui:30 src/math-window.vala:98
-msgid "Financial Mode"
-msgstr "Finansiellt läge"
-
-#: src/math-window.ui:35 src/math-window.vala:103
-msgid "Programming Mode"
-msgstr "Programmeringsläge"
-
-#: src/math-window.ui:40 src/math-window.vala:108
-msgid "Keyboard Mode"
-msgstr "Tangentbordsläge"
-
-#: src/math-window.ui:88
-msgid "Menu"
-msgstr "Meny"
-
-#: src/math-shortcuts.ui:15
-msgctxt "shortcut window"
-msgid "General"
-msgstr "Allmänt"
-
-#: src/math-shortcuts.ui:20
-msgctxt "shortcut window"
-msgid "Open a new window"
-msgstr "Öppna ett nytt fönster"
-
-#: src/math-shortcuts.ui:27
-msgctxt "shortcut window"
-msgid "Close current window"
-msgstr "Stäng aktuellt fönster"
-
-#: src/math-shortcuts.ui:34
-msgctxt "shortcut window"
-msgid "Open help"
-msgstr "Öppna hjälpsidor"
-
-#: src/math-shortcuts.ui:41
-msgctxt "shortcut window"
-msgid "Clear history"
-msgstr "Töm historik"
-
-#: src/math-shortcuts.ui:48
-msgctxt "shortcut window"
-msgid "Quit the application"
-msgstr "Avsluta programmet"
-
-#: src/math-shortcuts.ui:56
-msgctxt "shortcut window"
-msgid "Switching modes"
-msgstr "Växla lägen"
-
-#: src/math-shortcuts.ui:61
-msgctxt "shortcut window"
-msgid "Switch to Basic mode"
-msgstr "Växla till grundläggande läge"
-
-#: src/math-shortcuts.ui:68
-msgctxt "shortcut window"
-msgid "Switch to Advanced mode"
-msgstr "Växla till avancerat läge"
-
-#: src/math-shortcuts.ui:75
-msgctxt "shortcut window"
-msgid "Switch to Financial mode"
-msgstr "Växla till finansiellt läge"
-
-#: src/math-shortcuts.ui:82
-msgctxt "shortcut window"
-msgid "Switch to Programming mode"
-msgstr "Växla till programmeringsläge"
-
-#: src/math-shortcuts.ui:89
-msgctxt "shortcut window"
-msgid "Switch to Keyboard mode"
-msgstr "Växla till tangentbordsläge"
-
-#: src/math-shortcuts.ui:97
-msgctxt "shortcut window"
-msgid "Keyboard entry"
-msgstr "Tangentbordsinmatning"
-
-#: src/math-shortcuts.ui:102
-msgctxt "shortcut window"
-msgid "Multiply (×)"
-msgstr "Multiplicera (×)"
-
-#: src/math-shortcuts.ui:109
-msgctxt "shortcut window"
-msgid "Divide (÷)"
-msgstr "Dividera (÷)"
-
-#: src/math-shortcuts.ui:116
-msgctxt "shortcut window"
-msgid "Square root (√)"
-msgstr "Kvadratrot (√)"
-
-#: src/math-shortcuts.ui:123
-msgctxt "shortcut window"
-msgid "Inverse"
-msgstr "Invers"
-
-#: src/math-shortcuts.ui:130
-msgctxt "shortcut window"
-msgid "Pi (π)"
-msgstr "Pi (π)"
-
-#: src/math-shortcuts.ui:137
-msgctxt "shortcut window"
-msgid "Enter numbers in scientific format"
-msgstr "Mata in tal i vetenskaplig notation"
-
-#: src/math-shortcuts.ui:145
-msgctxt "shortcut window"
-msgid "Programming mode"
-msgstr "Programmeringsläge"
-
-#: src/math-shortcuts.ui:150
-msgctxt "shortcut window"
-msgid "Switch to binary"
-msgstr "Växla till binärt"
-
-#: src/math-shortcuts.ui:157
-msgctxt "shortcut window"
-msgid "Switch to octal"
-msgstr "Växla till oktalt"
-
-#: src/math-shortcuts.ui:164
-msgctxt "shortcut window"
-msgid "Switch to decimal"
-msgstr "Växla till decimalt"
-
-#: src/math-shortcuts.ui:171
-msgctxt "shortcut window"
-msgid "Switch to hexadecimal"
-msgstr "Växla till hexadecimalt"
-
-#: src/menu.ui:7
-msgid "New Window"
-msgstr "Nytt fönster"
+#. Preferences dialog: Label for display format combo box
+#: ../data/preferences.ui.h:10
+msgid "Number _Format:"
+msgstr "Tal_format:"
 
 #. Title of preferences dialog
-#: src/menu.ui:14 src/math-preferences.vala:30
+#: ../data/preferences.ui.h:11
+#: ../src/math-preferences.c:231
 msgid "Preferences"
 msgstr "Inställningar"
 
-#: src/menu.ui:21
-msgid "_Keyboard Shortcuts"
-msgstr "_Tangentbordsgenvägar"
+#. Preferences dialog: label for show thousands separator check button
+#: ../data/preferences.ui.h:13
+msgid "Show _thousands separators"
+msgstr "Visa tusentalsa_vgränsare"
 
-#: src/menu.ui:26
-msgid "Help"
-msgstr "Hjälp"
+#. Preferences dialog: label for show trailing zeroes check button
+#: ../data/preferences.ui.h:15
+msgid "Show trailing _zeroes"
+msgstr "Visa efterliggande _nollor"
 
-#: src/menu.ui:31
-msgid "About"
-msgstr "Om"
+#. Preferences dialog: label for word size combo box
+#: ../data/preferences.ui.h:17
+msgid "Word _size:"
+msgstr "Ord_storlek:"
 
-#: src/menu.ui:35
-msgid "Quit"
-msgstr "Avsluta"
+#. Preferences dialog: Label for angle unit combo box
+#: ../data/preferences.ui.h:19
+msgid "_Angle units:"
+msgstr "V_inkelenheter:"
 
-#: data/org.gnome.calculator.gschema.xml:25
+#. Title of main window
+#: ../data/gcalctool.desktop.in.h:1
+#: ../src/math-window.c:546
+msgid "Calculator"
+msgstr "Kalkylator"
+
+#: ../data/gcalctool.desktop.in.h:2
+msgid "Perform arithmetic, scientific or financial calculations"
+msgstr "Utför aritmetiska, vetenskapliga eller finansiella beräkningar"
+
+#: ../data/org.gnome.gcalctool.gschema.xml.in.h:1
 msgid "Accuracy value"
 msgstr "Noggrannhetsvärde"
 
-#: data/org.gnome.calculator.gschema.xml:26
-msgid "The number of digits displayed after the numeric point"
-msgstr "Antalet siffror visade efter den numeriska punkten"
-
-#: data/org.gnome.calculator.gschema.xml:31
-msgid "Word size"
-msgstr "Ordstorlek"
-
-#: data/org.gnome.calculator.gschema.xml:32
-msgid "The size of the words used in bitwise operations"
-msgstr "Storleken för orden som används i bitvisa operationer"
-
-#: data/org.gnome.calculator.gschema.xml:37
-msgid "Numeric Base"
-msgstr "Numerisk bas"
-
-#: data/org.gnome.calculator.gschema.xml:38
-msgid "The numeric base"
-msgstr "Numeriska basen"
-
-#: data/org.gnome.calculator.gschema.xml:42
-msgid "Show Thousands Separators"
-msgstr "Visa tusentalsavgränsare"
-
-#: data/org.gnome.calculator.gschema.xml:43
-msgid "Indicates whether thousands separators are shown in large numbers."
-msgstr "Indikerar huruvida tusentalsavgränsningar visas i större tal."
-
-#: data/org.gnome.calculator.gschema.xml:47
-msgid "Show Trailing Zeroes"
-msgstr "Visa eftersläpande nollor"
-
-#: data/org.gnome.calculator.gschema.xml:48
-msgid ""
-"Indicates whether any trailing zeroes after the numeric point should be "
-"shown in the display value."
-msgstr ""
-"Indikerar huruvida eventuella efterliggande nollor efter talpunkten ska "
-"visas i visningsvärdet."
-
-#: data/org.gnome.calculator.gschema.xml:52
-msgid "Number format"
-msgstr "Talformat"
-
-#: data/org.gnome.calculator.gschema.xml:53
-msgid "The format to display numbers in"
-msgstr "Formatet att visa tal i"
-
-#: data/org.gnome.calculator.gschema.xml:57
+#: ../data/org.gnome.gcalctool.gschema.xml.in.h:2
 msgid "Angle units"
 msgstr "Vinkelenheter"
 
-#: data/org.gnome.calculator.gschema.xml:58
-msgid "The angle units to use"
-msgstr "Vinkelenheterna att använda"
-
-#: data/org.gnome.calculator.gschema.xml:62
+#: ../data/org.gnome.gcalctool.gschema.xml.in.h:3
 msgid "Button mode"
 msgstr "Knappläge"
 
-#: data/org.gnome.calculator.gschema.xml:63
-msgid "The button mode"
-msgstr "Knappläget"
-
-#: data/org.gnome.calculator.gschema.xml:67
-msgid "Source currency"
-msgstr "Källvaluta"
-
-#: data/org.gnome.calculator.gschema.xml:68
+#: ../data/org.gnome.gcalctool.gschema.xml.in.h:4
 msgid "Currency of the current calculation"
 msgstr "Valuta för aktuell beräkning"
 
-#: data/org.gnome.calculator.gschema.xml:72
-msgid "Target currency"
-msgstr "Målvaluta"
-
-#: data/org.gnome.calculator.gschema.xml:73
+#: ../data/org.gnome.gcalctool.gschema.xml.in.h:5
 msgid "Currency to convert the current calculation into"
 msgstr "Valuta att konvertera den aktuell beräkningen till"
 
-#: data/org.gnome.calculator.gschema.xml:77
+#: ../data/org.gnome.gcalctool.gschema.xml.in.h:6
+msgid "Indicates whether any trailing zeroes after the numeric point should be shown in the display value."
+msgstr "Indikerar huruvida eventuella efterliggande nollor efter talpunkten ska visas i visningsvärdet."
+
+#: ../data/org.gnome.gcalctool.gschema.xml.in.h:7
+msgid "Indicates whether thousands separators are shown in large numbers."
+msgstr "Indikerar huruvida tusentalsavgränsningar visas i större tal."
+
+#: ../data/org.gnome.gcalctool.gschema.xml.in.h:8
+msgid "Number format"
+msgstr "Talformat"
+
+#: ../data/org.gnome.gcalctool.gschema.xml.in.h:9
+msgid "Numeric Base"
+msgstr "Numerisk bas"
+
+#: ../data/org.gnome.gcalctool.gschema.xml.in.h:10
+msgid "Show Thousands Separators"
+msgstr "Visa tusentalsavgränsare"
+
+#: ../data/org.gnome.gcalctool.gschema.xml.in.h:11
+msgid "Show Trailing Zeroes"
+msgstr "Visa eftersläpande nollor"
+
+#: ../data/org.gnome.gcalctool.gschema.xml.in.h:12
+msgid "Source currency"
+msgstr "Källvaluta"
+
+#: ../data/org.gnome.gcalctool.gschema.xml.in.h:13
 msgid "Source units"
 msgstr "Källenheter"
 
-#: data/org.gnome.calculator.gschema.xml:78
-msgid "Units of the current calculation"
-msgstr "Enheter för aktuell beräkning"
+#: ../data/org.gnome.gcalctool.gschema.xml.in.h:14
+msgid "Target currency"
+msgstr "Målvaluta"
 
-#: data/org.gnome.calculator.gschema.xml:82
+#: ../data/org.gnome.gcalctool.gschema.xml.in.h:15
 msgid "Target units"
 msgstr "Målenheter"
 
-#: data/org.gnome.calculator.gschema.xml:83
+#: ../data/org.gnome.gcalctool.gschema.xml.in.h:16
+msgid "The angle units to use"
+msgstr "Vinkelenheterna att använda"
+
+#: ../data/org.gnome.gcalctool.gschema.xml.in.h:17
+msgid "The button mode"
+msgstr "Knappläget"
+
+#: ../data/org.gnome.gcalctool.gschema.xml.in.h:18
+msgid "The format to display numbers in"
+msgstr "Formatet att visa tal i"
+
+#: ../data/org.gnome.gcalctool.gschema.xml.in.h:19
+msgid "The number of digits displayed after the numeric point"
+msgstr "Antalet siffror visade efter den numeriska punkten"
+
+#: ../data/org.gnome.gcalctool.gschema.xml.in.h:20
+msgid "The numeric base"
+msgstr "Numeriska basen"
+
+#: ../data/org.gnome.gcalctool.gschema.xml.in.h:21
+msgid "The size of the words used in bitwise operations"
+msgstr "Storleken för orden som används i bitvisa operationer"
+
+#: ../data/org.gnome.gcalctool.gschema.xml.in.h:22
+msgid "Units of the current calculation"
+msgstr "Enheter för aktuell beräkning"
+
+#: ../data/org.gnome.gcalctool.gschema.xml.in.h:23
 msgid "Units to convert the current calculation into"
 msgstr "Enheter att konvertera den aktuell beräkningen till"
 
-#: data/org.gnome.calculator.gschema.xml:87
-msgid "Internal precision"
-msgstr "Intern precision"
+#: ../data/org.gnome.gcalctool.gschema.xml.in.h:24
+msgid "Word size"
+msgstr "Ordstorlek"
 
-#: data/org.gnome.calculator.gschema.xml:88
-msgid "The internal precision used with the MPFR library"
-msgstr "Den interna precision som används med MPFR-biblioteket"
-
-#: data/org.gnome.calculator.gschema.xml:92
-msgid "Window position"
-msgstr "Fönsterposition"
-
-#: data/org.gnome.calculator.gschema.xml:93
-msgid "Window position (x and y) of the last closed window."
-msgstr "Fönsterposition (x och y) för det senast stängda fönstret."
-
-#: lib/currency.vala:28
+#: ../src/currency-manager.c:30
 msgid "UAE Dirham"
 msgstr "Dirham (Förenade Arabemiraten)"
 
-#: lib/currency.vala:29
+#: ../src/currency-manager.c:31
 msgid "Australian Dollar"
 msgstr "Australisk dollar"
 
-#: lib/currency.vala:30
+#: ../src/currency-manager.c:32
 msgid "Bulgarian Lev"
 msgstr "Bulgarisk leva"
 
-#: lib/currency.vala:31
+#: ../src/currency-manager.c:33
 msgid "Bahraini Dinar"
 msgstr "Dinar (Bahrain)"
 
-#: lib/currency.vala:32
+#: ../src/currency-manager.c:34
 msgid "Brunei Dollar"
 msgstr "Bruneisk dollar"
 
-#: lib/currency.vala:33
+#: ../src/currency-manager.c:35
 msgid "Brazilian Real"
 msgstr "Brasiliansk real"
 
-#: lib/currency.vala:34
+#: ../src/currency-manager.c:36
 msgid "Botswana Pula"
 msgstr "Botswansk pula"
 
-#: lib/currency.vala:35
+#: ../src/currency-manager.c:37
 msgid "Canadian Dollar"
 msgstr "Kanadensisk dollar"
 
-#: lib/currency.vala:36
+#: ../src/currency-manager.c:38
 msgid "CFA Franc"
 msgstr "CFA-franc"
 
-#: lib/currency.vala:37
+#: ../src/currency-manager.c:39
 msgid "Swiss Franc"
 msgstr "Schweizisk franc"
 
-#: lib/currency.vala:38
+#: ../src/currency-manager.c:40
 msgid "Chilean Peso"
 msgstr "Chilensk peso"
 
-#: lib/currency.vala:39
+#: ../src/currency-manager.c:41
 msgid "Chinese Yuan"
 msgstr "Kinesisk yuan"
 
-#: lib/currency.vala:40
+#: ../src/currency-manager.c:42
 msgid "Colombian Peso"
 msgstr "Colombiansk peso"
 
-#: lib/currency.vala:41
+#: ../src/currency-manager.c:43
 msgid "Czech Koruna"
 msgstr "Tjeckisk koruna"
 
-#: lib/currency.vala:42
+#: ../src/currency-manager.c:44
 msgid "Danish Krone"
 msgstr "Dansk krone"
 
-#: lib/currency.vala:43
+#: ../src/currency-manager.c:45
 msgid "Algerian Dinar"
 msgstr "Dinar (Algeriet)"
 
-#: lib/currency.vala:44
+#: ../src/currency-manager.c:46
 msgid "Estonian Kroon"
 msgstr "Estnisk kroon"
 
-#: lib/currency.vala:45
+#: ../src/currency-manager.c:47
 msgid "Euro"
 msgstr "Euro"
 
-#: lib/currency.vala:46
-msgid "British Pound Sterling"
+#: ../src/currency-manager.c:48
+msgid "Pound Sterling"
 msgstr "Brittiskt pund"
 
-#: lib/currency.vala:47
+#: ../src/currency-manager.c:49
 msgid "Hong Kong Dollar"
 msgstr "Hong Kong-dollar"
 
-#: lib/currency.vala:48
+#: ../src/currency-manager.c:50
 msgid "Croatian Kuna"
 msgstr "Kroatisk kuna"
 
-#: lib/currency.vala:49
+#: ../src/currency-manager.c:51
 msgid "Hungarian Forint"
 msgstr "Ungersk forint"
 
-#: lib/currency.vala:50
+#: ../src/currency-manager.c:52
 msgid "Indonesian Rupiah"
 msgstr "Indonesisk rupiah"
 
-#: lib/currency.vala:51
+#: ../src/currency-manager.c:53
 msgid "Israeli New Shekel"
 msgstr "Israelisk ny shekel"
 
-#: lib/currency.vala:52
+#: ../src/currency-manager.c:54
 msgid "Indian Rupee"
 msgstr "Indisk rupee"
 
-#: lib/currency.vala:53
+#: ../src/currency-manager.c:55
 msgid "Iranian Rial"
 msgstr "Iransk rial"
 
-#: lib/currency.vala:54
+#: ../src/currency-manager.c:56
 msgid "Icelandic Krona"
 msgstr "Isländsk krona"
 
-#: lib/currency.vala:55
+#: ../src/currency-manager.c:57
 msgid "Japanese Yen"
 msgstr "Japansk yen"
 
-#: lib/currency.vala:56
+#: ../src/currency-manager.c:58
 msgid "South Korean Won"
 msgstr "Sydkoreansk won"
 
-#: lib/currency.vala:57
+#: ../src/currency-manager.c:59
 msgid "Kuwaiti Dinar"
 msgstr "Dinar (Kuwait)"
 
-#: lib/currency.vala:58
+#: ../src/currency-manager.c:60
 msgid "Kazakhstani Tenge"
 msgstr "Kazakstansk tenge"
 
-#: lib/currency.vala:59
+#: ../src/currency-manager.c:61
 msgid "Sri Lankan Rupee"
 msgstr "Sri Lankansk rupee"
 
-#: lib/currency.vala:60
+#: ../src/currency-manager.c:62
+msgid "Lithuanian Litas"
+msgstr "Litauisk litas"
+
+#: ../src/currency-manager.c:63
+msgid "Latvian Lats"
+msgstr "Lettisk lat"
+
+#: ../src/currency-manager.c:64
 msgid "Libyan Dinar"
 msgstr "Dinar (Libyen)"
 
-#: lib/currency.vala:61
+#: ../src/currency-manager.c:65
 msgid "Mauritian Rupee"
 msgstr "Mauritiansk rupee"
 
-#: lib/currency.vala:62
+#: ../src/currency-manager.c:66
 msgid "Mexican Peso"
 msgstr "Mexikansk peso"
 
-#: lib/currency.vala:63
+#: ../src/currency-manager.c:67
 msgid "Malaysian Ringgit"
 msgstr "Malaysisk ringgit"
 
-#: lib/currency.vala:64
+#: ../src/currency-manager.c:68
 msgid "Norwegian Krone"
 msgstr "Norsk krone"
 
-#: lib/currency.vala:65
+#: ../src/currency-manager.c:69
 msgid "Nepalese Rupee"
 msgstr "Nepalesisk rupee"
 
-#: lib/currency.vala:66
+#: ../src/currency-manager.c:70
 msgid "New Zealand Dollar"
 msgstr "New Zealand-dollar"
 
-#: lib/currency.vala:67
+#: ../src/currency-manager.c:71
 msgid "Omani Rial"
 msgstr "Omansk rial"
 
-#: lib/currency.vala:68
+#: ../src/currency-manager.c:72
 msgid "Peruvian Nuevo Sol"
 msgstr "Peruansk nuevo sol"
 
-#: lib/currency.vala:69
+#: ../src/currency-manager.c:73
 msgid "Philippine Peso"
 msgstr "Filippinsk peso"
 
-#: lib/currency.vala:70
+#: ../src/currency-manager.c:74
 msgid "Pakistani Rupee"
 msgstr "Pakistansk rupee"
 
-#: lib/currency.vala:71
+#: ../src/currency-manager.c:75
 msgid "Polish Zloty"
 msgstr "Polsk zloty"
 
-#: lib/currency.vala:72
+#: ../src/currency-manager.c:76
 msgid "Qatari Riyal"
 msgstr "Qatarisk riyal"
 
-#: lib/currency.vala:73
+#: ../src/currency-manager.c:77
 msgid "New Romanian Leu"
 msgstr "Ny rumänsk leu"
 
-#: lib/currency.vala:74
+#: ../src/currency-manager.c:78
 msgid "Russian Rouble"
 msgstr "Rysk rubel"
 
-#: lib/currency.vala:75
+#: ../src/currency-manager.c:79
 msgid "Saudi Riyal"
 msgstr "Saudisk riyal"
 
-#: lib/currency.vala:76
+#: ../src/currency-manager.c:80
 msgid "Swedish Krona"
 msgstr "Svensk krona"
 
-#: lib/currency.vala:77
+#: ../src/currency-manager.c:81
 msgid "Singapore Dollar"
 msgstr "Singapore-dollar"
 
-#: lib/currency.vala:78
+#: ../src/currency-manager.c:82
 msgid "Thai Baht"
 msgstr "Thailändsk baht"
 
-#: lib/currency.vala:79
+#: ../src/currency-manager.c:83
 msgid "Tunisian Dinar"
 msgstr "Dinar (Tunisien)"
 
-#: lib/currency.vala:80
+#: ../src/currency-manager.c:84
 msgid "New Turkish Lira"
 msgstr "Ny turkisk lira"
 
-#: lib/currency.vala:81
+#: ../src/currency-manager.c:85
 msgid "T&T Dollar (TTD)"
 msgstr "Trinidad & Tobago-dollar"
 
-#: lib/currency.vala:82
+#: ../src/currency-manager.c:86
 msgid "US Dollar"
 msgstr "Amerikansk dollar"
 
-#: lib/currency.vala:83
+#: ../src/currency-manager.c:87
 msgid "Uruguayan Peso"
 msgstr "Uruguayansk peso"
 
-#: lib/currency.vala:84
+#: ../src/currency-manager.c:88
 msgid "Venezuelan Bolívar"
 msgstr "Venezuelansk bolívar"
 
-#: lib/currency.vala:85
+#: ../src/currency-manager.c:89
 msgid "South African Rand"
 msgstr "Sydafrikansk rand"
 
-#: lib/equation-parser.vala:717 lib/number.vala:429
-msgid "The zeroth root of a number is undefined"
-msgstr "Nollte roten av tal är inte definierad"
-
-#: lib/financial.vala:114
+#: ../src/financial.c:70
 msgid "Error: the number of periods must be positive"
 msgstr "Fel: antalet punkter måste vara positivt"
 
-#. Digits localized for the given language
-#: lib/math-equation.vala:171
-msgid "0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F"
-msgstr "0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F"
-
-#. Error shown when trying to undo with no undo history
-#: lib/math-equation.vala:523
-msgid "No undo history"
-msgstr "Ingen ångringshistorik"
-
-#. Error shown when trying to redo with no redo history
-#: lib/math-equation.vala:544
-msgid "No redo history"
-msgstr "Ingen ångringshistorik"
-
-#: lib/math-equation.vala:775
-msgid "No sane value to store"
-msgstr "Inget vettigt värde att lagra"
-
-#. Error displayed to user when they perform a bitwise operation on numbers greater than the current word
-#: lib/math-equation.vala:968
-msgid "Overflow. Try a bigger word size"
-msgstr "Överflöde. Prova en större ordstorlek"
-
-#. Error displayed to user when they an unknown variable is entered
-#: lib/math-equation.vala:973
+#. Description on how to use gcalctool displayed on command-line
+#: ../src/gcalctool.c:77
 #, c-format
-msgid "Unknown variable “%s”"
-msgstr "Okänd variabel ”%s”"
-
-#. Error displayed to user when an unknown function is entered
-#: lib/math-equation.vala:980
-#, c-format
-msgid "Function “%s” is not defined"
-msgstr "Funktionen ”%s” är inte definierad"
-
-#. Error displayed to user when an conversion with unknown units is attempted
-#: lib/math-equation.vala:987
-msgid "Unknown conversion"
-msgstr "Okänd konvertering"
-
-#. should always be run
-#: lib/math-equation.vala:997
-#, c-format
-msgid "%s"
-msgstr "%s"
-
-#. Unknown error.
-#. Error displayed to user when they enter an invalid calculation
-#: lib/math-equation.vala:1002 lib/math-equation.vala:1007
-msgid "Malformed expression"
-msgstr "Felaktigt utformat uttryck"
-
-#: lib/math-equation.vala:1018
-msgid "Calculating"
-msgstr "Beräknar"
-
-#. Error displayed when trying to factorize a non-integer value
-#: lib/math-equation.vala:1211
-msgid "Need an integer to factorize"
-msgstr "Behöver ett heltal att faktorisera"
-
-#. This message is displayed in the status bar when a bit shift operation is performed and the display does not contain a number
-#: lib/math-equation.vala:1265
-msgid "No sane value to bitwise shift"
-msgstr "Inget vettigt värde att göra bitvis skifte"
-
-#. Message displayed when cannot toggle bit in display
-#: lib/math-equation.vala:1279
-msgid "Displayed value not an integer"
-msgstr "Visat värde är inte ett heltal"
-
-#. Translators: Error displayed when underflow error occured
-#: lib/number.vala:196
-msgid "Underflow error"
-msgstr "Underspillsfel"
-
-#. Translators: Error displayed when overflow error occured
-#: lib/number.vala:201
-msgid "Overflow error"
-msgstr "Överspillsfel"
-
-#. Translators: Error display when attempting to take argument of zero
-#: lib/number.vala:251
-msgid "Argument not defined for zero"
-msgstr "Argument inte definierat för noll"
-
-#. Translators: Error displayed when attempted to raise 0 to a negative re_exponent
-#: lib/number.vala:367 lib/number.vala:397
-msgid "The power of zero is undefined for a negative exponent"
-msgstr "Potensen för noll är inte definierad för en negativ exponent"
-
-#. Translators: Error displayed when attempted to raise 0 to power of zero
-#: lib/number.vala:375 lib/number.vala:405
-msgid "Zero raised to zero is undefined"
-msgstr "Noll upphöjt till noll är odefinierat"
-
-#. Translators: Error displayed when attempting to take logarithm of zero
-#: lib/number.vala:459 lib/number.vala:490
-msgid "Logarithm of zero is undefined"
-msgstr "Logaritm med noll är inte definierad"
-
-#. Translators: Error displayed when attempted take the factorial of a negative or complex number
-#: lib/number.vala:512
-msgid "Factorial is only defined for non-negative real numbers"
-msgstr "Fakultet är endast definierad för icke-negativa heltal"
-
-#. Translators: Error displayed attempted to divide by zero
-#: lib/number.vala:572
-msgid "Division by zero is undefined"
-msgstr "Division med noll är inte definierad"
-
-#. Translators: Error displayed when attemping to do a modulus division on non-integer numbers
-#: lib/number.vala:593
-msgid "Modulus division is only defined for integers"
-msgstr "Modulus division är endast definierad för heltal"
-
-#. Translators: Error displayed when tangent value is undefined
-#: lib/number.vala:666
 msgid ""
-"Tangent is undefined for angles that are multiples of π (180°) from π∕2 (90°)"
+"Usage:\n"
+"  %s — Perform mathematical calculations"
 msgstr ""
-"Tangens är inte definierad för vinklar vars avstånd från π∕2 (90°) är en "
-"multipel av π (180°)"
+"Användning:\n"
+"  %s — Genomför matematiska beräkningar"
 
-#. Translators: Error displayed when inverse sine value is undefined
-#: lib/number.vala:685
-msgid "Inverse sine is undefined for values outside [-1, 1]"
-msgstr "Inversa sinus är inte definierad för värden utanför [-1, 1]"
-
-#. Translators: Error displayed when inverse cosine value is undefined
-#: lib/number.vala:702
-msgid "Inverse cosine is undefined for values outside [-1, 1]"
-msgstr "Inversa cosinus är inte definierad för värden utanför [-1, 1]"
-
-#. Translators: Error displayed when inverse hyperbolic cosine value is undefined
-#: lib/number.vala:763
-msgid "Inverse hyperbolic cosine is undefined for values less than one"
+#. Description on gcalctool command-line help options displayed on command-line
+#: ../src/gcalctool.c:85
+#, c-format
+msgid ""
+"Help Options:\n"
+"  -v, --version                   Show release version\n"
+"  -h, -?, --help                  Show help options\n"
+"  --help-all                      Show all help options\n"
+"  --help-gtk                      Show GTK+ options"
 msgstr ""
-"Inversa hyperboliska cosinus är inte definierad för värden mindre än ett"
+"Hjälpflaggor:\n"
+"  -v, --version                   Visa utgåvans version\n"
+"  -h, -?, --help                  Visa hjälpflaggor\n"
+"  --help-all                      Visa alla hjälpflaggor\n"
+"  --help-gtk                      Visa GTK+-flaggor"
 
-#. Translators: Error displayed when inverse hyperbolic tangent value is undefined
-#: lib/number.vala:779
-msgid "Inverse hyperbolic tangent is undefined for values outside [-1, 1]"
+#. Description on gcalctool command-line GTK+ options displayed on command-line
+#: ../src/gcalctool.c:96
+#, c-format
+msgid ""
+"GTK+ Options:\n"
+"  --class=CLASS                   Program class as used by the window manager\n"
+"  --name=NAME                     Program name as used by the window manager\n"
+"  --screen=SCREEN                 X screen to use\n"
+"  --sync                          Make X calls synchronous\n"
+"  --gtk-module=MODULES            Load additional GTK+ modules\n"
+"  --g-fatal-warnings              Make all warnings fatal"
 msgstr ""
-"Inversa hyperboliska tangens är inte definierad för värden utanför [-1, 1]"
-
-#. Translators: Error displayed when boolean AND attempted on non-integer values
-#: lib/number.vala:795
-msgid "Boolean AND is only defined for positive integers"
-msgstr "Boolesk AND definieras endast för positiva heltal"
-
-#. Translators: Error displayed when boolean OR attempted on non-integer values
-#: lib/number.vala:807
-msgid "Boolean OR is only defined for positive integers"
-msgstr "Boolesk OR definieras endast för positiva heltal"
-
-#. Translators: Error displayed when boolean XOR attempted on non-integer values
-#: lib/number.vala:819
-msgid "Boolean XOR is only defined for positive integers"
-msgstr "Boolesk XOR definieras endast för positiva heltal"
-
-#. Translators: Error displayed when boolean XOR attempted on non-integer values
-#: lib/number.vala:831
-msgid "Boolean NOT is only defined for positive integers"
-msgstr "Boolesk NOT definieras endast för positiva heltal"
-
-#. Translators: Error displayed when bit shift attempted on non-integer values
-#: lib/number.vala:854
-msgid "Shift is only possible on integer values"
-msgstr "Skift är endast möjlig på heltalsvärden"
-
-#: lib/serializer.vala:332
-msgid "Overflow: the result couldn’t be calculated"
-msgstr "Överflöde: resultatet kunde inte beräknas"
-
-#: lib/unit.vala:29
-msgid "Angle"
-msgstr "Vinkel"
-
-#: lib/unit.vala:30
-msgid "Length"
-msgstr "Längd"
-
-#: lib/unit.vala:31
-msgid "Area"
-msgstr "Yta"
-
-#: lib/unit.vala:32
-msgid "Volume"
-msgstr "Volym"
-
-#: lib/unit.vala:33
-msgid "Weight"
-msgstr "Vikt"
-
-#: lib/unit.vala:34
-msgid "Duration"
-msgstr "Tid"
-
-#: lib/unit.vala:35
-msgid "Temperature"
-msgstr "Temperatur"
-
-#: lib/unit.vala:36
-msgid "Digital Storage"
-msgstr "Digital lagring"
-
-#. FIXME: Approximations of 1/(units in a circle), therefore, 360 deg != 400 grads
-#. Preferences dialog: Angle unit combo box: Use degrees for trigonometric calculations
-#: lib/unit.vala:39 src/math-preferences.vala:144
-msgid "Degrees"
-msgstr "Grader"
-
-#: lib/unit.vala:39
-#, c-format
-msgctxt "unit-format"
-msgid "%s degrees"
-msgstr "%s grader"
-
-#: lib/unit.vala:39
-msgctxt "unit-symbols"
-msgid "degree,degrees,deg"
-msgstr "grad,grader,grd"
-
-#. Preferences dialog: Angle unit combo box: Use radians for trigonometric calculations
-#: lib/unit.vala:40 src/math-preferences.vala:148
-msgid "Radians"
-msgstr "Radianer"
-
-#: lib/unit.vala:40
-#, c-format
-msgctxt "unit-format"
-msgid "%s radians"
-msgstr "%s radianer"
-
-#: lib/unit.vala:40
-msgctxt "unit-symbols"
-msgid "radian,radians,rad"
-msgstr "radian,radianer,rad"
-
-#. Preferences dialog: Angle unit combo box: Use gradians for trigonometric calculations
-#: lib/unit.vala:41 src/math-preferences.vala:152
-msgid "Gradians"
-msgstr "Nygrader"
-
-#: lib/unit.vala:41
-#, c-format
-msgctxt "unit-format"
-msgid "%s gradians"
-msgstr "%s nygrader"
-
-#: lib/unit.vala:41
-msgctxt "unit-symbols"
-msgid "gradian,gradians,grad"
-msgstr "nygrad,nygrader,nygr"
-
-#: lib/unit.vala:42
-msgid "Parsecs"
-msgstr "Parsec"
-
-#: lib/unit.vala:42
-#, c-format
-msgctxt "unit-format"
-msgid "%s pc"
-msgstr "%s pc"
-
-#: lib/unit.vala:42
-msgctxt "unit-symbols"
-msgid "parsec,parsecs,pc"
-msgstr "parsec,pc"
-
-#: lib/unit.vala:43
-msgid "Light Years"
-msgstr "Ljusår"
-
-#: lib/unit.vala:43
-#, c-format
-msgctxt "unit-format"
-msgid "%s ly"
-msgstr "%s ly"
-
-#: lib/unit.vala:43
-msgctxt "unit-symbols"
-msgid "lightyear,lightyears,ly"
-msgstr "ljusår,lå"
-
-#: lib/unit.vala:44
-msgid "Astronomical Units"
-msgstr "Astronomiska enheter"
-
-#: lib/unit.vala:44
-#, c-format
-msgctxt "unit-format"
-msgid "%s au"
-msgstr "%s au"
-
-#: lib/unit.vala:44
-msgctxt "unit-symbols"
-msgid "au"
-msgstr "au"
-
-#: lib/unit.vala:45
-msgid "Nautical Miles"
-msgstr "Sjömil"
-
-#: lib/unit.vala:45
-#, c-format
-msgctxt "unit-format"
-msgid "%s nmi"
-msgstr "%s M"
-
-#: lib/unit.vala:45
-msgctxt "unit-symbols"
-msgid "nmi"
-msgstr "M"
-
-#: lib/unit.vala:46
-msgid "Miles"
-msgstr "Engelska mil"
-
-#: lib/unit.vala:46
-#, c-format
-msgctxt "unit-format"
-msgid "%s mi"
-msgstr "%s mi"
-
-#: lib/unit.vala:46
-msgctxt "unit-symbols"
-msgid "mile,miles,mi"
-msgstr "engelsk mil,engelska mil,mi"
-
-#: lib/unit.vala:47
-msgid "Kilometers"
-msgstr "Kilometer"
-
-#: lib/unit.vala:47
-#, c-format
-msgctxt "unit-format"
-msgid "%s km"
-msgstr "%s km"
-
-#: lib/unit.vala:47
-msgctxt "unit-symbols"
-msgid "kilometer,kilometers,km,kms"
-msgstr "kilometer,km,kms"
-
-#: lib/unit.vala:48
-msgid "Cables"
-msgstr "Kablar"
-
-#: lib/unit.vala:48
-#, c-format
-msgctxt "unit-format"
-msgid "%s cb"
-msgstr "%s cb"
-
-#: lib/unit.vala:48
-msgctxt "unit-symbols"
-msgid "cable,cables,cb"
-msgstr "kabel,kablar,cb"
-
-#: lib/unit.vala:49
-msgid "Fathoms"
-msgstr "Famn"
-
-#: lib/unit.vala:49
-#, c-format
-msgctxt "unit-format"
-msgid "%s ftm"
-msgstr "%s ftm"
-
-#: lib/unit.vala:49
-msgctxt "unit-symbols"
-msgid "fathom,fathoms,ftm"
-msgstr "famn,ftm"
-
-#: lib/unit.vala:50
-msgid "Meters"
-msgstr "Meter"
-
-#: lib/unit.vala:50
-#, c-format
-msgctxt "unit-format"
-msgid "%s m"
-msgstr "%s m"
-
-#: lib/unit.vala:50
-msgctxt "unit-symbols"
-msgid "meter,meters,m"
-msgstr "meter,m"
-
-#: lib/unit.vala:51
-msgid "Yards"
-msgstr "Yard"
-
-#: lib/unit.vala:51
-#, c-format
-msgctxt "unit-format"
-msgid "%s yd"
-msgstr "%s yd"
-
-#: lib/unit.vala:51
-msgctxt "unit-symbols"
-msgid "yard,yards,yd"
-msgstr "yard,yd"
-
-#: lib/unit.vala:52
-msgid "Feet"
-msgstr "Fot"
-
-#: lib/unit.vala:52
-#, c-format
-msgctxt "unit-format"
-msgid "%s ft"
-msgstr "%s ft"
-
-#: lib/unit.vala:52
-msgctxt "unit-symbols"
-msgid "foot,feet,ft"
-msgstr "fot,ft"
-
-#: lib/unit.vala:53
-msgid "Inches"
-msgstr "Tum"
-
-#: lib/unit.vala:53
-#, c-format
-msgctxt "unit-format"
-msgid "%s in"
-msgstr "%s in"
-
-#: lib/unit.vala:53
-msgctxt "unit-symbols"
-msgid "inch,inches,in"
-msgstr "tum,inch,in"
-
-#: lib/unit.vala:54
-msgid "Centimeters"
-msgstr "Centimeter"
-
-#: lib/unit.vala:54
-#, c-format
-msgctxt "unit-format"
-msgid "%s cm"
-msgstr "%s cm"
-
-#: lib/unit.vala:54
-msgctxt "unit-symbols"
-msgid "centimeter,centimeters,cm,cms"
-msgstr "centimeter,cm,cms"
-
-#: lib/unit.vala:55
-msgid "Millimeters"
-msgstr "Millimeter"
-
-#: lib/unit.vala:55
-#, c-format
-msgctxt "unit-format"
-msgid "%s mm"
-msgstr "%s mm"
-
-#: lib/unit.vala:55
-msgctxt "unit-symbols"
-msgid "millimeter,millimeters,mm"
-msgstr "millimeter,mm"
-
-#: lib/unit.vala:56
-msgid "Micrometers"
-msgstr "Mikrometer"
-
-#: lib/unit.vala:56
-#, c-format
-msgctxt "unit-format"
-msgid "%s μm"
-msgstr "%s μm"
-
-#: lib/unit.vala:56
-msgctxt "unit-symbols"
-msgid "micrometer,micrometers,um"
-msgstr "mikrometer,mcm,um"
-
-#: lib/unit.vala:57
-msgid "Nanometers"
-msgstr "Nanometer"
-
-#: lib/unit.vala:57
-#, c-format
-msgctxt "unit-format"
-msgid "%s nm"
-msgstr "%s nm"
-
-#: lib/unit.vala:57
-msgctxt "unit-symbols"
-msgid "nanometer,nanometers,nm"
-msgstr "nanometer,nm"
-
-#: lib/unit.vala:58
-msgid "Desktop Publishing Point"
-msgstr "Desktop Publishing-punkt"
-
-#: lib/unit.vala:58 lib/unit.vala:68
-#, c-format
-msgctxt "unit-format"
-msgid "%s pt"
-msgstr "%s pt"
-
-#: lib/unit.vala:58
-msgctxt "unit-symbols"
-msgid "point,pt,points,pts"
-msgstr "punkt,punkter,point,pt,points,pts"
-
-#: lib/unit.vala:59
-msgid "Hectares"
-msgstr "Hektar"
-
-#: lib/unit.vala:59
-#, c-format
-msgctxt "unit-format"
-msgid "%s ha"
-msgstr "%s ha"
-
-#: lib/unit.vala:59
-msgctxt "unit-symbols"
-msgid "hectare,hectares,ha"
-msgstr "hektar,ha"
-
-#: lib/unit.vala:60
-msgid "Acres"
-msgstr "Tunnland"
-
-#: lib/unit.vala:60
-#, c-format
-msgctxt "unit-format"
-msgid "%s acres"
-msgstr "%s tunnland"
-
-#: lib/unit.vala:60
-msgctxt "unit-symbols"
-msgid "acre,acres"
-msgstr "tunnland"
-
-#: lib/unit.vala:61
-msgid "Square Meters"
-msgstr "Kvadratmeter"
-
-#: lib/unit.vala:61
-#, c-format
-msgctxt "unit-format"
-msgid "%s m²"
-msgstr "%s m²"
-
-#: lib/unit.vala:61
-msgctxt "unit-symbols"
-msgid "m²"
-msgstr "m²"
-
-#: lib/unit.vala:62
-msgid "Square Centimeters"
-msgstr "Kvadratcentimeter"
-
-#: lib/unit.vala:62
-#, c-format
-msgctxt "unit-format"
-msgid "%s cm²"
-msgstr "%s cm²"
-
-#: lib/unit.vala:62
-msgctxt "unit-symbols"
-msgid "cm²"
-msgstr "cm²"
-
-#: lib/unit.vala:63
-msgid "Square Millimeters"
-msgstr "Kvadratmillimeter"
-
-#: lib/unit.vala:63
-#, c-format
-msgctxt "unit-format"
-msgid "%s mm²"
-msgstr "%s mm²"
-
-#: lib/unit.vala:63
-msgctxt "unit-symbols"
-msgid "mm²"
-msgstr "mm²"
-
-#: lib/unit.vala:64
-msgid "Cubic Meters"
-msgstr "Kubikmeter"
-
-#: lib/unit.vala:64
-#, c-format
-msgctxt "unit-format"
-msgid "%s m³"
-msgstr "%s m³"
-
-#: lib/unit.vala:64
-msgctxt "unit-symbols"
-msgid "m³"
-msgstr "m³"
-
-#: lib/unit.vala:65
-msgid "Gallons"
-msgstr "Gallon"
-
-#: lib/unit.vala:65
-#, c-format
-msgctxt "unit-format"
-msgid "%s gal"
-msgstr "%s gal"
-
-#: lib/unit.vala:65
-msgctxt "unit-symbols"
-msgid "gallon,gallons,gal"
-msgstr "gallon,gal"
-
-#: lib/unit.vala:66
-msgid "Liters"
-msgstr "Liter"
-
-#: lib/unit.vala:66
-#, c-format
-msgctxt "unit-format"
-msgid "%s L"
-msgstr "%s L"
-
-#: lib/unit.vala:66
-msgctxt "unit-symbols"
-msgid "litre,litres,liter,liters,L"
-msgstr "liter,L"
-
-#: lib/unit.vala:67
-msgid "Quarts"
-msgstr "Quart"
-
-#: lib/unit.vala:67
-#, c-format
-msgctxt "unit-format"
-msgid "%s qt"
-msgstr "%s qt"
-
-#: lib/unit.vala:67
-msgctxt "unit-symbols"
-msgid "quart,quarts,qt"
-msgstr "quart,qt"
-
-#: lib/unit.vala:68
-msgid "Pints"
-msgstr "Pint"
-
-#: lib/unit.vala:68
-msgctxt "unit-symbols"
-msgid "pint,pints,pt"
-msgstr "pint,pt"
-
-#: lib/unit.vala:69
-msgid "Milliliters"
-msgstr "Milliliter"
-
-#: lib/unit.vala:69
-#, c-format
-msgctxt "unit-format"
-msgid "%s mL"
-msgstr "%s mL"
-
-#: lib/unit.vala:69
-msgctxt "unit-symbols"
-msgid "millilitre,millilitres,milliliter,milliliters,mL,cm³"
-msgstr "milliliter,mL,cm³"
-
-#: lib/unit.vala:70
-msgid "Microliters"
-msgstr "Mikroliter"
-
-#: lib/unit.vala:70
-#, c-format
-msgctxt "unit-format"
-msgid "%s μL"
-msgstr "%s μL"
-
-#: lib/unit.vala:70
-msgctxt "unit-symbols"
-msgid "mm³,μL,uL"
-msgstr "mm³,μL,uL"
-
-#: lib/unit.vala:71
-msgid "Tonnes"
-msgstr "Ton"
-
-#: lib/unit.vala:71
-#, c-format
-msgctxt "unit-format"
-msgid "%s T"
-msgstr "%s T"
-
-#: lib/unit.vala:71
-msgctxt "unit-symbols"
-msgid "tonne,tonnes"
-msgstr "ton"
-
-#: lib/unit.vala:72
-msgid "Kilograms"
-msgstr "Kilogram"
-
-#: lib/unit.vala:72
-#, c-format
-msgctxt "unit-format"
-msgid "%s kg"
-msgstr "%s kg"
-
-#: lib/unit.vala:72
-msgctxt "unit-symbols"
-msgid "kilogram,kilograms,kilogramme,kilogrammes,kg,kgs"
-msgstr "kilogram,kilo,kg,kgs"
-
-#: lib/unit.vala:73
-msgid "Pounds"
-msgstr "Pund"
-
-#: lib/unit.vala:73
-#, c-format
-msgctxt "unit-format"
-msgid "%s lb"
-msgstr "%s lb"
-
-#: lib/unit.vala:73
-msgctxt "unit-symbols"
-msgid "pound,pounds,lb"
-msgstr "pund,lb"
-
-#: lib/unit.vala:74
-msgid "Ounces"
-msgstr "Uns"
-
-#: lib/unit.vala:74
-#, c-format
-msgctxt "unit-format"
-msgid "%s oz"
-msgstr "%s oz"
-
-#: lib/unit.vala:74
-msgctxt "unit-symbols"
-msgid "ounce,ounces,oz"
-msgstr "uns,ounce,oz"
-
-#: lib/unit.vala:75
-msgid "Grams"
-msgstr "Gram"
-
-#: lib/unit.vala:75
-#, c-format
-msgctxt "unit-format"
-msgid "%s g"
-msgstr "%s g"
-
-#: lib/unit.vala:75
-msgctxt "unit-symbols"
-msgid "gram,grams,gramme,grammes,g"
-msgstr "gram,g"
-
-#: lib/unit.vala:76
-msgid "Stone"
-msgstr "Stone"
-
-#: lib/unit.vala:76
-#, c-format
-msgctxt "unit-format"
-msgid "%s st"
-msgstr "%s st"
-
-#: lib/unit.vala:76
-msgctxt "unit-symbols"
-msgid "stone,st,stones"
-msgstr "stone,st,stones"
-
-#: lib/unit.vala:77
-msgid "Years"
-msgstr "År"
-
-#: lib/unit.vala:77
-#, c-format
-msgctxt "unit-format"
-msgid "%s years"
-msgstr "%s år"
-
-#: lib/unit.vala:77
-msgctxt "unit-symbols"
-msgid "year,years"
-msgstr "år"
-
-#: lib/unit.vala:78
-msgid "Days"
-msgstr "Dagar"
-
-#: lib/unit.vala:78
-#, c-format
-msgctxt "unit-format"
-msgid "%s days"
-msgstr "%s dagar"
-
-#: lib/unit.vala:78
-msgctxt "unit-symbols"
-msgid "day,days"
-msgstr "dag,dagar"
-
-#: lib/unit.vala:79
-msgid "Hours"
-msgstr "Timmar"
-
-#: lib/unit.vala:79
-#, c-format
-msgctxt "unit-format"
-msgid "%s hours"
-msgstr "%s timmar"
-
-#: lib/unit.vala:79
-msgctxt "unit-symbols"
-msgid "hour,hours"
-msgstr "timme,timmar"
-
-#: lib/unit.vala:80
-msgid "Minutes"
-msgstr "Minuter"
-
-#: lib/unit.vala:80
-#, c-format
-msgctxt "unit-format"
-msgid "%s minutes"
-msgstr "%s minuter"
-
-#: lib/unit.vala:80
-msgctxt "unit-symbols"
-msgid "minute,minutes"
-msgstr "minut,minuter"
-
-#: lib/unit.vala:81
-msgid "Seconds"
-msgstr "Sekunder"
-
-#: lib/unit.vala:81
-#, c-format
-msgctxt "unit-format"
-msgid "%s s"
-msgstr "%s s"
-
-#: lib/unit.vala:81
-msgctxt "unit-symbols"
-msgid "second,seconds,s"
-msgstr "sekund,sekunder,s"
-
-#: lib/unit.vala:82
-msgid "Milliseconds"
-msgstr "Millisekunder"
-
-#: lib/unit.vala:82
-#, c-format
-msgctxt "unit-format"
-msgid "%s ms"
-msgstr "%s ms"
-
-#: lib/unit.vala:82
-msgctxt "unit-symbols"
-msgid "millisecond,milliseconds,ms"
-msgstr "millisekund,millisekunder,ms"
-
-#: lib/unit.vala:83
-msgid "Microseconds"
-msgstr "Mikrosekunder"
-
-#: lib/unit.vala:83
-#, c-format
-msgctxt "unit-format"
-msgid "%s μs"
-msgstr "%s μs"
-
-#: lib/unit.vala:83
-msgctxt "unit-symbols"
-msgid "microsecond,microseconds,us,μs"
-msgstr "mikrosekund,mikrosekunder,us,μs"
-
-#: lib/unit.vala:84
-msgid "Celsius"
-msgstr "Celsius"
-
-#: lib/unit.vala:84
-#, c-format
-msgctxt "unit-format"
-msgid "%s ˚C"
-msgstr "%s ˚C"
-
-#: lib/unit.vala:84
-msgctxt "unit-symbols"
-msgid "degC,˚C,C,c,Celsius,celsius"
-msgstr "degC,gradC,˚C,C,c,Celsius,celsius"
-
-#: lib/unit.vala:85
-msgid "Fahrenheit"
-msgstr "Fahrenheit"
-
-#: lib/unit.vala:85
-#, c-format
-msgctxt "unit-format"
-msgid "%s ˚F"
-msgstr "%s ˚F"
-
-#: lib/unit.vala:85
-msgctxt "unit-symbols"
-msgid "degF,˚F,F,f,Fahrenheit,fahrenheit"
-msgstr "degF,gradF,˚F,F,f,Fahrenheit,fahrenheit"
-
-#: lib/unit.vala:86
-msgid "Kelvin"
-msgstr "Kelvin"
-
-#: lib/unit.vala:86
-#, c-format
-msgctxt "unit-format"
-msgid "%s K"
-msgstr "%s K"
-
-#: lib/unit.vala:86
-msgctxt "unit-symbols"
-msgid "k,K,Kelvin,kelvin"
-msgstr "k,K,Kelvin,kelvin"
-
-#: lib/unit.vala:87
-msgid "Rankine"
-msgstr "Rankine"
-
-#: lib/unit.vala:87
-#, c-format
-msgctxt "unit-format"
-msgid "%s ˚R"
-msgstr "%s ˚R"
-
-#: lib/unit.vala:87
-msgctxt "unit-symbols"
-msgid "degR,˚R,˚Ra,r,R,Rankine,rankine"
-msgstr "degR,gradR,˚R,˚Ra,r,R,Rankine,rankine"
-
-#. We use IEC prefix for digital storage units. i.e. 1 kB = 1 KiloByte = 1000 bytes, and 1 KiB = 1 kibiByte = 1024 bytes
-#: lib/unit.vala:89
-msgid "Bits"
-msgstr "Bit"
-
-#: lib/unit.vala:89
-#, c-format
-msgctxt "unit-format"
-msgid "%s b"
-msgstr "%s b"
-
-#: lib/unit.vala:89
-msgctxt "unit-symbols"
-msgid "bit,bits,b"
-msgstr "bit,b"
-
-#: lib/unit.vala:90
-msgid "Bytes"
-msgstr "Byte"
-
-#: lib/unit.vala:90
-#, c-format
-msgctxt "unit-format"
-msgid "%s B"
-msgstr "%s B"
-
-#: lib/unit.vala:90
-msgctxt "unit-symbols"
-msgid "byte,bytes,B"
-msgstr "byte,B"
-
-#: lib/unit.vala:91
-msgid "Nibbles"
-msgstr "Nibble"
-
-#: lib/unit.vala:91
-#, c-format
-msgctxt "unit-format"
-msgid "%s nibble"
-msgstr "%s nibble"
-
-#: lib/unit.vala:91
-msgctxt "unit-symbols"
-msgid "nibble,nibbles"
-msgstr "nibble"
-
-#. The SI symbol for kilo is k, however we also allow "KB" and "Kb", as they are widely used and accepted.
-#: lib/unit.vala:93
-msgid "Kilobits"
-msgstr "Kilobit"
-
-#: lib/unit.vala:93
-#, c-format
-msgctxt "unit-format"
-msgid "%s kb"
-msgstr "%s kb"
-
-#: lib/unit.vala:93
-msgctxt "unit-symbols"
-msgid "kilobit,kilobits,kb,Kb"
-msgstr "kilobit,kb,Kb"
-
-#: lib/unit.vala:94
-msgid "Kilobytes"
-msgstr "Kilobyte"
-
-#: lib/unit.vala:94
-#, c-format
-msgctxt "unit-format"
-msgid "%s kB"
-msgstr "%s kB"
-
-#: lib/unit.vala:94
-msgctxt "unit-symbols"
-msgid "kilobyte,kilobytes,kB,KB"
-msgstr "kilobyte,kB,KB"
-
-#: lib/unit.vala:95
-msgid "Kibibits"
-msgstr "Kibibit"
-
-#: lib/unit.vala:95
-#, c-format
-msgctxt "unit-format"
-msgid "%s Kib"
-msgstr "%s Kib"
-
-#: lib/unit.vala:95
-msgctxt "unit-symbols"
-msgid "kibibit,kibibits,Kib"
-msgstr "kibibit,Kib"
-
-#: lib/unit.vala:96
-msgid "Kibibytes"
-msgstr "Kibibyte"
-
-#: lib/unit.vala:96
-#, c-format
-msgctxt "unit-format"
-msgid "%s KiB"
-msgstr "%s KiB"
-
-#: lib/unit.vala:96
-msgctxt "unit-symbols"
-msgid "kibibyte,kibibytes,KiB"
-msgstr "kibibyte,KiB"
-
-#: lib/unit.vala:97
-msgid "Megabits"
-msgstr "Megabit"
-
-#: lib/unit.vala:97
-#, c-format
-msgctxt "unit-format"
-msgid "%s Mb"
-msgstr "%s Mb"
-
-#: lib/unit.vala:97
-msgctxt "unit-symbols"
-msgid "megabit,megabits,Mb"
-msgstr "megabit,Mb"
-
-#: lib/unit.vala:98
-msgid "Megabytes"
-msgstr "Megabyte"
-
-#: lib/unit.vala:98
-#, c-format
-msgctxt "unit-format"
-msgid "%s MB"
-msgstr "%s MB"
-
-#: lib/unit.vala:98
-msgctxt "unit-symbols"
-msgid "megabyte,megabytes,MB"
-msgstr "megabyte,MB"
-
-#: lib/unit.vala:99
-msgid "Mebibits"
-msgstr "Mebibit"
-
-#: lib/unit.vala:99
-#, c-format
-msgctxt "unit-format"
-msgid "%s Mib"
-msgstr "%s Mib"
-
-#: lib/unit.vala:99
-msgctxt "unit-symbols"
-msgid "mebibit,mebibits,Mib"
-msgstr "mebibit,Mib"
-
-#: lib/unit.vala:100
-msgid "Mebibytes"
-msgstr "Mebibyte"
-
-#: lib/unit.vala:100
-#, c-format
-msgctxt "unit-format"
-msgid "%s MiB"
-msgstr "%s MiB"
-
-#: lib/unit.vala:100
-msgctxt "unit-symbols"
-msgid "mebibyte,mebibytes,MiB"
-msgstr "mebibyte,MiB"
-
-#: lib/unit.vala:101
-msgid "Gigabits"
-msgstr "Gigabit"
-
-#: lib/unit.vala:101
-#, c-format
-msgctxt "unit-format"
-msgid "%s Gb"
-msgstr "%s Gb"
-
-#: lib/unit.vala:101
-msgctxt "unit-symbols"
-msgid "gigabit,gigabits,Gb"
-msgstr "gigabit,Gb"
-
-#: lib/unit.vala:102
-msgid "Gigabytes"
-msgstr "Gigabyte"
-
-#: lib/unit.vala:102
-#, c-format
-msgctxt "unit-format"
-msgid "%s GB"
-msgstr "%s GB"
-
-#: lib/unit.vala:102
-msgctxt "unit-symbols"
-msgid "gigabyte,gigabytes,GB"
-msgstr "gigabyte,GB"
-
-#: lib/unit.vala:103
-msgid "Gibibits"
-msgstr "Gibibit"
-
-#: lib/unit.vala:103
-#, c-format
-msgctxt "unit-format"
-msgid "%s Gib"
-msgstr "%s Gib"
-
-#: lib/unit.vala:103
-msgctxt "unit-symbols"
-msgid "gibibit,gibibits,Gib"
-msgstr "gibibit,Gib"
-
-#: lib/unit.vala:104
-msgid "Gibibytes"
-msgstr "Gibibyte"
-
-#: lib/unit.vala:104
-#, c-format
-msgctxt "unit-format"
-msgid "%s GiB"
-msgstr "%s GiB"
-
-#: lib/unit.vala:104
-msgctxt "unit-symbols"
-msgid "gibibyte,gibibytes,GiB"
-msgstr "gibibyte,GiB"
-
-#: lib/unit.vala:105
-msgid "Terabits"
-msgstr "Terabit"
-
-#: lib/unit.vala:105
-#, c-format
-msgctxt "unit-format"
-msgid "%s Tb"
-msgstr "%s Tb"
-
-#: lib/unit.vala:105
-msgctxt "unit-symbols"
-msgid "terabit,terabits,Tb"
-msgstr "terabit,Tb"
-
-#: lib/unit.vala:106
-msgid "Terabytes"
-msgstr "Terabyte"
-
-#: lib/unit.vala:106
-#, c-format
-msgctxt "unit-format"
-msgid "%s TB"
-msgstr "%s TB"
-
-#: lib/unit.vala:106
-msgctxt "unit-symbols"
-msgid "terabyte,terabytes,TB"
-msgstr "terabyte,TB"
-
-#: lib/unit.vala:107
-msgid "Tebibits"
-msgstr "Tebibit"
-
-#: lib/unit.vala:107
-#, c-format
-msgctxt "unit-format"
-msgid "%s Tib"
-msgstr "%s Tib"
-
-#: lib/unit.vala:107
-msgctxt "unit-symbols"
-msgid "tebibit,tebibits,Tib"
-msgstr "tebibit,Tib"
-
-#: lib/unit.vala:108
-msgid "Tebibytes"
-msgstr "Tebibyte"
-
-#: lib/unit.vala:108
-#, c-format
-msgctxt "unit-format"
-msgid "%s TiB"
-msgstr "%s TiB"
-
-#: lib/unit.vala:108
-msgctxt "unit-symbols"
-msgid "tebibyte,tebibytes,TiB"
-msgstr "tebibyte,TiB"
-
-#: lib/unit.vala:109
-msgid "Petabits"
-msgstr "Petabit"
-
-#: lib/unit.vala:109
-#, c-format
-msgctxt "unit-format"
-msgid "%s Pb"
-msgstr "%s Pb"
-
-#: lib/unit.vala:109
-msgctxt "unit-symbols"
-msgid "petabit,petabits,Pb"
-msgstr "petabit,Pb"
-
-#: lib/unit.vala:110
-msgid "Petabytes"
-msgstr "Petabyte"
-
-#: lib/unit.vala:110
-#, c-format
-msgctxt "unit-format"
-msgid "%s PB"
-msgstr "%s PB"
-
-#: lib/unit.vala:110
-msgctxt "unit-symbols"
-msgid "petabyte,petabytes,PB"
-msgstr "petabyte,PB"
-
-#: lib/unit.vala:111
-msgid "Pebibits"
-msgstr "Pebibit"
-
-#: lib/unit.vala:111
-#, c-format
-msgctxt "unit-format"
-msgid "%s Pib"
-msgstr "%s Pib"
-
-#: lib/unit.vala:111
-msgctxt "unit-symbols"
-msgid "pebibit,pebibits,Pib"
-msgstr "pebibit,Pib"
-
-#: lib/unit.vala:112
-msgid "Pebibytes"
-msgstr "Pebibyte"
-
-#: lib/unit.vala:112
-#, c-format
-msgctxt "unit-format"
-msgid "%s PiB"
-msgstr "%s PiB"
-
-#: lib/unit.vala:112
-msgctxt "unit-symbols"
-msgid "pebibyte,pebibytes,PiB"
-msgstr "pebibyte,PiB"
-
-#: lib/unit.vala:113
-msgid "Exabits"
-msgstr "Exabit"
-
-#: lib/unit.vala:113 lib/unit.vala:117
-#, c-format
-msgctxt "unit-format"
-msgid "%s Eb"
-msgstr "%s Eb"
-
-#: lib/unit.vala:113
-msgctxt "unit-symbols"
-msgid "exabit,exabits,Eb"
-msgstr "exabit,Eb"
-
-#: lib/unit.vala:114
-msgid "Exabytes"
-msgstr "Exabyte"
-
-#: lib/unit.vala:114 lib/unit.vala:118
-#, c-format
-msgctxt "unit-format"
-msgid "%s EB"
-msgstr "%s EB"
-
-#: lib/unit.vala:114
-msgctxt "unit-symbols"
-msgid "exabyte,exabytes,EB"
-msgstr "exabyte,EB"
-
-#: lib/unit.vala:115
-msgid "Exbibits"
-msgstr "Exbibit"
-
-#: lib/unit.vala:115
-#, c-format
-msgctxt "unit-format"
-msgid "%s Eib"
-msgstr "%s Eib"
-
-#: lib/unit.vala:115
-msgctxt "unit-symbols"
-msgid "exbibit,exbibits,Eib"
-msgstr "exbibit,Eib"
-
-#: lib/unit.vala:116
-msgid "Exbibytes"
-msgstr "Exbibyte"
-
-#: lib/unit.vala:116
-#, c-format
-msgctxt "unit-format"
-msgid "%s EiB"
-msgstr "%s EiB"
-
-#: lib/unit.vala:116
-msgctxt "unit-symbols"
-msgid "exbibyte,exbibytes,EiB"
-msgstr "exbibyte,EiB"
-
-#: lib/unit.vala:117
-msgid "Zettabits"
-msgstr "Zettabit"
-
-#: lib/unit.vala:117
-msgctxt "unit-symbols"
-msgid "zettabit,zettabits,Zb"
-msgstr "zettabit,Zb"
-
-#: lib/unit.vala:118
-msgid "Zettabytes"
-msgstr "Zettabyte"
-
-#: lib/unit.vala:118
-msgctxt "unit-symbols"
-msgid "zettabyte,zettabytes,ZB"
-msgstr "zettabyte,ZB"
-
-#: lib/unit.vala:119
-msgid "Zebibits"
-msgstr "Zebibit"
-
-#: lib/unit.vala:119
-#, c-format
-msgctxt "unit-format"
-msgid "%s Zib"
-msgstr "%s Zib"
-
-#: lib/unit.vala:119
-msgctxt "unit-symbols"
-msgid "zebibit,zebibits,Zib"
-msgstr "zebibit,Zib"
-
-#: lib/unit.vala:120
-msgid "Zebibytes"
-msgstr "Zebibyte"
-
-#: lib/unit.vala:120
-#, c-format
-msgctxt "unit-format"
-msgid "%s ZiB"
-msgstr "%s ZiB"
-
-#: lib/unit.vala:120
-msgctxt "unit-symbols"
-msgid "zebibyte,zebibytes,ZiB"
-msgstr "zebibyte,ZiB"
-
-#: lib/unit.vala:121
-msgid "Yottabits"
-msgstr "Yottabit"
-
-#: lib/unit.vala:121
-#, c-format
-msgctxt "unit-format"
-msgid "%s Yb"
-msgstr "%s Yb"
-
-#: lib/unit.vala:121
-msgctxt "unit-symbols"
-msgid "yottabit,yottabits,Yb"
-msgstr "yottabit,Yb"
-
-#: lib/unit.vala:122
-msgid "Yottabytes"
-msgstr "Yottabyte"
-
-#: lib/unit.vala:122
-#, c-format
-msgctxt "unit-format"
-msgid "%s YB"
-msgstr "%s YB"
-
-#: lib/unit.vala:122
-msgctxt "unit-symbols"
-msgid "yottabyte,yottabytes,YB"
-msgstr "yottabyte,YB"
-
-#: lib/unit.vala:123
-msgid "Yobibits"
-msgstr "Yobibit"
-
-#: lib/unit.vala:123
-#, c-format
-msgctxt "unit-format"
-msgid "%s Yib"
-msgstr "%s Yib"
-
-#: lib/unit.vala:123
-msgctxt "unit-symbols"
-msgid "yobibit,yobibits,Yib"
-msgstr "yobibit,Yib"
-
-#: lib/unit.vala:124
-msgid "Yobibytes"
-msgstr "Yobibyte"
-
-#: lib/unit.vala:124
-#, c-format
-msgctxt "unit-format"
-msgid "%s YiB"
-msgstr "%s YiB"
-
-#: lib/unit.vala:124
-msgctxt "unit-symbols"
-msgid "yobibyte,yobibytes,YiB"
-msgstr "yobibyte,YiB"
-
-#: lib/unit.vala:126
-msgid "Currency"
-msgstr "Valuta"
-
-#. Translators: result of currency conversion, %s is the symbol, %%s is the placeholder for amount, i.e.: USD100
-#: lib/unit.vala:132
-#, c-format
-msgid "%s%%s"
-msgstr "%s%%s"
-
-#: src/gnome-calculator.vala:24
-msgid "Start in given mode"
-msgstr "Starta i angivet läge"
-
-#: src/gnome-calculator.vala:25
-msgid "Solve given equation"
-msgstr "Lös given ekvation"
-
-#: src/gnome-calculator.vala:26
-msgid "Start with given equation"
-msgstr "Börja med given ekvation"
-
-#: src/gnome-calculator.vala:27
-msgid "Show release version"
-msgstr "Visa programvaruversion"
-
-#. Translators: Error message displayed when unable to launch help browser
-#: src/gnome-calculator.vala:303
-msgid "Unable to open help file"
-msgstr "Kunde inte öppna hjälpfilen"
-
-#. The translator credits. Please translate this with your name (s).
-#: src/gnome-calculator.vala:334
-msgid "translator-credits"
+"GTK+-flaggor:\n"
+"  --class=KLASS                   Programklass som används av fönsterhanteraren\n"
+"  --name=NAMN                     Programnamn som används av fönsterhanteraren\n"
+"  --screen=SKÄRM                 X-skärm att använda\n"
+"  --sync                          Gör X-anrop synkrona\n"
+"  --gtk-module=MODULER            Läs in ytterligare GTK+-moduler\n"
+"  --g-fatal-warnings              Gör alla varningar ödesdigra"
+
+#. Description on gcalctool application options displayed on command-line
+#: ../src/gcalctool.c:110
+#, c-format
+msgid ""
+"Application Options:\n"
+"  -s, --solve <equation>          Solve the given equation"
 msgstr ""
-"Daniel Nylander <po@danielnylander.se>\n"
-"Christian Rose\n"
-"Marcus Lundblad <ml@update.uu.se>\n"
-"Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
-"\n"
-"Skicka synpunkter på översättningen till\n"
-"<tp-sv@listor.tp-sv.se>."
+"Programflaggor:\n"
+"  -s, --solve <ekvation>          Lös angiven ekvation"
 
-#: src/gnome-calculator.vala:340
-msgid "About Calculator"
-msgstr "Om Kalkylator"
+#. Error printed to stderr when user uses --solve argument without an equation
+#: ../src/gcalctool.c:154
+#, c-format
+msgid "Argument --solve requires an equation to solve"
+msgstr "Argumentet --solve kräver en ekvation att lösa"
 
-#. Short description in the about dialog
-#: src/gnome-calculator.vala:348
-msgid "Calculator with financial and scientific modes."
-msgstr "Kalkylator med finansiella och vetenskapliga lägen."
+#. Error printed to stderr when user provides an unknown command-line argument
+#: ../src/gcalctool.c:164
+#, c-format
+msgid "Unknown argument '%s'"
+msgstr "Okänt argument \"%s\""
 
-#: src/math-buttons.vala:464
+#. Tooltip for the Pi button
+#: ../src/math-buttons.c:96
+msgid "Pi [Ctrl+P]"
+msgstr "Pi [Ctrl+P]"
+
+#. Tooltip for the Euler's Number button
+#: ../src/math-buttons.c:99
+msgid "Euler’s Number"
+msgstr "Eulers nummer"
+
+#. Tooltip for the subscript button
+#: ../src/math-buttons.c:104
+msgid "Subscript mode [Alt]"
+msgstr "Subscript-läge [Alt]"
+
+#. Tooltip for the superscript button
+#: ../src/math-buttons.c:107
+msgid "Superscript mode [Ctrl]"
+msgstr "Superscript-läge [Ctrl]"
+
+#. Tooltip for the scientific exponent button
+#: ../src/math-buttons.c:110
+msgid "Scientific exponent [Ctrl+E]"
+msgstr "Vetenskaplig exponent [Ctrl+E]"
+
+# Detta är räknesättet
+#. Tooltip for the add button
+#: ../src/math-buttons.c:113
+msgid "Add [+]"
+msgstr "Addera [+]"
+
+#. Tooltip for the subtract button
+#: ../src/math-buttons.c:116
+msgid "Subtract [-]"
+msgstr "Subtrahera [-]"
+
+#. Tooltip for the multiply button
+#: ../src/math-buttons.c:119
+msgid "Multiply [*]"
+msgstr "Multiplicera [*]"
+
+#. Tooltip for the divide button
+#: ../src/math-buttons.c:122
+msgid "Divide [/]"
+msgstr "Dividera [/]"
+
+#. Tooltip for the modulus divide button
+#: ../src/math-buttons.c:125
+msgid "Modulus divide"
+msgstr "Modulusdivision"
+
+#. Tooltip for the additional functions button
+#: ../src/math-buttons.c:128
+msgid "Additional Functions"
+msgstr "Ytterligare funktioner"
+
+#. Tooltip for the exponent button
+#: ../src/math-buttons.c:131
+msgid "Exponent [^ or **]"
+msgstr "Exponent [^ eller **]"
+
+#. Tooltip for the square button
+#: ../src/math-buttons.c:134
+msgid "Square [Ctrl+2]"
+msgstr "Kvadrat [Ctrl+2]"
+
+#. Tooltip for the percentage button
+#: ../src/math-buttons.c:137
+msgid "Percentage [%]"
+msgstr "Procent [%]"
+
+#. Tooltip for the factorial button
+#: ../src/math-buttons.c:140
+msgid "Factorial [!]"
+msgstr "Fakultet [!]"
+
+#. Tooltip for the absolute value button
+#: ../src/math-buttons.c:143
+msgid "Absolute value [|]"
+msgstr "Absolutvärde [|]"
+
+#. Tooltip for the complex argument component button
+#: ../src/math-buttons.c:146
+msgid "Complex argument"
+msgstr "Komplexargument"
+
+#. Tooltip for the complex conjugate button
+#: ../src/math-buttons.c:149
+msgid "Complex conjugate"
+msgstr "Komplexkonjugat"
+
+#. Tooltip for the root button
+#: ../src/math-buttons.c:152
+msgid "Root [Ctrl+R]"
+msgstr "Rot [Ctrl+R]"
+
+#. Tooltip for the square root button
+#: ../src/math-buttons.c:155
+msgid "Square root [Ctrl+R]"
+msgstr "Kvadratrot [Ctrl+R]"
+
+#. Tooltip for the logarithm button
+#: ../src/math-buttons.c:158
+msgid "Logarithm"
+msgstr "Logaritm"
+
+#. Tooltip for the natural logarithm button
+#: ../src/math-buttons.c:161
+msgid "Natural Logarithm"
+msgstr "Naturlig logaritm"
+
+#. Tooltip for the sine button
+#: ../src/math-buttons.c:164
+msgid "Sine"
+msgstr "Sinus"
+
+#. Tooltip for the cosine button
+#: ../src/math-buttons.c:167
+msgid "Cosine"
+msgstr "Cosinus"
+
+#. Tooltip for the tangent button
+#: ../src/math-buttons.c:170
+msgid "Tangent"
+msgstr "Tangent"
+
+#. Tooltip for the hyperbolic sine button
+#: ../src/math-buttons.c:173
+msgid "Hyperbolic Sine"
+msgstr "Hyperbolisk sinus"
+
+#. Tooltip for the hyperbolic cosine button
+#: ../src/math-buttons.c:176
+msgid "Hyperbolic Cosine"
+msgstr "Hyperbolisk cosinus"
+
+#. Tooltip for the hyperbolic tangent button
+#: ../src/math-buttons.c:179
+msgid "Hyperbolic Tangent"
+msgstr "Hyperbolisk tangent"
+
+#. Tooltip for the inverse button
+#: ../src/math-buttons.c:182
+msgid "Inverse [Ctrl+I]"
+msgstr "Inversad [Ctrl+I]"
+
+#. Tooltip for the boolean AND button
+#: ../src/math-buttons.c:185
+msgid "Boolean AND"
+msgstr "Boolesk AND"
+
+#. Tooltip for the boolean OR button
+#: ../src/math-buttons.c:188
+msgid "Boolean OR"
+msgstr "Boolesk OR"
+
+#. Tooltip for the exclusive OR button
+#: ../src/math-buttons.c:191
+msgid "Boolean Exclusive OR"
+msgstr "Boolesk exklusiv OR"
+
+#. Tooltip for the boolean NOT button
+#: ../src/math-buttons.c:194
+msgid "Boolean NOT"
+msgstr "Boolesk NOT"
+
+#. Tooltip for the integer component button
+#: ../src/math-buttons.c:197
+#: ../src/math-buttons.c:1038
+msgid "Integer Component"
+msgstr "Heltalsdel"
+
+#. Tooltip for the fractional component button
+#: ../src/math-buttons.c:200
+#: ../src/math-buttons.c:1040
+msgid "Fractional Component"
+msgstr "Bråkdel"
+
+#. Tooltip for the real component button
+#: ../src/math-buttons.c:203
+msgid "Real Component"
+msgstr "Realdel"
+
+#. Tooltip for the imaginary component button
+#: ../src/math-buttons.c:206
+msgid "Imaginary Component"
+msgstr "Imaginärdel"
+
+#. Tooltip for the ones' complement button
+#: ../src/math-buttons.c:209
+msgid "Ones' Complement"
+msgstr "Enkomplement"
+
+#. Tooltip for the two's complement button
+#: ../src/math-buttons.c:212
+msgid "Two's Complement"
+msgstr "Tvåkomplement"
+
+#. Tooltip for the truncate button
+#: ../src/math-buttons.c:215
+msgid "Truncate"
+msgstr "Korta ner"
+
+#. Tooltip for the start group button
+#: ../src/math-buttons.c:218
+msgid "Start Group [(]"
+msgstr "Startblock [(]"
+
+#. Tooltip for the end group button
+#: ../src/math-buttons.c:221
+msgid "End Group [)]"
+msgstr "Slutblock [)]"
+
+#. Tooltip for the solve button
+#: ../src/math-buttons.c:230
+msgid "Calculate Result"
+msgstr "Beräkna resultat"
+
+#. Tooltip for the factor button
+#: ../src/math-buttons.c:233
+msgid "Factorize [Ctrl+F]"
+msgstr "Faktorisera [Ctrl+F]"
+
+#. Tooltip for the clear button
+#: ../src/math-buttons.c:236
+msgid "Clear Display [Escape]"
+msgstr "Töm skärmen [Escape]"
+
+#. Tooltip for the undo button
+#: ../src/math-buttons.c:239
+msgid "Undo [Ctrl+Z]"
+msgstr "Ångra [Ctrl+Z]"
+
+#. Tooltip for the double declining depreciation button
+#: ../src/math-buttons.c:251
+msgid "Double Declining Depreciation"
+msgstr "Dubbel degressiv avskrivning"
+
+#. Tooltip for the financial term button
+#: ../src/math-buttons.c:257
+msgid "Financial Term"
+msgstr "Finansiell period"
+
+#. Tooltip for the sum of the years digits depreciation button
+#: ../src/math-buttons.c:260
+msgid "Sum of the Years Digits Depreciation"
+msgstr "Degressiv avskrivning"
+
+#. Tooltip for the straight line depreciation button
+#: ../src/math-buttons.c:263
+msgid "Straight Line Depreciation"
+msgstr "Linjär avskrivning"
+
+#. Number display mode combo: Binary, e.g. 10011010010₂
+#: ../src/math-buttons.c:653
+msgid "Binary"
+msgstr "Binär"
+
+#. Number display mode combo: Octal, e.g. 2322₈
+#: ../src/math-buttons.c:657
+msgid "Octal"
+msgstr "Oktal"
+
+#. Number display mode combo: Decimal, e.g. 1234
+#: ../src/math-buttons.c:661
+msgid "Decimal"
+msgstr "Decimal"
+
+#. Number display mode combo: Hexadecimal, e.g. 4D2₁₆
+#: ../src/math-buttons.c:665
+msgid "Hexadecimal"
+msgstr "Hexadecimal"
+
+#. Left Shift Popup: Menu item to shift left by n places (n < 10)
+#. Right Shift Popup: Menu item to shift right by n places (n < 10)
+#: ../src/math-buttons.c:948
+#: ../src/math-buttons.c:992
+#, c-format
+msgid "_%d place"
+msgid_plural "_%d places"
+msgstr[0] "_%d plats"
+msgstr[1] "_%d platser"
+
+#. Left Shift Popup: Menu item to shift left by n places (n >= 10)
+#. Right Shift Popup: Menu item to shift right by n places (n >= 10)
+#: ../src/math-buttons.c:952
+#: ../src/math-buttons.c:996
 #, c-format
 msgid "%d place"
 msgid_plural "%d places"
 msgstr[0] "%d plats"
 msgstr[1] "%d platser"
 
-#. Preferences dialog: Label for number format combo box
-#: src/math-preferences.vala:43
-msgid "Number _Format:"
-msgstr "Tal_format:"
+#. Tooltip for the round button
+#: ../src/math-buttons.c:1042
+msgid "Round"
+msgstr "Avrunda"
+
+# Osäker
+#. Tooltip for the floor button
+#: ../src/math-buttons.c:1044
+msgid "Floor"
+msgstr "Golv"
+
+# Osäker
+#. Tooltip for the ceiling button
+#: ../src/math-buttons.c:1046
+msgid "Ceiling"
+msgstr "Tak"
+
+#. Tooltip for the ceiling button
+#: ../src/math-buttons.c:1048
+msgid "Sign"
+msgstr "Tecken"
+
+#. Label that is displayed between the two conversion combo boxes, e.g. "[degrees] in [radians]"
+#: ../src/math-converter.c:412
+msgid " in "
+msgstr " i "
+
+#. Tooltip for swap conversion button
+#: ../src/math-converter.c:427
+msgid "Switch conversion units"
+msgstr "Byt konverteringsenheter"
+
+#. Error shown when trying to undo with no undo history
+#: ../src/math-equation.c:458
+msgid "No undo history"
+msgstr "Ingen ångringshistorik"
+
+#. Error shown when trying to redo with no redo history
+#: ../src/math-equation.c:485
+msgid "No redo history"
+msgstr "Ingen ångringshistorik"
+
+#: ../src/math-equation.c:943
+msgid "No sane value to store"
+msgstr "Inget vettigt värde att lagra"
+
+#. Error displayed to user when they perform a bitwise operation on numbers greater than the current word
+#: ../src/math-equation.c:1225
+msgid "Overflow. Try a bigger word size"
+msgstr "Överflöde. Prova en större ordstorlek"
+
+#. Error displayed to user when they an unknown variable is entered
+#: ../src/math-equation.c:1230
+#, c-format
+msgid "Unknown variable '%s'"
+msgstr "Okänd variabel \"%s\""
+
+#. Error displayed to user when an unknown function is entered
+#: ../src/math-equation.c:1235
+#, c-format
+msgid "Function '%s' is not defined"
+msgstr "Funktionen \"%s\" är inte definierad"
+
+#. Error displayed to user when an conversion with unknown units is attempted
+#: ../src/math-equation.c:1240
+msgid "Unknown conversion"
+msgstr "Okänd konvertering"
+
+#. Error displayed to user when they enter an invalid calculation
+#: ../src/math-equation.c:1249
+msgid "Malformed expression"
+msgstr "Felaktigt utformat uttryck"
+
+#: ../src/math-equation.c:1263
+msgid "Calculating"
+msgstr "Beräknar"
+
+#. Error displayed when trying to factorize a non-integer value
+#: ../src/math-equation.c:1394
+msgid "Need an integer to factorize"
+msgstr "Behöver ett heltal att faktorisera"
+
+#. This message is displayed in the status bar when a bit
+#. shift operation is performed and the display does not contain a number
+#: ../src/math-equation.c:1469
+msgid "No sane value to bitwise shift"
+msgstr "Inget vettigt värde att göra bitvis skifte"
+
+#. Message displayed when cannot toggle bit in display
+#: ../src/math-equation.c:1500
+msgid "Displayed value not an integer"
+msgstr "Visat värde är inte ett heltal"
+
+#. Digits localized for the given language
+#: ../src/math-equation.c:1925
+msgid "0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F"
+msgstr "0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F"
+
+#. Label on close button in preferences dialog
+#: ../src/math-preferences.c:236
+msgid "_Close"
+msgstr "S_täng"
+
+#. Preferences dialog: Angle unit combo box: Use degrees for trigonometric calculations
+#. FIXME: Approximations of 1/(units in a circle), therefore, 360 deg != 400 grads
+#: ../src/math-preferences.c:246
+#: ../src/unit-manager.c:54
+msgid "Degrees"
+msgstr "Grader"
+
+#. Preferences dialog: Angle unit combo box: Use radians for trigonometric calculations
+#: ../src/math-preferences.c:250
+#: ../src/unit-manager.c:55
+msgid "Radians"
+msgstr "Radianer"
+
+#. Preferences dialog: Angle unit combo box: Use gradians for trigonometric calculations
+#: ../src/math-preferences.c:254
+#: ../src/unit-manager.c:56
+msgid "Gradians"
+msgstr "Nygrader"
 
 #. Number display mode combo: Automatic, e.g. 1234 (or scientific for large number 1.234×10^99)
-#: src/math-preferences.vala:60
+#: ../src/math-preferences.c:264
 msgid "Automatic"
 msgstr "Automatiskt"
 
 #. Number display mode combo: Fixed, e.g. 1234
-#: src/math-preferences.vala:64
+#: ../src/math-preferences.c:268
 msgid "Fixed"
 msgstr "Fast"
 
 #. Number display mode combo: Scientific, e.g. 1.234×10^3
-#: src/math-preferences.vala:68
+#: ../src/math-preferences.c:272
 msgid "Scientific"
 msgstr "Vetenskaplig"
 
 #. Number display mode combo: Engineering, e.g. 1.234k
-#: src/math-preferences.vala:72
+#: ../src/math-preferences.c:276
 msgid "Engineering"
 msgstr "Ingenjör"
 
-#. Preferences dialog: label for show trailing zeroes check button
-#: src/math-preferences.vala:89
-msgid "Number of _decimals"
-msgstr "Antal _decimaler"
+#. Label used in preferences dialog.  The %d is replaced by a spinbutton
+#: ../src/math-preferences.c:287
+#, c-format
+msgid "Show %d decimal _places"
+msgstr "Visa %d decimal_platser"
 
-#. Preferences dialog: label for show trailing zeroes switch
-#: src/math-preferences.vala:101
-msgid "Trailing _zeroes"
-msgstr "Efterliggande _nollor"
+#. Translators: Error message displayed when unable to launch help browser
+#: ../src/math-window.c:172
+msgid "Unable to open help file"
+msgstr "Kunde inte öppna hjälpfilen"
 
-#. Preferences dialog: label for show show thousands separator switch
-#: src/math-preferences.vala:114
-msgid "_Thousands separators"
-msgstr "Tusentalsa_vgränsare"
+#. The translator credits. Please translate this with your name(s).
+#: ../src/math-window.c:204
+msgid "translator-credits"
+msgstr ""
+"Daniel Nylander <po@danielnylander.se>\n"
+"Christian Rose\n"
+"\n"
+"Skicka synpunkter på översättningen till\n"
+"<tp-sv@listor.tp-sv.se>."
 
-#. Preferences dialog: Label for angle unit combo box
-#: src/math-preferences.vala:128
-msgid "_Angle units:"
-msgstr "V_inkelenheter:"
+#. The license this software is under (GPL2+)
+#: ../src/math-window.c:207
+msgid ""
+"Gcalctool is free software; you can redistribute it and/or modify\n"
+"it under the terms of the GNU General Public License as published by\n"
+"the Free Software Foundation; either version 2 of the License, or\n"
+"(at your option) any later version.\n"
+"\n"
+"Gcalctool is distributed in the hope that it will be useful,\n"
+"but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
+"GNU General Public License for more details.\n"
+"\n"
+"You should have received a copy of the GNU General Public License\n"
+"along with Gcalctool; if not, write to the Free Software Foundation, Inc.,\n"
+"51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA"
+msgstr ""
+"Gcalctool är fri programvara. Du kan distribuera det och/eller\n"
+"modifiera det under villkoren i GNU General Public License, publicerad\n"
+"av Free Software Foundation, antingen version 2 eller (om du så vill)\n"
+"någon senare version.\n"
+"\n"
+"Gcalctool distribueras i hopp om att det ska vara användbart,\n"
+"men UTAN NÅGON SOM HELST GARANTI, även utan underförstådd garanti\n"
+"om SÄLJBARHET eller LÄMPLIGHET FÖR NÅGOT SPECIELLT ÄNDAMÅL. Se\n"
+"GNU General Public License för ytterligare information.\n"
+"\n"
+"Du bör ha fått en kopia av GNU General Public License tillsammans\n"
+"med Gcalctool. Om inte, skriv till Free Software Foundation, Inc.,\n"
+"51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA"
 
-#. Preferences dialog: Label for word size combo box
-#: src/math-preferences.vala:158
-msgid "Word _size:"
-msgstr "Ord_storlek:"
+#. Program name in the about dialog
+#: ../src/math-window.c:224
+msgid "Gcalctool"
+msgstr "Gcalctool"
 
-#. Word size combo: 8 bits
-#: src/math-preferences.vala:172
-msgid "8 bits"
-msgstr "8 bitar"
+#. Copyright notice in the about dialog
+#: ../src/math-window.c:228
+msgid "© 1986–2010 The Gcalctool authors"
+msgstr "© 1986-2010 Upphovsmännen bakom Gcalctool"
 
-#. Word size combo: 16 bits
-#: src/math-preferences.vala:174
-msgid "16 bits"
-msgstr "16 bitar"
+#. Short description in the about dialog
+#: ../src/math-window.c:232
+msgid "Calculator with financial and scientific modes."
+msgstr "Kalkylator med finansiella och vetenskapliga lägen."
 
-#. Word size combo: 32 bits
-#: src/math-preferences.vala:176
-msgid "32 bits"
-msgstr "32 bitar"
+#. Calculator menu
+#: ../src/math-window.c:381
+msgid "_Calculator"
+msgstr "_Kalkylator"
 
-#. Word size combo: 64 bits
-#: src/math-preferences.vala:178
-msgid "64 bits"
-msgstr "64 bitar"
+#. Mode menu
+#: ../src/math-window.c:383
+msgid "_Mode"
+msgstr "_Läge"
 
-#: src/math-window.vala:134
-msgid "_Quit"
-msgstr "_Avsluta"
+#. Help menu label
+#: ../src/math-window.c:385
+msgid "_Help"
+msgstr "_Hjälp"
 
-#~ msgid "accessories-calculator"
-#~ msgstr "accessories-calculator"
+#. Basic menu label
+#: ../src/math-window.c:387
+msgid "_Basic"
+msgstr "_Grundläggande"
 
-#~ msgid "Precision error"
-#~ msgstr "Precisionsfel"
+#. Advanced menu label
+#: ../src/math-window.c:389
+msgid "_Advanced"
+msgstr "_Avancerad"
 
-#~ msgid "Reciprocal of zero is undefined"
-#~ msgstr "Reciprok av noll är inte definierad"
+#. Financial menu label
+#: ../src/math-window.c:391
+msgid "_Financial"
+msgstr "_Finansiell"
 
+#. Programming menu label
+#: ../src/math-window.c:393
+msgid "_Programming"
+msgstr "_Programmering"
+
+#. Help>Contents menu label
+#: ../src/math-window.c:395
+msgid "_Contents"
+msgstr "_Innehåll"
+
+#. Translators: Error displayed when boolean AND attempted on non-integer values
+#: ../src/mp-binary.c:115
+msgid "Boolean AND is only defined for positive integers"
+msgstr "Boolesk AND definieras endast för positiva heltal"
+
+#. Translators: Error displayed when boolean OR attempted on non-integer values
+#: ../src/mp-binary.c:128
+msgid "Boolean OR is only defined for positive integers"
+msgstr "Boolesk OR definieras endast för positiva heltal"
+
+#. Translators: Error displayed when boolean XOR attempted on non-integer values
+#: ../src/mp-binary.c:141
+msgid "Boolean XOR is only defined for positive integers"
+msgstr "Boolesk XOR definieras endast för positiva heltal"
+
+#. Translators: Error displayed when boolean XOR attempted on non-integer values
+#: ../src/mp-binary.c:156
+msgid "Boolean NOT is only defined for positive integers"
+msgstr "Boolesk NOT definieras endast för positiva heltal"
+
+#. Translators: Error displayed when bit shift attempted on non-integer values
+#: ../src/mp-binary.c:187
+msgid "Shift is only possible on integer values"
+msgstr "Skift är endast möjlig på heltalsvärden"
+
+#. Translators: Error display when attempting to take argument of zero
+#: ../src/mp.c:148
+msgid "Argument not defined for zero"
+msgstr "Argument inte definierat för noll"
+
+#: ../src/mp.c:299
+msgid "Overflow: the result couldn't be calculated"
+msgstr "Överflöde: resultatet kunde inte beräknas"
+
+#. Translators: Error displayed attempted to divide by zero
+#: ../src/mp.c:644
+#: ../src/mp.c:676
+#: ../src/mp.c:1605
+msgid "Division by zero is undefined"
+msgstr "Division med noll är inte definierad"
+
+#. Translators: Error displayed when attempting to take logarithm of zero
+#: ../src/mp.c:1276
+#: ../src/mp.c:1313
+msgid "Logarithm of zero is undefined"
+msgstr "Logaritm med noll är inte definierad"
+
+#. Translators: Error displayed when attempted to raise 0 to a negative exponent
+#: ../src/mp.c:1680
+#: ../src/mp.c:1994
+msgid "The power of zero is undefined for a negative exponent"
+msgstr "Potensen för noll är inte definierad för en negativ exponent"
+
+#: ../src/mp.c:1704
+msgid "Reciprocal of zero is undefined"
+msgstr "Reciprok av noll är inte definierad"
+
+#: ../src/mp.c:1789
+msgid "Root must be non-zero"
+msgstr "Rot får inte vara noll"
+
+#: ../src/mp.c:1807
+msgid "Negative root of zero is undefined"
+msgstr "Negativ rot av noll är inte definierad"
+
+#: ../src/mp.c:1813
+msgid "nth root of negative number is undefined for even n"
+msgstr "n:de roten av negativt tal är inte definierad för jämna n"
+
+#. Translators: Error displayed when attempted take the factorial of a fractional number
+#: ../src/mp.c:1934
+msgid "Factorial is only defined for natural numbers"
+msgstr "Faktultet är endast definierad för naturliga tal"
+
+#. Translators: Error displayed when attemping to do a modulus division on non-integer numbers
+#: ../src/mp.c:1954
+msgid "Modulus division is only defined for integers"
+msgstr "Modulus division är endast definierad för heltal"
+
+#. Translators: Error displayed when tangent value is undefined
+#: ../src/mp-trigonometric.c:310
+msgid "Tangent is undefined for angles that are multiples of π (180°) from π∕2 (90°)"
+msgstr "Tangent är inte definierad för vinklar som är nämnare av π (180°) från π∕2 (90°)"
+
+#. Translators: Error displayed when inverse sine value is undefined
+#: ../src/mp-trigonometric.c:355
+msgid "Inverse sine is undefined for values outside [-1, 1]"
+msgstr "Inversad sinus är inte definierad för värden utanför [-1, 1]"
+
+#. Translators: Error displayed when inverse cosine value is undefined
+#: ../src/mp-trigonometric.c:372
+msgid "Inverse cosine is undefined for values outside [-1, 1]"
+msgstr "Inversad cosinus är inte definierad för värden utanför [-1, 1]"
+
+#. Translators: Error displayed when inverse hyperbolic cosine value is undefined
+#: ../src/mp-trigonometric.c:591
+msgid "Inverse hyperbolic cosine is undefined for values less than one"
+msgstr "Inversad hyperbolisk cosinus är inte definierad för värden mindre än ett"
+
+#. Translators: Error displayed when inverse hyperbolic tangent value is undefined
+#: ../src/mp-trigonometric.c:615
+msgid "Inverse hyperbolic tangent is undefined for values outside [-1, 1]"
+msgstr "Inversad hyperbolisk tangent är inte definierad för värden utanför [-1, 1]"
+
+#: ../src/unit-manager.c:54
+#, c-format
+msgctxt "unit-format"
+msgid "%s degrees"
+msgstr "%s grader"
+
+#: ../src/unit-manager.c:54
+msgctxt "unit-symbols"
+msgid "degree,degrees,deg"
+msgstr "grad,grader,grd"
+
+#: ../src/unit-manager.c:55
+#, c-format
+msgctxt "unit-format"
+msgid "%s radians"
+msgstr "%s radianer"
+
+#: ../src/unit-manager.c:55
+msgctxt "unit-symbols"
+msgid "radian,radians,rad"
+msgstr "radian,radianer,rad"
+
+#: ../src/unit-manager.c:56
+#, c-format
+msgctxt "unit-format"
+msgid "%s gradians"
+msgstr "%s nygrader"
+
+#: ../src/unit-manager.c:56
+msgctxt "unit-symbols"
+msgid "gradian,gradians,grad"
+msgstr "nygrad,nygrader,nygr"
+
+#: ../src/unit-manager.c:57
+msgid "Parsecs"
+msgstr "Parsec"
+
+#: ../src/unit-manager.c:57
+#, c-format
+msgctxt "unit-format"
+msgid "%s pc"
+msgstr "%s pc"
+
+#: ../src/unit-manager.c:57
+msgctxt "unit-symbols"
+msgid "parsec,parsecs,pc"
+msgstr "parsec,pc"
+
+#: ../src/unit-manager.c:58
+msgid "Light Years"
+msgstr "Ljusår"
+
+#: ../src/unit-manager.c:58
+#, c-format
+msgctxt "unit-format"
+msgid "%s ly"
+msgstr "%s ly"
+
+#: ../src/unit-manager.c:58
+msgctxt "unit-symbols"
+msgid "lightyear,lightyears,ly"
+msgstr "ljusår,lå"
+
+#: ../src/unit-manager.c:59
+msgid "Astronomical Units"
+msgstr "Astronomiska enheter"
+
+#: ../src/unit-manager.c:59
+#, c-format
+msgctxt "unit-format"
+msgid "%s au"
+msgstr "%s au"
+
+#: ../src/unit-manager.c:59
+msgctxt "unit-symbols"
+msgid "au"
+msgstr "au"
+
+#: ../src/unit-manager.c:60
+msgid "Nautical Miles"
+msgstr "Sjömil"
+
+#: ../src/unit-manager.c:60
+#, c-format
+msgctxt "unit-format"
+msgid "%s nmi"
+msgstr "%s M"
+
+#: ../src/unit-manager.c:60
+msgctxt "unit-symbols"
+msgid "nmi"
+msgstr "M"
+
+#: ../src/unit-manager.c:61
+msgid "Miles"
+msgstr "Engelska mil"
+
+#: ../src/unit-manager.c:61
+#, c-format
+msgctxt "unit-format"
+msgid "%s mi"
+msgstr "%s mi"
+
+#: ../src/unit-manager.c:61
+msgctxt "unit-symbols"
+msgid "mile,miles,mi"
+msgstr "engelsk mil,engelska mil,mi"
+
+#: ../src/unit-manager.c:62
+msgid "Kilometers"
+msgstr "Kilometer"
+
+#: ../src/unit-manager.c:62
+#, c-format
+msgctxt "unit-format"
+msgid "%s km"
+msgstr "%s km"
+
+#: ../src/unit-manager.c:62
+msgctxt "unit-symbols"
+msgid "kilometer,kilometers,km,kms"
+msgstr "kilometer,km,kms"
+
+#: ../src/unit-manager.c:63
+msgid "Cables"
+msgstr "Kablar"
+
+#: ../src/unit-manager.c:63
+#, c-format
+msgctxt "unit-format"
+msgid "%s cb"
+msgstr "%s cb"
+
+#: ../src/unit-manager.c:63
+msgctxt "unit-symbols"
+msgid "cable,cables,cb"
+msgstr "kabel,kablar,cb"
+
+#: ../src/unit-manager.c:64
+msgid "Fathoms"
+msgstr "Famn"
+
+#: ../src/unit-manager.c:64
+#, c-format
+msgctxt "unit-format"
+msgid "%s ftm"
+msgstr "%s ftm"
+
+#: ../src/unit-manager.c:64
+msgctxt "unit-symbols"
+msgid "fathom,fathoms,ftm"
+msgstr "famn,ftm"
+
+#: ../src/unit-manager.c:65
+msgid "Meters"
+msgstr "Meter"
+
+#: ../src/unit-manager.c:65
+#, c-format
+msgctxt "unit-format"
+msgid "%s m"
+msgstr "%s m"
+
+#: ../src/unit-manager.c:65
+msgctxt "unit-symbols"
+msgid "meter,meters,m"
+msgstr "meter,m"
+
+#: ../src/unit-manager.c:66
+msgid "Yards"
+msgstr "Yard"
+
+#: ../src/unit-manager.c:66
+#, c-format
+msgctxt "unit-format"
+msgid "%s yd"
+msgstr "%s yd"
+
+#: ../src/unit-manager.c:66
+msgctxt "unit-symbols"
+msgid "yard,yards,yd"
+msgstr "yard,yd"
+
+#: ../src/unit-manager.c:67
+msgid "Feet"
+msgstr "Fot"
+
+#: ../src/unit-manager.c:67
+#, c-format
+msgctxt "unit-format"
+msgid "%s ft"
+msgstr "%s ft"
+
+#: ../src/unit-manager.c:67
+msgctxt "unit-symbols"
+msgid "foot,feet,ft"
+msgstr "fot,ft"
+
+#: ../src/unit-manager.c:68
+msgid "Inches"
+msgstr "Tum"
+
+#: ../src/unit-manager.c:68
+#, c-format
+msgctxt "unit-format"
+msgid "%s in"
+msgstr "%s in"
+
+#: ../src/unit-manager.c:68
+msgctxt "unit-symbols"
+msgid "inch,inches,in"
+msgstr "tum,inch,in"
+
+#: ../src/unit-manager.c:69
+msgid "Centimeters"
+msgstr "Centimeter"
+
+#: ../src/unit-manager.c:69
+#, c-format
+msgctxt "unit-format"
+msgid "%s cm"
+msgstr "%s cm"
+
+#: ../src/unit-manager.c:69
+msgctxt "unit-symbols"
+msgid "centimeter,centimeters,cm,cms"
+msgstr "centimeter,cm,cms"
+
+#: ../src/unit-manager.c:70
+msgid "Millimeters"
+msgstr "Millimeter"
+
+#: ../src/unit-manager.c:70
+#, c-format
+msgctxt "unit-format"
+msgid "%s mm"
+msgstr "%s mm"
+
+#: ../src/unit-manager.c:70
+msgctxt "unit-symbols"
+msgid "millimeter,millimeters,mm"
+msgstr "millimeter,mm"
+
+#: ../src/unit-manager.c:71
+msgid "Micrometers"
+msgstr "Mikrometer"
+
+#: ../src/unit-manager.c:71
+#, c-format
+msgctxt "unit-format"
+msgid "%s μm"
+msgstr "%s μm"
+
+#: ../src/unit-manager.c:71
+msgctxt "unit-symbols"
+msgid "micrometer,micrometers,um"
+msgstr "mikrometer,mcm,um"
+
+#: ../src/unit-manager.c:72
+msgid "Nanometers"
+msgstr "Nanometer"
+
+#: ../src/unit-manager.c:72
+#, c-format
+msgctxt "unit-format"
+msgid "%s nm"
+msgstr "%s nm"
+
+#: ../src/unit-manager.c:72
+msgctxt "unit-symbols"
+msgid "nanometer,nanometers,nm"
+msgstr "nanometer,nm"
+
+#: ../src/unit-manager.c:73
+msgid "Hectares"
+msgstr "Hektar"
+
+#: ../src/unit-manager.c:73
+#, c-format
+msgctxt "unit-format"
+msgid "%s ha"
+msgstr "%s ha"
+
+#: ../src/unit-manager.c:73
+msgctxt "unit-symbols"
+msgid "hectare,hectares,ha"
+msgstr "hektar,ha"
+
+#: ../src/unit-manager.c:74
+msgid "Acres"
+msgstr "Tunnland"
+
+#: ../src/unit-manager.c:74
+#, c-format
+msgctxt "unit-format"
+msgid "%s acres"
+msgstr "%s tunnland"
+
+#: ../src/unit-manager.c:74
+msgctxt "unit-symbols"
+msgid "acre,acres"
+msgstr "tunnland"
+
+#: ../src/unit-manager.c:75
+msgid "Square Meters"
+msgstr "Kvadratmeter"
+
+#: ../src/unit-manager.c:75
+#, c-format
+msgctxt "unit-format"
+msgid "%s m²"
+msgstr "%s m²"
+
+#: ../src/unit-manager.c:75
+msgctxt "unit-symbols"
+msgid "m²"
+msgstr "m²"
+
+#: ../src/unit-manager.c:76
+msgid "Square Centimeters"
+msgstr "Kvadratcentimeter"
+
+#: ../src/unit-manager.c:76
+#, c-format
+msgctxt "unit-format"
+msgid "%s cm²"
+msgstr "%s cm²"
+
+#: ../src/unit-manager.c:76
+msgctxt "unit-symbols"
+msgid "cm²"
+msgstr "cm²"
+
+#: ../src/unit-manager.c:77
+msgid "Square Millimeters"
+msgstr "Kvadratmillimeter"
+
+#: ../src/unit-manager.c:77
+#, c-format
+msgctxt "unit-format"
+msgid "%s mm²"
+msgstr "%s mm²"
+
+#: ../src/unit-manager.c:77
+msgctxt "unit-symbols"
+msgid "mm²"
+msgstr "mm²"
+
+#: ../src/unit-manager.c:78
+msgid "Cubic Meters"
+msgstr "Kubikmeter"
+
+#: ../src/unit-manager.c:78
+#, c-format
+msgctxt "unit-format"
+msgid "%s m³"
+msgstr "%s m³"
+
+#: ../src/unit-manager.c:78
+msgctxt "unit-symbols"
+msgid "m³"
+msgstr "m³"
+
+#: ../src/unit-manager.c:79
+msgid "Gallons"
+msgstr "Gallon"
+
+#: ../src/unit-manager.c:79
+#, c-format
+msgctxt "unit-format"
+msgid "%s gal"
+msgstr "%s gal"
+
+#: ../src/unit-manager.c:79
+msgctxt "unit-symbols"
+msgid "gallon,gallons,gal"
+msgstr "gallon,gal"
+
+#: ../src/unit-manager.c:80
+msgid "Litres"
+msgstr "Liter"
+
+#: ../src/unit-manager.c:80
+#, c-format
+msgctxt "unit-format"
+msgid "%s L"
+msgstr "%s L"
+
+#: ../src/unit-manager.c:80
+msgctxt "unit-symbols"
+msgid "litre,litres,liter,liters,L"
+msgstr "liter,L"
+
+#: ../src/unit-manager.c:81
+msgid "Quarts"
+msgstr "Quart"
+
+#: ../src/unit-manager.c:81
+#, c-format
+msgctxt "unit-format"
+msgid "%s qt"
+msgstr "%s qt"
+
+#: ../src/unit-manager.c:81
+msgctxt "unit-symbols"
+msgid "quart,quarts,qt"
+msgstr "quart,qt"
+
+#: ../src/unit-manager.c:82
+msgid "Pints"
+msgstr "Pint"
+
+#: ../src/unit-manager.c:82
+#, c-format
+msgctxt "unit-format"
+msgid "%s pt"
+msgstr "%s pt"
+
+#: ../src/unit-manager.c:82
+msgctxt "unit-symbols"
+msgid "pint,pints,pt"
+msgstr "pint,pt"
+
+#: ../src/unit-manager.c:83
+msgid "Millilitres"
+msgstr "Milliliter"
+
+#: ../src/unit-manager.c:83
+#, c-format
+msgctxt "unit-format"
+msgid "%s mL"
+msgstr "%s mL"
+
+#: ../src/unit-manager.c:83
+msgctxt "unit-symbols"
+msgid "millilitre,millilitres,milliliter,milliliters,mL,cm³"
+msgstr "milliliter,mL,cm³"
+
+#: ../src/unit-manager.c:84
+msgid "Microlitres"
+msgstr "Mikroliter"
+
+#: ../src/unit-manager.c:84
+#, c-format
+msgctxt "unit-format"
+msgid "%s μL"
+msgstr "%s μL"
+
+#: ../src/unit-manager.c:84
+msgctxt "unit-symbols"
+msgid "mm³,μL,uL"
+msgstr "mm³,μL,uL"
+
+#: ../src/unit-manager.c:85
+msgid "Tonnes"
+msgstr "Ton"
+
+#: ../src/unit-manager.c:85
+#, c-format
+msgctxt "unit-format"
+msgid "%s T"
+msgstr "%s T"
+
+#: ../src/unit-manager.c:85
+msgctxt "unit-symbols"
+msgid "tonne,tonnes"
+msgstr "ton"
+
+#: ../src/unit-manager.c:86
+msgid "Kilograms"
+msgstr "Kilogram"
+
+#: ../src/unit-manager.c:86
+#, c-format
+msgctxt "unit-format"
+msgid "%s kg"
+msgstr "%s kg"
+
+#: ../src/unit-manager.c:86
+msgctxt "unit-symbols"
+msgid "kilogram,kilograms,kilogramme,kilogrammes,kg,kgs"
+msgstr "kilogram,kilo,kg,kgs"
+
+#: ../src/unit-manager.c:87
+msgid "Pounds"
+msgstr "Pund"
+
+#: ../src/unit-manager.c:87
+#, c-format
+msgctxt "unit-format"
+msgid "%s lb"
+msgstr "%s lb"
+
+#: ../src/unit-manager.c:87
+msgctxt "unit-symbols"
+msgid "pound,pounds,lb"
+msgstr "pund,lb"
+
+#: ../src/unit-manager.c:88
+msgid "Ounces"
+msgstr "Uns"
+
+#: ../src/unit-manager.c:88
+#, c-format
+msgctxt "unit-format"
+msgid "%s oz"
+msgstr "%s oz"
+
+#: ../src/unit-manager.c:88
+msgctxt "unit-symbols"
+msgid "ounce,ounces,oz"
+msgstr "uns,ounce,oz"
+
+#: ../src/unit-manager.c:89
+msgid "Grams"
+msgstr "Gram"
+
+#: ../src/unit-manager.c:89
+#, c-format
+msgctxt "unit-format"
+msgid "%s g"
+msgstr "%s g"
+
+#: ../src/unit-manager.c:89
+msgctxt "unit-symbols"
+msgid "gram,grams,gramme,grammes,g"
+msgstr "gram,g"
+
+#: ../src/unit-manager.c:90
+msgid "Years"
+msgstr "År"
+
+#: ../src/unit-manager.c:90
+#, c-format
+msgctxt "unit-format"
+msgid "%s years"
+msgstr "%s år"
+
+#: ../src/unit-manager.c:90
+msgctxt "unit-symbols"
+msgid "year,years"
+msgstr "år"
+
+#: ../src/unit-manager.c:91
+msgid "Days"
+msgstr "Dagar"
+
+#: ../src/unit-manager.c:91
+#, c-format
+msgctxt "unit-format"
+msgid "%s days"
+msgstr "%s dagar"
+
+#: ../src/unit-manager.c:91
+msgctxt "unit-symbols"
+msgid "day,days"
+msgstr "dag,dagar"
+
+#: ../src/unit-manager.c:92
+msgid "Hours"
+msgstr "Timmar"
+
+#: ../src/unit-manager.c:92
+#, c-format
+msgctxt "unit-format"
+msgid "%s hours"
+msgstr "%s timmar"
+
+#: ../src/unit-manager.c:92
+msgctxt "unit-symbols"
+msgid "hour,hours"
+msgstr "timme,timmar"
+
+#: ../src/unit-manager.c:93
+msgid "Minutes"
+msgstr "Minuter"
+
+#: ../src/unit-manager.c:93
+#, c-format
+msgctxt "unit-format"
+msgid "%s minutes"
+msgstr "%s minuter"
+
+#: ../src/unit-manager.c:93
+msgctxt "unit-symbols"
+msgid "minute,minutes"
+msgstr "minut,minuter"
+
+#: ../src/unit-manager.c:94
+msgid "Seconds"
+msgstr "Sekunder"
+
+#: ../src/unit-manager.c:94
+#, c-format
+msgctxt "unit-format"
+msgid "%s s"
+msgstr "%s s"
+
+#: ../src/unit-manager.c:94
+msgctxt "unit-symbols"
+msgid "second,seconds,s"
+msgstr "sekund,sekunder,s"
+
+#: ../src/unit-manager.c:95
+msgid "Milliseconds"
+msgstr "Millisekunder"
+
+#: ../src/unit-manager.c:95
+#, c-format
+msgctxt "unit-format"
+msgid "%s ms"
+msgstr "%s ms"
+
+#: ../src/unit-manager.c:95
+msgctxt "unit-symbols"
+msgid "millisecond,milliseconds,ms"
+msgstr "millisekund,millisekunder,ms"
+
+#: ../src/unit-manager.c:96
+msgid "Microseconds"
+msgstr "Mikrosekunder"
+
+#: ../src/unit-manager.c:96
+#, c-format
+msgctxt "unit-format"
+msgid "%s μs"
+msgstr "%s μs"
+
+#: ../src/unit-manager.c:96
+msgctxt "unit-symbols"
+msgid "microsecond,microseconds,us,μs"
+msgstr "mikrosekund,mikrosekunder,us,μs"
+
+#: ../src/unit-manager.c:97
+msgid "Celsius"
+msgstr "Celsius"
+
+#: ../src/unit-manager.c:97
+#, c-format
+msgctxt "unit-format"
+msgid "%s ˚C"
+msgstr "%s ˚C"
+
+#: ../src/unit-manager.c:97
+msgctxt "unit-symbols"
+msgid "degC,˚C"
+msgstr "degC,˚C"
+
+#: ../src/unit-manager.c:98
+msgid "Farenheit"
+msgstr "Fahrenheit"
+
+#: ../src/unit-manager.c:98
+#, c-format
+msgctxt "unit-format"
+msgid "%s ˚F"
+msgstr "%s ˚F"
+
+#: ../src/unit-manager.c:98
+msgctxt "unit-symbols"
+msgid "degF,˚F"
+msgstr "degF,˚F"
+
+#: ../src/unit-manager.c:99
+msgid "Kelvin"
+msgstr "Kelvin"
+
+#: ../src/unit-manager.c:99
+#, c-format
+msgctxt "unit-format"
+msgid "%s K"
+msgstr "%s K"
+
+#: ../src/unit-manager.c:99
+msgctxt "unit-symbols"
+msgid "K"
+msgstr "K"
+
+#: ../src/unit-manager.c:100
+msgid "Rankine"
+msgstr "Rankine"
+
+#: ../src/unit-manager.c:100
+#, c-format
+msgctxt "unit-format"
+msgid "%s ˚R"
+msgstr "%s ˚R"
+
+#: ../src/unit-manager.c:100
+msgctxt "unit-symbols"
+msgid "degR,˚R,˚Ra"
+msgstr "degR,˚R,˚Ra"
+
+#: ../src/unit-manager.c:109
+msgid "Angle"
+msgstr "Vinkel"
+
+#: ../src/unit-manager.c:110
+msgid "Length"
+msgstr "Längd"
+
+#: ../src/unit-manager.c:111
+msgid "Area"
+msgstr "Yta"
+
+#: ../src/unit-manager.c:112
+msgid "Volume"
+msgstr "Volym"
+
+#: ../src/unit-manager.c:113
+msgid "Weight"
+msgstr "Vikt"
+
+#: ../src/unit-manager.c:114
+msgid "Duration"
+msgstr "Tid"
+
+#: ../src/unit-manager.c:115
+msgid "Temperature"
+msgstr "Temperatur"
+
+#: ../src/unit-manager.c:127
+msgid "Currency"
+msgstr "Valuta"
+
+#. Translators: result of currency conversion, %s is the symbol, %%s is the placeholder for amount, i.e.: USD100
+#: ../src/unit-manager.c:137
+#, c-format
+msgid "%s%%s"
+msgstr "%s%%s"
+
+#~ msgctxt "unit-format"
+#~ msgid "%s˚C"
+#~ msgstr "%s˚C"
+#~ msgctxt "unit-format"
+#~ msgid "%s˚F"
+#~ msgstr "%s˚F"
+#~ msgctxt "unit-format"
+#~ msgid "%s˚K"
+#~ msgstr "%s˚K"
 #~ msgctxt "unit-symbols"
-#~ msgid "degC,˚C"
-#~ msgstr "degC,˚C"
+#~ msgid "degK,˚K"
+#~ msgstr "degK,˚K"
+#~ msgctxt "unit-format"
+#~ msgid "%s˚R"
+#~ msgstr "%s˚R"
+#~ msgid "&#x2190; R"
+#~ msgstr "&#x2190; R"
+#~ msgid "&#x2192; R"
+#~ msgstr "&#x2192; R"
+#~ msgid "Clear"
+#~ msgstr "Töm"
+#~ msgid "Recall"
+#~ msgstr "Hämt"
+#~ msgid "Undo"
+#~ msgstr "Ångra"
+#~ msgid "Assign Variable"
+#~ msgstr "Tilldela variabel"
+#~ msgid "Insert Variable"
+#~ msgstr "Infoga variabel"
+#~ msgid "No variables defined"
+#~ msgstr "Inga variabler definierade"
+#~ msgid ""
+#~ "Converts between different currencies. Enter the amount and the currency "
+#~ "you want to convert from on the upper row, and the currency you want to "
+#~ "convert to on the lower row, and the amount will be displayed on the "
+#~ "lower row."
+#~ msgstr ""
+#~ "Konverterar mellan olika valutor. Ange summan och valutan som du vill "
+#~ "konvertera från i övre raden samt valutan du vill konvertera till i nedre "
+#~ "raden. Den konverterade summan kommer att visas i nedre raden."
+#~ msgid "Currency Conversion"
+#~ msgstr "Valutakonvertering"
+#~ msgid "&#xA4;$&#x20AC;"
+#~ msgstr "&#xA4;$&#x20AC;"
+#~ msgid "10 places"
+#~ msgstr "10 platser"
+#~ msgid "11 places"
+#~ msgstr "11 platser"
+#~ msgid "12 places"
+#~ msgstr "12 platser"
+#~ msgid "13 places"
+#~ msgstr "13 platser"
+#~ msgid "14 places"
+#~ msgstr "14 platser"
+#~ msgid "15 places"
+#~ msgstr "15 platser"
+#~ msgid "Base 16"
+#~ msgstr "Bas 16"
+#~ msgid "Base 2"
+#~ msgstr "Bas 2"
+#~ msgid "Base 8"
+#~ msgstr "Bas 8"
+#~ msgid "Display _Format:"
+#~ msgstr "Visnings_format:"
+#~ msgid "Factorize into prime numbers (Ctrl+F)"
+#~ msgstr "Faktorisera till primtal (Ctrl+F)"
+#~ msgid "Insert ASCII Value"
+#~ msgstr "Infoga ASCII-värde"
+#~ msgid "Insert character"
+#~ msgstr "Infoga tecken"
+#~ msgid "Numeric point [. or ,]"
+#~ msgstr "Decimalpunkt [. eller ,]"
+#~ msgid "Random number"
+#~ msgstr "Slumptal"
+#~ msgid "Recall value"
+#~ msgstr "Hämta värde"
+#~ msgid "Result Region"
+#~ msgstr "Resultatregion"
+#~ msgid "Shift left [<]"
+#~ msgstr "Skifta vänster [<]"
+#~ msgid "Shift right [>]"
+#~ msgstr "Skifta höger [>]"
+#~ msgid "Store value"
+#~ msgstr "Lagra värde"
+#~ msgid "_2 places"
+#~ msgstr "_2 platser"
+#~ msgid "_3 places"
+#~ msgstr "_3 platser"
+#~ msgid "_4 places"
+#~ msgstr "_4 platser"
+#~ msgid "_5 places"
+#~ msgstr "_5 platser"
+#~ msgid "_6 places"
+#~ msgstr "_6 platser"
+#~ msgid "_7 places"
+#~ msgstr "_7 platser"
+#~ msgid "_8 places"
+#~ msgstr "_8 platser"
+#~ msgid "_9 places"
+#~ msgstr "_9 platser"
+#~ msgid "_Scientific"
+#~ msgstr "_Vetenskaplig"
+#~ msgid "_View"
+#~ msgstr "_Visa"
+#~ msgid "Display Mode"
+#~ msgstr "Visningsläge"
+#~ msgid "Indicates whether the memory register window is initially displayed."
+#~ msgstr "Indikerar huruvida minnesregisterfönstret initialt visas."
+#~ msgid "Show Registers"
+#~ msgstr "Visa register"
+#~ msgid ""
+#~ "The initial calculator mode. Valid values are \"BASIC\", \"FINANCIAL\", "
+#~ "\"LOGICAL\", \"SCIENTIFIC\" and \"PROGRAMMING\""
+#~ msgstr ""
+#~ "Initialt läge för kalkylator. Giltiga värden är \"BASIC\", \"FINANCIAL\", "
+#~ "\"LOGICAL\", \"SCIENTIFIC\" och \"PROGRAMMING\""
+#~ msgid ""
+#~ "The initial display mode. Valid values are \"ENG\" (engineering), \"FIX"
+#~ "\" (fixed-point) and \"SCI\" (scientific)"
+#~ msgstr ""
+#~ "Det initiala visningsläget. Giltiga värden är \"ENG\" (ingenjör), \"FIX"
+#~ "\" (fixt) och \"SCI\" (vetenskaplig)"
+#~ msgid ""
+#~ "The initial trigonometric type. Valid values are \"DEG\" (degrees), \"GRAD"
+#~ "\" (gradians) and \"RAD\" (radians)."
+#~ msgstr ""
+#~ "Den initiala trigonometriska typen. Giltiga värden är \"DEG\" (grader), "
+#~ "\"GRAD\" (gradianer) och \"RAD\" (radianer)."
+#~ msgid "The initial x-coordinate for the window"
+#~ msgstr "Initiala x-koordinaten för fönstret"
+#~ msgid "The initial y-coordinate for the window"
+#~ msgstr "Initiala y-koordinaten för fönstret"
+#~ msgid ""
+#~ "The number of pixels to place the window from the left of the screen."
+#~ msgstr ""
+#~ "Antalet bildpunkter att placera fönstret från vänstra kanten av skärmen."
+#~ msgid "The number of pixels to place the window from the top of the screen."
+#~ msgstr ""
+#~ "Antalet bildpunkter att placera fönstret från överkanten av skärmen."
+#~ msgid "The numeric base for input and display."
+#~ msgstr "Numerisk bas för inmatning och visning."
+#~ msgid "Trigonometric type"
+#~ msgstr "Trigonometrisk typ"
+#~ msgid "No redo steps"
+#~ msgstr "Inga gör om-steg"
+#~ msgid "Calculator — Advanced"
+#~ msgstr "Kalkylator — Avancerad"
+#~ msgid "Calculator — Financial"
+#~ msgstr "Kalkylator — Finansiell"
+#~ msgid "Calculator — Scientific"
+#~ msgstr "Kalkylator — Vetenskaplig"
+#~ msgid "Calculator — Programming"
+#~ msgstr "Kalkylator — Programmering"
+#~ msgid "Error loading user interface"
+#~ msgstr "Fel vid inläsning av användargränssnitt"
+#~ msgid ""
+#~ "A required file is missing or damaged. Please check your installation.\n"
+#~ "\n"
+#~ "%s"
+#~ msgstr ""
+#~ "En nödvändig fil saknas eller är skadad. Kontrollera din installation.\n"
+#~ "\n"
+#~ "%s"
+#~ msgid ""
+#~ "You don't have any recent currency rates. Should some be downloaded now?"
+#~ msgstr "Du har inte några valutakurser. Vill du hämta dem nu?"
+#~ msgid ""
+#~ "Currency rates could not be downloaded. You may receive inaccurate "
+#~ "results, or you may not receive any results at all."
+#~ msgstr ""
+#~ "Valutakurser kunde inte hämtas. Du kan få felaktiga resultat eller så "
+#~ "kanske du inte får några resultat alls."
+#~ msgid "Paste"
+#~ msgstr "Klistra in"
+#~ msgid "Logarithm of negative values is undefined"
+#~ msgstr "Logaritm med negativa värden är inte definierad"
+#~ msgid "The power of negative numbers is only defined for integer exponents"
+#~ msgstr "Potensen av negativ tal definieras endast för heltalsexponenter"
+#~ msgid "Square root is undefined for negative values"
+#~ msgstr "Kvadratroten är inte definierad för negativa värden"
+#~ msgid "%"
+#~ msgstr "%"
+#~ msgid "&#x221A;"
+#~ msgstr "&#x221A;"
+#~ msgid "&#xB1;"
+#~ msgstr "&#xB1;"
+#~ msgid "&#xD7;"
+#~ msgstr "&#xD7;"
+#~ msgid "&#xF7;"
+#~ msgstr "&#xF7;"
+#~ msgid "("
+#~ msgstr "("
+#~ msgid "(Ln)"
+#~ msgstr "(Ln)"
+#~ msgid "(Set accuracy from 0 to N numeric places [A])"
+#~ msgstr "(Ställ in noggrannheten från 0 till 9 sifferplatser [A])"
+#~ msgid "(X^Y)"
+#~ msgstr "(X^Y)"
+#~ msgid "(cos)"
+#~ msgstr "(cos)"
+#~ msgid "(log)"
+#~ msgstr "(log)"
+#~ msgid "(log2)"
+#~ msgstr "(log2)"
+#~ msgid "(sin)"
+#~ msgstr "(sin)"
+#~ msgid "(tan)"
+#~ msgstr "(tan)"
+#~ msgid ")"
+#~ msgstr ")"
+#~ msgid "+"
+#~ msgstr "+"
+#~ msgid "0"
+#~ msgstr "0"
+#~ msgid "1"
+#~ msgstr "1"
+#~ msgid "1's"
+#~ msgstr "1's"
+#~ msgid "1/<i>x</i>"
+#~ msgstr "1/<i>x</i>"
+#~ msgid "1/x"
+#~ msgstr "1/x"
+#~ msgid "15"
+#~ msgstr "15"
+#~ msgid "2"
+#~ msgstr "2"
+#~ msgid "2's"
+#~ msgstr "2's"
+#~ msgid "2's complement [Z]"
+#~ msgstr "Andra komplement [Z]"
+#~ msgid "3"
+#~ msgstr "3"
+#~ msgid "31"
+#~ msgstr "31"
+#~ msgid "32"
+#~ msgstr "32"
+#~ msgid "4"
+#~ msgstr "4"
+#~ msgid "47"
+#~ msgstr "47"
+#~ msgid "5"
+#~ msgstr "5"
+#~ msgid "6"
+#~ msgstr "6"
+#~ msgid "63"
+#~ msgstr "63"
+#~ msgid "7"
+#~ msgstr "7"
+#~ msgid "8"
+#~ msgstr "8"
+#~ msgid "9"
+#~ msgstr "9"
+#~ msgid "<"
+#~ msgstr "<"
+#~ msgid "<i>x</i><sup>2</sup>"
+#~ msgstr "<i>x</i><sup>2</sup>"
+#~ msgid ""
+#~ "<small><i><b>Note:</b> All constant values are specified in the decimal "
+#~ "numeric base.</i></small>"
+#~ msgstr ""
+#~ "<small><i><b>Observera:</b> Alla konstanta värden är angivna i deras "
+#~ "numeriska bas.</i></small>"
+#~ msgid "<span weight=\"bold\">R0</span>"
+#~ msgstr "<span weight=\"bold\">R0</span>"
+#~ msgid "<span weight=\"bold\">R1</span>"
+#~ msgstr "<span weight=\"bold\">R1</span>"
+#~ msgid "<span weight=\"bold\">R2</span>"
+#~ msgstr "<span weight=\"bold\">R2</span>"
+#~ msgid "<span weight=\"bold\">R3</span>"
+#~ msgstr "<span weight=\"bold\">R3</span>"
+#~ msgid "<span weight=\"bold\">R4</span>"
+#~ msgstr "<span weight=\"bold\">R4</span>"
+#~ msgid "<span weight=\"bold\">R5</span>"
+#~ msgstr "<span weight=\"bold\">R5</span>"
+#~ msgid "<span weight=\"bold\">R6</span>"
+#~ msgstr "<span weight=\"bold\">R6</span>"
+#~ msgid "<span weight=\"bold\">R7</span>"
+#~ msgstr "<span weight=\"bold\">R7</span>"
+#~ msgid "<span weight=\"bold\">R8</span>"
+#~ msgstr "<span weight=\"bold\">R8</span>"
+#~ msgid "<span weight=\"bold\">R9</span>"
+#~ msgstr "<span weight=\"bold\">R9</span>"
+#~ msgid ">"
+#~ msgstr ">"
+#~ msgid "A"
+#~ msgstr "A"
+#~ msgid "AND"
+#~ msgstr "AND"
+#~ msgid "Abs"
+#~ msgstr "Abs"
+#~ msgid "Acc"
+#~ msgstr "Noggr"
 
-#~ msgctxt "unit-symbols"
-#~ msgid "degF,˚F"
-#~ msgstr "degF,˚F"
-
-#~ msgctxt "unit-symbols"
-#~ msgid "K"
-#~ msgstr "K"
-
-#~ msgctxt "unit-symbols"
-#~ msgid "degR,˚R,˚Ra"
-#~ msgstr "degR,˚R,˚Ra"
-
-#~ msgid "_%d place"
-#~ msgid_plural "_%d places"
-#~ msgstr[0] "_%d plats"
-#~ msgstr[1] "_%d platser"
-
-#~ msgid "Show %d decimal _places"
-#~ msgstr "Visa %d decimal_platser"
-
-#~ msgid "Lithuanian Litas"
-#~ msgstr "Litauisk litas"
-
-#~ msgid "Malformed expression at token '%s'"
-#~ msgstr "Felaktigt utformat uttryck vid tecken ”%s”"
-
-#~ msgid "Root must be non-zero"
-#~ msgstr "Rot får inte vara noll"
-
-#~ msgid "Negative root of zero is undefined"
-#~ msgstr "Negativ rot av noll är inte definierad"

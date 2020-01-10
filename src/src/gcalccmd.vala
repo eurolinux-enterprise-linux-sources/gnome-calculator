@@ -15,11 +15,15 @@ private static Serializer result_serializer;
 
 static void solve (string equation)
 {
-    var tsep_string = nl_langinfo (NLItem.THOUSEP);
+    var tsep_string = Posix.nl_langinfo (Posix.NLItem.THOUSEP);
     if (tsep_string == null || tsep_string == "")
         tsep_string = " ";
 
-    var e = new Equation (equation.replace (tsep_string, ""));
+    var decimal = Posix.nl_langinfo (Posix.NLItem.RADIXCHAR);
+    if (decimal == null)
+        decimal = "";
+
+    var e = new Equation (equation.replace (tsep_string, "").replace (decimal, "."));
     e.base = 10;
     e.wordlen = 32;
     e.angle_units = AngleUnit.DEGREES;
@@ -41,6 +45,8 @@ public static int main (string[] args)
 {
     /* Seed random number generator. */
     var now = new DateTime.now_utc ();
+    bool requires_new_line = false;
+
     Random.set_seed (now.get_microsecond ());
 
     Intl.setlocale (LocaleCategory.ALL, "");
@@ -53,12 +59,19 @@ public static int main (string[] args)
         stdout.printf ("> ");
         var line = stdin.gets (buffer);
 
-        line = line.strip ();
+        if (line != null)
+            line = line.strip ();
+        else
+            requires_new_line = true;
+
         if (line == null || line == "exit" || line == "quit" || line == "")
             break;
 
         solve (line);
     }
+
+    if (requires_new_line)
+        stdout.printf ("\n");
 
     return Posix.EXIT_SUCCESS;
 }

@@ -13,7 +13,7 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Christian Kirbach</mal:name>
       <mal:email>Christian.Kirbach@googlemail.com</mal:email>
-      <mal:years>2008, 2009, 2010</mal:years>
+      <mal:years>2008, 2009, 2010,2014</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
@@ -31,10 +31,22 @@
 
 	<title>Funktionen</title>
     
-    <p>Funktionen können verwendet werden, indem Sie die Funktion gefolgt vom Funktionsargument eingeben. Sollte das Argument weder eine Zahl noch eine <link xref="variable">Variable</link> sein, dann setzen Sie das Argument in Klammern.</p>
+    <p>Funktionen können verwendet werden, indem Sie die Funktion gefolgt von den Funktionsargumenten eingeben. <app>Taschenrechner</app> unterstützt auch benutzerdefinierte Funktionen. Sollte das Argument weder eine Zahl noch <link xref="variable">eine einzelne Variable</link> sein, so trennen Sie jedes Argument durch ein Semikolon und setzen Sie die Liste der Argumente in Klammern.</p>
     <example>
     <p>sin 30</p>
     <p>abs (5−9)</p>
+    <p>fun (9;10)</p>
+    </example>
+    <p>Neue Funktionen erfassen Sie in dem nachfolgend dargestellten Format. Der Funktionsname und die Argumente dürfen nur Groß- und Kleinbuchstaben enthalten. Der Teil nach @ ist eine optionale Beschreibung der Funktion.</p>
+    <example>
+    <p>AllgemeineZinsformel (Kapital; Zinssatz; Verzinsungszeit) = Kapital * Zinssatz * Verzinsungszeit @ Allgemeine Zinsformel</p>
+    </example>
+    <p>Funktionen können auch über den f(x)-Knopf hinzugefügt und eingegeben werden.</p>
+    <example>
+    <p>Klicken Sie auf f(x). Erfassen Sie den Namen der Funktion, wählen Sie die Anzahl der Argumente und klicken Sie auf das Plus-Symbol daneben. Im Taschenrechner geben Sie die den Ausdruck der Funktion ein und drücken die <key>Enter</key>-Taste.</p>
+    </example>
+    <example>
+    <p>Klicken Sie auf f(x). Wählen Sie die Funktion und klicken auf diese.</p>
     </example>
     <p>Die folgende Funktionen sind definiert.</p>
     <table>
@@ -99,5 +111,4 @@
     <td><p>Zweierkomplement</p></td>
     </tr>
     </table>
-    <p>Der <app>Taschenrechner</app> unterstützt keine benutzerdefinierten Funktionen.</p>
 </page>

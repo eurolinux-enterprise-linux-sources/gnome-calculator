@@ -26,11 +26,13 @@
     <p>75</p>
     <p>4B₁₆</p>
     </example>
-    <p>В <link xref="mouse">режиме программирования</link> доступны кнопки для двоичного (<keyseq><key>Ctrl</key><key>B</key></keyseq>), восьмиричного (<keyseq><key>Ctrl</key><key>O</key></keyseq>) и шестнадцатиричного (<keyseq><key>Ctrl</key><key>H</key></keyseq>) счислений.</p>
     <p>
-    To set the base that results are shown in change the <link xref="number-display">result format</link>.
+    When in <link xref="mouse">programming mode</link>, use the drop-down menu to change the base of the calculation.
     </p>
     <p>
-    To change the base of the current result use a base button or <keyseq><key>Ctrl</key><key>D</key></keyseq> to show in decimal form.
+    Keyboard shortcuts can be used to switch to <gui>Binary</gui> (<keyseq><key>Ctrl</key><key>B</key></keyseq>), <gui>Octal</gui> (<keyseq><key>Ctrl</key><key>O</key></keyseq>), <gui>Decimal</gui> (<keyseq><key>Ctrl</key><key>D</key></keyseq>) and <gui>Hexadecimal</gui> (<keyseq><key>Ctrl</key><key>H</key></keyseq>) modes.
+    </p>
+    <p>
+    To convert numbers to other base on the fly, <link xref="conv-base">Number Base conversion</link> can be used.
     </p>
 </page>

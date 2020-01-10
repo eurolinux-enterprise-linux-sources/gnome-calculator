@@ -21,11 +21,17 @@
       <mal:email>laurentc@iol.ie</mal:email>
       <mal:years>2009-2010</mal:years>
     </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Alain Lojewski</mal:name>
+      <mal:email>allomervan@gmail.com</mal:email>
+      <mal:years>2014</mal:years>
+    </mal:credit>
   </info>
 
 	<title>Trigonométrie</title>
     
-    <p>La trigonométrie peut être effectuée avec les <link xref="function">fonctions</link> sin, cos, et tan.</p>
+    <p>La trigonométrie peut être calculée avec les <link xref="function">fonctions</link> sin, cos, et tan.</p>
     <example>
     <p>sin 45</p>
     </example>
@@ -39,5 +45,5 @@
     <p>sin⁻¹ 0.5</p>
     <p>asin 0.5</p>
     </example>   
-    <p>Pour saisir <link xref="variable">π</link> avec le clavier, utilisez <keyseq><key>Ctrl</key><key>P</key></keyseq>.</p>
+    <p>Pour saisir la variable <link xref="variable">π</link> avec le clavier, faites <keyseq><key>Ctrl</key><key>P</key></keyseq>.</p>
 </page>

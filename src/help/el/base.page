@@ -5,9 +5,15 @@
         <link type="guide" xref="index#number"/>
     
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Ελληνική μεταφραστική ομάδα GNOME</mal:name>
+      <mal:email>team@gnome.gr</mal:email>
+      <mal:years>2009-2014</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name> Δημήτρης Σπίγγος</mal:name>
       <mal:email>dmtrs32@gmail.com</mal:email>
-      <mal:years>2013</mal:years>
+      <mal:years>2013, 2014</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
@@ -32,7 +38,7 @@
     <p>75</p>
     <p>4B₁₆</p>
     </example>
-    <p>Όταν είστε στην <link xref="mouse">προγραμματιστική λειτουργία</link> υπάρχουν κουμπιά για δυαδικό (<keyseq><key>Ctrl</key><key>B</key></keyseq>), οκταδικό (<keyseq><key>Ctrl</key><key>O</key></keyseq>) και δεκαεξαδικό (<keyseq><key>Ctrl</key><key>H</key></keyseq>) σύστημα.</p>
-    <p>Για να ορίσετε τη βάση στην οποία εμφανίζονται τα αποτελέσματα αλλάξτε τη <link xref="number-display">μορφή αποτελέσματος</link>.</p>
-    <p>Για να αλλάξετε τη βάση του τρέχοντος αποτελέσματος χρησιμοποιήστε ένα κουμπί βάσης ή πιέστε <keyseq><key>Ctrl</key><key>D</key></keyseq> για να το εμφανίσετε σε δεκαδική μορφή.</p>
+    <p>Όταν είστε σε <link xref="mouse">προγραμματιστική λειτουργία</link>, χρησιμοποιήστε το πτυσσόμενο μενού για να αλλάξετε τη βάση του υπολογισμού.</p>
+    <p>Οι συντομεύσεων πληκτρολογίου μπορούν να χρησιμοποιηθούν για να αλλάξετε σε λειτουργίες <gui>δυαδικού</gui> (<keyseq><key>Ctrl</key><key>B</key></keyseq>), <gui>οκταδικού</gui> (<keyseq><key>Ctrl</key><key>O</key></keyseq>), <gui>δεκαδικού</gui> (<keyseq><key>Ctrl</key><key>D</key></keyseq>) και <gui>δεκαεξαδικό</gui> (<keyseq><key>Ctrl</key><key>H</key></keyseq>).</p>
+    <p>Για να μετατρέψετε αριθμούς σε άλλη βάση δυναμικά, μπορείτε να χρησιμοποιήσετε <link xref="conv-base">μετατροπή βάσης αριθμού</link>.</p>
 </page>

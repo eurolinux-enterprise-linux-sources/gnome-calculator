@@ -21,6 +21,12 @@
       <mal:email>laurentc@iol.ie</mal:email>
       <mal:years>2009-2010</mal:years>
     </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Alain Lojewski</mal:name>
+      <mal:email>allomervan@gmail.com</mal:email>
+      <mal:years>2014</mal:years>
+    </mal:credit>
   </info>
 
 	<title>Fonctions financières</title>

@@ -13,10 +13,22 @@
 
 	<title>Függvények</title>
     
-    <p>A függvények a függvény nevének és argumentumának beszúrásával használhatók. Ha az argumentum nem szám vagy <link xref="variable">változó</link>, akkor használjon zárójeleket az argumentum körül.</p>
+    <p>A függvények a függvény nevének és argumentumának beszúrásával használhatók. A <app>Számológép</app> támogatja a felhasználó által megadott függvényeket is. Ha az argumentum nem szám vagy <link xref="variable">változó</link>, akkor pontosvesszővel válassza el az egyes argumentumokat, és használjon zárójeleket az argumentumlista körül.</p>
     <example>
     <p>sin 30</p>
     <p>abs (5−9)</p>
+    <p>fgv (9;10)</p>
+    </example>
+    <p>Új függvény hozzáadásához írja be azt az alább megadott formátumban. A függvény neve és argumentumai csak kis- és nagybetűket tartalmazhatnak. A @ utáni rész a függvény leírása és elhagyható.</p>
+    <example>
+    <p>EgyszeruKamat (toke; kamatlab; ido) = toke * kamatlab * ido @ Egyszerű kamatszámítási képlet</p>
+    </example>
+    <p>A függvények felvehetők és beszúrhatók az f(x) gomb használatával is.</p>
+    <example>
+    <p>Kattintson az f(x) gombra. Írja be a függvény nevét a mezőbe, válassza ki az argumentumok számát, és kattintson a mellette lévő plusz jel gombra. A számológép képernyőn írja be a függvénykifejezést, és nyomja meg az <key>Enter</key> billentyűt.</p>
+    </example>
+    <example>
+    <p>Kattintson az f(x) gombra. Válassza ki a függvényt, és kattintson rá.</p>
     </example>
     <p>A következő függvények használhatók.</p>
     <table>
@@ -81,5 +93,4 @@
     <td><p>Kettes komplemens</p></td>
     </tr>
     </table>
-    <p>A <app>Számológép</app> nem támogatja a felhasználó által megadott függvényeket.</p>
 </page>

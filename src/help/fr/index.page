@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<page xmlns="http://projectmallard.org/1.0/" type="guide" id="index" xml:lang="fr">
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="guide" id="index" xml:lang="fr">
 
 	<info>
 		<credit type="author">
@@ -25,9 +25,15 @@
       <mal:email>laurentc@iol.ie</mal:email>
       <mal:years>2009-2010</mal:years>
     </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Alain Lojewski</mal:name>
+      <mal:email>allomervan@gmail.com</mal:email>
+      <mal:years>2014</mal:years>
+    </mal:credit>
   </info>
 
-	<title>Aide de Calculatrice</title>
+	<title><media type="image" src="figures/logo32.png" its:translate="no"/> Manuel de Calculatrice</title>
 
     <section id="ui" style="2column">
         <title>Interface utilisateur</title>

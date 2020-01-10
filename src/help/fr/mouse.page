@@ -21,6 +21,12 @@
       <mal:email>laurentc@iol.ie</mal:email>
       <mal:years>2009-2010</mal:years>
     </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Alain Lojewski</mal:name>
+      <mal:email>allomervan@gmail.com</mal:email>
+      <mal:years>2014</mal:years>
+    </mal:credit>
   </info>
 
 	<title>Utilisation de la souris</title>
@@ -33,7 +39,7 @@
     </tr>
     <tr>
     <td><p>Mode avancé</p></td>
-    <td><p>Fournit les boutons utilisés pour les mathématiques avancés tels que <link xref="trigonometrie"/></p></td>
+    <td><p>Fournit les boutons utilisés pour les mathématiques avancées telles que <link xref="trigonometry"/></p></td>
     </tr>
     <tr>
     <td><p>Mode financier</p></td>

@@ -55,7 +55,7 @@ public enum AngleUnit
  *
  * x = sign * (BASE^(exponent-1) + BASE^(exponent-2) + ...)
  */
-public class Number
+public class Number : Object
 {
     /* Sign (+1, -1) or 0 for the value zero */
     public int re_sign;
@@ -910,6 +910,14 @@ public class Number
             return new Number.integer (0);
         }
 
+        /* 0^0 is indeterminate */
+        if (is_zero () && n == 0)
+        {
+            /* Translators: Error displayed when attempted to raise 0 to power of zero */
+            mperr (_("Zero raised to zero is undefined"));
+            return new Number.integer (0);
+        }
+
         /* x^0 = 1 */
         if (n == 0)
             return new Number.integer (1);
@@ -931,11 +939,14 @@ public class Number
         else
             t = this;
 
-        /* Multply x n times */
-        // FIXME: Can do z = z.multiply (z) until close to answer (each call doubles number of multiples) */
         var z = new Number.integer (1);
-        for (var i = 0; i < n; i++)
-            z = z.multiply (t);
+        while (n != 0)
+        {
+            if (n % 2 == 1)
+                z = z.multiply (t);
+            t = t.multiply (t);
+            n = n / 2;
+        }
         return z;
     }
 
@@ -1039,9 +1050,21 @@ public class Number
             return new Number.integer (1);
         if (!is_natural ())
         {
-            /* Translators: Error displayed when attempted take the factorial of a fractional number */
-            mperr (_("Factorial is only defined for natural numbers"));
-            return new Number.integer (0);
+
+             /* Factorial Not defined for Complex or for negative numbers */
+            if(is_negative () || is_complex ())
+            {
+                /* Translators: Error displayed when attempted take the factorial of a negative or complex number */
+                mperr (_("Factorial is only defined for non-negative real numbers"));
+                return new Number.integer (0);
+            }
+
+            var val = to_double ();
+
+            /* Factorial(x) = Gamma(x+1) - This is the formula used to calculate Factorial.*/
+            var fact = Math.tgamma(val+1);
+
+            return new Number.double(fact);
         }
 
         /* Convert to integer - if couldn't be converted then the factorial would be too big anyway */
@@ -1169,6 +1192,30 @@ public class Number
             z = z.add (y);
 
         return z;
+    }
+
+    /* Sets z = x ^ y mod p */
+    public Number modular_exponentiation (Number exp, Number mod)
+    {
+        var base_value = this.copy ();
+        if (exp.is_negative ())
+            base_value = base_value.reciprocal ();
+        var exp_value = exp.abs ();
+        var ans = new Number.integer (1);
+        var two = new Number.integer (2);
+        while (!exp_value.is_zero ())
+        {
+            bool is_even = exp_value.modulus_divide (two).is_zero ();
+            if (!is_even)
+            {
+                ans = ans.multiply (base_value);
+                ans = ans.modulus_divide (mod);
+            }
+            base_value = base_value.multiply (base_value);
+            base_value = base_value.modulus_divide (mod);
+            exp_value = exp_value.divide_integer (2).floor ();
+        }
+        return ans.modulus_divide (mod);
     }
 
     /* Sets z = sin x */
@@ -1622,6 +1669,21 @@ public class Number
             return factors;
         }
 
+        // if value < 2^64-1, call for factorize_uint64 function which deals in integers
+
+        uint64 num = 1;
+        num = num << 63;
+        num += (num - 1);
+        var int_max = new Number.unsigned_integer (num);
+
+        if (value.compare (int_max) <= 0)
+        {
+            var factors_int64 = factorize_uint64 (value.to_unsigned_integer ());
+            if (is_negative ())
+                factors_int64.data = factors_int64.data.invert_sign ();
+            return factors_int64;
+        }
+
         var divisor = new Number.integer (2);
         while (true)
         {
@@ -1659,6 +1721,29 @@ public class Number
         if (is_negative ())
             factors.data = factors.data.invert_sign ();
 
+        return factors;
+    }
+
+    public List<Number?> factorize_uint64 (uint64 n)
+    {
+        var factors = new List<Number?> ();
+        while (n % 2 == 0)
+        {
+            n /= 2;
+            factors.append (new Number.unsigned_integer (2));
+        }
+
+        for (uint64 divisor = 3; divisor <= n / divisor; divisor += 2)
+        {
+            while (n % divisor == 0)
+            {
+                n /= divisor;
+                factors.append (new Number.unsigned_integer (divisor));
+            }
+        }
+
+        if (n > 1)
+            factors.append (new Number.unsigned_integer (n));
         return factors;
     }
 
@@ -2001,6 +2086,10 @@ public class Number
 
     private Number ln_real ()
     {
+        // ln(e^1) = 1, fixes precision loss
+        if (equals (new Number.eulers ()))
+            return new Number.integer (1);
+
         /* LOOP TO GET APPROXIMATE Ln (X) USING SINGLE-PRECISION */
         var t1 = copy ();
         var z = new Number.integer (0);
@@ -2014,10 +2103,10 @@ public class Number
             /* REMOVE EXPONENT TO AVOID FLOATING-POINT OVERFLOW */
             var e = t1.re_exponent;
             t1.re_exponent = 0;
-            var rx = t1.to_float_old ();
+            var rx = t1.to_double ();
             t1.re_exponent = e;
-            var rlx = (float) (Math.log (rx) + e * Math.log (BASE));
-            t2 = new Number.float (-(float)rlx);
+            var rlx = Math.log (rx) + e * Math.log (BASE);
+            t2 = new Number.double (-rlx);
 
             /* UPDATE Z AND COMPUTE ACCURATE EXP OF APPROXIMATE LOG */
             z = z.subtract (t2);
@@ -2029,59 +2118,6 @@ public class Number
 
         mperr ("*** ERROR IN LN, ITERATION NOT CONVERGING ***");
         return z;
-    }
-
-    // FIXME: This is here becase ln e breaks if we use the symmetric to_float
-    private float to_float_old ()
-    {
-        if (is_zero ())
-            return 0f;
-
-        var z = 0f;
-        var i = 0;
-        for (; i < T; i++)
-        {
-            z = BASE * z + re_fraction[i];
-
-            /* CHECK IF FULL SINGLE-PRECISION ACCURACY ATTAINED */
-            if (z + 1.0f <= z)
-                break;
-        }
-
-        /* NOW ALLOW FOR EXPONENT */
-        z = (float) (z * mppow_ri (BASE, re_exponent - i - 1));
-
-        if (re_sign < 0)
-            return -z;
-        else
-            return z;
-    }
-
-    private double mppow_ri (float ap, int bp)
-    {
-        if (bp == 0)
-            return 1.0f;
-
-        if (bp < 0)
-        {
-            if (ap == 0)
-                return 1.0f;
-            bp = -bp;
-            ap = 1 / ap;
-        }
-
-        var pow = 1.0;
-        while (true)
-        {
-            if ((bp & 01) != 0)
-                pow *= ap;
-            if ((bp >>= 1) != 0)
-                ap *= ap;
-            else
-                break;
-        }
-
-        return pow;
     }
 
     /*  RETURNS MP Y = Ln (1+X) IF X IS AN MP NUMBER SATISFYING THE

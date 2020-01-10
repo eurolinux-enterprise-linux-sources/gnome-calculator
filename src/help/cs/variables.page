@@ -3,7 +3,19 @@
 
     <info>
         <link type="guide" xref="index#equation"/>
-    </info>
+    
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Marek Černocký</mal:name>
+      <mal:email>marek@manet.cz</mal:email>
+      <mal:years>2009, 2010, 2011, 2013</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Lucas Lommer</mal:name>
+      <mal:email>llommer@svn.gnome.org</mal:email>
+      <mal:years>2009</mal:years>
+    </mal:credit>
+  </info>
 
 	<title>Proměnné</title>
     
@@ -25,11 +37,11 @@
     </tr>
     <tr>
     <td><p>e</p></td>
-    <td><p><link xref="logarithm">Euler's Number</link></p></td>
+    <td><p><link xref="logarithm">Eulerovo číslo</link></p></td>
     </tr>
     <tr>
     <td><p>π</p></td>
-    <td><p><link xref="trigonometry">Pi</link></p></td>
+    <td><p><link xref="trigonometry">Ludolfovo číslo pí</link></p></td>
     </tr>
     <tr>
     <td><p>rand</p></td>

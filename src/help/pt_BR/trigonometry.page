@@ -3,43 +3,47 @@
 
     <info>
         <link type="guide" xref="index#equation"/>
-    </info>
-
-	<title>Trigonometry</title>
     
-    <p>
-    Trigonometry can be performed using the sin, cos, and tan <link xref="function">function</link>.
-    </p>
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Irapuan Pascoal</mal:name>
+      <mal:email>irapuan.menezes@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Georges Basile Stavracas Neto</mal:name>
+      <mal:email>georges.stavracas@gmail.com</mal:email>
+      <mal:years>2013</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Lucas Romero de Abreu</mal:name>
+      <mal:email>lucasdeabreu@gmail.com</mal:email>
+      <mal:years>2013</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Enrico Nicoletto</mal:name>
+      <mal:email>liverig@gmail.com</mal:email>
+      <mal:years>2013</mal:years>
+    </mal:credit>
+  </info>
+
+	<title>Trigonometria</title>
+    
+    <p>A trigonometria pode ser efetuada usando a <link xref="function">função</link> de sin, cos, e tan.</p>
     <example>
-    <p>
-    sin 45
-    </p>
+    <p>sin 45</p>
     </example>
-    <p>
-    The angle units used can be changed from the <guiseq><gui>Calculator</gui><gui>Preferences</gui></guiseq> menu.
-    Trigonometry buttons are visible when in <link xref="mouse">Advanced mode</link>.
-    </p>
-    <p>
-    Hyperbolic functions are available by adding "h" to the end of a function.
-    </p>
+    <p>As unidades de ângulo podem ser alteradas indo em <guiseq><gui>Calculadora</gui><gui>Preferências</gui></guiseq>. Os botões de trigonometria ficam visíveis quando a calculadora está no <link xref="mouse">Modo avançada</link>.</p>
+    <p>As funções hiperbólicas ficam disponíveis ao adicionar "h" ao final de uma função.</p>
     <example>
-    <p>
-    sinh 0.34
-    </p>
+    <p>sinh 0.34</p>
     </example>
-    <p>
-    Inverse functions are entered either using the inverse symbol ⁻¹ (<keyseq><key>Ctrl</key><key>I</key></keyseq>) or the "a" form of the function.
-    The following two equations are equivalent.
-    </p>
+    <p>As funções inversas são inseridas tanto usando o simbolo inverso ⁻¹ (<keyseq><key>Ctrl</key><key>I</key></keyseq>) quanto usando a forma de função "a". As duas equações a seguir são equivalentes.</p>
     <example>
-    <p>
-    sin⁻¹ 0.5
-    </p>
-    <p>
-    asin 0.5 
-    </p>
+    <p>sin⁻¹ 0.5</p>
+    <p>asin 0.5</p>
     </example>   
-    <p>
-    To enter <link xref="variable">π</link> with the keyboard use <keyseq><key>Ctrl</key><key>P</key></keyseq>.
-    </p>
+    <p>Para inserir o <link xref="variable">π</link> através do teclado, use <keyseq><key>Ctrl</key><key>P</key></keyseq>.</p>
 </page>

@@ -266,7 +266,7 @@ private void test_equations ()
     test ("2z", "", ErrorCode.UNKNOWN_VARIABLE);  
     test ("z2", "", ErrorCode.UNKNOWN_VARIABLE);
     test ("z 2", "", ErrorCode.UNKNOWN_VARIABLE);
-    test ("z(2)", "", ErrorCode.UNKNOWN_VARIABLE);
+    test ("z(2)", "", ErrorCode.UNKNOWN_FUNCTION);
     test ("y²", "9", 0);
     test ("2y²", "18", 0);
     test ("x×y", "6", 0);
@@ -352,10 +352,14 @@ private void test_equations ()
     test ("1!", "1", 0);
     test ("5!", "120", 0);
     test ("69!", "171122452428141311372468338881272839092270544893520369393648040923257279754140647424000000000000000", 0);
-    test ("0.1!", "", ErrorCode.MP);
     test ("−1!", "−1", 0);
     test ("(−1)!", "", ErrorCode.MP);
     test ("−(1!)", "−1", 0);
+    test ("3.5!", "11.631728397", 0);
+    test ("(-2)!", "", ErrorCode.MP);
+    test ("(-10.9)!", "", ErrorCode.MP);
+    //test ("12.5!", "1710542068.319572266", 0); // FIXME: Due to the precesion bug in tgamma () from libc, this result fails on some setups.
+    test ("(-10.0)!", "", ErrorCode.MP);
 
     /* Powers */
     test ("2²", "4", 0);
@@ -365,7 +369,8 @@ private void test_equations ()
     test ("(x)²", "4", 0);
     test ("|1−3|²", "4", 0);
     test ("|x|²", "4", 0);
-    test ("0^0", "1", 0);
+    /* Note: 0^0 is indeterminate. Hence will return 0, with error set. */
+    test ("0^0", "0", ErrorCode.MP);
     test ("0^0.5", "0", 0);
     test ("2^0", "1", 0);
     test ("2^1", "2", 0);
@@ -620,13 +625,103 @@ private void test_base_conversion ()
     test ("x in hex", "2₁₆", 0);
 }
 
-public int main (string args[])
+private void test_precedence ()
+{
+    number_base = 10;
+    wordlen = 32;
+    angle_units = AngleUnit.DEGREES;
+    enable_conversions = true;
+    enable_variables = true;
+
+    test ("1 + 2 - 3 * 4 / 5", "0.6", 0);
+    test ("10 mod 4 / 2", "1", 0);
+    test ("20 / 10 mod 3", "2", 0);
+    test ("12 / 3 √4", "8", 0);
+    test ("√5!", "10.95445115", 0);
+    test ("4 ^ sin 30", "2", 0);
+    test ("4 ^ (sin 30)", "2", 0);
+    test ("4 ^ sin (30)", "2", 0);
+    test ("sin (30) ^ 4", "0.0625", 0);
+    test ("sin 30 ^ 4", "0.0625", 0);
+    test ("sin (30 ^ 4)", "0", 0);
+
+    test ("10 / - 2", "−5", 0);
+    test ("10 * - 2", "−20", 0);
+    test ("10 ^ -2", "0.01", 0);
+    test ("-10 ^ 2", "−100", 0);
+    test ("sin (-30)", "−0.5", 0);
+    test ("sin - 30", "−0.5", 0);
+
+    test ("6 + 3!", "12", 0);
+    test ("4 * 3!", "24", 0);
+    test ("100 mod 3!", "4", 0);
+    test ("5! mod 7", "1", 0);
+    test ("24 / 3!", "4", 0);
+    test ("4! / 6", "4", 0);
+    test ("cos 5!", "−0.5", 0);
+    test ("sin 6!", "0", 0);
+    test ("- 4!", "−24", 0);
+    test ("3! ^ 3", "216", 0);
+    test ("3 ^ 3!", "729", 0);
+}
+
+private void test_custom_functions ()
+{
+    number_base = 10;
+    wordlen = 32;
+    angle_units = AngleUnit.DEGREES;
+    enable_conversions = false;
+    enable_variables = true;
+
+    FunctionManager function_manager = FunctionManager.get_default_function_manager ();
+    test ("func(x;y;z)=x+y+z", "0", 0);
+    test ("func(2;3;5)", "10", 0);
+    test ("func(x;y;z)=x+y-z", "0", 0);
+    test ("func(2;3;5)", "0", 0);
+    test ("func(x;y;z)=abs(x-y)+abs(y-z)+abs(x-z)", "0", 0);
+    test ("func(1;2;3)", "4", 0);
+    test ("func(x;y;z)", "0", ErrorCode.INVALID);
+    test ("test(x;y)=func(x;y;x)+func(y;x;y)", "0", 0);
+    test ("6*test(3;5)+log10", "49", 0);
+    test ("test(test(5;6);9)", "20", 0);
+    test ("log(test(8;9))", "0.602059991", 0);
+    test ("sum(8)", "0", ErrorCode.UNKNOWN_FUNCTION);
+    test ("sum", "0", ErrorCode.UNKNOWN_VARIABLE);
+    test ("sum(x;y)=x+y", "0", 0);
+    test ("(3+2)*10 + 5^2 - sum(7;8)", "60", 0);
+    test ("dummy(abc;xyz;pqr)=abc*xyz*pqr", "0", 0);
+    test ("dummy(1;0;1)", "0", 0);
+    test ("dummy(4;5;6)", "120", 0);
+    test ("dummy(dummy(1;2;3);dummy(1;2;3);dummy(1;2;3))", "216", 0);
+    test ("dummy(10;5.687;100)", "5687", 0);
+    test ("dummy(10;5.687;1)", "56.87", 0);
+    test ("diff(x,y)=x-y", "0", ErrorCode.INVALID);
+    test ("abcd(x;y;z) = (floor((x+y+z)/z)+frac((x+y+z)/z))*z", "0", 0);
+    test ("abcd(4;5;6)", "15", 0);
+    test ("abcd(2.9;91;9.1)", "103", 0);
+    test ("log(dummy(1;5;2))", "1", 0);
+    test ("sum(sum(sum(1;1);sum(1;1));sum(sum(1;1);sum(1;1)))", "8", 0);
+    function_manager.delete ("sum");
+    test ("sum(sum(sum(1;1);sum(1;1));sum(sum(1;1);sum(1;1)))", "8", ErrorCode.UNKNOWN_FUNCTION);
+    test ("sum(x;y)=x+y+1", "0", 0);
+    test ("sum(sum(sum(1;1);sum(1;1));sum(sum(1;1);sum(1;1)))", "15", 0);
+
+    function_manager.delete ("func");
+    function_manager.delete ("test");
+    function_manager.delete ("sum");
+    function_manager.delete ("dummy");
+    function_manager.delete ("abcd");
+}
+
+public int main (string[] args)
 {
     Intl.setlocale (LocaleCategory.ALL, "C");
 
     test_conversions ();
     test_equations ();
     test_base_conversion ();
+    test_precedence ();
+    test_custom_functions ();
 
     if (fail_count == 0)
         stdout.printf ("Passed all %i tests\n", pass_count);

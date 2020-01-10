@@ -17,6 +17,12 @@
       <mal:email>sergi256@gmail.com</mal:email>
       <mal:years>2011, 2012</mal:years>
     </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Gil Forcada</mal:name>
+      <mal:email>gilforcada@guifi.net</mal:email>
+      <mal:years>2013</mal:years>
+    </mal:credit>
   </info>
 
 	<title>Superíndexs i subíndexs</title>

@@ -17,7 +17,7 @@ public enum NumberMode
 }
 
 /* Expression mode state */
-private class MathEquationState
+private class MathEquationState : Object
 {
     public Number ans;             /* Previously calculated answer */
     public uint ans_base;          /* Representation base of previous answer. */
@@ -33,7 +33,7 @@ private class MathEquationState
     public uint error_token_end;   /* End offset of error token */
 }
 
-private class SolveData
+private class SolveData : Object
 {
     public Number? number_result;
     public string text_result;
@@ -43,7 +43,7 @@ private class SolveData
     public uint representation_base;
 }
 
-public class MathEquation : Gtk.TextBuffer
+public class MathEquation : Gtk.SourceBuffer
 {
     private Gtk.TextTag ans_tag;
 
@@ -57,7 +57,6 @@ public class MathEquation : Gtk.TextBuffer
             if (_word_size == value)
                 return;
             _word_size = value;
-            notify_property ("word-size");
         }
     }
 
@@ -226,23 +225,26 @@ public class MathEquation : Gtk.TextBuffer
         get_iter_at_mark (out ans_end, ans_end_mark);
 
         var orig_ans_text = get_text (ans_start, ans_end, false);
-        serializer.set_representation_base (state.ans_base);
         var ans_text = serializer.to_string (state.ans);
-        serializer.set_representation_base (serializer.get_base ());
+
         if (orig_ans_text != ans_text)
         {
             in_undo_operation = true;
             in_reformat = true;
 
-            var start = ans_start.get_offset ();
             @delete (ref ans_start, ref ans_end);
+            get_iter_at_mark (out ans_start, ans_start_mark);
+            get_iter_at_mark (out ans_end, ans_end_mark);
             insert_with_tags (ans_end, ans_text, -1, ans_tag);
 
-            /* There seems to be a bug in the marks as they alternate being the correct and incorrect ways.  Reset them */
-            get_iter_at_offset (out ans_start, start);
-            get_iter_at_offset (out ans_end, start + ans_text.length);
-            move_mark (ans_start_mark, ans_start);
-            move_mark (ans_end_mark, ans_end);
+            // NOTE: Due to the inverted gravity of answer marks, after inserting text
+            //       the positions are inverted. Hence, we need to recreate marks.
+            get_iter_at_mark (out ans_start, ans_start_mark);
+            get_iter_at_mark (out ans_end, ans_end_mark);
+            delete_mark (ans_start_mark);
+            delete_mark (ans_end_mark);
+            ans_start_mark = create_mark (null, ans_end, false);
+            ans_end_mark = create_mark (null, ans_start, true);
 
             in_reformat = false;
             in_undo_operation = false;
@@ -476,10 +478,11 @@ public class MathEquation : Gtk.TextBuffer
     private void on_paste (Gtk.Clipboard clipboard, string? text)
     {
         if (text != null)
-            insert (text);
+            /* Replaces '\n' characters by ' ' in text before pasting it. */
+            insert (text.delimit ("\n", ' '));
     }
 
-    public void undo ()
+    public override void undo ()
     {
         if (undo_stack == null)
         {
@@ -489,13 +492,21 @@ public class MathEquation : Gtk.TextBuffer
         }
 
         state = undo_stack.nth_data (0);
+        status = ("");
         undo_stack.remove (state);
         redo_stack.prepend (get_current_state ());
 
+        if (undo_stack == null)
+        {
+            apply_state (state);
+            return;
+        }
+
+        state.ans = undo_stack.nth_data (0).ans;
         apply_state (state);
     }
 
-    public void redo ()
+    public override void redo ()
     {
         if (redo_stack == null)
         {
@@ -527,7 +538,6 @@ public class MathEquation : Gtk.TextBuffer
                 return;
             serializer.set_trailing_digits (value);
             reformat_display ();
-            notify_property ("accuracy");
         }
     }
 
@@ -541,7 +551,6 @@ public class MathEquation : Gtk.TextBuffer
 
             serializer.set_show_thousands_separators (value);
             reformat_display ();
-            notify_property ("show-thousands-separators");
         }
     }
 
@@ -555,7 +564,6 @@ public class MathEquation : Gtk.TextBuffer
 
             serializer.set_show_trailing_zeroes (value);
             reformat_display ();
-            notify_property ("show-trailing-zeroes");
         }
     }
 
@@ -569,7 +577,6 @@ public class MathEquation : Gtk.TextBuffer
 
             serializer.set_number_format (value);
             reformat_display ();
-            notify_property ("number-format");
         }
     }
 
@@ -578,12 +585,12 @@ public class MathEquation : Gtk.TextBuffer
         get { return serializer.get_base (); }
         set
         {
-            if (serializer.get_base () == value)
+            if (serializer.get_base () == value && serializer.get_representation_base () == value)
                 return;
 
             serializer.set_base (value);
+            serializer.set_representation_base (value);
             reformat_display ();
-            notify_property ("number-base");
         }
     }
 
@@ -596,7 +603,6 @@ public class MathEquation : Gtk.TextBuffer
                 return;
 
             _angle_units = value;
-            notify_property ("angle-units");
         }
     }
 
@@ -609,7 +615,6 @@ public class MathEquation : Gtk.TextBuffer
                 return;
 
             state.status = value;
-            notify_property ("status");
         }
     }
 
@@ -679,13 +684,14 @@ public class MathEquation : Gtk.TextBuffer
                     next_is_digit = next_char.isdigit ();
 
                 /* Ignore thousands separators */
-                if (c == serializer.get_thousands_separator () && last_is_digit && next_is_digit)
-                    ;
-                /* Substitute radix character */
-                else if (c == serializer.get_radix () && (last_is_digit || next_is_digit))
-                    eq_text += ".";
-                else
-                    eq_text += c.to_string ();
+                if (c != serializer.get_thousands_separator () || !last_is_digit || !next_is_digit)
+                {
+                    /* Substitute radix character */
+                    if (c == serializer.get_radix () && (last_is_digit || next_is_digit))
+                        eq_text += ".";
+                    else
+                        eq_text += c.to_string ();
+                }
 
                 last_is_digit = is_digit;
             }
@@ -716,7 +722,6 @@ public class MathEquation : Gtk.TextBuffer
             can_super_minus = value == NumberMode.SUPERSCRIPT;
 
             _number_mode = value;
-            notify_property ("number-mode");
         }
     }
 
@@ -792,6 +797,32 @@ public class MathEquation : Gtk.TextBuffer
         insert_at_cursor (text, -1);
     }
 
+    public new void insert_square ()
+    {
+        var space_required = false;
+        Gtk.TextIter iter;
+        get_iter_at_mark (out iter, get_insert ());
+
+        /*if it is not the first character in the buffer*/
+        if (iter.backward_char ())
+        {
+            unichar previous_character = iter.get_char ();
+            if ("⁰¹²³⁴⁵⁶⁷⁸⁹".index_of_char (previous_character) >= 0)
+            {
+                space_required = true;
+            }
+        }
+
+        if (space_required)
+        {
+            insert (" ²");
+        }
+        else
+        {
+            insert ("²");
+        }
+    }
+
     public void insert_digit (uint digit)
     {
         const unichar subscript_digits[] = {'₀', '₁', '₂', '₃', '₄', '₅', '₆', '₇', '₈', '₉'};
@@ -838,7 +869,7 @@ public class MathEquation : Gtk.TextBuffer
         }
     }
 
-    private Number? parse (string text, out uint representation_base, out ErrorCode error_code = null, out string error_token = null, out uint error_start, out uint error_end)
+    private Number? parse (string text, out uint representation_base, out ErrorCode error_code = null, out string? error_token = null, out uint? error_start = null, out uint error_end = null)
     {
         var equation = new MEquation (this, text);
         equation.base = serializer.get_base ();
@@ -1148,6 +1179,8 @@ public class MathEquation : Gtk.TextBuffer
             return;
         }
 
+        var mark = create_mark (null, location, false);
+
         /* If following a delete then have already pushed undo stack (Gtk.TextBuffer doesn't indicate replace operations so we have to infer them) */
         if (!in_delete)
             push_undo_stack ();
@@ -1178,8 +1211,11 @@ public class MathEquation : Gtk.TextBuffer
 
         state.entered_multiply = text == "×";
 
-        /* Update thousands separators */
+        /* Update thousands separators, then revalidate iterator */
         reformat_separators ();
+        get_iter_at_mark (out location, mark);
+
+        delete_mark (mark);
 
         notify_property ("display");
     }

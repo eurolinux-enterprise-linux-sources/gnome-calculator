@@ -20,7 +20,7 @@
     <p>75</p>
     <p>4B₁₆</p>
     </example>
-    <p><link xref="mouse">Programozói módban</link> egy legördülő menüből választhatja ki a bináris (<keyseq><key>Ctrl</key><key>B</key></keyseq>), oktális (<keyseq><key>Ctrl</key><key>O</key></keyseq>) és hexadecimális (<keyseq><key>Ctrl</key><key>H</key></keyseq>) számrendszert.</p>
-    <p>Az eredmények megjelenítésére használt számrendszer beállításához módosítsa az <link xref="number-display">eredmény formátumát</link>.</p>
-    <p>Az aktuális eredmény számrendszerének módosításához használja a legördülő menüt, vagy a <keyseq><key>Ctrl</key><key>D</key></keyseq> kombinációt a decimális alakhoz.</p>
+    <p><link xref="mouse">Programozói módban</link> a legördülő menüvel változtathatja meg a számolás alapját.</p>
+    <p>Gyorsbillentyűkkel is átválthat a <gui>bináris</gui> (<keyseq><key>Ctrl</key><key>B</key></keyseq>), <gui>oktális</gui> (<keyseq><key>Ctrl</key><key>O</key></keyseq>), <gui>tízes</gui> (<keyseq><key>Ctrl</key><key>D</key></keyseq>) és <gui>hexadecimális</gui> (<keyseq><key>Ctrl</key><key>H</key></keyseq>) számrendszerre.</p>
+    <p>A számok menet közbeni más alapra konvertálásához a <link xref="conv-base">számrendszerek konvertálása</link> használható.</p>
 </page>

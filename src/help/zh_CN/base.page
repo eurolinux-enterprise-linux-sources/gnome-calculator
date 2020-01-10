@@ -14,7 +14,13 @@
     <p>75</p>
     <p>4B₁₆</p>
     </example>
-    <p>在 <link xref="mouse">编程模式</link> 里，有二进制按钮(<keyseq><key>Ctrl</key><key>B</key></keyseq>)、八进制按钮 (<keyseq><key>Ctrl</key><key>O</key></keyseq>) 和十六进制按钮 (<keyseq><key>Ctrl</key><key>H</key></keyseq>)。</p>
-    <p>要设置运算结果的数制，请在 <link xref="number-display">结果格式</link> 中更改。</p>
-    <p>要更改当前结果的数制，点击一个数制按钮或按 <keyseq><key>Ctrl</key><key>D</key></keyseq> 显示十进制格式。</p>
+    <p>
+    When in <link xref="mouse">programming mode</link>, use the drop-down menu to change the base of the calculation.
+    </p>
+    <p>
+    Keyboard shortcuts can be used to switch to <gui>Binary</gui> (<keyseq><key>Ctrl</key><key>B</key></keyseq>), <gui>Octal</gui> (<keyseq><key>Ctrl</key><key>O</key></keyseq>), <gui>Decimal</gui> (<keyseq><key>Ctrl</key><key>D</key></keyseq>) and <gui>Hexadecimal</gui> (<keyseq><key>Ctrl</key><key>H</key></keyseq>) modes.
+    </p>
+    <p>
+    To convert numbers to other base on the fly, <link xref="conv-base">Number Base conversion</link> can be used.
+    </p>
 </page>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<page xmlns="http://projectmallard.org/1.0/" type="guide" id="index" xml:lang="ca">
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="guide" id="index" xml:lang="ca">
 
 	<info>
 		<credit type="author">
@@ -19,9 +19,15 @@
       <mal:email>sergi256@gmail.com</mal:email>
       <mal:years>2011, 2012</mal:years>
     </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Gil Forcada</mal:name>
+      <mal:email>gilforcada@guifi.net</mal:email>
+      <mal:years>2013</mal:years>
+    </mal:credit>
   </info>
 
-	<title>Calculator Help</title>
+	<title><media type="image" src="figures/logo32.png" its:translate="no"/> Calculator Help</title>
 
     <section id="ui" style="2column">
         <title>Interfície d'usuari</title>

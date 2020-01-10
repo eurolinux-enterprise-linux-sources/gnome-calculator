@@ -10,28 +10,20 @@
     <p>Formātu, kurš tiek izmantots rezultātu attēlošanai, var nomainīt <guiseq><gui>Kalkulators</gui><gui>Iestatījumi</gui></guiseq> izvēlnē.</p>
     <table>
     <tr>
-    <td><p>Decimāls</p></td>
-    <td><p>Rezultāti tiek attēloti kā decimālskaitļi</p></td>
+    <td><p><gui>Automātiski</gui></p></td>
+    <td><p>Mazi rezultāti tiek rādīti <gui>Fiksētajā</gui> notācijā, bet gari rezultāti tiek rādīti <gui>Zinātniskajā</gui> notācijā</p></td>
     </tr>
     <tr>
-    <td><p>Zinātnisks</p></td>
+    <td><p><gui>Fiksēts</gui></p></td>
+    <td><p>Rezultāti vienmēr tiek attēloti kā decimālskaitļi</p></td>
+    </tr>
+    <tr>
+    <td><p><gui>Zinātniskais</gui></p></td>
     <td><p>Rezultāti tiek attēloti <link xref="scientific">zinātniskā notācijā</link></p></td>
     </tr>
     <tr>
-    <td><p>Inženierijas</p></td>
+    <td><p><gui>Inženierijas</gui></p></td>
     <td><p>Rezultāts tiek attēlots zinātniskā apzīmējumā, izņemot to, ka eksponente vienmēr ir skaitlis, kas dalās ar 3</p></td>
-    </tr>
-    <tr>
-    <td><p>Binārs</p></td>
-    <td><p>Rezultāti tiek attēloti kā <link xref="base">binārie skaitļi</link></p></td>
-    </tr>
-    <tr>
-    <td><p>Oktāls</p></td>
-    <td><p>Rezultāti tiek attēloti kā <link xref="base">oktāli skaitļi</link></p></td>
-    </tr>
-    <tr>
-    <td><p>Heksadecimāls</p></td>
-    <td><p>Rezultāti tiek attēloti kā <link xref="base">heksadecimāli skaitļi</link></p></td>
     </tr>
     </table>
     <p>Var konfigurēt arī zīmes aiz komata, ja tiek rādīti tūkstošu atdalītāji un beigu nulles.</p>

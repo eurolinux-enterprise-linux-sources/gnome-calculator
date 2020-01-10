@@ -21,11 +21,17 @@
       <mal:email>laurentc@iol.ie</mal:email>
       <mal:years>2009-2010</mal:years>
     </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Alain Lojewski</mal:name>
+      <mal:email>allomervan@gmail.com</mal:email>
+      <mal:years>2014</mal:years>
+    </mal:credit>
   </info>
 
 	<title>Variables</title>
     
-    <p>Pour attribuer une valeur à une variable, utilisez le symbole = ou choisissez la variable à assigner avec le bouton <gui>x</gui> dans le <link xref="mouse">mode avancé</link>. Un nom de variable doit être composé uniquement de lettres majuscules ou minuscules.</p>
+    <p>Pour attribuer une valeur à une variable, utilisez le symbole = ou choisissez la variable à assigner avec le bouton <gui>x</gui> en <link xref="mouse">mode avancé</link>. Un nom de variable doit être impérativement tout en majuscules ou tout en minuscules.</p>
     <example>
     <p>x=5</p>
     <p>Valeur=82</p>

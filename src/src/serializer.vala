@@ -34,12 +34,12 @@ public class Serializer : Object
 
     public Serializer (DisplayFormat format, int number_base, int trailing_digits)
     {
-        var radix_string = nl_langinfo (NLItem.RADIXCHAR);
+        var radix_string = Posix.nl_langinfo (Posix.NLItem.RADIXCHAR);
         if (radix_string != null && radix_string != "")
             radix = radix_string.locale_to_utf8 (-1, null, null).get_char (0);
         else
             radix = '.';
-        var tsep_string = nl_langinfo (NLItem.THOUSEP);
+        var tsep_string = Posix.nl_langinfo (Posix.NLItem.THOUSEP);
         if (tsep_string != null && tsep_string != "")
             tsep = tsep_string.locale_to_utf8 (-1, null, null).get_char (0);
         else
@@ -102,11 +102,27 @@ public class Serializer : Object
             int n_digits = 0;
             return cast_to_string (x, ref n_digits);
         case DisplayFormat.SCIENTIFIC:
-            int n_digits = 0;
-            return cast_to_exponential_string (x, false, ref n_digits);
+            if (representation_base == 10)
+            {
+                int n_digits = 0;
+                return cast_to_exponential_string (x, false, ref n_digits);
+            }
+            else
+            {
+                int n_digits = 0;
+                return cast_to_string (x, ref n_digits);
+            }
         case DisplayFormat.ENGINEERING:
-            int n_digits = 0;
-            return cast_to_exponential_string (x, true, ref n_digits);
+            if (representation_base == 10)
+            {
+                int n_digits = 0;
+                return cast_to_exponential_string (x, true, ref n_digits);
+            }
+            else
+            {
+                int n_digits = 0;
+                return cast_to_string (x, ref n_digits);
+            }
         }
     }
 

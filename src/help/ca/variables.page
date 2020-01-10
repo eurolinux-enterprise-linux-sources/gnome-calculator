@@ -15,11 +15,20 @@
       <mal:email>sergi256@gmail.com</mal:email>
       <mal:years>2011, 2012</mal:years>
     </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Gil Forcada</mal:name>
+      <mal:email>gilforcada@guifi.net</mal:email>
+      <mal:years>2013</mal:years>
+    </mal:credit>
   </info>
 
 	<title>Variables</title>
     
-    <p>Per assignar un valor a una variable utilitzeu el símbol = o escolliu la variable a ser assignada amb el botó <gui>x</gui> en el <link xref="mouse">mode avançat</link>. El nom d'una variable només pot contenir caràcters en majúscula o en minúscula.</p>
+    <p>
+    To assign a value to a variable use the = symbol or choose the variable to assign to with the <gui>x</gui> button in <link xref="mouse">advanced mode</link>.
+    A variable name must only contain upper or lower case characters.
+    </p>
     <example>
     <p>x=5</p>
     <p>valor=82</p>

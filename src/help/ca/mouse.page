@@ -15,14 +15,17 @@
       <mal:email>sergi256@gmail.com</mal:email>
       <mal:years>2011, 2012</mal:years>
     </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Gil Forcada</mal:name>
+      <mal:email>gilforcada@guifi.net</mal:email>
+      <mal:years>2013</mal:years>
+    </mal:credit>
   </info>
 
 	<title>Utilització del ratolí</title>
 
-    <p>
-    All equations can be entered using the mouse.
-    To access all buttons there are a number of modes that can be selected from the <gui>Mode</gui> menu.
-    </p>
+    <p>Totes les equacions es poden introduir amb el ratolí. Per accedir a tots els botons hi ha diferents modes que es poden seleccionar des del menú <gui>Mode</gui>.</p>
     <table>
     <tr>
     <td><p>Bàsic</p></td>
@@ -30,7 +33,7 @@
     </tr>
     <tr>
     <td><p>Avançat</p></td>
-    <td><p>Provides buttons suitable for advanced mathematics such as <link xref="trigonometry"/></p></td>
+    <td><p>Proporciona els botons adequats per a les matemàtiques avançades, com ara <link xref="trigonometry"/></p></td>
     </tr>
     <tr>
     <td><p>Financer</p></td>

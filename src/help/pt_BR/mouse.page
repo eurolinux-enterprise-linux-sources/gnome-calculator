@@ -3,30 +3,51 @@
 
     <info>
         <link type="guide" xref="index#ui"/>
-    </info>
+    
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Irapuan Pascoal</mal:name>
+      <mal:email>irapuan.menezes@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Georges Basile Stavracas Neto</mal:name>
+      <mal:email>georges.stavracas@gmail.com</mal:email>
+      <mal:years>2013</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Lucas Romero de Abreu</mal:name>
+      <mal:email>lucasdeabreu@gmail.com</mal:email>
+      <mal:years>2013</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Enrico Nicoletto</mal:name>
+      <mal:email>liverig@gmail.com</mal:email>
+      <mal:years>2013</mal:years>
+    </mal:credit>
+  </info>
 
-	<title>Using the Mouse</title>
+	<title>Através do mouse</title>
 
-    <p>
-    All equations can be entered using the mouse.
-    To access all buttons there are a number of modes that can be selected from the <gui>Mode</gui> menu.
-    </p>
+    <p>Todas as equações podem ser inseridas usando o mouse. Para acessar todos os botões, há vários modos que podem ser selecionados a partir do menu <gui>Modo</gui>.</p>
     <table>
     <tr>
     <td><p>Básica</p></td>
-    <td><p>Provides buttons suitable for <link xref="equation">basic equations</link></p></td>
+    <td><p>Fornece botões apropriados para <link xref="equation">equações básicas</link></p></td>
     </tr>
     <tr>
     <td><p>Avançada</p></td>
-    <td><p>Provides buttons suitable for advanced mathematics such as <link xref="trigonometry"/></p></td>
+    <td><p>Fornece botões apropriados para matemática avançada como <link xref="trigonometry"/></p></td>
     </tr>
     <tr>
     <td><p>Financeira</p></td>
-    <td><p>Provides buttons suitable for <link xref="financial">financial equations</link></p></td>
+    <td><p>Fornece botões apropriados para <link xref="financial">equações financeiras</link></p></td>
     </tr>
     <tr>
-    <td><p>Programming</p></td>
-    <td><p>Provides buttons suitable for computer programmers</p></td>
+    <td><p>Programável</p></td>
+    <td><p>Fornece botões apropriados para programadores de computador</p></td>
     </tr>
     </table>
 </page>

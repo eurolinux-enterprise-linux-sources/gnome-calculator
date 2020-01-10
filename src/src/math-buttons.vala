@@ -68,8 +68,6 @@ public class MathButtons : Gtk.Box
     private Gtk.Menu shift_left_menu;
     private Gtk.Menu shift_right_menu;
 
-    private Gtk.Menu function_menu;
-
     private List<Gtk.ToggleButton> superscript_toggles;
     private List<Gtk.ToggleButton> subscript_toggles;
 
@@ -228,13 +226,8 @@ public class MathButtons : Gtk.Box
 
     private Gtk.Widget load_mode (ButtonMode mode)
     {
-        const string objects[] = { "button_panel", "character_code_dialog", "currency_dialog",
-                                   "ctrm_dialog", "ddb_dialog", "fv_dialog", "gpm_dialog",
-                                   "pmt_dialog", "pv_dialog", "rate_dialog", "sln_dialog",
-                                   "syd_dialog", "term_dialog", "adjustment1", "adjustment2", null };
-
         Gtk.Builder builder;
-        string builder_filename;
+        string builder_resource;
         switch (mode)
         {
         default:
@@ -242,37 +235,37 @@ public class MathButtons : Gtk.Box
             if (bas_panel != null)
                 return bas_panel;
             builder = basic_ui = new Gtk.Builder ();
-            builder_filename = Path.build_filename (UI_DIR, "buttons-basic.ui");
+            builder_resource = "buttons-basic.ui";
             break;
         case ButtonMode.ADVANCED:
             if (adv_panel != null)
                 return adv_panel;
             builder = advanced_ui = new Gtk.Builder ();
-            builder_filename = Path.build_filename (UI_DIR, "buttons-advanced.ui");
+            builder_resource = "buttons-advanced.ui";
             break;
         case ButtonMode.FINANCIAL:
             if (fin_panel != null)
                 return fin_panel;
             builder = financial_ui = new Gtk.Builder ();
-            builder_filename = Path.build_filename (UI_DIR, "buttons-financial.ui");
+            builder_resource = "buttons-financial.ui";
             break;
         case ButtonMode.PROGRAMMING:
             if (prog_panel != null)
                 return prog_panel;
             builder = programming_ui = new Gtk.Builder ();
-            builder_filename = Path.build_filename (UI_DIR, "buttons-programming.ui");            
+            builder_resource = "buttons-programming.ui";
             break;
         }
 
-        // FIXME: Show dialog if failed to load
         try
         {
-            builder.add_objects_from_file (builder_filename, objects);
+            builder.add_from_resource ("/org/gnome/calculator/%s".printf(builder_resource));
         }
         catch (Error e)
         {
-            warning ("Error loading button UI: %s", e.message);
+            error ("Error loading button UI: %s", e.message);
         }
+
         var panel = builder.get_object ("button_panel") as Gtk.Widget;
         pack_end (panel, true, true, 0);
 
@@ -320,8 +313,6 @@ public class MathButtons : Gtk.Box
         setup_button (builder, "function",           null, _("Additional Functions"));
         /* Tooltip for the exponent button */
         setup_button (builder, "x_pow_y",            "^", _("Exponent [^ or **]"));
-        /* Tooltip for the square button */
-        setup_button (builder, "x_squared",          "²", _("Square [Ctrl+2]"));
         /* Tooltip for the percentage button */
         setup_button (builder, "percentage",         "%", _("Percentage [%]"));
         /* Tooltip for the factorial button */
@@ -375,7 +366,8 @@ public class MathButtons : Gtk.Box
         /* Tooltip for the two's complement button */
         setup_button (builder, "twos_complement",    "twos ", _("Two's Complement"));
         /* Tooltip for the truncate button */
-        setup_button (builder, "trunc",              "trunc ", _("Truncate"));
+        /* FIXME : Can be Added Once the support is available at the back-end */
+        // setup_button (builder, "trunc",              "trunc ", _("Truncate"));
         /* Tooltip for the start group button */
         setup_button (builder, "start_group",        "(", _("Start Group [(]"));
         /* Tooltip for the end group button */
@@ -432,6 +424,12 @@ public class MathButtons : Gtk.Box
         var button = builder.get_object ("calc_subtract_button") as Gtk.Button;
         if (button != null)
             button.clicked.connect (() => { equation.insert_subtract (); });
+        button = builder.get_object ("calc_x_squared_button") as Gtk.Button;
+        if (button != null)
+        {
+            button.clicked.connect (() => { equation.insert_square (); });
+            button.set_tooltip_text (_("Square [Ctrl+2]"));
+        }
         button = builder.get_object ("calc_undo_button") as Gtk.Button;
         if (button != null)
             button.clicked.connect (() => { equation.undo (); });
@@ -689,7 +687,6 @@ public class MathButtons : Gtk.Box
                 return;
 
             _programming_base = value;
-            notify_property ("programming-base");
 
             if (mode == ButtonMode.PROGRAMMING)
                 equation.number_base = value;
@@ -712,6 +709,7 @@ public class MathButtons : Gtk.Box
         button.get_allocation (out allocation);
         x = (int) (origin_x + allocation.x + border);
         y = (int) (origin_y + allocation.y + border);
+        push_in = false;
     }
 
     private void memory_cb (Gtk.Widget widget)
@@ -801,37 +799,17 @@ public class MathButtons : Gtk.Box
         popup_button_menu (button, shift_right_menu);
     }
 
-    private void function_cb (Gtk.Button button)
+    private void function_cb (Gtk.Widget widget)
     {
-        if (function_menu == null)
-        {
-            function_menu = new Gtk.Menu ();
-            function_menu.set_reserve_toggle_size (false);
+        var popup = new MathFunctionPopup (equation);
+        popup.set_transient_for (widget.get_toplevel () as Gtk.Window);
 
-            /* Tooltip for the integer component button */
-            add_function_menu_item (function_menu, _("Integer Component"), "int ");
-            /* Tooltip for the fractional component button */
-            add_function_menu_item (function_menu, _("Fractional Component"), "frac ");
-            /* Tooltip for the round button */
-            add_function_menu_item (function_menu, _("Round"), "round ");
-            /* Tooltip for the floor button */
-            add_function_menu_item (function_menu, _("Floor"), "floor ");
-            /* Tooltip for the ceiling button */
-            add_function_menu_item (function_menu, _("Ceiling"), "ceil ");
-            /* Tooltip for the ceiling button */
-            add_function_menu_item (function_menu, _("Sign"), "sgn ");
-        }
-
-        popup_button_menu (button, function_menu);
-    }
-
-    private void add_function_menu_item (Gtk.Menu menu, string label, string function)
-    {
-        var item = new Gtk.MenuItem.with_label (label);
-        item.set_data<string> ("function", function);
-        menu.append (item);
-        item.activate.connect ((widget) => { equation.insert (widget.get_data<string> ("function")); });
-        item.show ();
+        Gtk.Allocation allocation;
+        widget.get_allocation (out allocation);
+        int x, y;
+        widget.get_window ().get_root_coords (allocation.x, allocation.y, out x, out y);
+        popup.move (x, y);
+        popup.show ();
     }
 
     private void finc_cb (Gtk.Widget widget)
@@ -962,9 +940,12 @@ public class MathButtons : Gtk.Box
         while (start.backward_char ())
         {
             if (!start.get_char ().isspace ())
+            {
+                start.forward_char ();
                 break;
-            equation.delete (ref start, ref end);
+            }
         }
+        equation.delete (ref start, ref end);
     }
 
     private void set_superscript_cb (Gtk.Button widget)

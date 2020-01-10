@@ -7,7 +7,10 @@
 
 	<title>變數</title>
     
-    <p>要將一個值指定為變數，使用「=」符號，或者用 <link xref="mouse">進階模式</link> 下的 <gui>x</gui> 按鈕來選擇欲指定的變數。變數名稱只能包含大小寫字母。</p>
+    <p>
+    To assign a value to a variable use the = symbol or choose the variable to assign to with the <gui>x</gui> button in <link xref="mouse">advanced mode</link>.
+    A variable name must only contain upper or lower case characters.
+    </p>
     <example>
     <p>x=5</p>
     <p>value=82</p>

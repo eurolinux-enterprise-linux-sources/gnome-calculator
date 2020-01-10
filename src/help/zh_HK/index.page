@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<page xmlns="http://projectmallard.org/1.0/" type="guide" id="index" xml:lang="zh-HK">
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="guide" id="index" xml:lang="zh-HK">
 
 	<info>
 		<credit type="author">
@@ -9,7 +9,7 @@
 		<include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
 	</info>
 
-	<title>Calculator Help</title>
+	<title><media type="image" src="figures/logo32.png" its:translate="no"/> Calculator Help</title>
 
     <section id="ui" style="2column">
         <title>使用者介面</title>

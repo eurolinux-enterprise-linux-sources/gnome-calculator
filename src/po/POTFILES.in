@@ -5,8 +5,10 @@
 [type: gettext/glade]data/buttons-basic.ui
 [type: gettext/glade]data/buttons-financial.ui
 [type: gettext/glade]data/buttons-programming.ui
-data/gcalctool.desktop.in
-data/org.gnome.calculator.gschema.xml.in
+data/gnome-calculator.desktop.in
+data/gnome-calculator.appdata.xml.in
+[type: gettext/glade]data/menu.ui
+data/org.gnome.calculator.gschema.xml
 src/currency.vala
 src/equation-lexer.vala
 src/equation-parser.vala

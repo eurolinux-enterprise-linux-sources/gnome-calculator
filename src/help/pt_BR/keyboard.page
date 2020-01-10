@@ -3,16 +3,36 @@
 
     <info>
         <link type="guide" xref="index#ui"/>
-    </info>
+    
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Irapuan Pascoal</mal:name>
+      <mal:email>irapuan.menezes@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Georges Basile Stavracas Neto</mal:name>
+      <mal:email>georges.stavracas@gmail.com</mal:email>
+      <mal:years>2013</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Lucas Romero de Abreu</mal:name>
+      <mal:email>lucasdeabreu@gmail.com</mal:email>
+      <mal:years>2013</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Enrico Nicoletto</mal:name>
+      <mal:email>liverig@gmail.com</mal:email>
+      <mal:years>2013</mal:years>
+    </mal:credit>
+  </info>
 
-	<title>Using the Keyboard</title>
+	<title>Através do teclado</title>
 
-    <p>
-    All mathematical equations can be entered using the keyboard.
-    </p>
-    <p>
-    The following key combinations can be used to enter keys that may not be available on your keyboard.
-    </p>
+    <p>Todas as equações matemáticas podem ser digitadas usando o teclado.</p>
+    <p>As seguintes combinações de teclas podem ser usadas para informar teclas que podem não estar disponíveis em seu teclado.</p>
     <table>
     <tr>
     <td><p>×</p></td>
@@ -24,7 +44,7 @@
     </tr>
     <tr>
     <td><p>^</p></td>
-    <td><p><key>*</key> twice</p></td>
+    <td><p><key>*</key> duas vezes</p></td>
     </tr>
     <tr>
     <td><p>√</p></td>
@@ -35,7 +55,5 @@
     <td><p><keyseq><key>Ctrl</key><key>P</key></keyseq></p></td>
     </tr>
     </table>
-    <p>
-    To enter <link xref="superscript">superscript numbers</link> use <keyseq><key>Ctrl</key>number</keyseq>, for subscript use <keyseq><key>Alt</key>number</keyseq>.
-    </p>
+    <p>Para digitar <link xref="superscript">números sobrescritos</link> tecle <keyseq><key>Ctrl</key>número</keyseq>, para números subscritos tecle <keyseq><key>Alt</key>número</keyseq>.</p>
 </page>

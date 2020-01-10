@@ -16,28 +16,20 @@
     <p>Az eredmények megjelenítésére használt formátum a <guiseq><gui>Számológép</gui><gui>Beállítások</gui></guiseq> menüből módosítható.</p>
     <table>
     <tr>
-    <td><p>Decimális</p></td>
-    <td><p>Az eredmények decimális számokként jelennek meg</p></td>
+    <td><p><gui>Automatikus</gui></p></td>
+    <td><p>A kis eredmények <gui>Rögzített</gui> jelöléssel, míg a hosszú eredmények <gui>Tudományos</gui> jelöléssel jelennek meg.</p></td>
     </tr>
     <tr>
-    <td><p>Tudományos</p></td>
+    <td><p><gui>Rögzített</gui></p></td>
+    <td><p>Az eredmények mindig decimális számokként jelennek meg</p></td>
+    </tr>
+    <tr>
+    <td><p><gui>Tudományos</gui></p></td>
     <td><p>Az eredmények <link xref="scientific">tudományos jelöléssel</link> jelennek meg</p></td>
     </tr>
     <tr>
-    <td><p>Műszaki</p></td>
+    <td><p><gui>Műszaki</gui></p></td>
     <td><p>Az eredmények tudományos formátumban jelennek meg, kivéve hogy a kitevő mindig 3 többszöröse</p></td>
-    </tr>
-    <tr>
-    <td><p>Bináris</p></td>
-    <td><p>Az eredmények <link xref="base">bináris számokként</link> jelennek meg</p></td>
-    </tr>
-    <tr>
-    <td><p>Oktális</p></td>
-    <td><p>Az eredmények <link xref="base">oktális számokként</link> jelennek meg</p></td>
-    </tr>
-    <tr>
-    <td><p>Hexadecimális</p></td>
-    <td><p>Az eredmények <link xref="base">hexadecimális számokként</link> jelennek meg</p></td>
     </tr>
     </table>
     <p>A decimális helyek száma is módosítható, ha láthatók a befejező nullák és az ezreselválasztók.</p>

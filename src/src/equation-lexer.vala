@@ -63,11 +63,12 @@ public enum LexerTokenType
     ABS,                /* | */
     POWER,              /* ^ */
     FACTORIAL,          /* ! */
-    PERCENTAGE          /* % */
+    PERCENTAGE,         /* % */
+    ARGUMENT_SEPARATOR  /* ; (Function argument separator) */
 }
 
 // FIXME: Merge into lexer
-public class PreLexer
+public class PreLexer : Object
 {
     public string stream; /* String being scanned */
     public int index;      /* Current character index */
@@ -228,6 +229,9 @@ public class PreLexer
         if (c == '%')
             return LexerTokenType.PERCENTAGE;
 
+        if (c == ';')
+            return LexerTokenType.ARGUMENT_SEPARATOR;
+
         if (c == ' ' || c == '\r' || c == '\t' || c == '\n')
             return LexerTokenType.PL_SKIP;
 
@@ -236,7 +240,7 @@ public class PreLexer
 }
 
 /* Structure to hold single token. */
-public class LexerToken
+public class LexerToken : Object
 {
     public string text;                /* Copy of token string. */
     public uint start_index;           /* Start index in original stream. */
@@ -245,7 +249,7 @@ public class LexerToken
 }
 
 /* Structure to hold lexer state and all the tokens. */
-public class Lexer
+public class Lexer : Object
 {
     private Parser parser;           /* Pointer to the parser parser. */
     private PreLexer prelexer;       /* Pre-lexer  Pre-lexer is part of lexer. */
@@ -353,7 +357,7 @@ public class Lexer
             type = prelexer.get_next_token ();
         }
 
-        if (type == LexerTokenType.AND || type == LexerTokenType.OR || type == LexerTokenType.XOR || type == LexerTokenType.NOT || type == LexerTokenType.ADD || type == LexerTokenType.SUBTRACT || type == LexerTokenType.MULTIPLY || type == LexerTokenType.DIVIDE || type == LexerTokenType.L_FLOOR || type == LexerTokenType.R_FLOOR || type == LexerTokenType.L_CEILING || type == LexerTokenType.R_CEILING || type == LexerTokenType.ROOT || type == LexerTokenType.ROOT_3 || type == LexerTokenType.ROOT_4 || type == LexerTokenType.ASSIGN || type == LexerTokenType.L_R_BRACKET || type == LexerTokenType.R_R_BRACKET || type == LexerTokenType.L_S_BRACKET || type == LexerTokenType.R_S_BRACKET || type == LexerTokenType.L_C_BRACKET || type == LexerTokenType.R_C_BRACKET || type == LexerTokenType.ABS || type == LexerTokenType.POWER || type == LexerTokenType.FACTORIAL || type == LexerTokenType.PERCENTAGE)
+        if (type == LexerTokenType.AND || type == LexerTokenType.OR || type == LexerTokenType.XOR || type == LexerTokenType.NOT || type == LexerTokenType.ADD || type == LexerTokenType.SUBTRACT || type == LexerTokenType.MULTIPLY || type == LexerTokenType.DIVIDE || type == LexerTokenType.L_FLOOR || type == LexerTokenType.R_FLOOR || type == LexerTokenType.L_CEILING || type == LexerTokenType.R_CEILING || type == LexerTokenType.ROOT || type == LexerTokenType.ROOT_3 || type == LexerTokenType.ROOT_4 || type == LexerTokenType.ASSIGN || type == LexerTokenType.L_R_BRACKET || type == LexerTokenType.R_R_BRACKET || type == LexerTokenType.L_S_BRACKET || type == LexerTokenType.R_S_BRACKET || type == LexerTokenType.L_C_BRACKET || type == LexerTokenType.R_C_BRACKET || type == LexerTokenType.ABS || type == LexerTokenType.POWER || type == LexerTokenType.FACTORIAL || type == LexerTokenType.PERCENTAGE || type == LexerTokenType.ARGUMENT_SEPARATOR)
             return insert_token (type);
 
         /* [LexerTokenType.PL_SUPER_MINUS][LexerTokenType.PL_SUPER_DIGIT]+ */

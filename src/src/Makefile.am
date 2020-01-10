@@ -1,19 +1,23 @@
 bin_PROGRAMS = gnome-calculator gcalccmd
 noinst_PROGRAMS = test-number test-equation test-serializer
 
-TESTS = test-number test-equation
+TESTS = test-number test-equation test-serializer
 
-INCLUDES = \
+AM_CPPFLAGS = \
 	-DUI_DIR=\""$(datadir)/gnome-calculator"\" \
 	-DVERSION=\""$(VERSION)"\" \
 	-DLOCALE_DIR=\""$(localedir)"\" \
 	-DGETTEXT_PACKAGE=\"$(GETTEXT_PACKAGE)\" \
-	$(WARN_CFLAGS) \
+	-w \
 	$(GNOME_CALCULATOR_CFLAGS)
+
+BUILT_SOURCES = resources.c
+
+resources.c: $(top_srcdir)/data/gnome-calculator.gresource.xml $(shell $(GLIB_COMPILE_RESOURCES) --generate-dependencies --sourcedir=$(top_srcdir)/data/ $(top_srcdir)/data/gnome-calculator.gresource.xml)
+	$(AM_V_GEN) $(GLIB_COMPILE_RESOURCES) --target=$@ --sourcedir=$(top_srcdir)/data/ --generate-source $<
 
 gnome_calculator_SOURCES = \
 	config.vapi \
-	fixes.vapi \
 	gnome-calculator.vala \
 	currency.vala \
 	equation.vala \
@@ -30,12 +34,17 @@ gnome_calculator_SOURCES = \
 	math-window.vala \
 	number.vala \
 	serializer.vala \
-  	unit.vala
+	unit.vala \
+	math-function.vala \
+	function-manager.vala \
+	math-function-popup.vala \
+	$(BUILT_SOURCES)
 
 gnome_calculator_VALAFLAGS = \
 	--target-glib 2.32 \
 	--pkg posix \
 	--pkg gtk+-3.0 \
+	--pkg gtksourceview-3.0 \
 	--pkg libxml-2.0
 
 gnome_calculator_LDADD = \
@@ -44,7 +53,6 @@ gnome_calculator_LDADD = \
 
 gcalccmd_SOURCES = \
 	config.vapi \
-	fixes.vapi \
 	gcalccmd.vala \
 	currency.vala \
 	equation.vala \
@@ -52,7 +60,9 @@ gcalccmd_SOURCES = \
 	equation-parser.vala \
 	number.vala \
 	serializer.vala \
-	unit.vala
+	unit.vala \
+	math-function.vala \
+	function-manager.vala
 
 gcalccmd_VALAFLAGS = \
 	--target-glib 2.32 \
@@ -66,7 +76,6 @@ gcalccmd_LDADD = \
 
 test_number_SOURCES = \
 	config.vapi \
-	fixes.vapi \
 	test-number.vala \
 	number.vala \
 	serializer.vala
@@ -83,7 +92,6 @@ test_number_LDADD = \
 
 test_equation_SOURCES = \
 	config.vapi \
-	fixes.vapi \
 	test-equation.vala \
 	currency.vala \
 	equation.vala \
@@ -91,7 +99,9 @@ test_equation_SOURCES = \
 	equation-parser.vala \
 	number.vala \
 	serializer.vala \
-	unit.vala
+	unit.vala \
+	math-function.vala \
+	function-manager.vala
 
 test_equation_VALAFLAGS = \
 	--target-glib 2.32 \
@@ -105,12 +115,11 @@ test_equation_LDADD = \
 
 test_serializer_SOURCES = \
 	config.vapi \
-	fixes.vapi \
 	test-serializer.vala \
 	number.vala \
 	serializer.vala
 
-test_serializer_VAFLAGS = \
+test_serializer_VALAFLAGS = \
 	--target-glib 2.32 \
 	--pkg posix \
 	--pkg gio-2.0 \
@@ -120,5 +129,4 @@ test_serializer_LDADD = \
 	$(GCALCCMD_LIBS) \
 	-lm
 
-DISTCLEANFILES = \
-	Makefile.in
+-include $(top_srcdir)/git.mk

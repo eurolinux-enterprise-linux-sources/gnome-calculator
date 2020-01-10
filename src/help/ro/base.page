@@ -20,7 +20,13 @@
     <p>75</p>
     <p>4B₁₆</p>
     </example>
-    <p>În <link xref="mouse">modul de programare</link> există butoane pentru binar (<keyseq><key>Ctrl</key><key>B</key></keyseq>), octal (<keyseq><key>Ctrl</key><key>O</key></keyseq>) și hexazecimal (<keyseq><key>Ctrl</key><key>H</key></keyseq>).</p>
-    <p>Pentru a defini baza în care sunt afișate rezultatele modificați <link xref="number-display">formatul rezultatului</link>.</p>
-    <p>Pentru a modifica baza rezultatului curent utilizați un buton pentru bază sau <keyseq><key>Ctrl</key><key>D</key></keyseq> pentru a afișa în formă zecimală.</p>
+    <p>
+    When in <link xref="mouse">programming mode</link>, use the drop-down menu to change the base of the calculation.
+    </p>
+    <p>
+    Keyboard shortcuts can be used to switch to <gui>Binary</gui> (<keyseq><key>Ctrl</key><key>B</key></keyseq>), <gui>Octal</gui> (<keyseq><key>Ctrl</key><key>O</key></keyseq>), <gui>Decimal</gui> (<keyseq><key>Ctrl</key><key>D</key></keyseq>) and <gui>Hexadecimal</gui> (<keyseq><key>Ctrl</key><key>H</key></keyseq>) modes.
+    </p>
+    <p>
+    To convert numbers to other base on the fly, <link xref="conv-base">Number Base conversion</link> can be used.
+    </p>
 </page>

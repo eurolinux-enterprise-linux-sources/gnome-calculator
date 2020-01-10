@@ -7,7 +7,5 @@
 
 	<title>Kompleksie skaitļi</title>
     
-    <p>
-    Complex numbers are not supported in <app>Calculator</app>.
-    </p>
+    <p><app>Kalkulators</app> neatbalsta kompleksos skaitļus.</p>
 </page>

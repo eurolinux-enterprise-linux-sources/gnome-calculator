@@ -17,6 +17,20 @@
     <example>
     <p>sin 30</p>
     <p>abs (5−9)</p>
+    <p>fun (9;10)</p>
+    </example>
+    <p>
+    To add a new function type the function in the format as given below. A function name and arguments must only contain upper or lower case characters. The part after @ is the function description which is optional.
+    </p>
+    <example>
+    <p>SimpleInterest (principal; rate; time) = principal * rate * time @ Simple Interest formula</p>
+    </example>
+    <p>As funcións tamén se poden engadir e inserir usando o botón f(x)</p>
+    <example>
+    <p>Prema en f(x). Escria o nome da función na caixa, escolla o número de argumentos e prema no botón de +. Na pantalla da calculadora escriba a expresión da función e prema <key>Intro</key>.</p>
+    </example>
+    <example>
+    <p>Prema en f(x). Seleccione a función e prema sobre ela.</p>
     </example>
     <p>As seguinte funcións sempre están definidas</p>
     <table>
@@ -81,5 +95,4 @@
     <td><p>Complemento a dous</p></td>
     </tr>
     </table>
-    <p><app>Calculadora</app> non admite funcións definidas polo usuario.</p>
 </page>

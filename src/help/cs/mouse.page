@@ -3,14 +3,23 @@
 
     <info>
         <link type="guide" xref="index#ui"/>
-    </info>
+    
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Marek Černocký</mal:name>
+      <mal:email>marek@manet.cz</mal:email>
+      <mal:years>2009, 2010, 2011, 2013</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Lucas Lommer</mal:name>
+      <mal:email>llommer@svn.gnome.org</mal:email>
+      <mal:years>2009</mal:years>
+    </mal:credit>
+  </info>
 
 	<title>Používání myši</title>
 
-    <p>
-    All equations can be entered using the mouse.
-    To access all buttons there are a number of modes that can be selected from the <gui>Mode</gui> menu.
-    </p>
+    <p>Všechny výrazy je možné zadat pomocí myši. Aby byl přístup ke všem tlačítkům, je zde několik režimů kalkulačky, které si můžete přepínat v nabídce <gui>Režim</gui>.</p>
     <table>
     <tr>
     <td><p>Základní</p></td>
@@ -18,7 +27,7 @@
     </tr>
     <tr>
     <td><p>Pokročilý</p></td>
-    <td><p>Provides buttons suitable for advanced mathematics such as <link xref="trigonometry"/></p></td>
+    <td><p>Poskytuje tlačítka potřebná pro pokročilou matematiku, jako je <link xref="trigonometry"/></p></td>
     </tr>
     <tr>
     <td><p>Finanční</p></td>

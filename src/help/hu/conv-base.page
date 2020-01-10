@@ -13,5 +13,14 @@
 
 	<title>Számrendszerek</title>
     
-    <p>Számrendszerek közti konverzióhoz adjon meg egy számot (vagy számoljon ki egy egyenletet), és módosítsa az <link xref="number-display">eredmény formátumát</link> a <guiseq><gui>Számológép</gui><gui>Beállítások</gui></guiseq> menüből.</p>
+    <p>Egy szám másik számrendszerbe konvertálására az <em>in</em> operátor használható.</p>
+    <example>
+    <p>12 in hex</p>
+    <p>5 in binary</p>
+    <p>1A₁₆ in dec</p>
+    <p>1010₂ in octal</p>
+    </example>
+    <note>
+      <p>A számrendszer-konverziót a billentyűzet használatával kell végrehajtani.</p>
+    </note>
 </page>

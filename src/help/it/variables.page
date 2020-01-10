@@ -19,7 +19,10 @@
 
 	<title>Variabili</title>
     
-    <p>Per assegnare un valore a una variabile usare il simbolo = oppure scegliere la variaile da assegnare con il pulsante <gui>x</gui> nella <link xref="mouse">modalità avanzata</link>. Un nome di variabile può contenere solo lettere minuscole o maiuscole.</p>
+    <p>
+    To assign a value to a variable use the = symbol or choose the variable to assign to with the <gui>x</gui> button in <link xref="mouse">advanced mode</link>.
+    A variable name must only contain upper or lower case characters.
+    </p>
     <example>
     <p>x=5</p>
     <p>value=82</p>

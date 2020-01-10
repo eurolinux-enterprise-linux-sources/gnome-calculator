@@ -13,10 +13,37 @@
 
 	<title>関数</title>
     
-    <p>関数名に関数の引数を続けて挿入することで関数を使用できます。引数が数か<link xref="variable">変数</link>でない場合は、引数を括弧で囲んでください。</p>
+    <p>
+    Functions can be used by inserting the name of the function followed by function arguments. <app>Calculator</app> also support user-defined functions.
+    If the argument is not a number or <link xref="variable">a single variable</link> then write each argument separated by semicolon and use parenthesis around the argument list.
+    </p>
     <example>
     <p>sin 30</p>
     <p>abs (5−9)</p>
+    <p>
+    fun (9;10)
+    </p>
+    </example>
+    <p>
+    To add a new function type the function in the format as given below. A function name and arguments must only contain upper or lower case characters. The part after @ is the function description which is optional.
+    </p>
+    <example>
+    <p>
+    SimpleInterest (principal; rate; time) = principal * rate * time @ Simple Interest formula
+    </p>
+    </example>
+    <p>
+    Functions can also be added and inserted using the f(x) button.
+    </p>
+    <example>
+    <p>
+    Click on f(x). Type the function name in the box, choose the number of arguments and click on the plus sign button next to it. On the calculator screen type the function expression and press <key>Enter</key>.
+    </p>
+    </example>
+    <example>
+    <p>
+    Click on f(x). Choose the function and click on it.
+    </p>
     </example>
     <p>以下の関数が定義されています。</p>
     <table>
@@ -81,5 +108,4 @@
     <td><p>2 の補数</p></td>
     </tr>
     </table>
-    <p><app>電卓</app> は、ユーザー定義関数をサポートしていません。</p>
 </page>

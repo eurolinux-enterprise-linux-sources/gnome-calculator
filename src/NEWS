@@ -1,11 +1,147 @@
-Overview of changes in gnome-calculator 3.8.2
-    * Updated translations
+Overview of changes in gnome-calculator 3.14.1
+    * Update : Translations (Translation team)
+    * Update : Search provider timeout (Michael Catanzaro)
+    * Workaround : Warning in search-provider log (Michael Catanzaro)
+    * Fix : Crash on thousand saperator (Michael Catanzaro)
+    * Fix : Button arrangement in programming mode (Abhinav)
+    * Fix : Vala warning about empty conditional body (Michael Catanzaro)
+    * Fix : Remove use of GtkAlignment (Michael Catanzaro)
+    * Fix : Use set_accels_for_action() (Arnaud Bonatti)
+    * Removed : Gtk.Widget.ensure_style() (Michael Catanzaro)
+    * Removed : Use of fixes.vapi for langinfo (Michael Catanzaro)
 
-Overview of changes in gnome-calculator 3.8.1
-    * Fix subtract button inserts additional minus
-    * Fix error reporting bug for malformed expression
-    * Fix crash issue with null pointer dereference
-    * Updated translation
+Overview of changes in gnome-calculator 3.14.0
+    * Update : Translations (Translation team)
+
+Overview of changes in gnome-calculator 3.13.92
+    * Update : Translations (Translation team)
+    * Fix : Documentation (Documentation team)
+
+Overview of changes in gnome-calculator 3.13.90
+    * Update : Translations (Translation team)
+    * Update : doap file (Piotr Drąg, Olav Vitters)
+    * Fix : test install (Vadim Rutkovsky)
+
+Overview of changes in gnome-calculator 3.13.3
+    * New : Calculator search provider (Michael Catanzaro)
+    * New : Tests in release tarball (Vadim Rutkovsky)
+    * New : Localized radix character from command-line (Michael Catanzaro)
+    * Update : Translations (Translation team)
+    * Fix : Restore previous answer on undo (Rodolphe PELLOUX-PRAYER)
+    * Fix : Segfault on undo beyond history (Elita Lobo)
+    * Fix : Malformed expression error on base change (PioneerAxon)
+    * Fix : Critical warnings when entering Financial Mode (Michael Catanzaro)
+    * Fix : Fix gcalccmd crash (PioneerAxon)
+    * Fix : gcalccmd now exits with new-line (PioneerAxon)
+    * Fix : Reset text in new function pop-up (ZZroman)
+    * Fix : Removed redundent calls to notify_property() (Michael Catanzaro)
+    * Fix : Use layout based decimal saperator on numberpad (Pierre Ossman)
+    * Fix : Appdata : add default screenshot (Richard Hughes)
+    * Fix : Don't create fundamental types (Michael Catanzaro)
+    * Fix : Typo in step definition filelist (Vadim Rutkovsky)
+    * Removed : Latvian lats from default currencies (Michael Catanzaro)
+
+Overview of changes in gnome-calculator 3.13.2
+    * New : Tests (Vadim Rutkovsky)
+    * New : Use popover to change mode (Michael Catanzaro)
+    * New : Use headerbar for preference dialog (Michael Catanzaro)
+    * Update : GTK+ and vala dependencies (Michael Catanzaro)
+    * Update : Modernize option parsing (Paolo Borelli)
+    * Update : URLs in doap file (Piotr Drag)
+    * Update : License fields in appdata (Michael Catanzaro)
+    * Update : Translations (Translation team)
+    * Fix : Ignore libtool files (Michael Catanzaro)
+    * Fix : Failing test-case due to updated libc (PioneerAxon)
+    * Fix : Crash due to non-validated return iterator (Andreas Henriksson)
+    * Fix : Close popover after changing mode (Arnaud Bonatti)
+    * Fix : Focus input field after mode change (Michael Catanzaro)
+    * Fix : Mark image not translatable (Gabor Kelemen)
+    * Fix : Crash on sub/superscript with trailing space (Robert Ancell)
+
+Overview of changes in gnome-calculator 3.12.0
+    * Update : Translations (Translation team)
+
+Overview of changes in gnome-calculator 3.11.92
+    * Update : Translations (Translation team)
+    * Fix : Lost text focus on click (Simen Heggestøyl)
+
+Overview of changes in gnome-calculator 3.11.91
+    * New : Use git.mk (Michael Catanzaro)
+    * Update : Rename desktop file (Michael Catanzaro)
+    * Update : Translations (Translation team)
+    * Fix : Makefile (Michael Catanzaro)
+    * Fix : Precision loss (Daniel Renninghoff)
+    * Fix : 0^0 should be indeterminate (Elita Lobo)
+    * Fix : Precision error for ln () calculations (Daniel Renninghoff)
+
+Overview of changes in gnome-calculator 3.11.90
+    * Update : Translations (Translation team)
+    * Fix : Window specific mode and actions (Michael Catanzaro)
+    * Fix : About dialog (Michael Catanzaro)
+
+Overview of changes in gnome-calculator 3.11.5
+    * Update : Translations (Translation team)
+    * Update : Documentation (PioneerAxon, Baptiste Mille-Mathias)
+    * Fix : Appdata (Michael Catanzaro)
+
+Overview of changes in gnome-calculator 3.11.4
+    * Update : Translations (Translations team)
+    * Fix : Add tooltip to custom functions (Garima Joshi)
+    * Fix : Bug in representation mode for non-decimal answers (PioneerAxon)
+
+Overview of changes in gnome-calculator 3.11.3
+    * New : Custom functions (Garima Joshi)
+    * New : Support for factorials of positive decimal numbers (Rashid Khan)
+    * Update : Depend on newer versions of GTK, Vala (Michael Catanzaro)
+    * Update : Translations
+    * Update : Use HeaderBar (Michael Catanzaro)
+    * Fix : Stop using stock icons (Robert Ancell)
+    * Fix : Compilation warnings (Robert Ancell)
+    * Fix : Title in basic mode (Michael Catanzaro)
+    * Fix : Typos (Christian Kirbach, Seán de Búrca)
+    * Fix : Newline text wrap bug (Kevin THIERRY)
+    * Fix : "Malformed expression" stays forever bug (Rashid Khan)
+    * Fix : AppData (Richard Hughes)
+    * Fix : Misc cleanup (Michael Catanzaro, Olav Vitters)
+
+Overview of changes in gnome-calculator 3.10.0
+    * Update translations
+
+Overview of changes in gnome-calculator 3.9.92
+    * Update translations
+    * Add Appdata
+
+Overview of changes in gnome-calculator 3.9.90
+    * Fix precedence related bugs
+    * Fix app name in about dialog
+    * Add logo to help index
+    * Update man page
+    * Fix desktop file (see bug #699073)
+    * Update translations
+
+Overview of changes in gnome-calculator 3.9.4
+    * Fix TextBufferIterator bug in base conversion
+    * Update Catalan Documentation
+
+Overview of changes in gnome-calculator 3.9.3
+    * Update translation
+
+Overview of changes in gnome-calculator 3.9.2
+    * Improve integer exponentiation & factorization
+    * Fix modular exponentiation calculation error
+    * Fix consecutive squaring crash
+    * Fix crash in nested power calculation
+    * Use .ui file for app menu
+    * Fix uninitialized variable
+    * Workaround for gtk_builder_add_objects_from_resource ()
+    * Fix .doap and .ui files (set buttons table as toplevel)
+    * Use gresource for .ui files
+    * Fix null pointer dereferrence
+    * Fix for subtract button inserting additional minus
+    * Fix error reporting on Malformed expression
+    * Fix compiler warnings
+    * Fix typo
+    * Update translation
 
 Overview of changes in gnome-calculator 3.8.0
     * Update translation

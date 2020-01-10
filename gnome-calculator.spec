@@ -1,15 +1,14 @@
 Name:           gnome-calculator
-Version:        3.8.2
-Release:        4%{?dist}
+Version:        3.14.1
+Release:        2%{?dist}
 Summary:        A desktop calculator
 
 Group:          Applications/System
 License:        GPLv2+
 URL:            http://live.gnome.org/Gcalctool
 #VCS: git:git://git.gnome.org/gcalctool
-Source0:        http://download.gnome.org/sources/%{name}/3.8/%{name}-%{version}.tar.xz
-
-Patch0:         gnome-calculator-translations.patch
+Source0:        http://download.gnome.org/sources/%{name}/3.14/%{name}-%{version}.tar.xz
+Patch0:         gnome-calculator-translations-3.14.patch
 
 BuildRequires: glib2-devel
 BuildRequires: gtk3-devel
@@ -20,6 +19,7 @@ BuildRequires: flex
 BuildRequires: bison
 BuildRequires: intltool
 BuildRequires: itstool
+BuildRequires: gtksourceview3-devel
 
 Requires(post): glib2
 Requires(postun): glib2
@@ -36,9 +36,7 @@ to do its arithmetic to give a high degree of accuracy.
 
 %prep
 %setup -q
-
-%patch0 -p2 -b .translations
-
+%patch0 -p1 -b .translations
 
 %build
 %configure
@@ -48,7 +46,7 @@ make %{?_smp_mflags}
 %install
 make install DESTDIR=$RPM_BUILD_ROOT
 
-desktop-file-validate $RPM_BUILD_ROOT%{_datadir}/applications/gcalctool.desktop
+desktop-file-validate $RPM_BUILD_ROOT%{_datadir}/applications/gnome-calculator.desktop
 
 %find_lang %{name} --with-gnome --all-name
 
@@ -67,14 +65,24 @@ glib-compile-schemas %{_datadir}/glib-2.0/schemas &> /dev/null || :
 %doc COPYING NEWS
 %{_bindir}/gcalccmd
 %{_bindir}/gnome-calculator
-%{_datadir}/applications/gcalctool.desktop
+%{_libexecdir}/gnome-calculator-search-provider
+%{_datadir}/appdata/gnome-calculator.appdata.xml
+%{_datadir}/applications/gnome-calculator.desktop
+%{_datadir}/dbus-1/services/org.gnome.Calculator.SearchProvider.service
 %{_datadir}/glib-2.0/schemas/org.gnome.calculator.gschema.xml
-%{_datadir}/gnome-calculator
+%{_datadir}/gnome-shell/
 %doc %{_mandir}/man1/gnome-calculator.1.gz
 %doc %{_mandir}/man1/gcalccmd.1.gz
 
 
 %changelog
+* Wed May  6 2015 Alexander Larsson <alexl@redhat.com> - 3.14.1-2
+- Add new translations
+
+* Mon Mar 23 2015 Richard Hughes <rhughes@redhat.com> - 3.14.1-1
+- Update to 3.14.1
+- Resolves: #1174575
+
 * Fri Jan 24 2014 Daniel Mach <dmach@redhat.com> - 3.8.2-4
 - Mass rebuild 2014-01-24
 

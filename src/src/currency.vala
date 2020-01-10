@@ -58,7 +58,6 @@ public class CurrencyManager : Object
         default_currency_manager.currencies.append (new Currency ("KZT", _("Kazakhstani Tenge"), "₸"));
         default_currency_manager.currencies.append (new Currency ("LKR", _("Sri Lankan Rupee"), "Rs"));
         default_currency_manager.currencies.append (new Currency ("LTL", _("Lithuanian Litas"), "Lt"));
-        default_currency_manager.currencies.append (new Currency ("LVL", _("Latvian Lats"), "Ls"));
         default_currency_manager.currencies.append (new Currency ("LYD", _("Libyan Dinar"), "د.ل"));
         default_currency_manager.currencies.append (new Currency ("MUR", _("Mauritian Rupee"), "Rs"));
         default_currency_manager.currencies.append (new Currency ("MXN", _("Mexican Peso"), "$"));
@@ -382,7 +381,7 @@ public class CurrencyManager : Object
 
         /* Check if we couldn't find out a currency */
         foreach (var c in currencies)
-            if (c.get_value ().is_zero ())
+            if (c.get_value () == null || c.get_value ().is_zero ())
                 warning ("Currency %s is not provided by IMF or ECB", c.name);
 
         debug ("Rates loaded");
@@ -469,7 +468,7 @@ public class CurrencyManager : Object
 
 public class Currency : Object
 {
-    private Number value;
+    private Number? value;
 
     private string _name;
     public string name { owned get { return _name; } }
@@ -492,7 +491,7 @@ public class Currency : Object
         this.value = value;
     }
 
-    public Number get_value ()
+    public Number? get_value ()
     {
         return value;
     }

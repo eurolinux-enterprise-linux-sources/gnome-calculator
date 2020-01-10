@@ -3,16 +3,36 @@
 
     <info>
         <link type="guide" xref="index#equation"/>
-    </info>
-
-	<title>Módulo da Divisão</title>
     
-    <p>
-    Modulus division is performed using the mod operator.
-    </p>
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Irapuan Pascoal</mal:name>
+      <mal:email>irapuan.menezes@gmail.com</mal:email>
+      <mal:years>2007</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Georges Basile Stavracas Neto</mal:name>
+      <mal:email>georges.stavracas@gmail.com</mal:email>
+      <mal:years>2013</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Lucas Romero de Abreu</mal:name>
+      <mal:email>lucasdeabreu@gmail.com</mal:email>
+      <mal:years>2013</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Enrico Nicoletto</mal:name>
+      <mal:email>liverig@gmail.com</mal:email>
+      <mal:years>2013</mal:years>
+    </mal:credit>
+  </info>
+
+	<title>Resto da divisão</title>
+    
+    <p>O resto da divisão é efetuado usando o operador mod.</p>
     <example>
-    <p>
-    9 mod 5
-    </p>
+    <p>9 mod 5</p>
     </example>
 </page>

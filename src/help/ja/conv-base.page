@@ -13,5 +13,24 @@
 
 	<title>基数</title>
     
-    <p>基数を変更するには、<link xref="mouse">プログラミングモード</link>に入り、数字を入力するか式を計算してから、進法を選択します。</p>
+    <p>
+    To convert the number to a different base representation use the <em>in</em> operator.
+    </p>
+    <example>
+    <p>
+    12 in hex
+    </p>
+    <p>
+    5 in binary
+    </p>
+    <p>
+    1A₁₆ in dec
+    </p>
+    <p>
+    1010₂ in octal
+    </p>
+    </example>
+    <note>
+      <p>Number Base conversions must be performed using the keyboard.</p>
+    </note>
 </page>

@@ -27,6 +27,18 @@
       <mal:email>liverig@gmail.com</mal:email>
       <mal:years>2013</mal:years>
     </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Rafael Fontenelle</mal:name>
+      <mal:email>rafaelff@gnome.org</mal:email>
+      <mal:years>2013, 2014</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Felipe Braga</mal:name>
+      <mal:email>fbobraga@gmail.com</mal:email>
+      <mal:years>2015</mal:years>
+    </mal:credit>
   </info>
 
 	<title>Funções financeiras</title>
@@ -58,15 +70,15 @@
     </tr>
     <tr>
     <td><p>Taxa</p></td>
-    <td><p>Calcula o juro periódico necessário para aumentar um investimento para um valor futuro, sobre o número de períodos compostos. </p></td>
+    <td><p>Calcula o juro periódico necessário para aumentar um investimento para um valor futuro, sobre o número de períodos compostos.</p></td>
     </tr>
     <tr>
     <td><p>Cdl</p></td>
-    <td><p>Calcula a depreciação linear de um ativo para um período. O método de depreciação linear divide o custo de depreciação de forma uniforme sobre a vida útil de um ativo. A vida útil é o número de períodos, normalmente anos, no qual um ativo é depreciado. </p></td>
+    <td><p>Calcula a depreciação linear de um ativo para um período. O método de depreciação linear divide o custo de depreciação de forma uniforme sobre a vida útil de um ativo. A vida útil é o número de períodos, normalmente anos, no qual um ativo é depreciado.</p></td>
     </tr>
     <tr>
     <td><p>Saa</p></td>
-    <td><p>Calcula o desconto de depreciação de um ativo para um período específico de tempo, utilizando o método da "soma dos algarismos dos anos". Este método de depreciação acelera a taxa de depreciação, para que a maior depreciação ocorra em períodos iniciais do que em posteriores. A vida útil é o número de períodos, normalmente em anos, no qual o bem é depreciado. </p></td>
+    <td><p>Calcula o desconto de depreciação de um ativo para um período específico de tempo, utilizando o método da "soma dos algarismos dos anos". Este método de depreciação acelera a taxa de depreciação, para que a maior depreciação ocorra em períodos iniciais do que em posteriores. A vida útil é o número de períodos, normalmente em anos, no qual o bem é depreciado.</p></td>
     </tr>
     <tr>
     <td><p>Prazo</p></td>

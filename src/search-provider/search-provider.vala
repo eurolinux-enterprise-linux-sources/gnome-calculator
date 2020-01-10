@@ -4,7 +4,7 @@
  *
  * This program is free software: you can redistribute it and/or modify it under
  * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 2 of the License, or (at your option) any later
+ * Foundation, either version 3 of the License, or (at your option) any later
  * version. See http://www.gnu.org/copyleft/gpl.html the full text of the
  * license.
  */
@@ -22,9 +22,30 @@ public class SearchProvider : Object
         try
         {
             int exit_status;
+
+            var tsep_string = Posix.nl_langinfo (Posix.NLItem.THOUSEP);
+            if (tsep_string == null || tsep_string == "")
+                tsep_string = " ";
+
+            var decimal = Posix.nl_langinfo (Posix.NLItem.RADIXCHAR);
+            if (decimal == null)
+                decimal = "";
+
+            // "normalize" input to a format known to double.try_parse
+            var equation = terms_to_equation (terms).replace (tsep_string, "").replace (decimal, ".");
+
+            // if the search is a plain number, don't process it
+            if (double.try_parse (equation)) {
+                return false;
+            }
+
+            // Eat output so that it doesn't wind up in the journal. It's
+            // expected that most searches are not valid calculator input.
+            string stdout_buf;
+            string stderr_buf;
             Process.spawn_command_line_sync (
-                "gnome-calculator --solve " + Shell.quote (terms_to_equation (terms)),
-                null, null, out exit_status);
+                "gnome-calculator --solve " + Shell.quote (equation),
+                out stdout_buf, out stderr_buf, out exit_status);
             Process.check_exit_status (exit_status);
         }
         catch (SpawnError e)
@@ -40,7 +61,7 @@ public class SearchProvider : Object
     }
 
     private static string[] get_result_identifier (string[] terms)
-//        ensures (result.length == 0 || result.length == 1)    bug #737222
+        ensures (result.length == 0 || result.length == 1)
     {
         /* We have at most one result: the search terms as one string */
         if (can_parse (terms))
@@ -61,10 +82,11 @@ public class SearchProvider : Object
 
     public HashTable<string, Variant>[] get_result_metas (string[] results)
         requires (results.length == 1)
-//        ensures (result.length == 1)  bug #737222
+        ensures (result.length == 1)
     {
         Subprocess subprocess;
         string stdout_buf;
+        string stderr_buf;
 
         string[] argv = {"gnome-calculator", "--solve"};
         argv += results[0];
@@ -72,7 +94,7 @@ public class SearchProvider : Object
 
         try
         {
-            subprocess = new Subprocess.newv (argv, SubprocessFlags.STDOUT_PIPE);
+            subprocess = new Subprocess.newv (argv, SubprocessFlags.STDOUT_PIPE | SubprocessFlags.STDERR_PIPE);
         }
         catch (Error e)
         {
@@ -81,7 +103,7 @@ public class SearchProvider : Object
 
         try
         {
-            subprocess.communicate_utf8 (null, null, out stdout_buf, null);
+            subprocess.communicate_utf8 (null, null, out stdout_buf, out stderr_buf);
         }
         catch (Error e)
         {
@@ -148,5 +170,7 @@ public class SearchProviderApp : Application
 
 int main ()
 {
+    Intl.setlocale (LocaleCategory.ALL, "");
+
     return new SearchProviderApp ().run ();
 }

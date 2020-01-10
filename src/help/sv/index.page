@@ -7,27 +7,39 @@
 			<email>robert.ancell@gmail.com</email>
 		</credit>
 		<include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
-	</info>
+	
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Daniel Nylander</mal:name>
+      <mal:email>po@danielnylander.se</mal:email>
+      <mal:years>2006, 2007, 2009</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Sebastian Rasmussen</mal:name>
+      <mal:email>sebras@gmail.com</mal:email>
+      <mal:years>2015</mal:years>
+    </mal:credit>
+  </info>
 
-	<title><media type="image" src="figures/logo32.png" its:translate="no"/> Calculator Help</title>
+	<title><media type="image" src="figures/logo32.png" its:translate="no"/> Kalkylatorhjälp</title>
 
     <section id="ui" style="2column">
-        <title>User Interface</title>
+        <title>Användargränssnitt</title>
     </section>
     
     <section id="equation" style="2column">
-        <title>Equations</title>
+        <title>Ekvationer</title>
     </section>
 
     <section id="number" style="2column">
-        <title>Numbers</title>
+        <title>Tal</title>
     </section>
 
     <section id="conversion" style="2column">
-        <title>Conversions</title>
+        <title>Konverteringar</title>
     </section>
 
     <section id="financial" style="2column">
-        <title>Financial Calculations</title>
+        <title>Finansiella beräkningar</title>
     </section>
 </page>

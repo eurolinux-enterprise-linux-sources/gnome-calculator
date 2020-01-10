@@ -3,43 +3,35 @@
 
     <info>
         <link type="guide" xref="index#equation"/>
-    </info>
-
-	<title>Trigonometry</title>
     
-    <p>
-    Trigonometry can be performed using the sin, cos, and tan <link xref="function">function</link>.
-    </p>
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Daniel Nylander</mal:name>
+      <mal:email>po@danielnylander.se</mal:email>
+      <mal:years>2006, 2007, 2009</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Sebastian Rasmussen</mal:name>
+      <mal:email>sebras@gmail.com</mal:email>
+      <mal:years>2015</mal:years>
+    </mal:credit>
+  </info>
+
+	<title>Trigonometri</title>
+    
+    <p>Trigonometri kan beräknas med sin-, cos- och tan-<link xref="function">funktionerna</link>.</p>
     <example>
-    <p>
-    sin 45
-    </p>
+    <p>sin 45</p>
     </example>
-    <p>
-    The angle units used can be changed from the <guiseq><gui>Calculator</gui><gui>Preferences</gui></guiseq> menu.
-    Trigonometry buttons are visible when in <link xref="mouse">Advanced mode</link>.
-    </p>
-    <p>
-    Hyperbolic functions are available by adding "h" to the end of a function.
-    </p>
+    <p>Enheten för vinklar kan ändras från menyn <guiseq><gui>Kalkylator</gui><gui>Inställningar</gui></guiseq>. Trigonometriknapparna visas i <link xref="mouse">avancerat läge</link>.</p>
+    <p>Hyperboliska funktioner går att nå genom att lägga till ”h” på slutet av en funktion.</p>
     <example>
-    <p>
-    sinh 0.34
-    </p>
+    <p>sinh 0.34</p>
     </example>
-    <p>
-    Inverse functions are entered either using the inverse symbol ⁻¹ (<keyseq><key>Ctrl</key><key>I</key></keyseq>) or the "a" form of the function.
-    The following two equations are equivalent.
-    </p>
+    <p>Inversfunktioner matas in antingen med hjälp av inverssymbolen ⁻¹ (<keyseq><key>Ctrl</key><key>I</key></keyseq>) eller ”a”-formen av funktionen. Följande två ekvationer är ekvivalenta.</p>
     <example>
-    <p>
-    sin⁻¹ 0.5
-    </p>
-    <p>
-    asin 0.5 
-    </p>
+    <p>sin⁻¹ 0.5</p>
+    <p>asin 0.5</p>
     </example>   
-    <p>
-    To enter <link xref="variable">π</link> with the keyboard use <keyseq><key>Ctrl</key><key>P</key></keyseq>.
-    </p>
+    <p>För att mata in <link xref="variable">π</link> med tangentbordet använd <keyseq><key>Ctrl</key><key>P</key></keyseq>.</p>
 </page>

@@ -3,17 +3,24 @@
 
     <info>
         <link type="guide" xref="index#equation"/>
-    </info>
-
-	<title>Factorials</title>
     
-    <p>
-    Factorials are entered using the ! symbol.
-    To calculate the factorial of 6 enter the following.
-    </p>
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Daniel Nylander</mal:name>
+      <mal:email>po@danielnylander.se</mal:email>
+      <mal:years>2006, 2007, 2009</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Sebastian Rasmussen</mal:name>
+      <mal:email>sebras@gmail.com</mal:email>
+      <mal:years>2015</mal:years>
+    </mal:credit>
+  </info>
+
+	<title>Fakulteter</title>
+    
+    <p>Fakulteter matas in med hjälp av symbolen !. För att beräkna fakulteten av 6 mata in följande.</p>
     <example>
-    <p>
-    6!
-    </p>
+    <p>6!</p>
     </example>
 </page>

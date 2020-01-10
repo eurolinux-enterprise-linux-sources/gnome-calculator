@@ -608,6 +608,9 @@
                 <property name="xalign">0</property>
                 <property name="label">63</property>
                 <property name="justify">center</property>
+                <style>
+                  <class name="dim-label"/>
+                </style>
               </object>
               <packing>
                 <property name="top_attach">1</property>
@@ -617,11 +620,14 @@
               </packing>
             </child>
             <child>
-              <object class="GtkLabel" id="bit_maker_label3">
+              <object class="GtkLabel" id="bit_marker_label3">
                 <property name="visible">True</property>
                 <property name="xalign">0</property>
                 <property name="label">31</property>
                 <property name="justify">center</property>
+                <style>
+                  <class name="dim-label"/>
+                </style>
               </object>
               <packing>
                 <property name="top_attach">3</property>
@@ -636,6 +642,9 @@
                 <property name="xalign">0</property>
                 <property name="label">32</property>
                 <property name="justify">center</property>
+                <style>
+                  <class name="dim-label"/>
+                </style>
               </object>
               <packing>
                 <property name="left_attach">38</property>
@@ -652,6 +661,9 @@
                 <property name="xalign">0</property>
                 <property name="label">0</property>
                 <property name="justify">center</property>
+                <style>
+                  <class name="dim-label"/>
+                </style>
               </object>
               <packing>
                 <property name="left_attach">38</property>
@@ -1306,6 +1318,9 @@
                 <property name="xalign">0</property>
                 <property name="label">47</property>
                 <property name="justify">center</property>
+                <style>
+                  <class name="dim-label"/>
+                </style>
               </object>
               <packing>
                 <property name="left_attach">20</property>
@@ -1322,6 +1337,9 @@
                 <property name="xalign">0</property>
                 <property name="label">15</property>
                 <property name="justify">center</property>
+                <style>
+                  <class name="dim-label"/>
+                </style>
               </object>
               <packing>
                 <property name="left_attach">20</property>
@@ -1774,6 +1792,8 @@
         <property name="n_rows">5</property>
         <property name="n_columns">10</property>
         <property name="homogeneous">True</property>
+        <property name="row_spacing">4</property>
+        <property name="column_spacing">4</property>
         <child>
           <object class="GtkButton" id="calc_root_button">
             <property name="label">√</property>
@@ -2848,12 +2868,12 @@
             <property name="layout_style">end</property>
             <child>
               <object class="GtkButton" id="button8">
-                <property name="label">gtk-cancel</property>
+                <property name="label" translatable="yes">_Cancel</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="can_default">True</property>
                 <property name="receives_default">True</property>
-                <property name="use_stock">True</property>
+                <property name="use_underline">True</property>
               </object>
               <packing>
                 <property name="expand">False</property>

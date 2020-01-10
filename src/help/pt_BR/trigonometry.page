@@ -27,23 +27,35 @@
       <mal:email>liverig@gmail.com</mal:email>
       <mal:years>2013</mal:years>
     </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Rafael Fontenelle</mal:name>
+      <mal:email>rafaelff@gnome.org</mal:email>
+      <mal:years>2013, 2014</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Felipe Braga</mal:name>
+      <mal:email>fbobraga@gmail.com</mal:email>
+      <mal:years>2015</mal:years>
+    </mal:credit>
   </info>
 
 	<title>Trigonometria</title>
     
-    <p>A trigonometria pode ser efetuada usando a <link xref="function">função</link> de sin, cos, e tan.</p>
+    <p>Cálculos trigonométricos podem ser efetuados usando as <link xref="function">funções</link> de sin, cos, e tan.</p>
     <example>
     <p>sin 45</p>
     </example>
     <p>As unidades de ângulo podem ser alteradas indo em <guiseq><gui>Calculadora</gui><gui>Preferências</gui></guiseq>. Os botões de trigonometria ficam visíveis quando a calculadora está no <link xref="mouse">Modo avançada</link>.</p>
     <p>As funções hiperbólicas ficam disponíveis ao adicionar "h" ao final de uma função.</p>
     <example>
-    <p>sinh 0.34</p>
+    <p>sinh 0,34</p>
     </example>
     <p>As funções inversas são inseridas tanto usando o simbolo inverso ⁻¹ (<keyseq><key>Ctrl</key><key>I</key></keyseq>) quanto usando a forma de função "a". As duas equações a seguir são equivalentes.</p>
     <example>
-    <p>sin⁻¹ 0.5</p>
-    <p>asin 0.5</p>
+    <p>sin⁻¹ 0,5</p>
+    <p>asin 0,5</p>
     </example>   
     <p>Para inserir o <link xref="variable">π</link> através do teclado, use <keyseq><key>Ctrl</key><key>P</key></keyseq>.</p>
 </page>

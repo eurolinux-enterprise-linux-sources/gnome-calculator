@@ -1,28 +1,23 @@
 Name:           gnome-calculator
-Version:        3.14.1
-Release:        2%{?dist}
+Version:        3.22.3
+Release:        1%{?dist}
 Summary:        A desktop calculator
 
-Group:          Applications/System
-License:        GPLv2+
-URL:            http://live.gnome.org/Gcalctool
-#VCS: git:git://git.gnome.org/gcalctool
-Source0:        http://download.gnome.org/sources/%{name}/3.14/%{name}-%{version}.tar.xz
-Patch0:         gnome-calculator-translations-3.14.patch
+License:        GPLv3+
+URL:            https://wiki.gnome.org/Apps/Calculator
+Source0:        https://download.gnome.org/sources/%{name}/3.22/%{name}-%{version}.tar.xz
 
-BuildRequires: glib2-devel
-BuildRequires: gtk3-devel
-BuildRequires: libsoup-devel
-BuildRequires: desktop-file-utils
-BuildRequires: gettext
-BuildRequires: flex
-BuildRequires: bison
-BuildRequires: intltool
-BuildRequires: itstool
-BuildRequires: gtksourceview3-devel
-
-Requires(post): glib2
-Requires(postun): glib2
+BuildRequires:  desktop-file-utils
+BuildRequires:  gettext
+BuildRequires:  intltool
+BuildRequires:  itstool
+BuildRequires:  libsoup-devel
+BuildRequires:  mpfr-devel
+BuildRequires:  pkgconfig(glib-2.0)
+BuildRequires:  pkgconfig(gtk+-3.0)
+BuildRequires:  pkgconfig(gtksourceview-3.0)
+BuildRequires:  pkgconfig(libxml-2.0)
+BuildRequires:  /usr/bin/appstream-util
 
 Provides:  gcalctool = 6.6.2-3
 Obsoletes: gcalctool < 6.6.2-3
@@ -36,19 +31,22 @@ to do its arithmetic to give a high degree of accuracy.
 
 %prep
 %setup -q
-%patch0 -p1 -b .translations
+
 
 %build
-%configure
+%configure --disable-static
 make %{?_smp_mflags}
 
 
 %install
-make install DESTDIR=$RPM_BUILD_ROOT
-
-desktop-file-validate $RPM_BUILD_ROOT%{_datadir}/applications/gnome-calculator.desktop
-
+%make_install
+find %{buildroot} -name '*.la' -delete
 %find_lang %{name} --with-gnome --all-name
+
+
+%check
+appstream-util validate-relax --nonet %{buildroot}/%{_datadir}/appdata/gnome-calculator.appdata.xml
+desktop-file-validate %{buildroot}/%{_datadir}/applications/gnome-calculator.desktop
 
 
 %postun
@@ -62,20 +60,26 @@ glib-compile-schemas %{_datadir}/glib-2.0/schemas &> /dev/null || :
 
 
 %files -f %{name}.lang
-%doc COPYING NEWS
+%doc NEWS
+%license COPYING
 %{_bindir}/gcalccmd
 %{_bindir}/gnome-calculator
+%{_libdir}/gnome-calculator/
 %{_libexecdir}/gnome-calculator-search-provider
 %{_datadir}/appdata/gnome-calculator.appdata.xml
 %{_datadir}/applications/gnome-calculator.desktop
 %{_datadir}/dbus-1/services/org.gnome.Calculator.SearchProvider.service
 %{_datadir}/glib-2.0/schemas/org.gnome.calculator.gschema.xml
 %{_datadir}/gnome-shell/
-%doc %{_mandir}/man1/gnome-calculator.1.gz
-%doc %{_mandir}/man1/gcalccmd.1.gz
+%{_mandir}/man1/gnome-calculator.1*
+%{_mandir}/man1/gcalccmd.1*
 
 
 %changelog
+* Wed Feb 22 2017 Matthias Clasen <mclasen@redhat.com> - 3.22.3-1
+- Rebase to 3.22.3
+  Resolves: rhbz#1386880
+
 * Wed May  6 2015 Alexander Larsson <alexl@redhat.com> - 3.14.1-2
 - Add new translations
 

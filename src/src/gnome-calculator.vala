@@ -4,7 +4,7 @@
  *
  * This program is free software: you can redistribute it and/or modify it under
  * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 2 of the License, or (at your option) any later
+ * Foundation, either version 3 of the License, or (at your option) any later
  * version. See http://www.gnu.org/copyleft/gpl.html the full text of the
  * license.
  */
@@ -31,7 +31,7 @@ public class Calculator : Gtk.Application
         { "about", about_cb, null, null, null },
         { "quit", quit_cb, null, null, null },
     };
-    
+
     public Calculator ()
     {
         Object (flags : ApplicationFlags.NON_UNIQUE);
@@ -56,6 +56,7 @@ public class Calculator : Gtk.Application
         var target_currency = settings.get_string ("target-currency");
         var source_units = settings.get_string ("source-units");
         var target_units = settings.get_string ("target-units");
+        var precision = settings.get_int ("precision");
 
         var equation = new MathEquation ();
         equation.accuracy = accuracy;
@@ -68,6 +69,7 @@ public class Calculator : Gtk.Application
         equation.target_currency = target_currency;
         equation.source_units = source_units;
         equation.target_units = target_units;
+        Number.precision = precision;
 
         add_action_entries (app_entries, this);
 
@@ -171,7 +173,7 @@ public class Calculator : Gtk.Application
             }
             else if (error == ErrorCode.MP)
             {
-                stderr.printf ("Error: %s\n", mp_get_error ());
+                stderr.printf ("Error: %s\n", Number.error);
                 return Posix.EXIT_FAILURE;
             }
             else
@@ -243,7 +245,8 @@ public class Calculator : Gtk.Application
                                "version", VERSION,
                                "copyright",
                                "\xc2\xa9 1986–2014 The Calculator authors",
-                               "license-type", Gtk.License.GPL_2_0,
+                               /* We link to MPFR which is LGPLv3+, so Calculator cannot be conveyed as GPLv2+ */
+                               "license-type", Gtk.License.GPL_3_0,
                                "comments",
                                /* Short description in the about dialog */
                                _("Calculator with financial and scientific modes."),

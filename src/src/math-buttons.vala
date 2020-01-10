@@ -3,7 +3,7 @@
  *
  * This program is free software: you can redistribute it and/or modify it under
  * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 2 of the License, or (at your option) any later
+ * Foundation, either version 3 of the License, or (at your option) any later
  * version. See http://www.gnu.org/copyleft/gpl.html the full text of the
  * license.
  */
@@ -13,7 +13,8 @@ public enum ButtonMode
     BASIC,
     ADVANCED,
     FINANCIAL,
-    PROGRAMMING
+    PROGRAMMING,
+    KEYBOARD
 }
 
 public class MathButtons : Gtk.Box
@@ -88,12 +89,12 @@ public class MathButtons : Gtk.Box
     private const string[] pv_entries = {"pv_pmt", "pv_pint", "pv_n"};
     private const string[] rate_entries = {"rate_fv", "rate_pv", "rate_n"};
     private const string[] sln_entries = {"sln_cost", "sln_salvage", "sln_life"};
-    private const string[] syd_entries = {"syd_cost", "syd_salvage", "syd_life"};
+    private const string[] syd_entries = {"syd_cost", "syd_salvage", "syd_life", "syd_period" };
     private const string[] term_entries = {"term_pmt","term_fv", "term_pint"};
 
     public MathButtons (MathEquation equation)
     {
-        Object (orientation: Gtk.Orientation.VERTICAL);
+        Object (orientation: Gtk.Orientation.VERTICAL, vexpand_set: true);
         spacing = 6;
         show.connect (load_buttons);
         this.equation = equation;
@@ -128,7 +129,7 @@ public class MathButtons : Gtk.Box
         for (var i = 0; i < entry_names.length; i++)
         {
             var entry = financial_ui.get_object (entry_names[i]) as Gtk.Entry;
-            if (i != ctrm_entries.length - 1)
+            if (i != entry_names.length - 1)
                 entry.set_data<Gtk.Entry> ("next-entry", financial_ui.get_object (entry_names[i+1]) as Gtk.Entry);
             entry.activate.connect (finc_activate_cb);
         }
@@ -163,7 +164,7 @@ public class MathButtons : Gtk.Box
         foreach (var label in bit_labels)
         {
             var text = " 0";
-            if ((bits & (1LL << i)) != 0)
+            if ((bits & (1ULL << i)) != 0)
                 text = " 1";
             label.set_text (text);
             i++;
@@ -620,6 +621,8 @@ public class MathButtons : Gtk.Box
         var button = builder.get_object (widget_name) as Gtk.Button;
         if (button == null)
             return;
+        if (name == "result") /* Adds blue color to result button */
+            button.get_style_context ().add_class ("suggested-action");
 
         if (data != null)
         {
@@ -931,23 +934,6 @@ public class MathButtons : Gtk.Box
         return true;
     }
 
-    private void remove_trailing_spaces ()
-    {
-        var insert_mark = equation.get_insert ();
-        Gtk.TextIter start, end;
-        equation.get_iter_at_mark (out end, insert_mark);
-        start = end;
-        while (start.backward_char ())
-        {
-            if (!start.get_char ().isspace ())
-            {
-                start.forward_char ();
-                break;
-            }
-        }
-        equation.delete (ref start, ref end);
-    }
-
     private void set_superscript_cb (Gtk.Button widget)
     {
         var button = widget as Gtk.ToggleButton;
@@ -956,7 +942,7 @@ public class MathButtons : Gtk.Box
         {
             equation.number_mode = NumberMode.SUPERSCRIPT;
             if (!equation.has_selection)
-                remove_trailing_spaces ();
+                equation.remove_trailing_spaces ();
         }
         else if (equation.number_mode == NumberMode.SUPERSCRIPT)
             equation.number_mode = NumberMode.NORMAL;
@@ -970,7 +956,7 @@ public class MathButtons : Gtk.Box
         {
             equation.number_mode = NumberMode.SUBSCRIPT;
             if (!equation.has_selection)
-                remove_trailing_spaces ();
+                equation.remove_trailing_spaces ();
         }
         else if (equation.number_mode == NumberMode.SUBSCRIPT)
             equation.number_mode = NumberMode.NORMAL;

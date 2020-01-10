@@ -13,7 +13,7 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Christian Kirbach</mal:name>
       <mal:email>Christian.Kirbach@googlemail.com</mal:email>
-      <mal:years>2008, 2009, 2010,2014</mal:years>
+      <mal:years>2008,2009,2010,2014,2015</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
@@ -33,7 +33,7 @@
     
     <p>Um Zahlen in einer bestimmten Zahlenbasis einzugeben, verwenden Sie <link xref="superscript">tiefgestellte Zahlen</link>. Die folgenden Zahlen sind äquivalent.</p>
     <example>
-    <p>10011001</p>    
+    <p>1001011₂</p>    
     <p>113₈</p>
     <p>75</p>
     <p>4B₁₆</p>

@@ -4,7 +4,7 @@
  *
  * This program is free software: you can redistribute it and/or modify it under
  * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 2 of the License, or (at your option) any later
+ * Foundation, either version 3 of the License, or (at your option) any later
  * version. See http://www.gnu.org/copyleft/gpl.html the full text of the
  * license.
  */
@@ -34,9 +34,18 @@ static void solve (string equation)
 
     result_serializer.set_representation_base (representation_base);
     if (z != null)
-        stdout.printf ("%s\n", result_serializer.to_string (z));
+    {
+        var str = result_serializer.to_string (z);
+        if (result_serializer.error != null)
+        {
+            stderr.printf ("%s\n", result_serializer.error);
+            result_serializer.error = null;
+        }
+        else
+            stdout.printf ("%s\n", str);
+    }
     else if (ret == ErrorCode.MP)
-        stderr.printf ("Error %s\n", mp_get_error ());
+        stderr.printf ("Error %s\n", Number.error);
     else
         stderr.printf ("Error %d\n", ret);
 }

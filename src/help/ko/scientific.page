@@ -3,35 +3,33 @@
 
     <info>
         <link type="guide" xref="index#number"/>
-    </info>
-
-	<title>Scientific Notation</title>
     
-    <p>
-    To enter numbers in scientific format use the <gui>×10x</gui> button (<keyseq><key>Ctrl</key><key>E</key></keyseq>).
-    The <link xref="superscript">number mode</link> automatically changes to superscript.
-    To enter 2×10¹⁰⁰, start by entering the mantissa (2):
-    </p>
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>류창우</mal:name>
+      <mal:email>cwryu@debian.org</mal:email>
+      <mal:years>2007, 2008, 2015.</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>조성호</mal:name>
+      <mal:email>shcho@gnome.org</mal:email>
+      <mal:years>2016.</mal:years>
+    </mal:credit>
+  </info>
+
+	<title>과학 표기법</title>
+    
+    <p>과학 표기법으로 수를 입력하려면 <gui>×10x</gui> 단추(<keyseq><key>Ctrl</key><key>E</key></keyseq>)를 사용하십시오. <link xref="superscript">숫자 모드</link>에서는 자동으로 위 첨자로 바꿔줍니다. 2×10¹⁰⁰을 입력하려면 가수부(2)부터 입력하십시오:</p>
     <example>
     <p>2</p>
     </example>
-    <p>
-    Then press the scientific notation button (or press <keyseq><key>Ctrl</key><key>E</key></keyseq>):
-    </p>
+    <p>그 다음 과학 표기법 단추(또는 <keyseq><key>Ctrl</key><key>E</key></keyseq> 키)를 누르십시오:</p>
     <example>
-    <p>
-    2×10
-    </p>
+    <p>2×10</p>
     </example>
-    <p>
-    Then enter the exponent (100):
-    </p>
+    <p>다음 지수(100)를 입력하십시오:</p>
     <example>
-    <p>
-    2×10¹⁰⁰
-    </p>
+    <p>2×10¹⁰⁰</p>
     </example>
-    <p>
-    To show results in scientific form change the <link xref="number-display">result format</link>.
-    </p>
+    <p>과학 계산기 방식으로 결과를 보려면 <link xref="number-display">결과 형식</link>을 바꾸십시오.</p>
 </page>

@@ -3,7 +3,7 @@
  *
  * This program is free software: you can redistribute it and/or modify it under
  * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 2 of the License, or (at your option) any later
+ * Foundation, either version 3 of the License, or (at your option) any later
  * version. See http://www.gnu.org/copyleft/gpl.html the full text of the
  * license.
  */
@@ -13,6 +13,7 @@ public class MathDisplay : Gtk.Viewport
     /* Equation being displayed */
     private MathEquation _equation;
     public MathEquation equation { get { return _equation; } }
+    private HistoryView history;
 
     /* Display widget */
     Gtk.SourceView source_view;
@@ -26,10 +27,18 @@ public class MathDisplay : Gtk.Viewport
     public MathDisplay (MathEquation equation)
     {
         _equation = equation;
-
+        _equation.history_signal.connect (this.handler);
         var main_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
         add (main_box);
 
+        history = new HistoryView ();
+        history.answer_clicked.connect ((ans) => { insert_text (ans); });
+        history.equation_clicked.connect ((eq) => { display_text (eq); });
+        main_box.add (history);
+        main_box.show_all ();
+
+        var scrolled_window = new Gtk.ScrolledWindow (null, null);
+        scrolled_window.set_policy (Gtk.PolicyType.AUTOMATIC, Gtk.PolicyType.NEVER);
         source_view = new Gtk.SourceView.with_buffer (equation);
         source_view.set_accepts_tab (false);
         source_view.set_pixels_above_lines (8);
@@ -37,16 +46,25 @@ public class MathDisplay : Gtk.Viewport
         /* TEMP: Disabled for now as GTK+ doesn't properly render a right aligned right margin, see bug #482688 */
         /*source_view.set_right_margin (6);*/
         source_view.set_justification (Gtk.Justification.RIGHT);
-        var font_desc = source_view.get_style_context ().get_font (Gtk.StateFlags.NORMAL);
+
+        var style_context = source_view.get_style_context ();
+        style_context.save ();
+        style_context.set_state (Gtk.StateFlags.NORMAL);
+        var font_desc = style_context.get_font (Gtk.StateFlags.NORMAL);
+        style_context.restore ();
+
         font_desc.set_size (16 * Pango.SCALE);
         source_view.override_font (font_desc);
         source_view.set_name ("displayitem");
+        source_view.set_size_request (20, 20);
         source_view.get_accessible ().set_role (Atk.Role.EDITBAR);
         //FIXME:<property name="AtkObject::accessible-description" translatable="yes" comments="Accessible description for the area in which results are displayed">Result Region</property>
         source_view.key_press_event.connect (key_press_cb);
         create_autocompletion ();
 
-        main_box.pack_start (source_view, true, true, 0);
+        main_box.pack_start (scrolled_window, false, false, 0);
+        scrolled_window.add (source_view); /* Adds ScrolledWindow to source_view for displaying long equations */
+        scrolled_window.show ();
 
         var info_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
         main_box.pack_start (info_box, false, true, 0);
@@ -73,6 +91,31 @@ public class MathDisplay : Gtk.Viewport
         status_changed_cb ();
 
         equation.notify["error-token-end"].connect ((pspec) => { error_status_changed_cb (); });
+    }
+
+    public void grabfocus () /* Editbar grabs focus when an instance of gnome-calculator is created */
+    {
+        source_view.grab_focus ();
+    }
+
+    public void handler (string answer, Number number, int number_base, uint representation_base)
+    {
+        this.update_history (answer, number, number_base, representation_base); /* Recieves signal emitted by a MathEquation object for updating history-view */
+    }
+
+    public void display_text (string prev_eq)
+    {
+        _equation.display_selected (prev_eq);
+    }
+
+    public  void update_history (string answer, Number number, int number_base, uint representation_base)
+    {
+        history.insert_entry (answer, number, number_base, representation_base); /* Sends current equation and answer for updating History-View */
+    }
+
+    public void insert_text (string answer)
+    {
+        _equation.insert_selected (answer);
     }
 
     private void create_autocompletion ()
@@ -142,6 +185,9 @@ public class MathDisplay : Gtk.Viewport
         case Gdk.Key.KP_Page_Up:
             new_keyval = Gdk.Key.@9;
             break;
+        case Gdk.Key.KP_Delete:
+            new_keyval = Gdk.Key.period;
+            break;
         }
 
         if (new_keyval != 0)
@@ -165,7 +211,6 @@ public class MathDisplay : Gtk.Viewport
 
         /* Clear on escape */
         if ((event.keyval == Gdk.Key.Escape && state == 0) ||
-            (event.keyval == Gdk.Key.BackSpace && state == Gdk.ModifierType.CONTROL_MASK) ||
             (event.keyval == Gdk.Key.Delete && state == Gdk.ModifierType.SHIFT_MASK))
         {
             equation.clear ();
@@ -252,6 +297,8 @@ public class MathDisplay : Gtk.Viewport
 
         if (state == Gdk.ModifierType.CONTROL_MASK || equation.number_mode == NumberMode.SUPERSCRIPT)
         {
+            if (!equation.has_selection)
+                equation.remove_trailing_spaces ();
             switch (event.keyval)
             {
             case Gdk.Key.@0:
@@ -298,6 +345,8 @@ public class MathDisplay : Gtk.Viewport
         }
         else if (state == Gdk.ModifierType.MOD1_MASK || equation.number_mode == NumberMode.SUBSCRIPT)
         {
+            if (!equation.has_selection)
+                equation.remove_trailing_spaces ();
             switch (event.keyval)
             {
             case Gdk.Key.@0:
@@ -403,8 +452,9 @@ public class CompletionProvider : GLib.Object, Gtk.SourceCompletionProvider
         }
     }
 
-    public virtual bool get_start_iter (Gtk.SourceCompletionContext context, Gtk.SourceCompletionProposal proposal, Gtk.TextIter iter)
+    public virtual bool get_start_iter (Gtk.SourceCompletionContext context, Gtk.SourceCompletionProposal proposal, out Gtk.TextIter iter)
     {
+        iter = {};
         return false;
     }
 
@@ -455,16 +505,9 @@ public class FunctionCompletionProvider : CompletionProvider
 
     public override void populate (Gtk.SourceCompletionContext context)
     {
-        Gtk.TextIter emptyiter = {};
-
-        var iter1 = context.get_iter ();
-        // This check is based on the assumption/knowledge
-        // that vala nulls the iter before passing at as a reference.
-        // The gtksourceview api has no way to signal error.
-        if (iter1 == emptyiter)
-        {
+        Gtk.TextIter iter1;
+        if (!context.get_iter (out iter1))
             return;
-        }
 
         Gtk.TextBuffer text_buffer = iter1.get_buffer ();
         MathFunction[] functions = get_matches_for_completion_at_cursor (text_buffer);
@@ -517,16 +560,9 @@ public class VariableCompletionProvider : CompletionProvider
 
     public override void populate (Gtk.SourceCompletionContext context)
     {
-        Gtk.TextIter emptyiter = {};
-
-        var iter1 = context.get_iter ();
-        // This check is based on the assumption/knowledge
-        // that vala nulls the iter before passing at as a reference.
-        // The gtksourceview api has no way to signal error.
-        if (iter1 == emptyiter)
-        {
+        Gtk.TextIter iter1;
+        if (!context.get_iter (out iter1))
             return;
-        }
 
         Gtk.TextBuffer text_buffer = iter1.get_buffer ();
         string[] variables = get_matches_for_completion_at_cursor (text_buffer, _equation.variables);

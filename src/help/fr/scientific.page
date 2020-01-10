@@ -27,6 +27,12 @@
       <mal:email>allomervan@gmail.com</mal:email>
       <mal:years>2014</mal:years>
     </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Guillaume Bernard</mal:name>
+      <mal:email>translate@filorin.fr</mal:email>
+      <mal:years>2015</mal:years>
+    </mal:credit>
   </info>
 
 	<title>Notation scientifique</title>

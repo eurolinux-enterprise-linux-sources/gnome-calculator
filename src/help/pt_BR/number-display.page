@@ -27,6 +27,18 @@
       <mal:email>liverig@gmail.com</mal:email>
       <mal:years>2013</mal:years>
     </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Rafael Fontenelle</mal:name>
+      <mal:email>rafaelff@gnome.org</mal:email>
+      <mal:years>2013, 2014</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Felipe Braga</mal:name>
+      <mal:email>fbobraga@gmail.com</mal:email>
+      <mal:years>2015</mal:years>
+    </mal:credit>
   </info>
 
 	<title>Formato do resultado</title>
@@ -50,5 +62,5 @@
     <td><p>Os resultados são exibidos em notação científica, com exceção do expoente que é sempre um múltiplo de três.</p></td>
     </tr>
     </table>
-    <p>O número de casas decimais. Se os zeros a direita e o separador de milhares forem mostrados, também podem ser configurados.</p>
+    <p>Também podem ser configurados o número de casas decimais, se os zeros a direita e o separador de milhares devem mostrados.</p>
 </page>

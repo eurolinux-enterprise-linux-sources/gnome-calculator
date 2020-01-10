@@ -3,7 +3,7 @@
  *
  * This program is free software: you can redistribute it and/or modify it under
  * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 2 of the License, or (at your option) any later
+ * Foundation, either version 3 of the License, or (at your option) any later
  * version. See http://www.gnu.org/copyleft/gpl.html the full text of the
  * license.
  */
@@ -90,7 +90,7 @@ public class MathPreferencesDialog : Gtk.Dialog
         var string = _("Show %d decimal _places");
         var tokens = string.split ("%d", 2);
 
-        var decimal_places_adjustment = new Gtk.Adjustment (0.0, 0.0, 9.0, 1.0, 1.0, 0.0);
+        var decimal_places_adjustment = new Gtk.Adjustment (0.0, 0.0, 100.0, 1.0, 1.0, 0.0);
         decimal_places_spin = new Gtk.SpinButton (decimal_places_adjustment, 0.0, 0);
 
         if (tokens.length > 0)

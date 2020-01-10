@@ -1,6 +1,6 @@
 Name:           gnome-calculator
 Version:        3.8.2
-Release:        1%{?dist}
+Release:        4%{?dist}
 Summary:        A desktop calculator
 
 Group:          Applications/System
@@ -8,6 +8,8 @@ License:        GPLv2+
 URL:            http://live.gnome.org/Gcalctool
 #VCS: git:git://git.gnome.org/gcalctool
 Source0:        http://download.gnome.org/sources/%{name}/3.8/%{name}-%{version}.tar.xz
+
+Patch0:         gnome-calculator-translations.patch
 
 BuildRequires: glib2-devel
 BuildRequires: gtk3-devel
@@ -34,6 +36,8 @@ to do its arithmetic to give a high degree of accuracy.
 
 %prep
 %setup -q
+
+%patch0 -p2 -b .translations
 
 
 %build
@@ -71,6 +75,16 @@ glib-compile-schemas %{_datadir}/glib-2.0/schemas &> /dev/null || :
 
 
 %changelog
+* Fri Jan 24 2014 Daniel Mach <dmach@redhat.com> - 3.8.2-4
+- Mass rebuild 2014-01-24
+
+* Wed Jan 22 2014 Alexander Larsson <alexl@redhat.com> - 3.8.2-3
+- Add missing translations
+  Resolves: rhbz#1030337
+
+* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 3.8.2-2
+- Mass rebuild 2013-12-27
+
 * Mon May 13 2013 Matthias Clasen <mclasen@redhat.com> - 3.8.2-1
 - Update to 3.8.2
 
